@@ -7,8 +7,9 @@ using UnityEngine;
 /// interacted by the player.
 /// Interactable inherits the MonoBehaviour Class
 /// </summary>
-public class Interactable : MonoBehaviour {
-    
+public class Interactable : MonoBehaviour
+{
+
     /* The minimum distance the player must be with the Interactable GameObject 
      * to interact with, and to keep the interaction with the GameObject.
      */
@@ -24,7 +25,7 @@ public class Interactable : MonoBehaviour {
     public bool hasInteracted = false;
 
     /// <summary>
-    /// Interact(): Is a virtual void method that is re-programmable in all other
+    /// Interact: Is a virtual void method that is re-programmable in all other
     /// classes that inherit the Interactable class.
     /// </summary>
     public virtual void Interact()
@@ -34,7 +35,7 @@ public class Interactable : MonoBehaviour {
     }
 
     /// <summary>
-    /// Update(): Is a void method that is called once per frame
+    /// Update: Is a void method that is called once per frame
     /// </summary>
     void Update()
     {
@@ -51,10 +52,10 @@ public class Interactable : MonoBehaviour {
     }
 
     /// <summary>
-    /// onFocused(Transform playerTransform): Is a void method that is used when 
-    /// the player interacts with an Interactable GameObject and shows that the 
-    /// one interacting with the GameObject is the player, and that the GameObject
-    /// has been interacted with and is being focused on.
+    /// onFocused: Is a void method that is used when the player interacts with 
+    /// an Interactable GameObject and shows that the  one interacting with the 
+    /// GameObject is the player, and that the GameObject has been interacted with 
+    /// and is being focused on.
     /// </summary>
     /// <param name="playerTransform">The player object</param>
     public void onFocused(Transform playerTransform)
@@ -65,7 +66,7 @@ public class Interactable : MonoBehaviour {
     }
 
     /// <summary>
-    /// onDefocused(): Is a void method that is used when the player removes 
+    /// onDefocused: Is a void method that is used when the player removes 
     /// focus with an Interactable GameObject and shows that the no one is
     /// interacting with the GameObject, and that the GameObject is not being
     /// interacted with and is not being focused on.
@@ -78,7 +79,7 @@ public class Interactable : MonoBehaviour {
     }
 
     /// <summary>
-    /// Shows the radius of the Interactable GameObject, revealing the minimum
+    /// OnDrawGizmosSelected: Shows the radius of the Interactable GameObject, revealing the minimum
     /// distance a player needs to be with the GameObject before interacting with it,
     /// and to keep interacting with the the GameObject.
     /// </summary>

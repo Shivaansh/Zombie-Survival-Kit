@@ -18,7 +18,7 @@ public class ConsumableItem : Item
     public int healthModifier;
 
     /// <summary>
-    /// Use(): An override void method used when the player wants to use the 
+    /// Use: An override void method used when the player wants to use the 
     /// ConsumableItem
     /// </summary>
     public override void Use()
@@ -26,7 +26,7 @@ public class ConsumableItem : Item
         base.Use();
         PlayerStats.instance.Eat(this);
         RemoveFromInventory();
-        
+
     }
 }
 

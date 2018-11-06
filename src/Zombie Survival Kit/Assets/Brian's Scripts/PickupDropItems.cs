@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -42,15 +41,15 @@ public class PickupDropItems : MonoBehaviour
     public float smooth;
 
     /// <summary>
-    /// Start(): Is a void method used for initialization
+    /// Start: Is a void method used for initialization
     /// </summary>
     void Start()
     {
         player = GameObject.FindWithTag("MainCamera");
     }
-        
+
     /// <summary>
-    /// Update(): Is a void method that is called once per frame
+    /// Update: Is a void method that is called once per frame
     /// </summary>
     void Update()
     {
@@ -72,10 +71,11 @@ public class PickupDropItems : MonoBehaviour
 
         AttackEnemy();
 
-        /* Checks if the player is focused on an interactable and checks the distance from the interactable to the player
-         * If the player is outside the radius of the interactable, RemoveFocus()
+        /* Checks if the player is focused on an interactable and checks the distance from 
+         * the interactable to the player. If the player is outside the radius of the 
+         * interactable, RemoveFocus().
          */
-        if (focus != null && 
+        if (focus != null &&
             Vector3.Distance(player.transform.position, focus.transform.position) > focus.radius)
         {
             RemoveFocus();
@@ -83,7 +83,7 @@ public class PickupDropItems : MonoBehaviour
     }
 
     /// <summary>
-    /// Carry(GameObject o): Is a void method used to carry a GameObject that is Pickupable in front of the player
+    /// Carry: Is a void method used to carry a GameObject that is Pickupable in front of the player
     /// camera specified by the carryingDistance.
     /// </summary>
     /// <param name="o">The GameObject being carried</param>
@@ -102,8 +102,8 @@ public class PickupDropItems : MonoBehaviour
     }
 
     /// <summary>
-    /// dropCheck(): Is a void method that checks if the correct input to drop the GameObject being carried is
-    /// inputted.
+    /// dropCheck: Is a void method that checks if the correct input to drop the GameObject being 
+    /// carried is inputted.
     /// </summary>
     void dropCheck()
     {
@@ -114,7 +114,7 @@ public class PickupDropItems : MonoBehaviour
     }
 
     /// <summary>
-    /// dropObject(): Is a void method used to drop the GameObject being carried.
+    /// dropObject: Is a void method used to drop the GameObject being carried.
     /// </summary>
     void dropObject()
     {
@@ -124,11 +124,11 @@ public class PickupDropItems : MonoBehaviour
         // Brian:   Displays message in Log
         Debug.Log("I dropped a " + carriedObject.gameObject.name);
         carriedObject = null;
-        
+
     }
 
     /// <summary>
-    /// pickup(): Is a void method used to raycast a GameObject when the appropriate input is given, and only 
+    /// pickup: Is a void method used to raycast a GameObject when the appropriate input is given, and only 
     /// interacts with the GameObject object if it is an interactable, and only carries the object if it is 
     /// a Pickupable.
     /// </summary>
@@ -149,7 +149,7 @@ public class PickupDropItems : MonoBehaviour
                 if (interactable != null)
                 {
                     SetFocus(interactable);
-                                                        
+
                     Pickupable p = hit.collider.GetComponent<Pickupable>();
                     /* If the Object is interactable and pickupable, then the player 
                      * will carry the object
@@ -194,7 +194,7 @@ public class PickupDropItems : MonoBehaviour
 
 
     /// <summary>
-    /// SetFocus(Interactable newFocus): Creates a focus on the object that the player interactes with.
+    /// SetFocus: Creates a focus on the object that the player interactes with.
     /// </summary>
     /// <param name="newFocus">The new interactable that the player is focusing on</param>
     void SetFocus(Interactable newFocus)
@@ -205,12 +205,12 @@ public class PickupDropItems : MonoBehaviour
                 focus.onDefocused();
             focus = newFocus;
         }
-        
+
         newFocus.onFocused(transform);
     }
 
     /// <summary>
-    /// RemoveFocus(): Removes the focus that the player is focusing on.
+    /// RemoveFocus: Removes the focus that the player is focusing on.
     /// </summary>
     /// <param name="newFocus">The new interactable that the player is focusing on</param>
     void RemoveFocus()
@@ -218,7 +218,7 @@ public class PickupDropItems : MonoBehaviour
         if (focus != null)
             focus.onDefocused();
         focus = null;
-    } 
-    
+    }
+
 }
 

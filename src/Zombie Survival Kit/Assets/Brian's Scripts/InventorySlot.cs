@@ -5,7 +5,8 @@ using UnityEngine.UI;
 /// InventorySlot: A class used to manage the slots in the inventory UI, and includes
 /// the methods that update these slots.
 /// </summary>
-public class InventorySlot : MonoBehaviour {
+public class InventorySlot : MonoBehaviour
+{
 
     /* A reference to the icon of the item being stored
      */
@@ -20,10 +21,10 @@ public class InventorySlot : MonoBehaviour {
     Item item;
 
     /// <summary>
-    /// addItem(Item newItem): Is a void method that adds an item to the inventory slot
+    /// addItem: Is a void method that adds an item to the inventory slot
     /// </summary>
     /// <param name="newItem"></param>
-    public void addItem (Item newItem)
+    public void addItem(Item newItem)
     {
         item = newItem;
 
@@ -31,9 +32,9 @@ public class InventorySlot : MonoBehaviour {
         icon.enabled = true;
         removeButton.interactable = true;
     }
-    
+
     /// <summary>
-    /// clearSlot(): A void method used to clear the images on the inventory slot in 
+    /// clearSlot: A void method used to clear the images on the inventory slot in 
     /// the inventory UI
     /// </summary>
     public void clearSlot()
@@ -43,9 +44,9 @@ public class InventorySlot : MonoBehaviour {
         icon.enabled = false;
         removeButton.interactable = false;
     }
-        
+
     /// <summary>
-    /// onRemoveButton(): a void method that Removes the item in the inventory from the 
+    /// onRemoveButton: a void method that Removes the item in the inventory from the 
     /// inventory list when the remove button is pressed
     /// </summary>
     public void onRemoveButton()
@@ -54,7 +55,7 @@ public class InventorySlot : MonoBehaviour {
     }
 
     /// <summary>
-    /// useItem(): A void method that uses the item in the inventory from the inventory 
+    /// useItem: A void method that uses the item in the inventory from the inventory 
     /// list when the inventory slot button is pressed
     /// </summary>
     public void useItem()

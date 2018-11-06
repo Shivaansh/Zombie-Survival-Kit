@@ -29,8 +29,9 @@ public class HealthManager : MonoBehaviour
     /// </summary>
     void Start()
     {
- 
+
     }
+
 
     public void KillPlayer()
     {

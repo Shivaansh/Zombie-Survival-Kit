@@ -4,7 +4,8 @@
 /// InventoryUI: A class used to manage the inventory UI when items are added or removed
 /// from the inventory
 /// </summary>
-public class InventoryUI : MonoBehaviour {
+public class InventoryUI : MonoBehaviour
+{
 
     /* Used to references the parent of all of the inventory slots
      */
@@ -23,31 +24,33 @@ public class InventoryUI : MonoBehaviour {
 
 
     /// <summary>
-    /// Start(): Is a void method used for initialization
+    /// Start: Is a void method used for initialization
     /// </summary>
-    void Start () {
+    void Start()
+    {
         inventory = Inventory.instance;
         // onItemChangedCcallBack triggers UpdateUI
-        inventory.onItemChangedCallback += UpdateUI;
+        inventory.onItemChangedCallback += UpdateInventoryUI;
 
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        
-	}
+
+    }
 
     /// <summary>
-    /// Update(): Is a void method that is called once per frame
+    /// Update: Is a void method that is called once per frame
     /// </summary>
-    void Update () {
-		if (Input.GetKeyDown(KeyCode.I))
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
         {
             if (!inventoryUI.enabled)
             {
                 inventoryUI.enabled = true;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-                
+
             }
             else
             {
@@ -58,13 +61,13 @@ public class InventoryUI : MonoBehaviour {
             }
 
         }
-	}
+    }
 
     /// <summary>
-    /// UpdateUI(): Is a void method that updates the inventory UI when an item is added
+    /// UpdateInventoryUI: Is a void method that updates the inventory UI when an item is added
     /// or removed from the invenotry.
     /// </summary>
-    void UpdateUI()
+    void UpdateInventoryUI()
     {
         Debug.Log("Updating UI");
         for (int i = 0; i < slots.Length; i++)
@@ -72,7 +75,8 @@ public class InventoryUI : MonoBehaviour {
             if (i < inventory.items.Count)
             {
                 slots[i].addItem(inventory.items[i]);
-            } else
+            }
+            else
             {
                 slots[i].clearSlot();
             }

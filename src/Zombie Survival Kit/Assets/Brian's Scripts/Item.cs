@@ -21,15 +21,15 @@ public class Item : ScriptableObject
     public bool isDefaultItem = false;
 
     /// <summary>
-    /// Use(): Is a virtual void method used when the player wants to use the item.
+    /// Use: Is a virtual void method used when the player wants to use the item.
     /// </summary>
-    public virtual void Use ()
+    public virtual void Use()
     {
         Debug.Log("Using " + name);
     }
-	
+
     /// <summary>
-    /// RemoveFromInventory(): Removes the item from the inventory
+    /// RemoveFromInventory: Removes the item from the inventory
     /// </summary>
     public void RemoveFromInventory()
     {

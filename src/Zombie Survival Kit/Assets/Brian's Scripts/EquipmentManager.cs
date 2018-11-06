@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// EquipmentManager: Is a class used to keep track of the player's equipped items, and 
 /// consists of methods that can affect the player's equipped items.
 /// </summary>
-public class EquipmentManager : MonoBehaviour {
+public class EquipmentManager : MonoBehaviour
+{
 
     /// <summary>
     /// Singleton: Is a region used to create an instance of the HealthManager
@@ -37,17 +36,18 @@ public class EquipmentManager : MonoBehaviour {
     Inventory inventory;
 
     /// <summary>
-    /// Start(): Is a void method used for initialization
+    /// Start: Is a void method used for initialization
     /// </summary>
-	void Start () {
-        int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
+	void Start()
+    {
+        int numSlots = System.Enum.GetNames(typeof(equipmentSlot)).Length;
         equippedItems = new EquipmentItem[numSlots];
 
         inventory = Inventory.instance;
-	}
+    }
 
     /// <summary>
-    /// Update(): Is a void method that is called once per frame
+    /// Update: Is a void method that is called once per frame
     /// </summary>
     void Update()
     {
@@ -56,8 +56,8 @@ public class EquipmentManager : MonoBehaviour {
     }
 
     /// <summary>
-    /// Equip(EquipmentItem newEquipment):Is a void method used to equip an
-    /// EquipmentItem into the EquipmentItem[].
+    /// Equip: Is a void method used to equip an EquipmentItem into the 
+    /// EquipmentItem[].
     /// </summary>
     /// <param name="newEquipment">The EquipmentItem being equipped</param>
     public void Equip(EquipmentItem newEquipment)
@@ -66,7 +66,7 @@ public class EquipmentManager : MonoBehaviour {
 
         EquipmentItem oldEquipment = null;
 
-        if(equippedItems[slotIndex] != null)
+        if (equippedItems[slotIndex] != null)
         {
             oldEquipment = equippedItems[slotIndex];
             inventory.Add(oldEquipment);
@@ -81,14 +81,13 @@ public class EquipmentManager : MonoBehaviour {
     }
 
     /// <summary>
-    /// Unequip(int SlotIndex):Is a void method used to unequip an
-    /// EquipmentItem from its slot index in the EquipmentItem[].
-    /// </summary>
+    /// Unequip: Is a void method used to unequip an EquipmentItem from its slot index 
+    /// in the EquipmentItem[].
     /// </summary>
     /// <param name="SlotIndex">The slot index of the equipment being uneuipped</param>
-    public void Unequip (int SlotIndex)
+    public void Unequip(int SlotIndex)
     {
-        if(equippedItems[SlotIndex] != null)
+        if (equippedItems[SlotIndex] != null)
         {
             EquipmentItem oldEquipment = equippedItems[SlotIndex];
             inventory.Add(oldEquipment);
@@ -103,7 +102,7 @@ public class EquipmentManager : MonoBehaviour {
     }
 
     /// <summary>
-    /// UnequipAll(): A method used to unequip any EquipmentItem currently equipped
+    /// UnequipAll: A method used to unequip any EquipmentItem currently equipped
     /// </summary>
     public void UnequipAll()
     {

@@ -15,7 +15,7 @@ public class EquipmentItem : Item
     /* Determines which Equipment slot the EmuipmentItem belongs to when equipped to
      * The player
      */
-    public EquipmentSlot equipSlot;
+    public equipmentSlot equipSlot;
 
     /* Determines how much attack the equipment can produce to an enemy
      */
@@ -25,7 +25,7 @@ public class EquipmentItem : Item
     public int defenceModifier;
 
     /// <summary>
-    /// Use(): An override void method used when the player wants to use the 
+    /// Use: An override void method used when the player wants to use the 
     /// EquipmentItem
     /// </summary>
     public override void Use()
@@ -35,10 +35,10 @@ public class EquipmentItem : Item
         RemoveFromInventory();
 
     }
-   
+
 }
 
 /// <summary>
 /// EquipmentSlot: An enum that determines the different types of equipment
 /// </summary>
-public enum EquipmentSlot { Head, Chest, Legs, Primaryhand, Offhand, Feet }
+public enum equipmentSlot { Head, Chest, Legs, Primaryhand, Offhand, Feet }
