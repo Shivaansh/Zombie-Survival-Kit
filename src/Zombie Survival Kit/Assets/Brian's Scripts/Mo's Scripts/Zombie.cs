@@ -35,7 +35,7 @@ public class Zombie : MonoBehaviour
         spawnLocation = transform.position;
         target = spawnLocation;
         agent = GetComponent<NavMeshAgent>();
-        player = HealthManager.instance.player.transform;
+        player = PlayerStats.instance.player.transform;
         animator = GetComponent<Animator>();
         enemyCombat = GetComponent<CharacterCombat>();
     }

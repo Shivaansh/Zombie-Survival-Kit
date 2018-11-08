@@ -18,6 +18,8 @@ public class PlayerStats : CharacterStats
     }
     #endregion
 
+    public GameObject player;
+
     // Use this for initialization
     void Start ()
     {

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/PickUpDropDownItems.unity
+- path: Assets/_Scenes/ShivsScene.unity
   isLoaded: 1
   isActive: 1
