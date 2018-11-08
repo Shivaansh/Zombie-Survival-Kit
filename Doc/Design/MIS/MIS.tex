@@ -50,59 +50,21 @@
 
 \newpage
 
-\section* {Map Types Module}
-
-\subsection*{Module}
-
-MapTypes
-
-\subsection* {Uses}
-
-N/A
-
-\subsection* {Syntax}
-
-\subsubsection* {Exported Constants}
-
-None
-
-\subsubsection* {Exported Types}
-
-CompassT = \{N, S, E, W\}\\ 
-LanduseT = \{Recreational, Transport, Agricultural, Residential, Commercial\}\\
-RotateT = \{CW, CCW\}
-
-\subsubsection* {Exported Access Programs}
-
-None
-
-\subsection* {Semantics}
-
-\subsubsection* {State Variables}
-
-None
-
-\subsubsection* {State Invariant}
-
-None
-
-\newpage
-
-\section* {Point ADT Module}
+\section* {Component Items Module}
 
 \subsection*{Template Module}
 
-PointT
+Item
 
 \subsection* {Uses}
 
-N/A
+ScriptableObject, Inventory, UnityEngine
 
 \subsection* {Syntax}
 
 \subsubsection* {Exported Types}
 
-\wss{PointT = ?}
+Sprite
 
 \subsubsection* {Exported Access Programs}
 
@@ -110,13 +72,9 @@ N/A
 \hline
 \textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
 \hline
-PointT & $\mathbb{Z}$, $\mathbb{Z}$ & PointT & \\
+Use & ~ & ~ & ~\\
 \hline
-x & ~ & $\mathbb{Z}$ & ~\\
-\hline
-y & ~ & $\mathbb{Z}$ & ~\\
-\hline
-translate & $\mathbb{Z}$, $\mathbb{Z}$ & PointT & ~\\
+RemoveFromInventory & ~ & ~ & ~\\
 \hline
 \end{tabular}
 
@@ -124,8 +82,8 @@ translate & $\mathbb{Z}$, $\mathbb{Z}$ & PointT & ~\\
 
 \subsubsection* {State Variables}
 
-$xc$: \wss{$\mathbb{Z}$}\\
-$yc$: \wss{$\mathbb{Z}$}
+name: $String$\\
+icon: $Sprite$
 
 \subsubsection* {State Invariant}
 
@@ -133,54 +91,41 @@ None
 
 \subsubsection* {Assumptions}
 
-The constructor PointT is called for each object instance before any other
-access routine is called for that object.  The constructor cannot be called on
-an existing object.
+This module is used to create a new asset in Unity by creating a new asset menu called "Inventory/Item". Once an item has been created through Unity's asset menu, the state variables are updated directly in Unity by manually typing in the name of the item, and placing the appropriate Sprite for the icon. User will not be tasked to do this; all items available to the user will be created before hand by the developers of Zombie Survival Kit.
 
 \subsubsection* {Access Routine Semantics}
 
-PointT($x, y$):
+\noindent Use():
 \begin{itemize}
-\item transition: \wss{xc, yc := x, y}
-\item output: $out := \mathit{self}$
+\item translation: None
+\item output: Prints out to Debug.Log()
 \item exception: None
 \end{itemize}
 
-\noindent x():
+\noindent RemoveFromInventory():
 \begin{itemize}
-\item output: $out := xc$
-\item exception: None
-\end{itemize}
-
-\noindent y():
-\begin{itemize}
-\item output: $out := yc$
-\item exception: None
-\end{itemize}
-
-\noindent translate($\Delta x$, $\Delta y$):
-\begin{itemize}
-\item \wss{output: out: PointT(xc + $\Delta x$, yc + $\Delta y$)}
+\item translation: Calls the "Remove" method from the Inventory class.
+\item output: None
 \item exception: None
 \end{itemize}
 
 \newpage
 
-\section* {Line ADT Module}
+\section* {Component Items Consumable Module}
 
 \subsection*{Template Module}
 
-LineT
+Consumable
 
 \subsection* {Uses}
 
-\wss{PointT, MapTypes for CompassT and RotateT}
+Item, PlayerStats, System.Collections, System.Collections.Generic, UnityEngine
 
 \subsection* {Syntax}
 
 \subsubsection* {Exported Types}
 
-LineT = ?
+None
 
 \subsubsection* {Exported Access Programs}
 
@@ -188,21 +133,7 @@ LineT = ?
 \hline
 \textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
 \hline
-LineT & PointT, CompassT, $\mathbb{N}$ & LineT & invalid\_argument\\
-\hline
-strt & ~ & PointT & ~\\
-\hline
-end & ~ & PointT & ~\\
-\hline
-orient & ~ & CompassT & ~\\
-\hline
- len & ~ & $\mathbb{Z}$ & ~\\
-\hline
-flip & ~ & LineT & ~\\
-\hline
-rotate & RotateT & LineT & ~\\
-\hline
-translate & $\mathbb{Z}$, $\mathbb{Z}$ & LineT  & ~\\
+Use & ~ & ~ & ~\\
 \hline
 \end{tabular}
 
@@ -210,9 +141,9 @@ translate & $\mathbb{Z}$, $\mathbb{Z}$ & LineT  & ~\\
 
 \subsubsection* {State Variables}
 
-$s$: PointT\\
-$o$: CompassT\\
-$L$: $\mathbb{N}$\\ 
+healthModifier: $\mathbb{N}$\\
+name: $String$\\
+icon: $Sprite$
 
 \subsubsection* {State Invariant}
 
@@ -220,101 +151,34 @@ None
 
 \subsubsection* {Assumptions}
 
-The constructor LineT is called for each object instance before any other
-access routine is called for that object.  The constructor cannot be called on
-an existing object.
+This module is used to create a new asset in Unity by creating a new asset menu called "Inventory/Consumable"; item of type Consumable. Once a Consumable has been created through Unity's asset menu, the state variables are updated directly in Unity by manually typing the value of the healthModifier, the name of the item, and placing the appropriate Sprite for the icon. User will not be tasked to do this; all Consumable items available to the user will be created before hand by the developers of Zombie Survival Kit.
 
 \subsubsection* {Access Routine Semantics}
 
-LineT($st, ornt, l$):
+\noindent Use():
 \begin{itemize}
-\item transition: $s, o, L := st, ornt, l$
-\item output: $out := \mathit{self}$
-\item exception: \wss{$l \leq 0 \implies invalid\_argument$}
-\end{itemize}
-
-\noindent strt():
-\begin{itemize}
-\item output: $out := \mbox{PointT}(st.x, st.y)$
-\item exception: None
-\end{itemize}
-
-\noindent end():
-\begin{itemize}
-\item output: \wss{$PointT(x, y)\, where,\, ( (o = N \implies y = strt().y() + l) \| (o = S \implies y = strt().y() - l) \| (o = E \implies y = strt().x() + l) \| (o = W \implies y = strt().x() - l) )$}
-
-\item exception: None
-\end{itemize}
-
-\noindent orient():
-\begin{itemize}
-\item output: $out := o$
-\item exception: None
-\end{itemize}
-
-\noindent len():
-\begin{itemize}
-\item output: $out := L$
-\item exception: None
-\end{itemize}
-
-\noindent flip():
-\begin{itemize}
-\item output: \wss{LineT(strt(), o, $l$)\, where,\, (o = rotate(CW), o = rotate(CW))}
-\item exception: None
-\end{itemize}
-
-\noindent rotate(r):
-\begin{itemize}
-\item output: 
-\begin{tabular}{|p{2.cm}|p{2.3cm}|l|}
-\hhline{~|~|-|}
-\multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{l|}{$out :=$}\\
-\hhline{|-|-|-|}
-$r = \mbox{CW}$ & $o = \mbox{N}$ & \wss{E}\\
-\hhline{|~|-|-|}
-~ & $o = \mbox{S}$ & \wss{W}\\
-\hhline{|~|-|-|}
-~ & $o = \mbox{W}$ & \wss{N}\\
-\hhline{|~|-|-|}
-~ & $o = \mbox{E}$ & \wss{S}\\
-\hhline{-|-|-|}
-$r = \mbox{CCW}$ & $o = \mbox{N}$ & \wss{W}\\
-\hhline{|~|-|-|}
-~ & $o = \mbox{S}$ & \wss{E}\\
-\hhline{|~|-|-|}
-~ & $o = \mbox{W}$ & \wss{S}\\
-\hhline{|~|-|-|}
-~ & $o = \mbox{E}$ & \wss{N}\\
-\hhline{-|-|-|}
-\end{tabular}
-
-\item exception: None
-\end{itemize}
-
-\noindent translate($\Delta x$, $\Delta y$):
-\begin{itemize}
-\item output: \wss{LineT(newPoint, o, $l$)\, where,\, (newPoint = st.translate($\Delta x$, $\Delta y$)}
+\item translation: Calls the base "Use" method from the Item class, the "Eat" method in the PlayerStats class, and "RemoveFromInventory" method from the Item class.
+\item output: None
 \item exception: None
 \end{itemize}
 
 \newpage
 
-\section* {Path ADT Module}
+\section* {Component Item Equipment Module}
 
 \subsection*{Template Module}
 
-PathT
+EquipmentItem
 
 \subsection* {Uses}
 
-PointT, LineT, MapTypes
+Item, EquipmentManager, System.Collections, System.Collections.Generic, UnityEngine
 
 \subsection* {Syntax}
 
 \subsubsection* {Exported Types}
 
-PathT = ?
+equipmentSlot: \{Head, Chest, Legs, Primaryhand, Offhand, Feet\}
 
 \subsubsection* {Exported Access Programs}
 
@@ -322,21 +186,7 @@ PathT = ?
 \hline
 \textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
 \hline
-PathT & PointT, CompassT, $\mathbb{N}$ & PathT & \\ %LineT constructor for invalid\_argument
-\hline
-append & CompassT, $\mathbb{N}$ & & invalid\_argument\\ 
-\hline
-strt & ~ & PointT & ~\\
-\hline
-end & ~ & PointT & ~\\
-\hline
-line & $\mathbb{N}$ & LineT & outside\_bounds\\
-\hline
-size & ~ & $\mathbb{N}$ & \\
-\hline
- len & ~ & $\mathbb{N}$ & ~\\
-\hline
-translate & $\mathbb{Z}$, $\mathbb{Z}$ & LineT  & ~\\
+Use & ~ & ~ & ~\\
 \hline
 \end{tabular}
 
@@ -344,7 +194,11 @@ translate & $\mathbb{Z}$, $\mathbb{Z}$ & LineT  & ~\\
 
 \subsubsection* {State Variables}
 
-$s$: sequence of LineT
+equipSlot: $equipmentSlot$\\
+attackModifier: $\mathbb{N}$\\
+defenceModifier: $\mathbb{N}$\\
+name: $String$\\
+icon: $Sprite$
 
 \subsubsection* {State Invariant}
 
@@ -352,101 +206,53 @@ None
 
 \subsubsection* {Assumptions}
 
-\begin{itemize}
-\item The constructor PathT is called for each object instance before any other
-access routine is called for that object.  The constructor cannot be called on
-an existing object.
-%\item Appends will not be made while iterating through the list of lines.
-\end{itemize}
+This module is used to create a new asset in Unity by creating a new asset menu called "Inventory/Equipment"; item of type EquipmentItem. Once an EquipmentItem has been created through Unity's asset menu, the state variables are updated directly in Unity by manually choosing which equipmentSlot belongs to the EquipmentItem's equipSlot, typing in the value of the attackModifier, defenceModifer and the name of the EquipmentItem, and placing the appropriate Sprite for the icon. User will not be tasked to do this; all EquipmentItem available to the user will be created before hand by the developers of Zombie Survival Kit.
 
 \subsubsection* {Access Routine Semantics}
 
-PathT($st, ornt, l$):
+\noindent Use():
 \begin{itemize}
-\item transition: \wss{$s_{0}$ := LineT($st, ornt, l$)}
-\item output: $out := \mathit{self}$
+\item transition: Calls the base "Use" method from the Item class, the "Equip" method in the EquipmentManager class, and "RemoveFromInventory" method from the Item class.
+\item output: None
 \item exception: None
 \end{itemize}
 
-\noindent append($ornt, l$):
-\begin{itemize}
-\item transition: \wss{s := s + LineT($z, ornt, l$)\, where,\, ($z = adjPt(ornt)$).}
-\item exception: \wss{$s_{|s|-1}.rotate(CW).rotate(CW).orient  = ornt \implies invalid\_argument$}
-\end{itemize}
-
-\noindent strt():
-\begin{itemize}
-\item output: \wss{out:= $s_{0}.st$}
-\item exception: None
-\end{itemize}
-
-\noindent end():
-\begin{itemize}
-\item output: \wss{out:= $s_{|s|-1}.end$}
-\item exception: None
-\end{itemize}
-
-\noindent line($i$):
-\begin{itemize}
-\item output: \wss{out := $s_{i}$}
-\item exception: \wss{$i < 0 \| i \geq s.len \implies outside\_bounds$}
-\end{itemize}
-
-\noindent size:
-\begin{itemize}
-\item output: \wss{out := $s.len$}
-\item exception: None
-\end{itemize}
-
-\noindent len:
-\begin{itemize}
-\item output: \wss{$out := +\forall(i : \mathbb{N}|i\in[0...s.len-1] : pointsInLine(i))$}
-\item exception: None
-\end{itemize}
-
-\noindent translate($\Delta x$, $\Delta y$):
-\begin{itemize}
-\item output: Create a new PathT object with state variable $s'$ such that:
-$$\forall(i: \mathbb{N} | i \in [0..|s|-1] : s'[i] = s[i].\mbox{translate}(\Delta x, \Delta y))$$
-\item exception: None
-\end{itemize}
-
-\subsection*{Local Functions}
-
-pointsInLine: $\mbox{LineT} \rightarrow \mbox{(set of PointT)}$\\
-
-\noindent pointsInLine ($l$) 
-\begin{multline*}
-\equiv \{ i: \mathbb{N} | i \in [0
-  .. (l.\mbox{len} - 1)] : l.\mbox{strt}.\mbox{translate}.(
-\end{multline*} (\wss{\begin{tabular}{|l|l|}
-\hline
-$l.orient = \mbox{N}$ & $(0,1)$\\
-\hline
-$l.orient = \mbox{S}$ & $(0,-1)$\\
-\hline
-$l.orient = \mbox{W}$ & $(-1,0)$\\
-\hline
-$l.orient = \mbox{E}$ & $(1,0)$\\
-\hline
-\end{tabular}}
-
-\noindent adjPt: $\mbox{CompassT} \rightarrow \mbox{PointT}$\\
-adjPt$(ornt) \equiv$
-
-\medskip
-
-\begin{tabular}{|l|l|}
-\hline
-$ornt = \mbox{N}$ & $s[|s|-1].\mbox{end}.\mbox{translate}\wss{(0,1)}$\\
-\hline
-$ornt = \mbox{S}$ & $s[|s|-1].\mbox{end}.\mbox{translate}\wss{(0,-1)}$\\
-\hline
-$ornt = \mbox{W}$ & $s[|s|-1].\mbox{end}.\mbox{translate}\wss{(-1,0)}$\\
-\hline
-$ornt = \mbox{E}$ & $s[|s|-1].\mbox{end}.\mbox{translate}\wss{(1,0)}$\\
-\hline
-\end{tabular}
+%\subsection*{Local Functions}
+%
+%pointsInLine: $\mbox{LineT} \rightarrow \mbox{(set of PointT)}$\\
+%
+%\noindent pointsInLine ($l$) 
+%\begin{multline*}
+%\equiv \{ i: \mathbb{N} | i \in [0
+%  .. (l.\mbox{len} - 1)] : l.\mbox{strt}.\mbox{translate}.(
+%\end{multline*} (\wss{\begin{tabular}{|l|l|}
+%\hline
+%$l.orient = \mbox{N}$ & $(0,1)$\\
+%\hline
+%$l.orient = \mbox{S}$ & $(0,-1)$\\
+%\hline
+%$l.orient = \mbox{W}$ & $(-1,0)$\\
+%\hline
+%$l.orient = \mbox{E}$ & $(1,0)$\\
+%\hline
+%\end{tabular}}
+%
+%\noindent adjPt: $\mbox{CompassT} \rightarrow \mbox{PointT}$\\
+%adjPt$(ornt) \equiv$
+%
+%\medskip
+%
+%\begin{tabular}{|l|l|}
+%\hline
+%$ornt = \mbox{N}$ & $s[|s|-1].\mbox{end}.\mbox{translate}\wss{(0,1)}$\\
+%\hline
+%$ornt = \mbox{S}$ & $s[|s|-1].\mbox{end}.\mbox{translate}\wss{(0,-1)}$\\
+%\hline
+%$ornt = \mbox{W}$ & $s[|s|-1].\mbox{end}.\mbox{translate}\wss{(-1,0)}$\\
+%\hline
+%$ornt = \mbox{E}$ & $s[|s|-1].\mbox{end}.\mbox{translate}\wss{(1,0)}$\\
+%\hline
+%\end{tabular}
 
 \newpage
 
