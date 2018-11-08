@@ -29,17 +29,17 @@
 \newcommand{\mthemnum}{M\themnum}
 \newcommand{\mref}[1]{M\ref{#1}}
 
-\title{SE 3XA3: Software Requirements Specification\\Title of Project}
+\title{SE 3XA3: Software Requirements Specification\\Zombie Survival Kit}
 
-\author{Team \#, Team Name
-		\\ Student 1 name and macid
-		\\ Student 2 name and macid
-		\\ Student 3 name and macid
+\author{Team \#6, Group 6ix
+		\\ Mohammad Hussain hussam17
+		\\ Brian Jonatan jonatans
+		\\ Shivaansh Prasann prasanns
 }
 
 \date{\today}
 
-\input{../../Comments}
+%\input{../../Comments}
 
 \begin{document}
 
@@ -150,7 +150,7 @@ decisions will be changed.
 
 \begin{description}
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
-  (Input: File and/or Keyboard, Output: File, Memory, and/or Screen).
+  (Input: File, Keyboard, and Mouse, Output: File, Memory, and Screen).
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] There will always be
   a source of input data external to the software.
 \item ...
@@ -165,7 +165,19 @@ actually be implemented.
 
 \begin{description}
 \item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
-\item ...
+\item [\refstepcounter{mnum} \mthemnum \label{mCISD}:] Component-Items-Software-Decision Module
+\item [\refstepcounter{mnum} \mthemnum \label{mCICSD}:] Component-Items-Consumable-Software-Decision Module
+\item [\refstepcounter{mnum} \mthemnum \label{mCIESD}:] Component-Items-Equipment-Software-Decision Module
+\item [\refstepcounter{mnum} \mthemnum \label{mMESD}:] Manager-Equipment-Software-Decision Module
+\item [\refstepcounter{mnum} \mthemnum \label{mMHSD}:] Manager-Health-Software-Decision Module
+\item [\refstepcounter{mnum} \mthemnum \label{mMISD}:] Manager-Inventory-Software-Decision Module
+\item [\refstepcounter{mnum} \mthemnum \label{mOIBH}:] Object-Interactable-Behaviour-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mOIIBH}:] Object-Interactable-Itemstore-Behaviour-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mPPBH}:] Player-PickUpDropItems-Behaviour-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mUEBH}:] UI-Equipment-Behaviour-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mUESBH}:] UI-Equipment-Slot-Behaviour-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mUIBH}:] UI-Inventory-Behaviour-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mUISBH}:] UI-Inventory-Slot-Behaviour-Hiding Module
 \end{description}
 
 
@@ -176,22 +188,27 @@ actually be implemented.
 \textbf{Level 1} & \textbf{Level 2}\\
 \midrule
 
-{Hardware-Hiding Module} & ~ \\
+{Hardware-Hiding Module} 
+& M1 \\
 \midrule
 
-\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} & ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\ 
-& ?\\
+\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} 
+& M8\\
+& M9\\
+& M10\\
+& M11\\
+& M12\\
+& M13\\
+& M14\\ 
 \midrule
 
-\multirow{3}{0.3\textwidth}{Software Decision Module} & {?}\\
-& ?\\
-& ?\\
+\multirow{3}{0.3\textwidth}{Software Decision Module} 
+& M2\\
+& M3\\
+& M4\\
+& M5\\
+& M6\\
+& M7\\
 \bottomrule
 
 \end{tabular}
@@ -246,16 +263,62 @@ selected.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Input Format Module (\mref{mInput})}
+\subsubsection{Object Interactable (\mref{mOIBH})}
 
 \begin{description}
-\item[Secrets:]The format and structure of the input data.
-\item[Services:]Converts the input data into the data structure used by the
-  input parameters module.
-\item[Implemented By:] [Your Program Name Here]
+\item[Secrets:] Serves as a component on an instantiated Game object. Used to differentiate which Game objects can be interacted with by the player.
+\item[Services:] If a Game object with \mref{mOIBH} as a component receives a valid user input, it will produce some output. 
+\item[Implemented By:] Interactable.cs
 \end{description}
 
-\subsubsection{Etc.}
+\subsubsection{Object Interactable ItemStore (\mref{mOIIBH})}
+
+\begin{description}
+\item[Secrets:] Serves as a component on an instantiated Game object; inherits \mref{mOIBH}. Used to differentiate which Game objects can be stored in the player's inventory.
+\item[Services:] If a Game object with \mref{mOIIBH} as a component receives a valid user input, it will store the item in the player's inventory.
+\item[Implemented By:] ItemStore.cs
+\end{description}
+
+\subsubsection{Player PickUpDropItems  (\mref{mPPBH})}
+
+\begin{description}
+\item[Secrets:] Allows the user to instruct the player to interact with Game objects with \mref{mOIBH} or \mref{mOIIBH} as components through keyboard input.
+\item[Services:] Converts the keyboard input into an output dictated by \mref{mOIBH} or \mref{mOIIBH}.
+\item[Implemented By:] PickupDropItems.cs
+\end{description}
+
+\subsubsection{UI Equipment (\mref{mUEBH})}
+
+\begin{description}
+\item[Secrets:] Input is determined by any changes that occur in the inventory (i.e. if an item is added or removed from the inventory).
+\item[Services:] Converts the changes in the inventory to be displayed in the equipment UI.
+\item[Implemented By:] EquipmentSlot.cs
+\end{description}
+
+\subsubsection{UI Equipment Slot (\mref{mUESBH})}
+
+\begin{description}
+\item[Secrets:] Input is determined by user input through the mouse. Acquires user input if the user clicks on the remove button on any slot in the equipment UI.
+\item[Services:] Once user input is acquired, the equipment item equipped moves back into the player's inventory and both the Equipment UI and Inventory UI updates accordingly.
+  input parameters module.
+\item[Implemented By:] EquipmentSlot.cs
+\end{description}
+
+\subsubsection{UI Inventory (\mref{mUIBH})}
+
+\begin{description}
+\item[Secrets:] Input is determined by any changes that occur in the inventory (If an item is added or removed from the inventory) 
+\item[Services:] The input converts the changes in the inventory to be displayed in the inventory UI.
+\item[Implemented By:] InventoryUI.cs
+\end{description}
+
+\subsubsection{UI Inventory Slot (\mref{mUISBH})}
+
+\begin{description}
+\item[Secrets:] Input is determined by user input through the mouse. Acquires user input if the user clicks on the remove button or the icon button on any slot in the inventory UI.
+\item[Services:] If an input on the remove button is acquired, the item in the inventory is removed from the inventory and the Inventory UI is updated accordingly. If an input on the icon button is acquired, the item is used in some way (depending on the item) and the inventory UI is updated (E.g. If the item is a consumable item, the item's healthModifier will be added to the player's current health; if the item is an equipment item, the item will be equipped, the player's stats will be updated through the attackModifier and defenceModifier,  and the equipment UI will be updated).
+\item[Implemented By:] InventorySlot.cs
+\end{description}
 
 
 \subsection{Software Decision Module}
@@ -271,7 +334,57 @@ selected.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Etc.}
+\subsubsection{Component Items (\mref{mCISD})}
+
+\begin{description}
+\item[Secrets:] Represents the basis of all items that can be used by the player; holds the name of the item, and the sprite icon
+  \emph{not} described in the SRS.
+\item[Services:] -
+\item[Implemented By:] Item.cs
+\end{description}
+
+\subsubsection{Component Items Consumable (\mref{mCICSD})}
+
+\begin{description}
+\item[Secrets:] Represents the basis of all items classified as a consumable that can be "eaten" by the player; holds the "healthModifier" (integer) that, when the consumable item is "eaten", modifies the player's health by this amount.
+\item[Services:] -
+\item[Implemented By:] ConsumableItem.cs
+\end{description}
+
+\subsubsection{Component Items Equipment (\mref{mCIESD})}
+
+\begin{description}
+\item[Secrets:] Represents the basis of all items classified as an equipment that can be equipped by the player; holds the "attackModifier" and "defenceModifier" that, when the equipment is equipped, changes the attack and defence stats of the player by these amounts. It also holds "equipSlot" that determines which slot this equipment item belongs to when equipped.
+\item[Services:] Includes an enum class called equipmentSlot that consists of \{Head, Chest, Legs, Primaryhand, Offhand, Feet\}. Each instance represents the different areas in which equipment items can be equipped to.
+\item[Implemented By:] EquipmentItem.cs
+\end{description}
+
+\subsubsection{Manager Equipment (\mref{mMESD})}
+
+\begin{description}
+\item[Secrets:] Manages any equipment items that are equipped. 
+\item[Services:] Has an array used to hold any equipped equipment items.
+\item[Implemented By:] EquipmentManager.cs
+\end{description}
+
+\subsubsection{Manager Health (\mref{mMHSD})}
+
+\begin{description}
+\item[Secrets:] The design decision based on mathematical theorems, physical
+  facts, or programming considerations. The secrets of this module are
+  \emph{not} described in the SRS.
+\item[Services:] Includes data structure and algorithms used in the system that
+  do not provide direct interaction with the user. 
+\item[Implemented By:] HealthManager.cs
+\end{description}
+
+\subsubsection{Manager Inventory (\mref{mMISD})}
+
+\begin{description}
+\item[Secrets:] Manages any items in the player's inventory.
+\item[Services:] Contains a list that stores all the items in the inventory.
+\item[Implemented By:] Inventory.cs
+\end{description}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -287,16 +400,24 @@ requirements and between the modules and the anticipated changes.
 \textbf{Req.} & \textbf{Modules}\\
 \midrule
 R1 & \mref{mHH}, \mref{mInput}, \mref{mParams}, \mref{mControl}\\
-R2 & \mref{mInput}, \mref{mParams}\\
-R3 & \mref{mVerify}\\
-R4 & \mref{mOutput}, \mref{mControl}\\
-R5 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R6 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R7 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R8 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R9 & \mref{mVerifyOut}\\
-R10 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}\\
-R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
+R2 &  \\
+R3 &  \\
+R4 &  \\
+R5 &  \\
+R6 &  \\
+R7 &  \\
+R8 &  \\
+R9 &  \\
+R10 & \mref{mOIBH}, \mref{mOIIBH},  \mref{mPPBH}  \\
+R11 & \mref{mUIBH} \\
+R12 & \mref{mCISD}, \mref{mCICSD}, \mref{mCIESD}, \mref{mMESD}, \mref{mMISD}, \mref{mUEBH}, \mref{mUESBH}, \mref{mUIBH}, \mref{mUISBH}\\
+R13 &  \\
+R14 &  \\
+R15 &  \\
+R16 &  \\
+R17 &  \\
+R18 &  \\
+R19 &  \\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Requirements and Modules}
