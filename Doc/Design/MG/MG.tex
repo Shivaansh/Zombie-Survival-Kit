@@ -177,7 +177,7 @@ actually be implemented.
 \item [\refstepcounter{mnum} \mthemnum \label{mBHEU}:] EquipmentUI
 \item [\refstepcounter{mnum} \mthemnum \label{mBHES}:] EquipmentSlotUI
 \item [\refstepcounter{mnum} \mthemnum \label{mBHIU}:] InventoryUI
-\item [\refstepcounter{mnum} \mthemnum \label{mBHIS}:] InventorySlotUI
+\item [\refstepcounter{mnum} \mthemnum \label{mBHISU}:] InventorySlotUI
 \item [\refstepcounter{mnum} \mthemnum \label{mBHCC}:] CharacterCombat (Character)
 \item [\refstepcounter{mnum} \mthemnum \label{mSDCS}:] CharacterStats (Manager)
 \item [\refstepcounter{mnum} \mthemnum \label{mSDPS}:] PlayerStats (Manager)
@@ -295,7 +295,7 @@ selected.
 \item[Implemented By:] InventoryUI.cs
 \end{description}
 
-\subsubsection{InventorySlotUI (\mref{mBHIS})}
+\subsubsection{InventorySlotUI (\mref{mBHISU})}
 
 \begin{description}
 \item[Secrets:] Input is determined by user input through the mouse. Acquires user input if the user clicks on the remove button or the icon button on any slot in the inventory UI.
@@ -435,10 +435,45 @@ because they use modules from the lower levels.
 
 \begin{figure}[H]
 \centering
-%\includegraphics[width=0.7\textwidth]{UsesHierarchy.png}
+\includegraphics[scale=0.3]{UsesHierarchy.png}
 \caption{Use hierarchy among modules}
 \label{FigUH}
 \end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Modules} & \textbf{Uses}\\
+\midrule
+\mref{mHH} & ~\\
+\mref{mSDI} & \mref{mHH}\\
+\mref{mSDCI} & \mref{mSDIM}\\
+\mref{mSDEI} & \mref{mSDEM}, \mref{mBHES}, \mref{mSDI}\\
+\mref{mSDEM} & \mref{mSDIM}, \mref{mSDEI}\\
+\mref{mSDIM} & \mref{mSDI}\\
+\mref{mBHI} & ~\\
+\mref{mBHE} & \mref{mBHCC}, \mref{mSDCS}, \mref{mSDPS}, \mref{mBHI}\\
+\mref{mBHIS} & \mref{mSDI}, \mref{mBHI}, \mref{mSDIM}\\
+\mref{mBHIC} & \mref{mBHI}\\
+\mref{mBHEU} & \mref{mSDEM}, \mref{mBHES}\\
+\mref{mBHES} & \mref{mSDEI}, \mref{mSDEM}\\
+\mref{mBHIU} & \mref{mSDIM}, \mref{mBHIS}\\
+\mref{mBHISU} & \mref{mSDIM}\\
+\mref{mBHCC} & \mref{mSDCS}\\
+\mref{mSDCS} & \mref{mSDS}\\
+\mref{mSDPS} & \mref{mSDCS}, \mref{mSDS}, \mref{mSDEM}, \mref{mSDCI}, \mref{mSDEI}\\
+\mref{mSDZS} & \mref{mSDCS}\\
+\mref{mSDS} & ~\\
+\mref{mBHZ} & \mref{mBHCC}, \mref{mSDCS}\\
+\mref{mBHFPS} & ~\\
+\mref{mBHG} & ~\\
+\mref{mBHBD} & \mref{mSDCS}\\
+\bottomrule
+\end{tabular}
+\caption{Use hierarchy among modules in table format for Figure \ref{FigUH}}
+\label{TblACT}
+\end{table}
 
 %\section*{References}
 
