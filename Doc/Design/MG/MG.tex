@@ -165,55 +165,38 @@ actually be implemented.
 
 \begin{description}
 \item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
-\item [\refstepcounter{mnum} \mthemnum \label{mCISD}:] Component-Items-Software-Decision Module
-\item [\refstepcounter{mnum} \mthemnum \label{mCICSD}:] Component-Items-Consumable-Software-Decision Module
-\item [\refstepcounter{mnum} \mthemnum \label{mCIESD}:] Component-Items-Equipment-Software-Decision Module
-\item [\refstepcounter{mnum} \mthemnum \label{mMESD}:] Manager-Equipment-Software-Decision Module
-\item [\refstepcounter{mnum} \mthemnum \label{mMHSD}:] Manager-Health-Software-Decision Module
-\item [\refstepcounter{mnum} \mthemnum \label{mMISD}:] Manager-Inventory-Software-Decision Module
-\item [\refstepcounter{mnum} \mthemnum \label{mOIBH}:] Object-Interactable-Behaviour-Hiding Module
-\item [\refstepcounter{mnum} \mthemnum \label{mOIIBH}:] Object-Interactable-Itemstore-Behaviour-Hiding Module
-\item [\refstepcounter{mnum} \mthemnum \label{mPPBH}:] Player-PickUpDropItems-Behaviour-Hiding Module
-\item [\refstepcounter{mnum} \mthemnum \label{mUEBH}:] UI-Equipment-Behaviour-Hiding Module
-\item [\refstepcounter{mnum} \mthemnum \label{mUESBH}:] UI-Equipment-Slot-Behaviour-Hiding Module
-\item [\refstepcounter{mnum} \mthemnum \label{mUIBH}:] UI-Inventory-Behaviour-Hiding Module
-\item [\refstepcounter{mnum} \mthemnum \label{mUISBH}:] UI-Inventory-Slot-Behaviour-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mSDI}:] Item (Component)
+\item [\refstepcounter{mnum} \mthemnum \label{mSDCI}:] ConsumableItem (Component)
+\item [\refstepcounter{mnum} \mthemnum \label{mSDEI}:] EquipmentItem (Component)
+\item [\refstepcounter{mnum} \mthemnum \label{mSDEM}:] EquipmentManager (Manager)
+\item [\refstepcounter{mnum} \mthemnum \label{mSDIM}:] InventoryManager (Manager)
+\item [\refstepcounter{mnum} \mthemnum \label{mBHI}:] Interactable (Object)
+\item [\refstepcounter{mnum} \mthemnum \label{mBHE}:] Enemy (Object)
+\item [\refstepcounter{mnum} \mthemnum \label{mBHIS}:] ItemStore (Object)
+\item [\refstepcounter{mnum} \mthemnum \label{mBHIC}:] InteractableController (Character)
+\item [\refstepcounter{mnum} \mthemnum \label{mBHEU}:] EquipmentUI
+\item [\refstepcounter{mnum} \mthemnum \label{mBHES}:] EquipmentSlotUI
+\item [\refstepcounter{mnum} \mthemnum \label{mBHIU}:] InventoryUI
+\item [\refstepcounter{mnum} \mthemnum \label{mBHIS}:] InventorySlotUI
+\item [\refstepcounter{mnum} \mthemnum \label{mBHCC}:] CharacterCombat (Character)
+\item [\refstepcounter{mnum} \mthemnum \label{mSDCS}:] CharacterStats (Manager)
+\item [\refstepcounter{mnum} \mthemnum \label{mSDPS}:] PlayerStats (Manager)
+\item [\refstepcounter{mnum} \mthemnum \label{mSDZS}:] ZombieStats (Manager)
+\item [\refstepcounter{mnum} \mthemnum \label{mSDS}:] Stat (Component)
+\item [\refstepcounter{mnum} \mthemnum \label{mBHZ}:] Zombie (Object)
+\item [\refstepcounter{mnum} \mthemnum \label{mBHFPS}:] FirstPersonController (Character)
+\item [\refstepcounter{mnum} \mthemnum \label{mBHG}:] Gun (Object)
+\item [\refstepcounter{mnum} \mthemnum \label{mBHBD}:] BulletDamage (Objects)
 \end{description}
 
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
-\toprule
-\textbf{Level 1} & \textbf{Level 2}\\
-\midrule
-
-{Hardware-Hiding Module} 
-& M1 \\
-\midrule
-
-\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} 
-& M8\\
-& M9\\
-& M10\\
-& M11\\
-& M12\\
-& M13\\
-& M14\\ 
-\midrule
-
-\multirow{3}{0.3\textwidth}{Software Decision Module} 
-& M2\\
-& M3\\
-& M4\\
-& M5\\
-& M6\\
-& M7\\
-\bottomrule
-
+\begin{table}[]
+\begin{tabular}{lllll}
+\cline{1-3}
+\textbf{Level 1}         & \textbf{Level 2}                                                                             & \textbf{Level 3}                                                                             &  &  \\ \cline{1-3}
+Hardware-Hiding Module   & M1                                                                                           &                                                                                              &  &  \\ \cline{1-3}
+Behaviour-Hiding Module  & \begin{tabular}[c]{@{}l@{}}M7  \\ M10\\ M11\\ M12\\ M13\\ M14\\ M15\\ M20\\ M21\\M22\\M23\end{tabular} & M8, M9 (Inherits M7)                                                                         &  &  \\ \cline{1-3}
+Software Decision Module & \begin{tabular}[c]{@{}l@{}}M2  \\ M5\\ M6\\ M16\\ M19\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}M3, M4 (Inherits M2)\\ \\ \\ M17, M18 (Inherits M16)\end{tabular} &  &  \\ \cline{1-3}
 \end{tabular}
-\caption{Module Hierarchy}
-\label{TblMH}
 \end{table}
 
 \section{Connection Between Requirements and Design} \label{SecConnection}
@@ -263,31 +246,31 @@ selected.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Object Interactable (\mref{mOIBH})}
+\subsubsection{Interactable (Object) (\mref{mBHI})}
 
 \begin{description}
 \item[Secrets:] Serves as a component on an instantiated Game object. Used to differentiate which Game objects can be interacted with by the player.
-\item[Services:] If a Game object with \mref{mOIBH} as a component receives a valid user input, it will produce some output. 
+\item[Services:] If a Game object with \mref{mBHI} as a component receives a valid user input, it will produce some output. 
 \item[Implemented By:] Interactable.cs
 \end{description}
 
-\subsubsection{Object Interactable ItemStore (\mref{mOIIBH})}
+\subsubsection{ItemStore (Object) (\mref{mBHIS})}
 
 \begin{description}
-\item[Secrets:] Serves as a component on an instantiated Game object; inherits \mref{mOIBH}. Used to differentiate which Game objects can be stored in the player's inventory.
-\item[Services:] If a Game object with \mref{mOIIBH} as a component receives a valid user input, it will store the item in the player's inventory.
+\item[Secrets:] Serves as a component on an instantiated Game object; inherits \mref{mBHI}. Used to differentiate which Game objects can be stored in the player's inventory.
+\item[Services:] If a Game object with \mref{mBHIS} as a component receives a valid user input, it will store the item in the player's inventory.
 \item[Implemented By:] ItemStore.cs
 \end{description}
 
-\subsubsection{Player PickUpDropItems  (\mref{mPPBH})}
+\subsubsection{InteractableController (Character)  (\mref{mBHIC})}
 
 \begin{description}
-\item[Secrets:] Allows the user to instruct the player to interact with Game objects with \mref{mOIBH} or \mref{mOIIBH} as components through keyboard input.
-\item[Services:] Converts the keyboard input into an output dictated by \mref{mOIBH} or \mref{mOIIBH}.
+\item[Secrets:] Allows the user to instruct the player to interact with Game objects with \mref{mBHI} or \mref{mBHIS} as components through keyboard input.
+\item[Services:] Converts the keyboard input into an output dictated by \mref{mBHI} or \mref{mBHIS}.
 \item[Implemented By:] PickupDropItems.cs
 \end{description}
 
-\subsubsection{UI Equipment (\mref{mUEBH})}
+\subsubsection{EquipmentUI (\mref{mBHEU})}
 
 \begin{description}
 \item[Secrets:] Input is determined by any changes that occur in the inventory (i.e. if an item is added or removed from the inventory).
@@ -295,7 +278,7 @@ selected.
 \item[Implemented By:] EquipmentSlot.cs
 \end{description}
 
-\subsubsection{UI Equipment Slot (\mref{mUESBH})}
+\subsubsection{EquipmentSlotUI (\mref{mBHES})}
 
 \begin{description}
 \item[Secrets:] Input is determined by user input through the mouse. Acquires user input if the user clicks on the remove button on any slot in the equipment UI.
@@ -304,7 +287,7 @@ selected.
 \item[Implemented By:] EquipmentSlot.cs
 \end{description}
 
-\subsubsection{UI Inventory (\mref{mUIBH})}
+\subsubsection{InventoryUI (\mref{mBHIU})}
 
 \begin{description}
 \item[Secrets:] Input is determined by any changes that occur in the inventory (If an item is added or removed from the inventory) 
@@ -312,7 +295,7 @@ selected.
 \item[Implemented By:] InventoryUI.cs
 \end{description}
 
-\subsubsection{UI Inventory Slot (\mref{mUISBH})}
+\subsubsection{InventorySlotUI (\mref{mBHIS})}
 
 \begin{description}
 \item[Secrets:] Input is determined by user input through the mouse. Acquires user input if the user clicks on the remove button or the icon button on any slot in the inventory UI.
@@ -334,7 +317,7 @@ selected.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Component Items (\mref{mCISD})}
+\subsubsection{Item (Component) (\mref{mSDI})}
 
 \begin{description}
 \item[Secrets:] Represents the basis of all items that can be used by the player; holds the name of the item, and the sprite icon
@@ -343,7 +326,7 @@ selected.
 \item[Implemented By:] Item.cs
 \end{description}
 
-\subsubsection{Component Items Consumable (\mref{mCICSD})}
+\subsubsection{ConsumableItem (Component) (\mref{mSDCI})}
 
 \begin{description}
 \item[Secrets:] Represents the basis of all items classified as a consumable that can be "eaten" by the player; holds the "healthModifier" (integer) that, when the consumable item is "eaten", modifies the player's health by this amount.
@@ -351,7 +334,7 @@ selected.
 \item[Implemented By:] ConsumableItem.cs
 \end{description}
 
-\subsubsection{Component Items Equipment (\mref{mCIESD})}
+\subsubsection{EquipmentItem (Component) (\mref{mSDEI})}
 
 \begin{description}
 \item[Secrets:] Represents the basis of all items classified as an equipment that can be equipped by the player; holds the "attackModifier" and "defenceModifier" that, when the equipment is equipped, changes the attack and defence stats of the player by these amounts. It also holds "equipSlot" that determines which slot this equipment item belongs to when equipped.
@@ -359,7 +342,7 @@ selected.
 \item[Implemented By:] EquipmentItem.cs
 \end{description}
 
-\subsubsection{Manager Equipment (\mref{mMESD})}
+\subsubsection{EquipmentManager (Manager) (\mref{mSDEM})}
 
 \begin{description}
 \item[Secrets:] Manages any equipment items that are equipped. 
@@ -367,18 +350,7 @@ selected.
 \item[Implemented By:] EquipmentManager.cs
 \end{description}
 
-\subsubsection{Manager Health (\mref{mMHSD})}
-
-\begin{description}
-\item[Secrets:] The design decision based on mathematical theorems, physical
-  facts, or programming considerations. The secrets of this module are
-  \emph{not} described in the SRS.
-\item[Services:] Includes data structure and algorithms used in the system that
-  do not provide direct interaction with the user. 
-\item[Implemented By:] HealthManager.cs
-\end{description}
-
-\subsubsection{Manager Inventory (\mref{mMISD})}
+\subsubsection{InventoryManager (Manager) (\mref{mSDIM})}
 
 \begin{description}
 \item[Secrets:] Manages any items in the player's inventory.
