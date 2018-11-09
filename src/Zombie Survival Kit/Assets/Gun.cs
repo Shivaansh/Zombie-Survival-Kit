@@ -23,7 +23,7 @@ public class Gun : MonoBehaviour {
 
     [SerializeField] Transform barrelLocation; //location of the gun barrell in 3d space
 
-    //[SerializeField] GameObject muzzleFlashPrefab;
+    [SerializeField] Vector3 offset = new Vector3 (0f, 0.5f, 0f); //point to instantiate bullet
 
     [SerializeField] GameObject cam; //reference to MainCamera object
 
@@ -69,7 +69,6 @@ public class Gun : MonoBehaviour {
 
     /// <summary>  
     ///  shoot: This method shoots a bullet towards a target, and updates the number of bullets in the clip. If the clip is empty, this method reloads the weapon.  
-    ///  It also instantiates a temporary "muzzle flash" at the end of the gun barrell
     /// </summary> 
     void shoot()
     {
@@ -83,9 +82,6 @@ public class Gun : MonoBehaviour {
         {
             reload();
         }
-
-        //GameObject tempFlash;
-        //tempFlash = Instantiate(muzzleFlashPrefab, barrelLocation.position, barrelLocation.rotation);
     }
 
     /// <summary>  

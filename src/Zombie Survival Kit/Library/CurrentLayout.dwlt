@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 39
+  controlID: 994
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 40
+  controlID: 995
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 41
+  controlID: 996
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,20 +368,20 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 18310000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 7ef6ffff80f6ffff82faffff00000000363f0000
+    m_SelectedIDs: ee3a0000
+    m_LastClickedID: 15086
+    m_ExpandedIDs: de86eeffe086eeff46a9eeff0c25efffeefaffffd2fbffffe4fbffff00000000003c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Bullet_45mm_Full
-      m_OriginalName: Bullet_45mm_Full
+      m_Name: FPSController 1
+      m_OriginalName: FPSController 1
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 16182
+      m_UserData: -1145120
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -420,14 +420,14 @@ MonoBehaviour:
     height: 539
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 2376.7889443919316
+  lastFramingTime: 11498.287570833061
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 49.449665, y: 1.4198288, z: 24.178932}
+    m_Target: {x: 49.44983, y: 1.4179544, z: 24.179535}
     speed: 2
-    m_Value: {x: 49.449665, y: 1.4198288, z: 24.178932}
+    m_Value: {x: 49.44983, y: 1.4179544, z: 24.179535}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -455,13 +455,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.00093653303, y: -0.6102718, z: -0.00072063523, w: 0.79219127}
+    m_Target: {x: -0.018345669, y: -0.97543216, z: 0.20059349, w: -0.089206725}
     speed: 2
-    m_Value: {x: -0.00093653303, y: -0.6102718, z: -0.00072063523, w: 0.79219127}
+    m_Value: {x: -0.018345669, y: -0.97543216, z: 0.20059349, w: -0.089206725}
   m_Size:
-    m_Target: 2.6082535
+    m_Target: 0.20825374
     speed: 2
-    m_Value: 2.6082535
+    m_Value: 0.20825374
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -535,11 +535,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Nokobot/ModernGuns_Handguns/Effects
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Nokobot/ModernGuns_Handguns/Effects
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Study Material\3XA3 projects\Zombie_Survival_Kit\src\Zombie
     Survival Kit
@@ -547,9 +547,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 19}
-    m_SelectedIDs: 64390000
-    m_LastClickedID: 14692
-    m_ExpandedIDs: 000000006c2b00007c2b0000902b0000882c0000022d0000362d00006e300000d2300000fa3000005031000066310000c2320000d8330000dc3300009e340000cc340000b03700006c380000c038000066390000083a0000483a0000744300007643000078430000
+    m_SelectedIDs: ea2a0000
+    m_LastClickedID: 10986
+    m_ExpandedIDs: 00000000ea2a0000fa2a00000e2b0000fc2b0000722c0000b02c0000e42f00004830000070300000c6300000da30000034320000483300004c3300000e3400003c340000d437000028380000ce38000068390000a6390000a2420000a4420000a642000046110400
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -577,7 +577,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006c2b00007c2b0000902b0000882c0000022d0000362d00006e300000d2300000fa3000005031000066310000c2320000d8330000dc3300009e340000cc340000b03700006c380000c038000066390000083a0000483a0000744300007643000078430000
+    m_ExpandedIDs: 00000000ea2a0000fa2a00000e2b0000fc2b0000722c0000962c0000b02c00004830000070300000da30000034320000483300004c3300000e3400003c340000d437000028380000ce38000068390000a6390000a2420000a4420000a6420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

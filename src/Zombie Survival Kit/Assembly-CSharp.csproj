@@ -66,7 +66,6 @@
     <Compile Include="Assets\Brian's Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Brian's Scripts\EquipmentSlot.cs" />
     <Compile Include="Assets\Brian's Scripts\EquipmentUI.cs" />
-    <Compile Include="Assets\Brian's Scripts\HealthManager.cs" />
     <Compile Include="Assets\Brian's Scripts\Interactable.cs" />
     <Compile Include="Assets\Brian's Scripts\Inventory.cs" />
     <Compile Include="Assets\Brian's Scripts\InventorySlot.cs" />
