@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : CharacterStats
 {
@@ -69,7 +70,7 @@ public class PlayerStats : CharacterStats
     {
         base.Die();
         //Kill the player, game over screen, reset
-        HealthManager.instance.KillPlayer();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

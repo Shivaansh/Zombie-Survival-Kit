@@ -5,12 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterStats))]
 public class Enemy : Interactable
 {
-    HealthManager playerManager;
+    PlayerStats playerManager;
     CharacterStats enemyStats;
 
     private void Start()
     {
-        playerManager = HealthManager.instance;
+        playerManager = PlayerStats.instance;
         enemyStats = GetComponent<CharacterStats>();
     }
 

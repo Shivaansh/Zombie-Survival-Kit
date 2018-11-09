@@ -12,7 +12,7 @@ public class SimpleShoot : MonoBehaviour
     public Transform casingExitLocation;
 
 
-    public float shotPower = 100f;
+    public float shotPower = 600f;
 
     void Start()
     {
@@ -38,12 +38,12 @@ public class SimpleShoot : MonoBehaviour
        Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
        tempFlash = Instantiate(muzzleFlashPrefab, barrelLocation.position, barrelLocation.rotation);
 
-       // Destroy(tempFlash, 0.5f);
-        //  Instantiate(casingPrefab, casingExitLocation.position, casingExitLocation.rotation).GetComponent<Rigidbody>().AddForce(casingExitLocation.right * 100f);
-        GameObject casing;
-        casing = Instantiate(casingPrefab, casingExitLocation.position, casingExitLocation.rotation) as GameObject;
-        casing.GetComponent<Rigidbody>().AddExplosionForce(shotPower*0.9f, (casingExitLocation.position - casingExitLocation.right * 0.5f), 1f);
-        casing.GetComponent<Rigidbody>().AddTorque(new Vector3(0, Random.Range(100f, 500f), Random.Range(10f, 1000f)), ForceMode.Impulse);
+       //// Destroy(tempFlash, 0.5f);
+       // //  Instantiate(casingPrefab, casingExitLocation.position, casingExitLocation.rotation).GetComponent<Rigidbody>().AddForce(casingExitLocation.right * 100f);
+       // GameObject casing;
+       // casing = Instantiate(casingPrefab, casingExitLocation.position, casingExitLocation.rotation) as GameObject;
+       // casing.GetComponent<Rigidbody>().AddExplosionForce(shotPower*0.9f, (casingExitLocation.position - casingExitLocation.right * 0.5f), 1f);
+       // casing.GetComponent<Rigidbody>().AddTorque(new Vector3(0, Random.Range(100f, 500f), Random.Range(10f, 1000f)), ForceMode.Impulse);
     }
 
 
