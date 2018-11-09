@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour
     /* The minimum distance the player must be with the Interactable GameObject 
      * to interact with, and to keep the interaction with the GameObject.
      */
-    public float radius;
+    private float radius = 3f;
     /* Shows if the the Interactable GameObject is being focused on.
      */
     public bool isFocus = false;
@@ -62,7 +62,7 @@ public class Interactable : MonoBehaviour
     {
         isFocus = true;
         player = playerTransform;
-        hasInteracted = false;
+        hasInteracted = true;
     }
 
     /// <summary>

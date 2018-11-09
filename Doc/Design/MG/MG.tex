@@ -267,7 +267,7 @@ selected.
 \begin{description}
 \item[Secrets:] Allows the user to instruct the player to interact with Game objects with \mref{mBHI} or \mref{mBHIS} as components through keyboard input.
 \item[Services:] Converts the keyboard input into an output dictated by \mref{mBHI} or \mref{mBHIS}.
-\item[Implemented By:] PickupDropItems.cs
+\item[Implemented By:] InteractableController.cs
 \end{description}
 
 \subsubsection{EquipmentUI (\mref{mBHEU})}
@@ -278,7 +278,7 @@ selected.
 \item[Implemented By:] EquipmentSlot.cs
 \end{description}
 
-\subsubsection{EquipmentSlotUI (\mref{mBHES})}
+\subsubsection{EquipmentSlotUI (\mref{mBHESU})}
 
 \begin{description}
 \item[Secrets:] Input is determined by user input through the mouse. Acquires user input if the user clicks on the remove button on any slot in the equipment UI.
@@ -447,16 +447,16 @@ because they use modules from the lower levels.
 \textbf{Modules} & \textbf{Uses}\\
 \midrule
 \mref{mHH} & ~\\
-\mref{mSDI} & \mref{mHH}\\
-\mref{mSDCI} & \mref{mSDIM}\\
-\mref{mSDEI} & \mref{mSDEM}, \mref{mBHES}, \mref{mSDI}\\
+\mref{mSDI} & \mref{mSDIM}\\
+\mref{mSDCI} & \mref{mSDI}, \mref{mSDIM}\\
+\mref{mSDEI} & \mref{mSDI}, \mref{mSDEM}, \mref{mBHESU}\\
 \mref{mSDEM} & \mref{mSDIM}, \mref{mSDEI}\\
 \mref{mSDIM} & \mref{mSDI}\\
 \mref{mBHI} & ~\\
 \mref{mBHE} & \mref{mBHCC}, \mref{mSDCS}, \mref{mSDPS}, \mref{mBHI}\\
 \mref{mBHIS} & \mref{mSDI}, \mref{mBHI}, \mref{mSDIM}\\
 \mref{mBHIC} & \mref{mBHI}\\
-\mref{mBHEU} & \mref{mSDEM}, \mref{mBHES}\\
+\mref{mBHEU} & \mref{mSDEM}, \mref{mBHESU}\\
 \mref{mBHESU} & \mref{mSDEI}, \mref{mSDEM}\\
 \mref{mBHIU} & \mref{mSDIM}, \mref{mBHIS}\\
 \mref{mBHISU} & \mref{mSDIM}\\
