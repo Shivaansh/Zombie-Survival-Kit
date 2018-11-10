@@ -55,8 +55,8 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+11/08/2018 & 1.0 & Added initial content and uses hierarchy figure\\
+11/09/2018 & 1.1 & Mohammad - Added my modules and finished req-module conneciton\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -67,54 +67,38 @@ Date 2 & 1.1 & Notes\\
 
 \section{Introduction}
 
-Decomposing a system into modules is a commonly accepted approach to developing
-software.  A module is a work assignment for a programmer or programming
-team~\citep{ParnasEtAl1984}.  We advocate a decomposition
-based on the principle of information hiding~\citep{Parnas1972a}.  This
-principle supports design for change, because the ``secrets'' that each module
-hides represent likely future changes.  Design for change is valuable in SC,
-where modifications are frequent, especially during initial development as the
-solution space is explored.  
 
-Our design follows the rules layed out by \citet{ParnasEtAl1984}, as follows:
-\begin{itemize}
-\item System details that are likely to change independently should be the
-  secrets of separate modules.
-\item Each data structure is used in only one module.
-\item Any other program that requires information stored in a module's data
-  structures must obtain it by calling access programs belonging to that module.
-\end{itemize}
+Zombie Survival Kit is a template for game developers to use as a starting ground for their own implementation of a First-Person Zombie Survival Shooter game. This project includes various mechanics that can be customized by game developers according to their own preferences.\\
+\newline
+The purpose of this module guide is to provide an overview of the various modules that have been implemented in this project and to serve as a reference document to help identify possible changes and facilitate the 'design for change' principle of our project. This document also serves as a starting point to help isolate any errors or bugs that may be encountered in the future.\\
+\newline
+This document includes a list of all the modules that have currently been implemented in our project, a Uses hierarchy for all modules, all the dependencies between various modules, as well as certain changes that may or may not be implemented in future versions of the project.
 
-After completing the first stage of the design, the Software Requirements
-Specification (SRS), the Module Guide (MG) is developed~\citep{ParnasEtAl1984}. The MG
-specifies the modular structure of the system and is intended to allow both
-designers and maintainers to easily identify the parts of the software.  The
-potential readers of this document are as follows:
+\newpage
+%Decomposing a system into modules is a commonly accepted approach to developing
+%software.  A module is a work assignment for a programmer or programming
+%team~\citep{ParnasEtAl1984}.  We advocate a decomposition
+%based on the principle of information hiding~\citep{Parnas1972a}.  This
+%principle supports design for change, because the ``secrets'' that each module
+%hides represent likely future changes.  Design for change is valuable in SC,
+%where modifications are frequent, especially during initial development as the
+%solution space is explored.  
 
-\begin{itemize}
-\item New project members: This document can be a guide for a new project member
-  to easily understand the overall structure and quickly find the
-  relevant modules they are searching for.
-\item Maintainers: The hierarchical structure of the module guide improves the
-  maintainers' understanding when they need to make changes to the system. It is
-  important for a maintainer to update the relevant sections of the document
-  after changes have been made.
-\item Designers: Once the module guide has been written, it can be used to
-  check for consistency, feasibility and flexibility. Designers can verify the
-  system in various ways, such as consistency among modules, feasibility of the
-  decomposition, and flexibility of the design.
-\end{itemize}
 
-The rest of the document is organized as follows. Section
-\ref{SecChange} lists the anticipated and unlikely changes of the software
-requirements. Section \ref{SecMH} summarizes the module decomposition that
-was constructed according to the likely changes. Section \ref{SecConnection}
-specifies the connections between the software requirements and the
-modules. Section \ref{SecMD} gives a detailed description of the
-modules. Section \ref{SecTM} includes two traceability matrices. One checks
-the completeness of the design against the requirements provided in the SRS. The
-other shows the relation between anticipated changes and the modules. Section
-\ref{SecUse} describes the use relation between modules.
+%\begin{itemize}
+%\item New project members: This document can be a guide for a new project member
+%  to easily understand the overall structure and quickly find the
+%  relevant modules they are searching for.
+%\item Maintainers: The hierarchical structure of the module guide improves the
+%  maintainers' understanding when they need to make changes to the system. It is
+%  important for a maintainer to update the relevant sections of the document
+%  after changes have been made.
+%\item Designers: Once the module guide has been written, it can be used to
+%  check for consistency, feasibility and flexibility. Designers can verify the
+%  system in various ways, such as consistency among modules, feasibility of the
+%  decomposition, and flexibility of the design.
+%\end{itemize}
+
 
 \section{Anticipated and Unlikely Changes} \label{SecChange}
 
@@ -125,36 +109,26 @@ unlikely changes are listed in Section \ref{SecUchange}.
 
 \subsection{Anticipated Changes} \label{SecAchange}
 
-Anticipated changes are the source of the information that is to be hidden
-inside the modules. Ideally, changing one of the anticipated changes will only
-require changing the one module that hides the associated decision. The approach
-adapted here is called design for
-change.
-
 \begin{description}
 \item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
   hardware on which the software is running.
-\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] The format of the
-  initial input data.
-\item ...
+\item[\refstepcounter{acnum} \actheacnum \label{acAnimations}:] The animations used for firing weapons in the game.
+\item[\refstepcounter{acnum} \actheacnum \label{acSounds}:] The sounds used for firing and reloading weapons in the game.
+\item[\refstepcounter{acnum} \actheacnum \label{acFireRate}:] The rate of firing for the gun in the game.
+\item[\refstepcounter{acnum} \actheacnum \label{acHealth}:] The values of health and damage for various characters in the game.
 \end{description}
 
 \subsection{Unlikely Changes} \label{SecUchange}
-
-The module design should be as general as possible. However, a general system is
-more complex. Sometimes this complexity is not necessary. Fixing some design
-decisions at the system architecture stage can simplify the software design. If
-these decision should later need to be changed, then many parts of the design
-will potentially need to be modified. Hence, it is not intended that these
-decisions will be changed.
 
 \begin{description}
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
   (Input: File, Keyboard, and Mouse, Output: File, Memory, and Screen).
 \item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] There will always be
   a source of input data external to the software.
-\item ...
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucAPI}:] The Unity API may be changed/updated.
 \end{description}
+
+\newpage 
 
 \section{Module Hierarchy} \label{SecMH}
 
@@ -197,6 +171,8 @@ Hardware-Hiding Module   & M1                                                   
 Behaviour-Hiding Module  & \begin{tabular}[c]{@{}l@{}}M7  \\ M10\\ M11\\ M12\\ M13\\ M14\\ M15\\ M20\\ M21\\M22\\M23\end{tabular} & M8, M9 (Inherits M7)                                                                         &  &  \\ \cline{1-3}
 Software Decision Module & \begin{tabular}[c]{@{}l@{}}M2  \\ M5\\ M6\\ M16\\ M19\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}M3, M4 (Inherits M2)\\ \\ \\ M17, M18 (Inherits M16)\end{tabular} &  &  \\ \cline{1-3}
 \end{tabular}
+\caption{Module Hierarchy}
+\label{TblMH}
 \end{table}
 
 \section{Connection Between Requirements and Design} \label{SecConnection}
@@ -205,23 +181,9 @@ The design of the system is intended to satisfy the requirements developed in
 the SRS. In this stage, the system is decomposed into modules. The connection
 between requirements and modules is listed in Table \ref{TblRT}.
 
+\newpage
+
 \section{Module Decomposition} \label{SecMD}
-
-Modules are decomposed according to the principle of ``information hiding''
-proposed by \citet{ParnasEtAl1984}. The \emph{Secrets} field in a module
-decomposition is a brief statement of the design decision hidden by the
-module. The \emph{Services} field specifies \emph{what} the module will do
-without documenting \emph{how} to do it. For each module, a suggestion for the
-implementing software is given under the \emph{Implemented By} title. If the
-entry is \emph{OS}, this means that the module is provided by the operating
-system or by standard programming language libraries.  Also indicate if the
-module will be implemented specifically for the software.
-
-Only the leaf modules in the
-hierarchy have to be implemented. If a dash (\emph{--}) is shown, this means
-that the module is not a leaf and will not have to be implemented. Whether or
-not this module is implemented depends on the programming language
-selected.
 
 \subsection{Hardware Hiding Modules (\mref{mHH})}
 
@@ -249,15 +211,23 @@ selected.
 \subsubsection{Interactable (Object) (\mref{mBHI})}
 
 \begin{description}
-\item[Secrets:] Serves as a component on an instantiated Game object. Used to differentiate which Game objects can be interacted with by the player.
+\item[Secrets:] Component on an instantiated Game object. Used to differentiate which Game objects can be interacted with by the player.
 \item[Services:] If a Game object with \mref{mBHI} as a component receives a valid user input, it will produce some output. 
 \item[Implemented By:] Interactable.cs
+\end{description}
+
+\subsubsection{Enemy (Object) (\mref{mBHE})}
+
+\begin{description}
+\item[Secrets:] Component on an instantiated Game object; inherits \mref{mBHI}. Used to differentiate different enemies that the player can attack.
+\item[Services:] If a Game object with \mref{mBHE} as a component receives a valid user input, it will store attack the enemy.
+\item[Implemented By:] Enemy.cs
 \end{description}
 
 \subsubsection{ItemStore (Object) (\mref{mBHIS})}
 
 \begin{description}
-\item[Secrets:] Serves as a component on an instantiated Game object; inherits \mref{mBHI}. Used to differentiate which Game objects can be stored in the player's inventory.
+\item[Secrets:] Component on an instantiated Game object; inherits \mref{mBHI}. Used to differentiate which Game objects can be stored in the player's inventory.
 \item[Services:] If a Game object with \mref{mBHIS} as a component receives a valid user input, it will store the item in the player's inventory.
 \item[Implemented By:] ItemStore.cs
 \end{description}
@@ -303,6 +273,46 @@ selected.
 \item[Implemented By:] InventorySlot.cs
 \end{description}
 
+\subsubsection{CharacterCombat (Character) (\mref{mBHCC})}
+
+\begin{description}
+	\item[Secrets:] Serves as a component on an instantiated Player or Zombie game object. Used to apply damage from one character to another.
+	\item[Services:] If the attack cooldown reaches 0, the Attack() method is called to apply damage from the attacker to the target and the cooldown is reset.
+	\item[Implemented By:] CharacterCombat.cs
+\end{description}
+
+\subsubsection{Zombie (Object) (\mref{mBHZ})}
+
+\begin{description}
+	\item[Secrets:] Serves as a component on an instantiated Zombie game object. Used to define the enemy's movement and attacking behaviour.
+	\item[Services:] In passive state, the enemy wanders around in random directions and switches to attack state if the player gets too close. In attack state, the zombie follows and attacks the player and returns back to spawn if it runs too far.
+	\item[Implemented By:] Zombie.cs
+\end{description}
+
+\subsubsection{FirstPersonController (Character) (\mref{mBHFPS})}
+
+\begin{description}
+	\item[Secrets:] Serves as a component on the instantiated Player game object. Used to control player movement and camera.
+	\item[Services:] -
+	\item[Implemented By:] Unity Standard Asset Scripts
+\end{description}
+
+\subsubsection{Gun (Object) (\mref{mBHG})}
+
+\begin{description}
+	\item[Secrets:] Input is determined by user input through the mouse or the keyboard. Acquires user input if the user clicks on the left mouse button or the R button on the keyboard when a gun is equipped.
+	\item[Services:] If an input through the left mouse button is acquired, the gun either fires a bullet or reloads itself (depending on the number of bullets in the clip) and the corresponding sound effect is played. If an input on the R button is acquired, the gun is reloaded.
+	\item[Implemented By:] Gun.cs
+\end{description}
+
+\subsubsection{BulletDamage (Objects) (\mref{mBHBD})}
+
+\begin{description}
+	\item[Secrets:] Serves as a component on an instantiated Bullet GameObject. Used to detect collisions with other objects in the game environment and take corresponding actions.
+	\item[Services:] If a Bullet GameObject collides with an object having a Collider component attached, the module checks if the object is an Enemy. If yes, then the Enemy takes some amount of damage and the bullet gets destroyed. In all other cases, the bullet gets destroyed
+	\item[Implemented By:] BulletDamage.cs
+\end{description}
+
 
 \subsection{Software Decision Module}
 
@@ -329,7 +339,7 @@ selected.
 \subsubsection{ConsumableItem (Component) (\mref{mSDCI})}
 
 \begin{description}
-\item[Secrets:] Represents the basis of all items classified as a consumable that can be "eaten" by the player; holds the "healthModifier" (integer) that, when the consumable item is "eaten", modifies the player's health by this amount.
+\item[Secrets:] Represents the basis of all items classified as a consumable that can be "eaten" by the player; holds the "healthModifier" (integer) that, when the consumable item is "eaten", modifies the player's health by this amount. Inherits \mref{mSDI}.
 \item[Services:] -
 \item[Implemented By:] ConsumableItem.cs
 \end{description}
@@ -337,7 +347,7 @@ selected.
 \subsubsection{EquipmentItem (Component) (\mref{mSDEI})}
 
 \begin{description}
-\item[Secrets:] Represents the basis of all items classified as an equipment that can be equipped by the player; holds the "attackModifier" and "defenceModifier" that, when the equipment is equipped, changes the attack and defence stats of the player by these amounts. It also holds "equipSlot" that determines which slot this equipment item belongs to when equipped.
+\item[Secrets:] Represents the basis of all items classified as an equipment that can be equipped by the player; holds the "attackModifier" and "defenceModifier" that, when the equipment is equipped, changes the attack and defence stats of the player by these amounts. It also holds "equipSlot" that determines which slot this equipment item belongs to when equipped. Inherits \mref{mSDI}.
 \item[Services:] Includes an enum class called equipmentSlot that consists of \{Head, Chest, Legs, Primaryhand, Offhand, Feet\}. Each instance represents the different areas in which equipment items can be equipped to.
 \item[Implemented By:] EquipmentItem.cs
 \end{description}
@@ -358,6 +368,39 @@ selected.
 \item[Implemented By:] Inventory.cs
 \end{description}
 
+\subsubsection{CharacterStats (Manager) (\mref{mSDCS})}
+
+\begin{description}
+\item[Secrets:] Holds damage and armour stats for any character (player or zombies) and the method to take damage and remove from the current health.
+\item[Services:] Includes two stat variables that track the damage and armour of the character.
+\item[Implemented By:] CharacterStats.cs
+\end{description}
+
+\subsubsection{PlayerStats (Manager) (\mref{mSDPS})}
+
+\begin{description}
+\item[Secrets:] Manages modifiers from consumable and equipment items to be applied and removed from the player. Inherits \mref{mSDCS}.
+\item[Services:] -
+\item[Implemented By:] PlayerStats.cs
+\end{description}
+
+\subsubsection{ZombieStats (Manager) (\mref{mSDZS})}
+
+\begin{description}
+\item[Secrets:] Manages events that occur when the zombie dies. Inherits \mref{mSDCS}.
+\item[Services:] -
+\item[Implemented By:] ZombieStats.cs
+\end{description}
+
+\subsubsection{Stat (Component) (\mref{mSDS})}
+
+\begin{description}
+\item[Secrets:] Manages initial values and modifiers to a stat.
+\item[Services:] Has a list of integers to hold each added armour or damage modifier
+\item[Implemented By:] Stat.cs
+\end{description}
+
+\newpage
 \section{Traceability Matrix} \label{SecTM}
 
 This section shows two traceability matrices: between the modules and the
@@ -371,25 +414,25 @@ requirements and between the modules and the anticipated changes.
 \toprule
 \textbf{Req.} & \textbf{Modules}\\
 \midrule
-R1 & \mref{mHH}, \mref{mInput}, \mref{mParams}, \mref{mControl}\\
-R2 &  \\
-R3 &  \\
-R4 &  \\
-R5 &  \\
-R6 &  \\
-R7 &  \\
-R8 &  \\
-R9 &  \\
+R1 & \mref{mBHFPS}\\
+R2 & \mref{mBHFPS} \\
+R3 & \mref{mBHZ} \\
+R4 & \mref{mBHZ}\\
+R5 & \mref{mBHZ}\\
+R6 & \mref{mBHZ} \\
+R7 & \mref{mBHZ}, \mref{mSDCS} \\
+R8 & \mref{mSDI}, \mref{mSDCI}, \mref{mSDEI}, \mref{mSDZS} \\
+R9 &  \mref{mSDI}, \mref{mSDCI}, \mref{mSDEI}, \mref{mSDZS} \\
 R10 & \mref{mBHI}, \mref{mBHIS},  \mref{mBHIC}  \\
 R11 & \mref{mBHIU} \\
 R12 & \mref{mSDI}, \mref{mSDCI}, \mref{mSDEI}, \mref{mSDEM}, \mref{mSDIM}, \mref{mBHEU}, \mref{mBHESU}, \mref{mBHIU}, \mref{mBHISU}\\
-R13 &  \\
-R14 &  \\
-R15 &  \\
-R16 &  \\
-R17 &  \\
-R18 &  \\
-R19 &  \\
+R13 & \mref{mBHE}, \mref{mBHIC}, \mref{mBHG}\\ 
+R14 &  Not yet implemented.\\
+R15 &  Not yet implemented.\\
+R16 &  \mref{mBHCC}, \mref{mSDCS}\\
+R17 &  \mref{mBHE}, \mref{mBHCC},  \mref{mSDCS},  \mref{mBHBD}\\ 
+R18 &  \mref{mSDCS}\\
+R19 &  \mref{mSDPS}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Requirements and Modules}
@@ -403,17 +446,20 @@ R19 &  \\
 \textbf{AC} & \textbf{Modules}\\
 \midrule
 \acref{acHardware} & \mref{mHH}\\
-\acref{acInput} & \mref{mInput}\\
-\acref{acParams} & \mref{mParams}\\
-\acref{acVerify} & \mref{mVerify}\\
-\acref{acOutput} & \mref{mOutput}\\
-\acref{acVerifyOut} & \mref{mVerifyOut}\\
-\acref{acODEs} & \mref{mODEs}\\
-\acref{acEnergy} & \mref{mEnergy}\\
-\acref{acControl} & \mref{mControl}\\
-\acref{acSeqDS} & \mref{mSeqDS}\\
-\acref{acSolver} & \mref{mSolver}\\
-\acref{acPlot} & \mref{mPlot}\\
+\acref{acAnimations} & \mref{mBHG}\\
+\acref{acSounds} & \mref{mBHG}\\
+\acref{acFireRate} & \mref{mBHG}\\
+\acref{acHealth} & \mref{mSDCS}\\
+%\acref{acParams} & \mref{mParams}\\
+%\acref{acVerify} & \mref{mVerify}\\
+%\acref{acOutput} & \mref{mOutput}\\
+%\acref{acVerifyOut} & \mref{mVerifyOut}\\
+%\acref{acODEs} & \mref{mODEs}\\
+%\acref{acEnergy} & \mref{mEnergy}\\
+%\acref{acControl} & \mref{mControl}\\
+%\acref{acSeqDS} & \mref{mSeqDS}\\
+%\acref{acSolver} & \mref{mSolver}\\
+%\acref{acPlot} & \mref{mPlot}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}
@@ -421,17 +467,6 @@ R19 &  \\
 \end{table}
 
 \section{Use Hierarchy Between Modules} \label{SecUse}
-
-In this section, the uses hierarchy between modules is
-provided. \citet{Parnas1978} said of two programs A and B that A {\em uses} B if
-correct execution of B may be necessary for A to complete the task described in
-its specification. That is, A {\em uses} B if there exist situations in which
-the correct functioning of A depends upon the availability of a correct
-implementation of B.  Figure \ref{FigUH} illustrates the use relation between
-the modules. It can be seen that the graph is a directed acyclic graph
-(DAG). Each level of the hierarchy offers a testable and usable subset of the
-system, and modules in the higher level of the hierarchy are essentially simpler
-because they use modules from the lower levels.
 
 \begin{figure}[H]
 \centering
@@ -468,7 +503,7 @@ because they use modules from the lower levels.
 \mref{mBHZ} & \mref{mBHCC}, \mref{mSDCS}\\
 \mref{mBHFPS} & ~\\
 \mref{mBHG} & ~\\
-\mref{mBHBD} & \mref{mSDCS}\\
+\mref{mBHBD} & \mref{mSDZS}\\
 \bottomrule
 \end{tabular}
 \caption{Use hierarchy among modules in table format for Figure \ref{FigUH}}

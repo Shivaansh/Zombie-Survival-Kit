@@ -398,7 +398,7 @@ Inventory
 
 \subsubsection* {Exported Types}
 
-Item, List<>
+Item, List
 
 \subsubsection* {Exported Access Programs}
 
@@ -537,6 +537,64 @@ This module is attatched to any GameObject that the player can interact with.
 \item exception: None
 \end{itemize}
 
+\section* {\mref{mBHE} Enemy}
+
+\subsection*{Template Module}
+
+Enemy
+
+\subsection* {Uses}
+
+\mref{mSDI}, \mref{mBHCC}, \mref{mSDCS}, \mref{mSDPS}
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+PlayerStats, CharacterStats, CharacterCombat
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+Start & ~ & ~  & ~\\
+Interact & ~ & ~ & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+playerManager: $PlayerStats$\\
+enemyStats: $CharacterStats$\\
+
+\subsubsection* {State Invariant}
+
+None
+
+\subsubsection* {Assumptions}
+
+This module inherits from the Interactable class.
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent Start():
+\begin{itemize}
+\item translation: Initializes enemyStats with the current CharacterStats component on the zombie game object that this script is attached to and playerManager with an instance of the player so the program knows where the attack is coming from.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent Interact():
+\begin{itemize}
+\item translation: Calls the base Interact method from Interactable and creates a CharacterCombat (CC) variable with the CC component from the playerManager. Calls the Attack() method on this CC variable with the enemyStats variable as the parameter for whose stats to affect as a result of the player attack.
+\item output: None
+\item exception: None
+\end{itemize}
+
 \newpage
 
 \section* {\mref{mBHIS} ItemStore}
@@ -580,6 +638,8 @@ None
 
 This module is attatched to any GameObject that the player can interact with. 
 
+\newpage
+
 \subsubsection* {Access Routine Semantics}
 
 \noindent Interact():
@@ -613,7 +673,7 @@ InteractableController
 
 \subsubsection* {Exported Types}
 
-Interactable, RaycastHit, GameObject, Vector3, Physics, Input,
+None
 
 \subsubsection* {Exported Access Programs}
 
@@ -832,7 +892,7 @@ A module used as a component to GameObjects. State variable slotNumber will have
 
 \newpage
 
-\section* {\mref{mBHEI} InventoryUI}
+\section* {\mref{mBHIU} InventoryUI}
 
 \subsection*{Template Module}
 
@@ -978,5 +1038,606 @@ A module used as a component to GameObjects. State variable slotNumber will have
 \end{itemize}
 
 \newpage
+
+\section* {\mref{mBHCC} CharacterCombat}
+
+\subsection*{Template Module}
+
+CharacterCombat
+
+\subsection* {Uses}
+
+\mref{mSDCS}
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+CharacterStats
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+Start & ~ & ~  & ~\\
+Update & ~ & ~ & ~\\
+Attack & CharacterStats & ~ & ~\\
+DoDamage & CharacterStats, $\mathbb{R}$ & IEnumerator & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+attackerStats: $CharacterStats$\\
+attackSpeed: $\mathbb{R}$ \\
+attackCooldown: $\mathbb{R}$ \\
+attackDelay: $\mathbb{R}$ \\
+
+\subsubsection* {State Invariant}
+
+attackDelay = 1.5
+
+\subsubsection* {Assumptions}
+
+This module requires the component to be of type CharacterStats. 
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent Start():
+\begin{itemize}
+\item translation: Initializes attackerStats with the CharacterStats component on the game object this script is attached to.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent Update():
+\begin{itemize}
+\item translation: Subtracts "Time.deltaTime" from the attackCooldown every Update.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent Attack(CharacterStats targetStats):
+\begin{itemize}
+\item translation: Runs the DoDamage() method once the attackCooldown reaches 0 and resets the cooldown back to 1 divided by the attackSpeed.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent DoDamage(CharacterStats stats, float delay):
+\begin{itemize}
+\item translation: Runs the TakeDamage() function on the stats parameter with the attackerStats damage value.
+\item output: $out := WaitForSecondsDelay(delay)$, so the attack only commences after the delay timer is over.
+\item exception: None
+\end{itemize}
+
+\newpage
+
+\section* {\mref{mSDCS} CharacterStats}
+
+\subsection*{Template Module}
+
+CharacterStats
+
+\subsection* {Uses}
+
+\mref{mSDS}
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+Stat
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+Start & ~ & ~  & ~\\
+TakeDamage & $\mathbb{N}$  & ~ & ~\\
+Die & ~  & ~ & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+maxHealth: $\mathbb{N}$ \\
+curHealth: $\mathbb{N}$ \\
+dmg: $Stat$\\
+armour: $Stat$\\
+
+\subsubsection* {State Invariant}
+
+maxHealth = 100
+
+\subsubsection* {Assumptions}
+
+None
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent Start():
+\begin{itemize}
+\item translation: Initializes curHealth as the maxHealth.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent TakeDamage(int damage):
+\begin{itemize}
+\item translation: Subtracts the armour from the damage parameter and substracts this modified damage from the curHealth. If the health goes below 0, Die() is called.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent Die():
+\begin{itemize}
+\item translation: Only displays a log message as this method is overwritten in PlayerStats/ZombieStats.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\newpage
+
+\section* {\mref{mSDPS} PlayerStats}
+
+\subsection*{Template Module}
+
+PlayerStats
+
+\subsection* {Uses}
+
+\mref{mSDCI}, \mref{mSDEI}, \mref{mSDEM}, \mref{mSDCS}, \mref{mSDS}
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+PlayerStats
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+Awake & ~ & ~  & ~\\
+Start & ~  & ~ & ~\\
+OnEquipmentChanged & EquipmentItem, EquipmentItem  & ~ & ~\\
+Eat & ConsumableItem  & ~ & ~\\
+Die & ~  & ~ & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+instance: $PlayerStats$ \\
+player: $GameObject$ \\
+
+\subsubsection* {State Invariant}
+
+None
+
+\subsubsection* {Assumptions}
+
+This module inherits from CharacterStats.
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent Awake():
+\begin{itemize}
+\item translation: Initializes the PlayerStats instance to "this" instance of the class (for a constant reference to the Player Object in Unity)
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent Start():
+\begin{itemize}
+\item translation: Initializes curHealth as maxHealth and the onEquipmentChanged delegate inside the EquipmentManager as the OnEquipmentChanged method in this class.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent OnEquipmentChanged(EquipmentItem newItem, EquipmentItem oldItem):
+\begin{itemize}
+\item translation: Adds the defence and attack modifiers of the newItem to the armour and damage stat respectively.  Removes the defence and attack modifiers of the oldItem to the armour and damage stat respectively. 
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent Eat(ConsumableItem consumable):
+\begin{itemize}
+\item translation: Adds the health modifier of the consumable item to the curHealth.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent Die():
+\begin{itemize}
+\item translation: Calls the base Die() method from CharacterStats and resets the scene.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\newpage
+
+\section* {\mref{mSDZS} ZombieStats}
+
+\subsection*{Template Module}
+
+ZombieStats
+
+\subsection* {Uses}
+
+\mref{mSDCS}
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+None
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+Die & ~  & ~ & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+None
+
+\subsubsection* {State Invariant}
+
+None
+
+\subsubsection* {Assumptions}
+
+This module inherits from CharacterStats.
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent Die():
+\begin{itemize}
+\item translation: Calls the base Die() method from CharacterStats and destroys the zombie game object this script is attached to.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\newpage
+
+\section* {\mref{mSDS} Stat}
+
+\subsection*{Template Module}
+
+Stat
+
+\subsection* {Uses}
+
+None
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+List
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+GetValue & ~ & $\mathbb{N}$  & ~\\
+AddToStat & $\mathbb{N}$  & ~ & ~\\
+RemoveFromStat & $\mathbb{N}$m  & ~ & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+initialValue: $\mathbb{N}$ \\
+statChanges: $List<int>$ \\
+
+\subsubsection* {State Invariant}
+
+None
+
+\subsubsection* {Assumptions}
+
+None
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent GetValue():
+\begin{itemize}
+\item translation: Initalizes finalValue as the initialValue then adds each statChange in the list to the finalValue to apply the modifiers from equipment and weapons
+\item output: $out := finalValue$
+\item exception: None
+\end{itemize}
+
+\noindent AddToStat(int stat):
+\begin{itemize}
+\item translation: Adds the stat parameter to the statChanges list
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent RemoveFromStat(int stat):
+\begin{itemize}
+\item translation: Removes the stat parameter from the statChanges list
+\item output: None
+\item exception: None
+\end{itemize}
+
+\newpage
+
+\section* {\mref{mBHZ} Zombie}
+
+\subsection*{Template Module}
+
+Zombie
+
+\subsection* {Uses}
+
+\mref{mBHCC}, \mref{mSDCS}
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+Animator, NavMeshAgent, Vector3, CharacterCombat, CharacterStats
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+Start & ~  & ~ & ~\\
+Update & ~  & ~ & ~\\
+MoveToTarget & ~  & ~ & ~\\
+LookAtTarget & Vector3  & ~ & ~\\
+RandomMovement & ~  & ~ & ~\\
+onDrawGizmos & ~  & ~ & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+detectRadius: $\mathbb{R}$ \\
+returnToSpawnRadius: $\mathbb{R}$ \\
+distanceToPlayer: $\mathbb{R}$ \\
+distanceToSpawn: $\mathbb{R}$ \\
+randomAngle: $\mathbb{R}$ \\
+animator: $Animator$ \\
+player: $Transform$ \\
+agent: $NavMeshAgent$ \\
+target: $Vector3$ \\
+spawnLocation: $Vector3$ \\
+enemyCombat: $CharacterCombat$ \\
+playerStats: $CharacterStats$ \\
+enemyState: $enum$ $EnemyStates$ 
+
+\subsubsection* {State Invariant}
+
+detectRadius = 5.0 \\
+returnToSpawnRadius = 25.0 \\
+
+\subsubsection* {Assumptions}
+
+None
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent Start():
+\begin{itemize}
+\item translation: Initializes the spawnLocation as the initial position of the transform and gets components for each state variable from the zombie that this script is attached to.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent Update():
+\begin{itemize}
+\item translation: In the Passive state, continuously run RandomMovement() and check if the distanceToPlayer comes within the detectRadius, in which case switch to Attack state. In the Attack state, continously call MoveToTarget() to follow the player and check if the distanceToPlayer comes within stopping distance, in which case play the attack animation and attack the player. Also check if the distanceToSpawn has surpassed the returnToSpawnRadius, in which case make the zombie look at and move back to spawnLocation.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent MoveToTarget():
+\begin{itemize}
+\item translation: Sets the destination of the navmesh agent to the player's position, and calls LookAtTarget() if the enemy is within stopping position.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent LookAtTarget(Vector3 destination):
+\begin{itemize}
+\item translation: Rotates the zombie object so it is looking in the direction of the destination parameter.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent RandomMovement():
+\begin{itemize}
+\item translation: Selects a random angle between $[0..2\pi]$ and gets the zombie to move a certain distance towards this angle.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent OnDrawGizmos():
+\begin{itemize}
+\item translation: Draws a blue line from the zombie object to its destination it is walking towards and a red sphere around the zombie's detectRadius.
+\item output: None
+\item exception: None
+\end{itemize}
+
+
+\newpage
+\section*{\mref{mBHG} Gun}
+
+\subsection*{Template Module}
+
+Gun
+
+\subsection* {Uses}
+
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+int, int, GameObject, AudioClip, AudioClip, float, float, Tranform, GameObject, Transform, float
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+	\hline
+	\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+	\hline
+	Start & ~ & ~  & ~\\
+	Update & ~ & ~  & ~\\
+	shoot & ~ & ~  & ~\\
+	reload & ~ & ~ & ~\\
+	createBullet & ~ & ~ & ~\\
+	\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+ammoPerClip: $\mathbb{N}$\\
+ammoInClip: $\mathbb{N}$\\
+bullet: $GameObject$\\
+gunShotSound: $AudioClip$\\
+reloadSound: $AudioClip$\\
+bulletSpeed: $\mathbb{R}$\\
+fireRate: $\mathbb{R}$\\
+barrelLocation: $Transform$\\
+cam: $GameObject$\\
+startPoint: $Transform$\\
+startTime: $\mathbb{R}$\\
+\subsubsection* {State Invariant}
+
+ammoPerClip $>$ 0\\
+startTime $\geq$ 0\\
+ammoInClip $\leq$ ammoPerClip\\
+
+\subsubsection* {Assumptions}
+
+This module is attached to a GameObject which has a RangedWeapon component attached to it.
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent Start():
+\begin{itemize}
+	\item translation: This method sets $startTime$ to the time of starting of the level and sets $cam$ to an object of type $GameObject$. This method then called the $reload()$ method, and the following actions then take place:\\
+	barrelLocation $:=$ Transform of $Gun$\\
+	startPoint $:=$ Transform of $cam$ 
+	\item output: None
+	\item exception: None
+\end{itemize}
+
+\noindent Update():
+\begin{itemize}
+	\item translation: This method sets the variable $elapsedTime$ to the currentTime.
+	Then, this method checks if the user has pressed the left mouse button or the 'R' button. If the user has pressed the left mouse button and the value of $elapsedTime$ is more than $fireRate$, this method calls the $shoot$ method and resets $elapsedTime$ to 0.
+	\item output: None
+	\item exception: None
+\end{itemize}
+
+\noindent shoot():
+\begin{itemize}
+	\item translation: This method checks if the value of $ammoInClip$ is greater than 0. If yes, this method then calls the $createBullet$ method, plays a shooting animation and decreases the value of $ammoInClip$ by 1.\\ 
+	If the value of $ammoInClip$ is 0, this method calls the $reload$ method.
+	\item output: None
+	\item exception: None
+\end{itemize}
+
+\noindent reload():
+\begin{itemize}
+	\item translation: This method sets the value of $ammoInClip$ to that of $ammoPerClip$ and plays the reload sound effect.
+	\item output: None
+	\item exception: None
+\end{itemize}
+
+\noindent createBullet():
+\begin{itemize}
+	\item translation: This method instantiates a $bullet$ GameObject and plays a gunshot sound effect.
+	\item output: None
+	\item exception: None
+\end{itemize}
+
+\newpage
+\section*{\mref{mBHBD} BulletDamage}
+
+\subsection*{Template Module}
+
+BulletDamage
+
+\subsection* {Uses}
+
+\mref{mSDZS}
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+Trigger
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+	\hline
+	\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+	\hline
+	OnTriggerEnter & Collider & ~  & ~\\
+	\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+damage: $\mathbb{R}$\\
+enemyHit: $ZombieStats$
+
+\subsubsection* {State Invariant}
+
+damage $>$ 0
+\subsubsection* {Assumptions}
+
+The object collided with has a "collider" component attached to it.
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent OnTriggerEnter(Collider other):
+\begin{itemize}
+	\item translation: This method detects if the bullet has collided with an object "other". If the object collided with has a tag "Enemy" then the health for that object is reduced by $damage$. This method then destroys the bullet object.
+	\item output: None
+	\item exception: None
+\end{itemize}
+
 
 \end {document}

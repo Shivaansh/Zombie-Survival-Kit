@@ -1,0 +1,34 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {section}{\numberline {2}Anticipated and Unlikely Changes}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Anticipated Changes}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Unlikely Changes}{2}{subsection.2.2}
+\contentsline {section}{\numberline {3}Module Hierarchy}{3}{section.3}
+\contentsline {section}{\numberline {4}Connection Between Requirements and Design}{4}{section.4}
+\contentsline {section}{\numberline {5}Module Decomposition}{5}{section.5}
+\contentsline {subsection}{\numberline {5.1}Hardware Hiding Modules (M\ref {mHH})}{5}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Behaviour-Hiding Module}{5}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Interactable (Object) (M\ref {mBHI})}{5}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Enemy (Object) (M\ref {mBHE})}{5}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}ItemStore (Object) (M\ref {mBHIS})}{6}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}InteractableController (Character) (M\ref {mBHIC})}{6}{subsubsection.5.2.4}
+\contentsline {subsubsection}{\numberline {5.2.5}EquipmentUI (M\ref {mBHEU})}{6}{subsubsection.5.2.5}
+\contentsline {subsubsection}{\numberline {5.2.6}EquipmentSlotUI (M\ref {mBHESU})}{6}{subsubsection.5.2.6}
+\contentsline {subsubsection}{\numberline {5.2.7}InventoryUI (M\ref {mBHIU})}{6}{subsubsection.5.2.7}
+\contentsline {subsubsection}{\numberline {5.2.8}InventorySlotUI (M\ref {mBHISU})}{7}{subsubsection.5.2.8}
+\contentsline {subsubsection}{\numberline {5.2.9}CharacterCombat (Character) (M\ref {mBHCC})}{7}{subsubsection.5.2.9}
+\contentsline {subsubsection}{\numberline {5.2.10}Zombie (Object) (M\ref {mBHZ})}{7}{subsubsection.5.2.10}
+\contentsline {subsubsection}{\numberline {5.2.11}FirstPersonController (Character) (M\ref {mBHFPS})}{7}{subsubsection.5.2.11}
+\contentsline {subsubsection}{\numberline {5.2.12}Gun (Object) (M\ref {mBHG})}{8}{subsubsection.5.2.12}
+\contentsline {subsubsection}{\numberline {5.2.13}BulletDamage (Objects) (M\ref {mBHBD})}{8}{subsubsection.5.2.13}
+\contentsline {subsection}{\numberline {5.3}Software Decision Module}{8}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Item (Component) (M\ref {mSDI})}{8}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}ConsumableItem (Component) (M\ref {mSDCI})}{9}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3}EquipmentItem (Component) (M\ref {mSDEI})}{9}{subsubsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.4}EquipmentManager (Manager) (M\ref {mSDEM})}{9}{subsubsection.5.3.4}
+\contentsline {subsubsection}{\numberline {5.3.5}InventoryManager (Manager) (M\ref {mSDIM})}{9}{subsubsection.5.3.5}
+\contentsline {subsubsection}{\numberline {5.3.6}CharacterStats (Manager) (M\ref {mSDCS})}{9}{subsubsection.5.3.6}
+\contentsline {subsubsection}{\numberline {5.3.7}PlayerStats (Manager) (M\ref {mSDPS})}{10}{subsubsection.5.3.7}
+\contentsline {subsubsection}{\numberline {5.3.8}ZombieStats (Manager) (M\ref {mSDZS})}{10}{subsubsection.5.3.8}
+\contentsline {subsubsection}{\numberline {5.3.9}Stat (Component) (M\ref {mSDS})}{10}{subsubsection.5.3.9}
+\contentsline {section}{\numberline {6}Traceability Matrix}{11}{section.6}
+\contentsline {section}{\numberline {7}Use Hierarchy Between Modules}{13}{section.7}
