@@ -607,6 +607,7 @@ MonoBehaviour:
     initialValue: 0
   armour:
     initialValue: 0
+  player: {fileID: 0}
 --- !u!224 &271399770 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224871294845715804, guid: b6b9c08914661d747b0a060d3389baf8,
@@ -926,6 +927,11 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 61f2cc60c390e6d47a5aaef5dd0e29e3, type: 2}
+    - target: {fileID: 114060083030196848, guid: 0584839bceadb844fa31b1ca352056ba,
+        type: 2}
+      propertyPath: zombie
+      value: 
+      objectReference: {fileID: 2069004111}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 2}
   m_IsPrefabAsset: 0
@@ -1280,6 +1286,7 @@ MonoBehaviour:
     initialValue: 10
   armour:
     initialValue: 0
+  player: {fileID: 0}
 --- !u!82 &574836056
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3392,10 +3399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272ca35125b6cc44b8720d1b4b807b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  damage: 0
   campType: 0
-  level: 0
   detectRadius: 5
   returnToSpawnRadius: 25
 --- !u!54 &1373588878
@@ -3476,6 +3480,8 @@ MonoBehaviour:
     initialValue: 5
   armour:
     initialValue: 0
+  delay: 0
+  zombie: {fileID: 0}
 --- !u!114 &1373588883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3491,6 +3497,11 @@ MonoBehaviour:
   isFocus: 0
   player: {fileID: 0}
   hasInteracted: 0
+--- !u!4 &1373588890 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400100, guid: f2a03eaf53eec964aa81784732592d2e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1575559616}
 --- !u!1 &1515475057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,6 +3685,11 @@ Prefab:
       propertyPath: m_Name
       value: ToonZombie
       objectReference: {fileID: 0}
+    - target: {fileID: 114215671922201588, guid: f2a03eaf53eec964aa81784732592d2e,
+        type: 2}
+      propertyPath: zombie
+      value: 
+      objectReference: {fileID: 1373588890}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2a03eaf53eec964aa81784732592d2e, type: 2}
   m_IsPrefabAsset: 0
@@ -5934,10 +5950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272ca35125b6cc44b8720d1b4b807b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  damage: 0
   campType: 0
-  level: 0
   detectRadius: 5
   returnToSpawnRadius: 25
 --- !u!54 &2069004099
@@ -6018,6 +6031,8 @@ MonoBehaviour:
     initialValue: 5
   armour:
     initialValue: 0
+  delay: 0
+  zombie: {fileID: 0}
 --- !u!114 &2069004104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6033,6 +6048,11 @@ MonoBehaviour:
   isFocus: 0
   player: {fileID: 0}
   hasInteracted: 0
+--- !u!4 &2069004111 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 412665112}
 --- !u!1001 &2070560573
 Prefab:
   m_ObjectHideFlags: 0
