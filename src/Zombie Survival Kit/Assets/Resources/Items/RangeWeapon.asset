@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: RangeWeapon
   m_EditorClassIdentifier: 
   name: RangeWeapon
-  icon: {fileID: 21300000, guid: 7d88475a7f376444f81efa1030d2ff5d, type: 3}
+  icon: {fileID: 21300000, guid: 5d7061fc7da05ce44add317708ec7215, type: 3}
   isDefaultItem: 0
   equipSlot: 3
   attackModifier: 3
