@@ -80,11 +80,20 @@ public class Inventory : MonoBehaviour
     /// Remove: A void method used to remove items to the inventory
     /// </summary>
     /// <param name="item">The item being removed from the inventory</param>
-    public void Remove(Item item)
+    public void RemoveFromInventory(Item item)
     {
         string itemPath = "PrefabItems/" + item.name;
         GameObject droppedItem = Instantiate(Resources.Load<GameObject>(itemPath)) as GameObject;
         droppedItem.transform.position = player.transform.position + player.transform.forward * 2;
+        items.Remove(item);
+
+        // Invoke a change to the inventory UI 
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
+    }
+
+    public void InventoryToEquipment(Item item)
+    {
         items.Remove(item);
 
         // Invoke a change to the inventory UI 

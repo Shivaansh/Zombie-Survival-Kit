@@ -33,6 +33,6 @@ public class Item : ScriptableObject
     /// </summary>
     public void RemoveFromInventory()
     {
-        Inventory.instance.Remove(this);
+        Inventory.instance.RemoveFromInventory(this);
     }
 }
