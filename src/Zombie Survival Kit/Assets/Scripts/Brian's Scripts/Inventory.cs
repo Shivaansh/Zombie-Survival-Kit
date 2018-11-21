@@ -36,6 +36,8 @@ public class Inventory : MonoBehaviour
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
+    public GameObject player;
+
     /* The amount of space the inventory can have
      */
     public int space;
@@ -80,6 +82,9 @@ public class Inventory : MonoBehaviour
     /// <param name="item">The item being removed from the inventory</param>
     public void Remove(Item item)
     {
+        string itemPath = "PrefabItems/" + item.name;
+        GameObject droppedItem = Instantiate(Resources.Load<GameObject>(itemPath)) as GameObject;
+        droppedItem.transform.position = player.transform.position + player.transform.forward * 2;
         items.Remove(item);
 
         // Invoke a change to the inventory UI 

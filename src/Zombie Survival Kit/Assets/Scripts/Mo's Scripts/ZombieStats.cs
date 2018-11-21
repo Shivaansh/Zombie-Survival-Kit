@@ -10,7 +10,7 @@ public class ZombieStats : CharacterStats
     private bool isDropped = false;
 
     //Brian's Code
-    private Item[] Drops;
+    public GameObject[] Drops;
     public Transform zombie;
 
     //Shiv's Code
@@ -20,23 +20,20 @@ public class ZombieStats : CharacterStats
     {
         animator = GetComponent<Animator>();
 
-        Item headArmor = ScriptableObject.CreateInstance<Item>();
-        Item meleeWeapon = ScriptableObject.CreateInstance<Item>();
-        Item rangeWeapon = ScriptableObject.CreateInstance<Item>();
-        Item watermelon = ScriptableObject.CreateInstance<Item>();
-
-        headArmor = Resources.Load<Item>("Items/HeadArmor");
-        meleeWeapon = Resources.Load<Item>("Items/MeleeWeapon");
-        rangeWeapon = Resources.Load<Item>("Items/RangeWeapon");
-        watermelon = Resources.Load<Item>("Items/Watermelon");
-
         curHealth = maxHealth;
 
-        Drops = new Item[4];
-        Drops[0] = headArmor;
-        Drops[1] = meleeWeapon;
-        Drops[2] = rangeWeapon;
-        Drops[3] = watermelon;
+        //Loads All the possible items that can be dropped by a zombie
+        Drops = new GameObject[10];
+        Drops[0] = Resources.Load<GameObject>("PrefabItems/HeadArmor");
+        Drops[1] = Resources.Load<GameObject>("PrefabItems/Axe");
+        Drops[2] = Resources.Load<GameObject>("PrefabItems/RangeWeapon");
+        Drops[3] = Resources.Load<GameObject>("PrefabItems/Watermelon");
+        Drops[4] = Resources.Load<GameObject>("PrefabItems/LegArmor");
+        Drops[5] = Resources.Load<GameObject>("PrefabItems/Apple");
+        Drops[6] = Resources.Load<GameObject>("PrefabItems/ChestArmor");
+        Drops[7] = Resources.Load<GameObject>("PrefabItems/FeetArmor");
+        Drops[8] = Resources.Load<GameObject>("PrefabItems/OffHand");
+        Drops[9] = Resources.Load<GameObject>("PrefabItems/Cloak");
     }
 
     private void Update()
@@ -44,12 +41,14 @@ public class ZombieStats : CharacterStats
         
         if (Time.time >= timeAnimStarted + delay && isDead == true)
         {
+            //The death location of the zombie
             Vector3 deathLocation = zombie.transform.position;
 
             Destroy(gameObject);
 
+            //Generates a random number between 0-9
             System.Random r = new System.Random();
-            int dropChoice = r.Next(0, 4);
+            int dropChoice = r.Next(0, 10);
 
             DropItem(deathLocation, dropChoice);
         }
@@ -74,6 +73,11 @@ public class ZombieStats : CharacterStats
 
     }
 
+    /// <summary>
+    /// DropItem: A void method used to select an item to drop after an enemy has died
+    /// </summary>
+    /// <param name="deathLocation">The location of the dead enemy</param>
+    /// <param name="dropChoice">Determines which item is dropped from the dead enemy</param>
     private void DropItem(Vector3 deathLocation, int dropChoice)
     {
         if (!isDropped)
@@ -84,51 +88,53 @@ public class ZombieStats : CharacterStats
             {
                 case 0:
                     Debug.Log("Dropped HeadArmor");
-                    GameObject HeadArmor = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    HeadArmor.name = "HeadArmor";
-                    HeadArmor.transform.localScale = new Vector3(0.3948148f, 0.3948148f, 0.3948148f);
-                    HeadArmor.AddComponent<ItemStore>();
-                    HeadArmor.GetComponent<ItemStore>().item = Drops[dropChoice];
-                    HeadArmor.GetComponent<ItemStore>().radius = 3;
-                    HeadArmor.AddComponent<Rigidbody>();
-                    HeadArmor.GetComponent<Rigidbody>().useGravity = true;
+                    GameObject HeadArmor = Instantiate(Drops[dropChoice]) as GameObject;
                     HeadArmor.transform.position = deathLocation;
                     break;
                 case 1:
                     Debug.Log("Dropped MeleeWeapon");
-                    GameObject MeleeWeapon = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    MeleeWeapon.name = "MeleeWeapon";
-                    MeleeWeapon.transform.localScale = new Vector3(0.3948148f, 0.3948148f, 0.3948148f);
-                    MeleeWeapon.AddComponent<ItemStore>();
-                    MeleeWeapon.GetComponent<ItemStore>().item = Drops[dropChoice];
-                    MeleeWeapon.GetComponent<ItemStore>().radius = 3;
-                    MeleeWeapon.AddComponent<Rigidbody>();
-                    MeleeWeapon.GetComponent<Rigidbody>().useGravity = true;
+                    GameObject MeleeWeapon = Instantiate(Drops[dropChoice]) as GameObject;
                     MeleeWeapon.transform.position = deathLocation;
                     break;
                 case 2:
                     Debug.Log("Dropped RangeWeapon");
-                    GameObject RangeWeapon = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    RangeWeapon.name = "RangeWeapon";
-                    RangeWeapon.transform.localScale = new Vector3(0.3948148f, 0.3948148f, 0.3948148f);
-                    RangeWeapon.AddComponent<ItemStore>();
-                    RangeWeapon.GetComponent<ItemStore>().item = Drops[dropChoice];
-                    RangeWeapon.GetComponent<ItemStore>().radius = 3;
-                    RangeWeapon.AddComponent<Rigidbody>();
-                    RangeWeapon.GetComponent<Rigidbody>().useGravity = true;
+                    GameObject RangeWeapon = Instantiate(Drops[dropChoice]) as GameObject;
                     RangeWeapon.transform.position = deathLocation;
                     break;
                 case 3:
                     Debug.Log("Dropped Watermelon");
-                    GameObject Watermelon = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                    Watermelon.name = "Watermelon";
-                    Watermelon.transform.localScale = new Vector3(0.3948148f, 0.3948148f, 0.3948148f);
-                    Watermelon.AddComponent<ItemStore>();
-                    Watermelon.GetComponent<ItemStore>().item = Drops[dropChoice];
-                    Watermelon.GetComponent<ItemStore>().radius = 3;
-                    Watermelon.AddComponent<Rigidbody>();
-                    Watermelon.GetComponent<Rigidbody>().useGravity = true;
+                    GameObject Watermelon = Instantiate(Drops[dropChoice]) as GameObject;
                     Watermelon.transform.position = deathLocation;
+                    break;
+                case 4:
+                    Debug.Log("Dropped LegArmor");
+                    GameObject LegArmor = Instantiate(Drops[dropChoice]) as GameObject;
+                    LegArmor.transform.position = deathLocation;
+                    break;
+                case 5:
+                    Debug.Log("Dropped Apple");
+                    GameObject Apple = Instantiate(Drops[dropChoice]) as GameObject;
+                    Apple.transform.position = deathLocation;
+                    break;
+                case 6:
+                    Debug.Log("Dropped ChestArmor");
+                    GameObject ChestArmor = Instantiate(Drops[dropChoice]) as GameObject;
+                    ChestArmor.transform.position = deathLocation;
+                    break;
+                case 7:
+                    Debug.Log("Dropped FeetArmor");
+                    GameObject FeetArmor = Instantiate(Drops[dropChoice]) as GameObject;
+                    FeetArmor.transform.position = deathLocation;
+                    break;
+                case 8:
+                    Debug.Log("Dropped OffHand");
+                    GameObject OffHand = Instantiate(Drops[dropChoice]) as GameObject;
+                    OffHand.transform.position = deathLocation;
+                    break;
+                case 9:
+                    Debug.Log("Dropped Cloak");
+                    GameObject Cloak = Instantiate(Drops[dropChoice]) as GameObject;
+                    Cloak.transform.position = deathLocation;
                     break;
             }
         }

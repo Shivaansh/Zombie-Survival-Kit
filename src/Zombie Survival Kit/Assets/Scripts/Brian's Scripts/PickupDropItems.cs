@@ -24,21 +24,21 @@ public class PickupDropItems : MonoBehaviour
      */
     public GameObject player;
 
-    /* Checks to see if the player is carrying anything
-     */
-    public bool carrying;
+    ///* Checks to see if the player is carrying anything
+    // */
+    //public bool carrying;
 
-    /* The object the player is carrying
-     */
-    public GameObject carriedObject;
+    ///* The object the player is carrying
+    // */
+    //public GameObject carriedObject;
 
-    /* Determines how far out from the player the object is being carried
-     */
-    public float carryingDistance;
+    ///* Determines how far out from the player the object is being carried
+    // */
+    //public float carryingDistance;
 
-    /* Determines the smoothness in which the object is carried and moved around
-     */
-    public float smooth;
+    ///* Determines the smoothness in which the object is carried and moved around
+    // */
+    //public float smooth;
 
     /// <summary>
     /// Start: Is a void method used for initialization
@@ -57,19 +57,20 @@ public class PickupDropItems : MonoBehaviour
          */
         Debug.DrawRay(transform.position, this.transform.forward * distanceToSee, Color.magenta);
 
-        /* Checks the player is carrying something. If it is, then move carriedObject. Else, check for pickup instruction.
+        /* Creating an interaction with interactiable objects in game when user 
+         * presses down the "E" key on their keyboard.
          */
-        if (carrying)
-        {
-            carry(carriedObject);
-            dropCheck();
-        }
-        else
-        {
+        if (Input.GetKeyDown(KeyCode.E)) {
             pickup();
         }
 
-        AttackEnemy();
+        /* Creating an interaction with interactiable objects in game when user 
+         * presses the LMB on their mouse
+         */
+        if (Input.GetMouseButtonDown(0))
+        {
+            AttackEnemy();
+        }
 
         /* Checks if the player is focused on an interactable and checks the distance from 
          * the interactable to the player. If the player is outside the radius of the 
@@ -82,50 +83,50 @@ public class PickupDropItems : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Carry: Is a void method used to carry a GameObject that is Pickupable in front of the player
-    /// camera specified by the carryingDistance.
-    /// </summary>
-    /// <param name="o">The GameObject being carried</param>
-    void carry(GameObject o)
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            o.GetComponent<Rigidbody>().isKinematic = false;
-            o.transform.position = o.transform.position;
+    ///// <summary>
+    ///// Carry: Is a void method used to carry a GameObject that is Pickupable in front of the player
+    ///// camera specified by the carryingDistance.
+    ///// </summary>
+    ///// <param name="o">The GameObject being carried</param>
+    //void carry(GameObject o)
+    //{
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        o.GetComponent<Rigidbody>().isKinematic = false;
+    //        o.transform.position = o.transform.position;
 
-        }
-        o.GetComponent<Rigidbody>().isKinematic = true;
-        o.transform.position = Vector3.Lerp(o.transform.position,
-            player.transform.position + player.transform.forward * carryingDistance,
-            Time.deltaTime * smooth);
-    }
+    //    }
+    //    o.GetComponent<Rigidbody>().isKinematic = true;
+    //    o.transform.position = Vector3.Lerp(o.transform.position,
+    //        player.transform.position + player.transform.forward * carryingDistance,
+    //        Time.deltaTime * smooth);
+    //}
 
-    /// <summary>
-    /// dropCheck: Is a void method that checks if the correct input to drop the GameObject being 
-    /// carried is inputted.
-    /// </summary>
-    void dropCheck()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            dropObject();
-        }
-    }
+    ///// <summary>
+    ///// dropCheck: Is a void method that checks if the correct input to drop the GameObject being 
+    ///// carried is inputted.
+    ///// </summary>
+    //void dropCheck()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        dropObject();
+    //    }
+    //}
 
-    /// <summary>
-    /// dropObject: Is a void method used to drop the GameObject being carried.
-    /// </summary>
-    void dropObject()
-    {
-        RemoveFocus();
-        carrying = false;
-        carriedObject.GetComponent<Rigidbody>().isKinematic = false;
-        // Brian:   Displays message in Log
-        Debug.Log("I dropped a " + carriedObject.gameObject.name);
-        carriedObject = null;
+    ///// <summary>
+    ///// dropObject: Is a void method used to drop the GameObject being carried.
+    ///// </summary>
+    //void dropObject()
+    //{
+    //    RemoveFocus();
+    //    carrying = false;
+    //    carriedObject.GetComponent<Rigidbody>().isKinematic = false;
+    //    // Brian:   Displays message in Log
+    //    Debug.Log("I dropped a " + carriedObject.gameObject.name);
+    //    carriedObject = null;
 
-    }
+    //}
 
     /// <summary>
     /// pickup: Is a void method used to raycast a GameObject when the appropriate input is given, and only 
@@ -134,35 +135,28 @@ public class PickupDropItems : MonoBehaviour
     /// </summary>
     void pickup()
     {
-        /* Creating an interaction with interactiable objects in game when user 
-         * presses down the "E" key on their keyboard.
-         */
-        if (Input.GetKeyDown(KeyCode.E))
+        /* If the ray hits, do something
+            */
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
         {
-            /* If the ray hits, do something
-             */
-            if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
+            ItemStore interactable = hit.collider.GetComponent<ItemStore>();
+            /* Checks of the game object is interactable
+                */
+            if (interactable != null)
             {
-                Interactable interactable = hit.collider.GetComponent<Interactable>();
-                /* Checks of the game object is interactable
-                 */
-                if (interactable != null)
-                {
-                    SetFocus(interactable);
+                SetFocus(interactable);
 
-                    Pickupable p = hit.collider.GetComponent<Pickupable>();
-                    /* If the Object is interactable and pickupable, then the player 
-                     * will carry the object
-                     */
-                    if (p != null)
-                    {
-                        carrying = true;
-                        carriedObject = p.gameObject;
-                        // Displays message in Log
-                        Debug.Log("I picked up a " + hit.collider.gameObject.name);
-                    }
-
-                }
+                //Pickupable p = hit.collider.GetComponent<Pickupable>();
+                ///* If the Object is interactable and pickupable, then the player 
+                // * will carry the object
+                // */
+                //if (p != null)
+                //{
+                //    carrying = true;
+                //    carriedObject = p.gameObject;
+                //    // Displays message in Log
+                //    Debug.Log("I picked up a " + hit.collider.gameObject.name);
+                //}
 
             }
 
@@ -171,23 +165,18 @@ public class PickupDropItems : MonoBehaviour
 
     void AttackEnemy()
     {
-        /* Creating an interaction with interactiable objects in game when user 
-         * presses the LMB on their mouse
-         */
-        if (Input.GetMouseButtonDown(0))
+        /* If the ray hits, do something
+            */
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
         {
-            /* If the ray hits, do something
-             */
-            if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
+            if (hit.collider.GetComponent<ItemStore>() == null)
             {
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
-
                 /* Checks of the game object is interactable
-                 */
+                */
                 if (interactable != null)
                     SetFocus(interactable);
             }
-
         }
     }
 

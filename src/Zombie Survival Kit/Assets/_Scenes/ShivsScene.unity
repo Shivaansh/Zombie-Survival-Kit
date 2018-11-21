@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea2309fa8588774cab595d57f809651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 10
+  rate: 1
 --- !u!1001 &24336795
 Prefab:
   m_ObjectHideFlags: 0
@@ -864,6 +864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb58e5dc4ec989d4fb52f4f4d5f74f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1424062897}
   space: 20
   items: []
 --- !u!4 &98458702
@@ -6581,7 +6582,7 @@ MonoBehaviour:
   armour:
     initialValue: 0
   player: {fileID: 838764158}
-  playerUI: {fileID: 0}
+  playerUI: {fileID: 1945546713}
 --- !u!82 &838764161
 AudioSource:
   m_ObjectHideFlags: 0
