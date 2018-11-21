@@ -14,4 +14,4 @@ MonoBehaviour:
   name: Watermelon
   icon: {fileID: 21300000, guid: 7d88475a7f376444f81efa1030d2ff5d, type: 3}
   isDefaultItem: 0
-  healthModifier: 4
+  healthModifier: 25

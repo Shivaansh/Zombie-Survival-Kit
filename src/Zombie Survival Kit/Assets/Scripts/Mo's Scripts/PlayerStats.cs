@@ -21,11 +21,19 @@ public class PlayerStats : CharacterStats
 
     public GameObject player;
 
+    [SerializeField]
+    GameObject playerUI;
+
     // Use this for initialization
     void Start ()
     {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
         curHealth = maxHealth;
+
+        //Configure player UI
+        PlayerUI ui = playerUI.GetComponent<PlayerUI>();
+        ui.SetStats(GetComponent<PlayerStats>());
+
 	}
 
     void OnEquipmentChanged(EquipmentItem newItem, EquipmentItem oldItem)
