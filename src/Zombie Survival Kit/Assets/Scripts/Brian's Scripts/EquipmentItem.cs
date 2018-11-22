@@ -32,7 +32,7 @@ public class EquipmentItem : Item
     {
         base.Use();
         EquipmentManager.instance.Equip(this);
-        Inventory.instance.InventoryToEquipment(this);
+        Inventory.instance.InventoryEquipmentConsumable(this);
 
     }
 

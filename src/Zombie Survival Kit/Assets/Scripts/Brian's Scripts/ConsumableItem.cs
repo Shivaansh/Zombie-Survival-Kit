@@ -25,7 +25,7 @@ public class ConsumableItem : Item
     {
         base.Use();
         PlayerStats.instance.Eat(this);
-        RemoveFromInventory();
+        Inventory.instance.InventoryEquipmentConsumable(this);
 
     }
 }

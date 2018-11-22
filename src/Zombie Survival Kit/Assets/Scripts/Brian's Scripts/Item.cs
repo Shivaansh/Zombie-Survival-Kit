@@ -28,11 +28,4 @@ public class Item : ScriptableObject
         Debug.Log("Using " + name);
     }
 
-    /// <summary>
-    /// RemoveFromInventory: Removes the item from the inventory
-    /// </summary>
-    public void RemoveFromInventory()
-    {
-        Inventory.instance.RemoveFromInventory(this);
-    }
 }

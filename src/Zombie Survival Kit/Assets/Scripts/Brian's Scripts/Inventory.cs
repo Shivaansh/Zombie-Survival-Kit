@@ -92,7 +92,7 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke();
     }
 
-    public void InventoryToEquipment(Item item)
+    public void InventoryEquipmentConsumable(Item item)
     {
         items.Remove(item);
 
