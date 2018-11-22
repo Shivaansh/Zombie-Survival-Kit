@@ -6,7 +6,9 @@ using UnityEngine;
 /// <summary>
 /// Gun: A class used to define Gun behavior and define values required for Gun operation
 /// </summary>
-public class Gun : MonoBehaviour {
+[RequireComponent(typeof(AudioSource))]
+public class Gun : MonoBehaviour
+{
 
     [SerializeField] int ammoPerClip = 7; //max capacity for a clip
     int ammoInClip;  //the number of bullets in the current clip, if this reaches 0 a reload is needed
@@ -21,9 +23,7 @@ public class Gun : MonoBehaviour {
 
     [SerializeField] float fireRate = 0.8f; //rate of fire for weapon
 
-    [SerializeField] Transform barrelLocation; //location of the gun barrell in 3d space
-
-    //[SerializeField] GameObject muzzleFlashPrefab;
+    [SerializeField] float reloadRate = 2f; //reload speed for weapon
 
     [SerializeField] GameObject cam; //reference to MainCamera object
 
@@ -31,39 +31,49 @@ public class Gun : MonoBehaviour {
 
     float startTime; //used to create a clock to keep track of time
 
+    private AudioSource reloadSource;
+
+    ItemStore rangedItem;
 
 
     /// <summary>  
     ///  Start: This method runs at the start of the game and initialized the various variables required for the level.  
     /// </summary>  
-    void Start () {
+    void Start()
+    {
         startTime = Time.time;//start clock
-
-        if (barrelLocation == null)
-            barrelLocation = transform;
 
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         startPoint = cam.transform;
 
-        reload();
-	}
+        ammoInClip = ammoPerClip; //loads the weapon
+
+        reloadSource = GetComponent<AudioSource>(); //assigns AudioSource to check status of reload sound
+
+        rangedItem = GetComponent<ItemStore>();
+
+        Item rangedWeapon = GetComponent<Item>();
+
+        Debug.Log(rangedWeapon.name);
+
+    }
     /// <summary>  
     ///  Update: This method is called once per frame.  
     /// </summary>  
-	void Update ()
-    { 
+	void Update()
+    {
         float elapsedTime = Time.time - startTime; //current time - time since last shot
-        if(Input.GetKeyDown(KeyCode.Mouse0) && elapsedTime >= fireRate) //when left mouse button is clicked, and time passed since last shot is more than fire rate
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !reloadSource.isPlaying && elapsedTime >= fireRate) //when left mouse button is clicked, and time passed since last shot is more than fire rate
         {
             shoot(); //shoot a bullet
             elapsedTime = 0f; //reset time since last shot to 0
             startTime = Time.time; //start time set to time of shot
         }
-        else if(Input.GetKeyDown(KeyCode.R)) //if the 'R' button is pressed
+        else if (Input.GetKeyDown(KeyCode.R)) //if the 'R' button is pressed
         {
             reload(); //reload the gun
-        }	
-	}
+        }
+    }
 
     /// <summary>  
     ///  shoot: This method shoots a bullet towards a target, and updates the number of bullets in the clip. If the clip is empty, this method reloads the weapon.  
@@ -71,7 +81,7 @@ public class Gun : MonoBehaviour {
     /// </summary> 
     void shoot()
     {
-        if(ammoInClip > 0)
+        if (ammoInClip > 0)
         {
             createBullet();
             GetComponent<Animator>().SetTrigger("Fire");
@@ -81,12 +91,6 @@ public class Gun : MonoBehaviour {
         {
             reload();
         }
-
-        //if (ammoInClip == 0)
-          //  reload();
-
-        //GameObject tempFlash;
-        //tempFlash = Instantiate(muzzleFlashPrefab, barrelLocation.position, barrelLocation.rotation);
     }
 
     /// <summary>  
@@ -95,7 +99,7 @@ public class Gun : MonoBehaviour {
     void reload()
     {
         ammoInClip = ammoPerClip; //loads the weapon
-        AudioSource.PlayClipAtPoint(reloadSound, transform.position);
+        playReloadSound();
     }
 
     /// <summary>  
@@ -104,7 +108,7 @@ public class Gun : MonoBehaviour {
     void createBullet()
     {
         Instantiate(bullet, startPoint.position, startPoint.rotation).GetComponent<Rigidbody>().AddForce(startPoint.forward * bulletSpeed);
-        AudioSource.PlayClipAtPoint(gunShotSound, transform.position);
+        playShotSound();
     }
 
     /// <summary>
@@ -115,4 +119,23 @@ public class Gun : MonoBehaviour {
     {
         return ammoInClip;
     }
+
+    /// <summary>
+    /// playShotSound: A private void method used to play the gun shot sound
+    /// </summary>
+    private void playShotSound()
+    {
+        AudioSource.PlayClipAtPoint(gunShotSound, transform.position); //fire and forget sound implementation
+    }
+
+    /// <summary>
+    /// playReloadSound: A private void method used to play the reload sound
+    /// </summary>
+    private void playReloadSound()
+    {
+        //the status of this sound effect can be checked
+        reloadSource.clip = reloadSound;
+        reloadSource.Play();
+    }
+
 }
