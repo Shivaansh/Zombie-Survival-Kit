@@ -6,11 +6,23 @@ using UnityEngine;
 /// <summary>
 /// BulletDamage: A class used to define bullet behaviour and damage enemies
 /// </summary>
-public class BulletDamage : MonoBehaviour {
+public class BulletDamage : MonoBehaviour
+{
 
-    [SerializeField] int damage = 50; //the damage done by the gun
+    [SerializeField] int damage = 25; //the damage done by the gun
 
     ZombieStats enemyHit; //the enemy hit by the gun
+
+    CharacterStats playerStats;
+
+    int modifier;
+
+    private void Awake()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("GameController");
+        playerStats = player.GetComponent<PlayerStats>();
+        modifier = playerStats.dmg.GetValue();
+    }
 
     /// <summary>  
     ///  OnTriggerEnter: This method checks for collisions between a Collider and a Trigger
@@ -22,7 +34,7 @@ public class BulletDamage : MonoBehaviour {
         {
             Debug.Log("HIT A ZOMBIE - trigger");
             enemyHit = other.gameObject.GetComponent<ZombieStats>();
-            enemyHit.TakeDamage(damage);
+            enemyHit.TakeDamage(damage + modifier);
             Destroy(gameObject);
         }
     }
