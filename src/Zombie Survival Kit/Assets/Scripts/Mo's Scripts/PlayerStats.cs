@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// PlayerStats: A class used to manage stats specific to the player, inherited from CharacterStats
+/// </summary>
 public class PlayerStats : CharacterStats
 {
 
@@ -19,14 +22,18 @@ public class PlayerStats : CharacterStats
     }
     #endregion
 
+    //Reference to the first person controller
     public GameObject player;
 
     [SerializeField]
-    GameObject playerUI;
+    GameObject playerUI; //A game object used to refer to the UI overlay
 
-    // Use this for initialization
+    /// <summary>
+    /// Start: Is a void method used for initialization
+    /// </summary>
     void Start ()
     {
+        //Initializes the health and method that is invoked in EquipmentManager in the equip and dequip methods
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
         curHealth = maxHealth;
 
@@ -36,15 +43,20 @@ public class PlayerStats : CharacterStats
 
 	}
 
+    /// <summary>
+    /// OnEquipmentChanged: A method to modify the player stats when items are equipped or dequipepd 
+    /// </summary>
+    /// <param name="newItem">The new item about to be equippedy</param>
+    /// <param name="oldItem">The old item about to be dequipped</param>
     void OnEquipmentChanged(EquipmentItem newItem, EquipmentItem oldItem)
     {
-        if (newItem != null)
+        if (newItem != null) //Add the new item's modifiers to each respective stat
         {
             armour.AddToStat(newItem.defenceModifier);
             dmg.AddToStat(newItem.attackModifier);
         }
 
-        if (oldItem != null)
+        if (oldItem != null) //Remove the old item's modifiers from each respective stat
         {
             armour.RemoveFromStat(oldItem.defenceModifier);
             dmg.RemoveFromStat(oldItem.attackModifier);
@@ -60,13 +72,13 @@ public class PlayerStats : CharacterStats
     /// <param name="consumable">The ConsumableItem being used</param>
     public void Eat(ConsumableItem consumable)
     {
-        if (curHealth < maxHealth)
+        if (curHealth < maxHealth) //Do not do anything if they have maximum health
         {
-            if (curHealth + consumable.healthModifier <= maxHealth)
+            if (curHealth + consumable.healthModifier <= maxHealth) //If healing them does not bring them above max health
             {
-                curHealth += consumable.healthModifier;
+                curHealth += consumable.healthModifier; //Add the consumabe's health modifier to the current health
             }
-            else
+            else //Do not give them above maximum health
             {
                 curHealth = maxHealth;
             }
@@ -74,10 +86,13 @@ public class PlayerStats : CharacterStats
         }
     }
 
+    /// <summary>
+    /// Die: An overwritten Die method to control what happens when the player dies
+    /// </summary>
     public override void Die()
     {
+        //Call the base method and reset the scene
         base.Die();
-        //Kill the player, game over screen, reset
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

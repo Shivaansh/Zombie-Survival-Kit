@@ -2,24 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ZombieStats: A class used to manage stats specific to the zombies, inherited from CharacterStats
+/// </summary>
 public class ZombieStats : CharacterStats
 {
+    //Animator to control death animation
     private Animator animator;
+
+    //Delay and timer to allow animation to complete
     public float delay;
+    float timeAnimStarted;
+
+    //Booleans to check if the zombie has died or dropped an item
     private bool isDead = false;
     private bool isDropped = false;
 
-    //Brian's Code
+    //Array of droppable objects
     public GameObject[] Drops;
+
+    //To store the death location
     public Transform zombie;
 
-    //Shiv's Code
-    float timeAnimStarted;
-
-    void Start()
+    /// <summary>
+    /// Start: Is a void method used for initialization
+    /// </summary>
+    private void Start()
     {
+        //Initializes the animator reference and their initial health to max 
         animator = GetComponent<Animator>();
-
         curHealth = maxHealth;
 
         //Loads All the possible items that can be dropped by a zombie
@@ -36,41 +47,37 @@ public class ZombieStats : CharacterStats
         Drops[9] = Resources.Load<GameObject>("PrefabItems/Cloak");
     }
 
+    /// <summary>
+    /// Update: Is a void method that is called once per frame
+    /// </summary>
     private void Update()
     {
-        
+        //If the delay has passed since the zombie's health has reached 0
         if (Time.time >= timeAnimStarted + delay && isDead == true)
         {
-            //The death location of the zombie
+            //Mark the death location and destroy the zombie game object
             Vector3 deathLocation = zombie.transform.position;
-
             Destroy(gameObject);
 
-            //Generates a random number between 0-9
+            //Drops a random item
             System.Random r = new System.Random();
             int dropChoice = r.Next(0, 10);
-
             DropItem(deathLocation, dropChoice);
         }
     }
 
+    /// <summary>
+    /// Die: An overwritten Die method to control what happens when the zombie dies
+    /// </summary>
     public override void Die()
     {
-        zombie.GetComponent<Enemy>().enabled = false;
+        base.Die();
+        //zombie.GetComponent<Enemy>().enabled = false;
+
+        //Let the update method know the zombie is dead, play the animation, and start the timer
         isDead = true;
         animator.SetBool("dead", true);
         timeAnimStarted = Time.time;
-
-        
-
-        base.Die();
-        //Destroy(gameObject, delay);
-        
-
-        
-
-        //DropItem(deathLocation, dropChoice);
-
     }
 
     /// <summary>
@@ -80,7 +87,7 @@ public class ZombieStats : CharacterStats
     /// <param name="dropChoice">Determines which item is dropped from the dead enemy</param>
     private void DropItem(Vector3 deathLocation, int dropChoice)
     {
-        if (!isDropped)
+        if (!isDropped) //So multiple items do not drop from the enemy
         {
             isDropped = true;
 
@@ -140,6 +147,10 @@ public class ZombieStats : CharacterStats
         }
     }
 
+    /// <summary>
+    /// IsDead: A boolean method that allows other classes to know if the zombie has died
+    /// </summary>
+    /// <returns>true or false</returns>
     public bool isDeath()
     {
         return isDead;
