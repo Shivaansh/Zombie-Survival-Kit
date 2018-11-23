@@ -9,12 +9,12 @@ using UnityEngine;
 public class CharacterCombat : MonoBehaviour
 {
     //Variables to control how fast a character can attack and a timer/delay between attacks
-    public float attackSpeed = 0.5f;
+    [SerializeField] float attackSpeed = 0.5f;
     private float attackCooldown = 0f;
     private float attackDelay = 1.5f;
 
     //Reference to the stats of the attacker
-    CharacterStats attackerStats;
+    private CharacterStats attackerStats;
 
     /// <summary>
     /// Start: Is a void method used for stats initialization

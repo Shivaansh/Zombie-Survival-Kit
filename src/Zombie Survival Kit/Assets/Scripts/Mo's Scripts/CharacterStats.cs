@@ -36,10 +36,12 @@ public class CharacterStats : MonoBehaviour
         //Subtracts the new damage value from the character's current health
         if (curHealth > damage)
             curHealth -= damage;
+        else
+            curHealth = 0; //Do not go below 0 health
 
         Debug.Log(transform.name + " takes " + damage + " damage.");
 
-        //If the player has reached below 0 health, initiate the Die method
+        //If the player has reached 0 health, initiate the Die method
         if (curHealth <= 0)
             Die();
     }

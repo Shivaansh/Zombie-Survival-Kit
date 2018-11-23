@@ -8,11 +8,11 @@ using UnityEngine.AI;
 /// </summary>
 public class Zombie : MonoBehaviour
 {
-    public bool campType; //Used to determine if the zombie is idle wanders around initially
+    [SerializeField] bool campType; //Used to determine if the zombie is idle wanders around initially
 
     //Radiuses to determine when the zombie detects a player and when it walks back to its spawn point
-    public float detectRadius = 5f;
-    public float returnToSpawnRadius = 25f;
+    [SerializeField] float detectRadius = 5f;
+    [SerializeField] float returnToSpawnRadius = 25f;
 
     //Zombie distance from the player and spawn point
     private float distanceToPlayer;

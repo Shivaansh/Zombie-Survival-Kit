@@ -9,8 +9,8 @@ using UnityEngine;
 public class Enemy : Interactable
 {
     //Objects used to hold the stats for the player and the enemy
-    PlayerStats playerManager;
-    CharacterStats enemyStats;
+    private PlayerStats playerManager;
+    private CharacterStats enemyStats;
 
     /// <summary>
     /// Start: Is a void method used for stats initialization
