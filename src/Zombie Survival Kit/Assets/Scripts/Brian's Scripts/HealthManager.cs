@@ -22,7 +22,7 @@ public class HealthManager : MonoBehaviour
     }
     #endregion
 
-    public GameObject player;
+    //public GameObject player;
 
     /// <summary>
     /// Start(): Is a void method used for initialization

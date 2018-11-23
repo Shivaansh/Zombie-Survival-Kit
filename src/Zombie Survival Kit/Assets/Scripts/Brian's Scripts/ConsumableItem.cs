@@ -15,7 +15,7 @@ public class ConsumableItem : Item
     /* Determines how much health is restored to the player if the player uses the
      * ConsumableItem
      */
-    public int healthModifier;
+    [SerializeField] public int healthModifier;
 
     /// <summary>
     /// Use: An override void method used when the player wants to use the 

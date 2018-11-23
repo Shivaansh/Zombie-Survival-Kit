@@ -10,19 +10,19 @@ public class PickupDropItems : MonoBehaviour
 
     /* Creating the length of the Raycast
      */
-    public float distanceToSee;
+    [SerializeField] private float distanceToSee;
 
     /* Creating a public interactible variable that stores whatever the player had just focused on
      */
-    public Interactable focus;
+    private Interactable focus;
 
     /* Creating a public interactible variable
      */
-    RaycastHit hit;
+    private RaycastHit hit;
 
     /* Keeps a reference of the player
      */
-    public GameObject player;
+    private GameObject player;
 
     ///* Checks to see if the player is carrying anything
     // */
@@ -133,7 +133,7 @@ public class PickupDropItems : MonoBehaviour
     /// interacts with the GameObject object if it is an interactable, and only carries the object if it is 
     /// a Pickupable.
     /// </summary>
-    void pickup()
+    private void pickup()
     {
         /* If the ray hits, do something
             */
@@ -163,7 +163,7 @@ public class PickupDropItems : MonoBehaviour
         }
     }
 
-    void AttackEnemy()
+    private void AttackEnemy()
     {
         /* If the ray hits, do something
             */
@@ -186,7 +186,7 @@ public class PickupDropItems : MonoBehaviour
     /// SetFocus: Creates a focus on the object that the player interactes with.
     /// </summary>
     /// <param name="newFocus">The new interactable that the player is focusing on</param>
-    void SetFocus(Interactable newFocus)
+    private void SetFocus(Interactable newFocus)
     {
         if (newFocus != focus)
         {
@@ -202,7 +202,7 @@ public class PickupDropItems : MonoBehaviour
     /// RemoveFocus: Removes the focus that the player is focusing on.
     /// </summary>
     /// <param name="newFocus">The new interactable that the player is focusing on</param>
-    void RemoveFocus()
+    private void RemoveFocus()
     {
         if (focus != null)
             focus.onDefocused();

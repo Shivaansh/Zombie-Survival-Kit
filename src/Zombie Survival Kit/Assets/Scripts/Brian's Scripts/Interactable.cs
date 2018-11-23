@@ -13,16 +13,16 @@ public class Interactable : MonoBehaviour
     /* The minimum distance the player must be with the Interactable GameObject 
      * to interact with, and to keep the interaction with the GameObject.
      */
-    public float radius;
+    [SerializeField] public float radius;
     /* Shows if the the Interactable GameObject is being focused on.
      */
-    public bool isFocus = false;
+    private bool isFocus = false;
     /* Shows what is interacting wtih the Interactable GameObject.
      */
-    public Transform player;
+    private Transform player;
     /* Shows if the Interactable GameObject has been interacted with.
      */
-    public bool hasInteracted = false;
+    private bool hasInteracted = false;
 
     /// <summary>
     /// Interact: Is a virtual void method that is re-programmable in all other

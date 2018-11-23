@@ -29,11 +29,11 @@ public class EquipmentManager : MonoBehaviour
 
     /* A EquipementItem array used to hold all equipped items
      */
-    public EquipmentItem[] equippedItems;
+    [SerializeField] private EquipmentItem[] equippedItems;
 
     /* Used as a reference to the inventory
      */
-    Inventory inventory;
+    [SerializeField] Inventory inventory;
 
     /// <summary>
     /// Start: Is a void method used for initialization

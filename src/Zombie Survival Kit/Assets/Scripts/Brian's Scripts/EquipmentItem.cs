@@ -15,14 +15,14 @@ public class EquipmentItem : Item
     /* Determines which Equipment slot the EmuipmentItem belongs to when equipped to
      * The player
      */
-    public equipmentSlot equipSlot;
+    [SerializeField] public equipmentSlot equipSlot;
 
     /* Determines how much attack the equipment can produce to an enemy
      */
-    public int attackModifier;
+    [SerializeField] public int attackModifier;
     /* Determines how much defence the equipment can provide for the player
      */
-    public int defenceModifier;
+    [SerializeField] public int defenceModifier;
 
     /// <summary>
     /// Use: An override void method used when the player wants to use the 

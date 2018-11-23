@@ -9,18 +9,18 @@ public class InventoryUI : MonoBehaviour
 
     /* Used to references the parent of all of the inventory slots
      */
-    public Transform itemsParent;
+    [SerializeField] private Transform itemsParent;
     /* Used to reference the Canvas of the inventoryUI
      */
-    public Canvas inventoryUI;
+    [SerializeField] private Canvas inventoryUI;
 
     /* Used to reference the the inventory instance
      */
-    Inventory inventory;
+    private Inventory inventory;
 
     /* Used to references all of the inventory slots
      */
-    InventorySlot[] slots;
+    private InventorySlot[] slots;
 
 
     /// <summary>
@@ -67,7 +67,7 @@ public class InventoryUI : MonoBehaviour
     /// UpdateInventoryUI: Is a void method that updates the inventory UI when an item is added
     /// or removed from the invenotry.
     /// </summary>
-    void UpdateInventoryUI()
+    private void UpdateInventoryUI()
     {
         Debug.Log("Updating UI");
         for (int i = 0; i < slots.Length; i++)

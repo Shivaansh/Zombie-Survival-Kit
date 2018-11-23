@@ -10,7 +10,7 @@ public class ItemStore : Interactable
 
     /* A reference to the Item being interacted with
      */
-    public Item item;
+    [SerializeField] private Item item;
 
     /// <summary>
     /// Interact: Is an override void method used when interacting with an Item
@@ -25,7 +25,7 @@ public class ItemStore : Interactable
     /// <summary>
     /// StoreItem: Is a void method that stores the Item into the inventory
     /// </summary>
-    void StoreItem()
+    private void StoreItem()
     {
         /* Add item to inventory
          */

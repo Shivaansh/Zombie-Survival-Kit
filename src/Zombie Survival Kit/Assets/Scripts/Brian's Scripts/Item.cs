@@ -12,13 +12,13 @@ public class Item : ScriptableObject
 {
     /* The name of the item
      */
-    new public string name = "New Item";
+    [SerializeField] new public string name = "New Item";
     /* The icon of the item
      */
-    public Sprite icon = null;
-    /* A bool used to check if it is a default item
-     */
-    public bool isDefaultItem = false;
+    [SerializeField] public Sprite icon = null;
+    ///* A bool used to check if it is a default item
+    // */
+    //[SerializeField] private bool isDefaultItem = false;
 
     /// <summary>
     /// Use: Is a virtual void method used when the player wants to use the item.

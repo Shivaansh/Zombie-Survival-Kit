@@ -10,17 +10,19 @@ public class EquipmentSlot : MonoBehaviour
 
     /* A reference to the icon of the equipment item being stored
     */
-    public Image icon;
+    [SerializeField] private Image icon;
 
     /* A reference to the remove button on the equipment slot
      */
-    public Button removeButton;
+    [SerializeField] private Button removeButton;
 
-    public int slotNumber;
+    /* A reference to the slot number
+     */
+    [SerializeField] private equipmentSlot slotNumber;
 
     /* A reference to the item being stored in the equipment UI and list
      */
-    EquipmentItem item;
+    private EquipmentItem item;
 
     /// <summary>
     /// addItem: Is a void method that adds an item to the equipment 
@@ -49,11 +51,11 @@ public class EquipmentSlot : MonoBehaviour
     }
 
     /// <summary>
-    /// onRemoveButton: a void method that Removes the item from the equipment and moves it to the
+    /// onRemoveButton: a private void method that Removes the item from the equipment and moves it to the
     /// the inventory.
     /// </summary>
-    public void onRemoveButton()
+    private void onRemoveButton()
     {
-        EquipmentManager.instance.Unequip(slotNumber);
+        EquipmentManager.instance.Unequip((int)slotNumber);
     }
 }

@@ -11,18 +11,18 @@ public class EquipmentUI : MonoBehaviour
 
     /* Used to references the parent of all of the equipment slots
      */
-    public Transform equipmentParent;
+    [SerializeField] private Transform equipmentParent;
     /* Used to reference the Canvas of the equipment UI
      */
-    public Canvas equipmentUI;
-
-    /* Used to reference the the EquipmentManager instance
-     */
-    EquipmentManager equipment;
+    [SerializeField] private Canvas equipmentUI;
 
     /* Used to references all of the equipment slots
      */
-    EquipmentSlot[] equipmentSlots;
+    [SerializeField] private EquipmentSlot[] equipmentSlots;
+
+    /* Used to reference the the EquipmentManager instance
+     */
+    private EquipmentManager equipment;
 
     /// <summary>
     /// Start: Is a void method used for initialization
@@ -65,10 +65,10 @@ public class EquipmentUI : MonoBehaviour
     }
 
     /// <summary>
-    /// UpdateEquipmentUI: Is a void method that updates the equipment UI when an Equipment 
+    /// UpdateEquipmentUI: Is a private void method that updates the equipment UI when an Equipment 
     /// item is added or removed from the corresponding inventory slot.
     /// </summary>
-    void UpdateEquipmentUI(EquipmentItem New, EquipmentItem Old)
+    private void UpdateEquipmentUI(EquipmentItem New, EquipmentItem Old)
     {
         Debug.Log("Updating Equipment UI");
         if (New == null)

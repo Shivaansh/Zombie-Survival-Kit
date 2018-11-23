@@ -36,11 +36,13 @@ public class Inventory : MonoBehaviour
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
-    public GameObject player;
+    /* A reference to the player
+     */
+    [SerializeField] private GameObject player;
 
     /* The amount of space the inventory can have
      */
-    public int space;
+    [SerializeField] private int space;
 
     /* The inventory list
      */
@@ -53,31 +55,26 @@ public class Inventory : MonoBehaviour
     /// <returns>true or false</returns>
     public bool Add(Item item)
     {
-        // Checks to see if the item being picked up is a default item
-        if (!item.isDefaultItem)
+
+        // Checks if the inventory does not have enough space
+        if (items.Count >= space)
         {
-            // Checks if the inventory does not have enough space
-            if (items.Count >= space)
-            {
-                Debug.Log("Not enough room in the inventory");
-                return false;
-            }
-            // Add the item to the inventory
-            items.Add(item);
-
-            // Invoke a change to the inventory UI 
-            if (onItemChangedCallback != null)
-                onItemChangedCallback.Invoke();
-
-
+            Debug.Log("Not enough room in the inventory");
+            return false;
         }
+        // Add the item to the inventory
+        items.Add(item);
+
+        // Invoke a change to the inventory UI 
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
 
         return true;
     }
 
 
     /// <summary>
-    /// Remove: A void method used to remove items to the inventory
+    /// RemoveFromInventory: A void method used to remove items from the inventory
     /// </summary>
     /// <param name="item">The item being removed from the inventory</param>
     public void RemoveFromInventory(Item item)
@@ -92,6 +89,11 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke();
     }
 
+    /// <summary>
+    /// InventoryEquipmentConsumable: A void method used to remove an item from the
+    /// inventory when the item is used
+    /// </summary>
+    /// <param name="item"></param>
     public void InventoryEquipmentConsumable(Item item)
     {
         items.Remove(item);

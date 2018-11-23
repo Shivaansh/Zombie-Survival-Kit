@@ -10,15 +10,15 @@ public class InventorySlot : MonoBehaviour
 
     /* A reference to the icon of the item being stored
      */
-    public Image icon;
+    [SerializeField] private Image icon;
 
     /* A reference to the remove button on the inventory slot
      */
-    public Button removeButton;
+    [SerializeField] private Button removeButton;
 
     /* A reference to the item being stored in the inventory UI and list
      */
-    Item item;
+    private Item item;
 
     /// <summary>
     /// addItem: Is a void method that adds an item to the inventory slot
