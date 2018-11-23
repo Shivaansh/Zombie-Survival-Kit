@@ -22,7 +22,7 @@ public class ZombieStats : CharacterStats
     private GameObject[] Drops;
 
     //To store the death location
-    private Transform zombie;
+    public Transform zombie;
 
     /// <summary>
     /// Start: Is a void method used for initialization
@@ -72,7 +72,7 @@ public class ZombieStats : CharacterStats
     public override void Die()
     {
         base.Die();
-        zombie.GetComponent<Enemy>().enabled = false;
+        //zombie.GetComponent<Enemy>().enabled = false;
 
         //Let the update method know the zombie is dead, play the animation, and start the timer
         isDead = true;

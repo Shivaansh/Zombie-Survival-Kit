@@ -13,6 +13,10 @@ public class CharacterStats : MonoBehaviour
     public Stat dmg;
     public Stat armour;
 
+    //Constants to represent the minmum damage and hp values
+    private const int MIN_DMG = 1;
+    private const int MIN_HP = 0;
+
     /// <summary>
     /// Start: Is a void method used for health initialization
     /// </summary>
@@ -31,17 +35,17 @@ public class CharacterStats : MonoBehaviour
         if (damage > armour.GetValue())
             damage -= armour.GetValue();
         else
-            damage = 1; //Minimum damage value
+            damage = MIN_DMG; //Minimum damage value of 1
 
         //Subtracts the new damage value from the character's current health
         if (curHealth > damage)
             curHealth -= damage;
-        else
-            curHealth = 0; //Do not go below 0 health
+        else 
+            curHealth = MIN_HP; //Do not allow negative health
 
         Debug.Log(transform.name + " takes " + damage + " damage.");
 
-        //If the player has reached 0 health, initiate the Die method
+        //If the player has reached below 0 health, initiate the Die method
         if (curHealth <= 0)
             Die();
     }

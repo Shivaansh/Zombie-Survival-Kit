@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class PlayerStats : CharacterStats
 {
-
     /// <summary>
     /// Singleton: Is a region used to create an instance of the HealthManager
     /// class

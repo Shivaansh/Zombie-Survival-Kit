@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class PlayerUI : MonoBehaviour
 {
     [SerializeField]
-    private RectTransform hpBarFill; //The amount of the health bar to fill red
+    RectTransform hpBarFill; //The amount of the health bar to fill red
 
     [SerializeField]
-    private Text ammoLeft; //Text to display ammo left in the clip
+    Text ammoLeft; //Text to display ammo left in the clip
 
     [SerializeField]
     GameObject gunObject; //Reference to the player's gun and stats
