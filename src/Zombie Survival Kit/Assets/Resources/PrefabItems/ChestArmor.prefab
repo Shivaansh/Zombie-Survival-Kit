@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114850053825595040}
   m_Layer: 0
   m_Name: ChestArmor
-  m_TagString: Untagged
+  m_TagString: Equipment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  isFocus: 0
-  player: {fileID: 0}
-  hasInteracted: 0
   item: {fileID: 11400000, guid: f2e0ca1af65faa448b07d69775ea57fd, type: 2}

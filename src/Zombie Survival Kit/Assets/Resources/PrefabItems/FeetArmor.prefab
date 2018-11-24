@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114239565965162298}
   m_Layer: 0
   m_Name: FeetArmor
-  m_TagString: Untagged
+  m_TagString: Equipment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  isFocus: 0
-  player: {fileID: 0}
-  hasInteracted: 0
   item: {fileID: 11400000, guid: 286fa8ccc3190a743ade9d8104b60d94, type: 2}

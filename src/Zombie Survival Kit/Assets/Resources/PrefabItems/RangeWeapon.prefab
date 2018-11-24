@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54462010520399828}
   m_Layer: 0
   m_Name: RangeWeapon
-  m_TagString: Untagged
+  m_TagString: Equipment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,9 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  isFocus: 0
-  player: {fileID: 0}
-  hasInteracted: 0
   item: {fileID: 11400000, guid: cc295ee21be408a489f4a18162a2b5cf, type: 2}
 --- !u!136 &136992295316573520
 CapsuleCollider:

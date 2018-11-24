@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 114814028956184882}
   m_Layer: 0
   m_Name: Handgun_M1911A_Steel (WithScript)
-  m_TagString: Untagged
+  m_TagString: Equipment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: e5198250a6a57408bb36e14bc4a322c4, type: 3}
   bulletSpeed: 2000
   fireRate: 0.8
-  barrelLocation: {fileID: 0}
+  reloadRate: 2
   cam: {fileID: 0}
 --- !u!114 &114902262272980302
 MonoBehaviour:
@@ -645,7 +645,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  isFocus: 0
-  player: {fileID: 0}
-  hasInteracted: 0
   item: {fileID: 11400000, guid: cc295ee21be408a489f4a18162a2b5cf, type: 2}

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114804090816033214}
   m_Layer: 0
   m_Name: LegArmor
-  m_TagString: Untagged
+  m_TagString: Equipment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  isFocus: 0
-  player: {fileID: 0}
-  hasInteracted: 0
   item: {fileID: 11400000, guid: 2de1bc42fa1613641b14b08b67b5a106, type: 2}

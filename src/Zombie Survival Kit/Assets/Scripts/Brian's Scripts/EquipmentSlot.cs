@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class EquipmentSlot : MonoBehaviour
 {
-
+    
     /* A reference to the icon of the equipment item being stored
     */
     [SerializeField] private Image icon;

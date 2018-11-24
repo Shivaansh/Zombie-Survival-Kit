@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114723843934530874}
   m_Layer: 0
   m_Name: HeadArmor
-  m_TagString: Untagged
+  m_TagString: Equipment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  isFocus: 0
-  player: {fileID: 0}
-  hasInteracted: 0
   item: {fileID: 11400000, guid: 8db76d7693a2fbf478cf4c5b679baf48, type: 2}
