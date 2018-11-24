@@ -35,6 +35,11 @@ public class EquipmentManager : MonoBehaviour
      */
     [SerializeField] Inventory inventory;
 
+    GameObject player; // the player in the game
+    GameObject fpscontroller; // the FirstPersonCharacter child of the player
+    [SerializeField] GameObject gun; //the gun
+    GameObject equippedGun;
+
     /// <summary>
     /// Start: Is a void method used for initialization
     /// </summary>
@@ -44,6 +49,13 @@ public class EquipmentManager : MonoBehaviour
         equippedItems = new EquipmentItem[numSlots];
 
         inventory = Inventory.instance;
+
+        //Shiv's part
+        player = GameObject.FindGameObjectWithTag("GameController");
+        Debug.Log(player + " is the player object");
+        fpscontroller = GameObject.FindGameObjectWithTag("MainCamera");
+        Debug.Log(player + " is the player FPS controller child");
+        // end
     }
 
     /// <summary>
@@ -78,6 +90,15 @@ public class EquipmentManager : MonoBehaviour
         {
             onEquipmentChanged.Invoke(newEquipment, oldEquipment);
         }
+
+        //Shiv's part
+        if (newEquipment.name == "RangeWeapon")
+        {
+            //set to active
+            equippedGun = Instantiate(gun, fpscontroller.transform.position, Quaternion.identity);
+            Debug.Log("Gun equipped");
+        }
+        //End of Shiv's part
     }
 
     /// <summary>
@@ -92,6 +113,14 @@ public class EquipmentManager : MonoBehaviour
             EquipmentItem oldEquipment = equippedItems[SlotIndex];
             inventory.Add(oldEquipment);
 
+            //Shiv's part
+            if (equippedItems[SlotIndex].name == "RangeWeapon")
+            {
+                //set to active
+                Destroy(GameObject.FindGameObjectWithTag("Gun").gameObject);
+                Debug.Log("Gun unequipped");
+            }
+            // End of Shiv's part
             equippedItems[SlotIndex] = null;
 
             if (onEquipmentChanged != null)
