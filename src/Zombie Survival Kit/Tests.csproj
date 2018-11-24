@@ -85,6 +85,8 @@
     <Compile Include="Assets\Scripts\Shiv's Scripts\BulletDamage.cs" />
     <Compile Include="Assets\Scripts\Shiv's Scripts\DayLightController.cs" />
     <Compile Include="Assets\Scripts\Shiv's Scripts\Gun.cs" />
+    <Compile Include="Assets\Scripts\Tests\Test_ConsumableItem.cs" />
+    <Compile Include="Assets\Scripts\Tests\Test_EquipmentItem.cs" />
     <Compile Include="Assets\Scripts\Tests\Test_EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\Tests\Test_Inventory.cs" />
     <None Include="Assets\Scripts\Tests.asmdef" />

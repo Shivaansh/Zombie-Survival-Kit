@@ -29,16 +29,22 @@ public class EquipmentManager : MonoBehaviour
 
     /* A EquipementItem array used to hold all equipped items
      */
-    [SerializeField] private EquipmentItem[] equippedItems;
+    [SerializeField] public EquipmentItem[] equippedItems;
 
     /* Used as a reference to the inventory
      */
-    [SerializeField] Inventory inventory;
+    private Inventory inventory;
 
-    GameObject player; // the player in the game
-    GameObject fpscontroller; // the FirstPersonCharacter child of the player
+    [SerializeField] GameObject fpscontroller; // the FirstPersonCharacter child of the player
     [SerializeField] GameObject gun; //the gun
     GameObject equippedGun;
+
+    public void Construct(Inventory i, GameObject g, GameObject player)
+    {
+        inventory = i;
+        gun = g;
+        fpscontroller = player;
+    }
 
     /// <summary>
     /// Start: Is a void method used for initialization
@@ -49,13 +55,6 @@ public class EquipmentManager : MonoBehaviour
         equippedItems = new EquipmentItem[numSlots];
 
         inventory = Inventory.instance;
-
-        //Shiv's part
-        player = GameObject.FindGameObjectWithTag("GameController");
-        Debug.Log(player + " is the player object");
-        fpscontroller = GameObject.FindGameObjectWithTag("MainCamera");
-        Debug.Log(player + " is the player FPS controller child");
-        // end
     }
 
     /// <summary>

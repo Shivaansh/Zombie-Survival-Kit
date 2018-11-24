@@ -12,8 +12,7 @@ public class PlayerUI : MonoBehaviour
     [SerializeField]
     Text ammoLeft; //Text to display ammo left in the clip
 
-    [SerializeField]
-    GameObject gunObject; //Reference to the player's gun and stats
+    //GameObject gunObject; //Reference to the player's gun and stats
     private Gun gun;
     private PlayerStats stats;
 
@@ -24,7 +23,7 @@ public class PlayerUI : MonoBehaviour
     public void SetStats(PlayerStats playerStats)
     {
         stats = playerStats;
-        gun = gunObject.GetComponent<Gun>();
+        //gun = gunObject.GetComponent<Gun>();
     }
 
     /// <summary>
@@ -32,9 +31,19 @@ public class PlayerUI : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        GameObject gun1 = GameObject.FindGameObjectWithTag("Gun");
+        if (gun1 != null)
+        {
+            gun = gun1.GetComponent<Gun>();
+            SetAmmoAmount(gun.getAmmoInClip().ToString());
+        } else
+        {
+            SetAmmoAmount("-");
+        }
+            
         //Keep on updating the amount health and ammo to display
         SetHPFill(stats.curHealth);
-        SetAmmoAmount(gun.getAmmoInClip());
+
     }
 
     /// <summary>
@@ -51,9 +60,9 @@ public class PlayerUI : MonoBehaviour
     /// SetAmmoAmount: A method to modify the ammo UI acording to the ammo left in the clip
     /// </summary>
     /// <param name="amount">The amount of ammo left</param>
-    private void SetAmmoAmount(int amount)
+    private void SetAmmoAmount(string amount)
     {
         //Update the text
-        ammoLeft.text = amount.ToString();
+        ammoLeft.text = amount;
     }
 }

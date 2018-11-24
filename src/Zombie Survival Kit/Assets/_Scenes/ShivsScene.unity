@@ -3962,6 +3962,11 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 223741829429734774, guid: 9fa1541db61c3614099578f807d82ac9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fa1541db61c3614099578f807d82ac9, type: 2}
   m_IsPrefabAsset: 0
@@ -4583,11 +4588,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74319e74ce2dcb34090aef3b6c7e8e8b, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &676134872 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1429342165930954, guid: b27d888e816d3e144b39fdf811221ed6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1475269400}
 --- !u!1001 &677701412
 Prefab:
   m_ObjectHideFlags: 0
@@ -5686,6 +5686,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1292577933150200, guid: 63db0516efe765849a66e22084a6a364,
         type: 2}
+    - target: {fileID: 114892796975052866, guid: 888d76a7073324548a39bb4da51eb270,
+        type: 2}
+      propertyPath: fpscontroller
+      value: 
+      objectReference: {fileID: 911994134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 888d76a7073324548a39bb4da51eb270, type: 2}
   m_IsPrefabAsset: 0
@@ -5791,6 +5796,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 438536, guid: 74319e74ce2dcb34090aef3b6c7e8e8b,
     type: 2}
   m_PrefabInternal: {fileID: 1602844834}
+--- !u!1 &911994134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1851868628379042, guid: b27d888e816d3e144b39fdf811221ed6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1475269400}
 --- !u!4 &923797743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 438536, guid: 74319e74ce2dcb34090aef3b6c7e8e8b,
@@ -8356,7 +8366,13 @@ Prefab:
         type: 2}
       propertyPath: gunObject
       value: 
-      objectReference: {fileID: 676134872}
+      objectReference: {fileID: 1292577933150200, guid: 63db0516efe765849a66e22084a6a364,
+        type: 2}
+    - target: {fileID: 114774461935860094, guid: 44a5f6da080336b4fb6e1a276aa869f4,
+        type: 2}
+      propertyPath: m_Text
+      value: '-'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44a5f6da080336b4fb6e1a276aa869f4, type: 2}
   m_IsPrefabAsset: 0
