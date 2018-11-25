@@ -33,8 +33,35 @@ public class Gun : MonoBehaviour
 
     private AudioSource reloadSource;
 
+    //public bool bulletHasBeenFired; //used for testing
+
     ItemStore rangedItem;
 
+    GameObject playerCanvasUI;
+
+    bool isInventoryActive;
+
+    /*
+    /// <summary>
+    /// Contruct: Used to construct an Object of type Gun, used for unit testing purposes
+    /// </summary>
+    /// <param name="ammoinclip"></param>
+    /// <param name="ammoperclip"></param>
+    /// <param name="bulletobject"></param>
+    /// <param name="bulletspeed"></param>
+    /// <param name="firerate"></param>
+    /// <param name="reloadrate"></param>
+    public void Construct(int ammoinClip, int ammoperclip, GameObject bulletobject, GameObject camera, float bulletspeed, float firerate, float reloadrate)
+    {
+        cam = camera;
+        ammoInClip = ammoinClip;
+        ammoPerClip = ammoperclip;
+        bullet = bulletobject;
+        bulletSpeed = bulletspeed;
+        fireRate = firerate;
+        reloadRate = reloadrate;
+    }
+    */
 
     /// <summary>  
     ///  Start: This method runs at the start of the game and initialized the various variables required for the level.  
@@ -52,18 +79,20 @@ public class Gun : MonoBehaviour
 
         rangedItem = GetComponent<ItemStore>();
 
-        //Item rangedWeapon = GetComponent<Item>();
-
-        //Debug.Log(rangedWeapon.name);
-
+        playerCanvasUI = GameObject.FindGameObjectWithTag("InventoryCanvas");
+        var inventoryCanvas = playerCanvasUI.GetComponent<Canvas>();
+        isInventoryActive = inventoryCanvas.enabled;
     }
     /// <summary>  
     ///  Update: This method is called once per frame.  
     /// </summary>  
 	void Update()
     {
+        var inventoryCanvas = playerCanvasUI.GetComponent<Canvas>();
+        isInventoryActive = inventoryCanvas.enabled;
+
         float elapsedTime = Time.time - startTime; //current time - time since last shot
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !reloadSource.isPlaying && elapsedTime >= fireRate) //when left mouse button is clicked, and time passed since last shot is more than fire rate
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !reloadSource.isPlaying && elapsedTime >= fireRate && isInventoryActive == false) //when left mouse button is clicked, and time passed since last shot is more than fire rate
         {
             shoot(); //shoot a bullet
             elapsedTime = 0f; //reset time since last shot to 0
@@ -79,13 +108,14 @@ public class Gun : MonoBehaviour
     ///  shoot: This method shoots a bullet towards a target, and updates the number of bullets in the clip. If the clip is empty, this method reloads the weapon.  
     ///  It also instantiates a temporary "muzzle flash" at the end of the gun barrell
     /// </summary> 
-    void shoot()
+    public void shoot()
     {
         if (ammoInClip > 0)
         {
             createBullet();
-            GetComponent<Animator>().SetTrigger("Fire");
+            //GetComponent<Animator>().SetTrigger("Fire");
             ammoInClip--;
+           // bulletHasBeenFired = true;
         }
         else
         {
@@ -96,7 +126,7 @@ public class Gun : MonoBehaviour
     /// <summary>  
     ///  reload: This method reloads the weapon by restoring the number of bullets in the clip to full capacity.  
     /// </summary>  
-    void reload()
+    public void reload()
     {
         ammoInClip = ammoPerClip; //loads the weapon
         playReloadSound();
@@ -105,7 +135,7 @@ public class Gun : MonoBehaviour
     /// <summary>  
     ///  createBullet: This method instantiates a bullet at the end of the gun barrel and sends it forward with respect to the starting position.  
     /// </summary>  
-    void createBullet()
+    public void createBullet()
     {
         Instantiate(bullet, startPoint.position, startPoint.rotation).GetComponent<Rigidbody>().AddForce(startPoint.forward * bulletSpeed);
         playShotSound();

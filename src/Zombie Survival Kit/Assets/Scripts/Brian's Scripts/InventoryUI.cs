@@ -12,7 +12,11 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Transform itemsParent;
     /* Used to reference the Canvas of the inventoryUI
      */
-    [SerializeField] private Canvas inventoryUI;
+    //[SerializeField] private Canvas inventoryUI;
+
+    //Shiv's part
+    public Canvas inventoryUI;
+    //End of Shiv's part
 
     /* Used to reference the the inventory instance
      */

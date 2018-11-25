@@ -9,6 +9,7 @@ TagManager:
   - Gun
   - Equipment
   - GameManager
+  - InventoryCanvas
   layers:
   - Default
   - TransparentFX
