@@ -1132,7 +1132,7 @@ MonoBehaviour:
   armour:
     initialValue: 0
   player: {fileID: 1851868628379042}
-  playerUI: {fileID: 0}
+  playerUI: {fileID: 1041779841995196, guid: 44a5f6da080336b4fb6e1a276aa869f4, type: 2}
 --- !u!124 &124888035006849278
 Behaviour:
   m_ObjectHideFlags: 1

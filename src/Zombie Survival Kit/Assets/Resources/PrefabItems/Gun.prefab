@@ -741,4 +741,4 @@ MonoBehaviour:
   bulletSpeed: 2000
   fireRate: 0.8
   reloadRate: 2
-  cam: {fileID: 0}
+  cam: {fileID: 1606140112452260, guid: b27d888e816d3e144b39fdf811221ed6, type: 2}

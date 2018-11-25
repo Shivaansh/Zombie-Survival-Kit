@@ -52,9 +52,9 @@ public class Gun : MonoBehaviour
 
         rangedItem = GetComponent<ItemStore>();
 
-        Item rangedWeapon = GetComponent<Item>();
+        //Item rangedWeapon = GetComponent<Item>();
 
-        Debug.Log(rangedWeapon.name);
+        //Debug.Log(rangedWeapon.name);
 
     }
     /// <summary>  

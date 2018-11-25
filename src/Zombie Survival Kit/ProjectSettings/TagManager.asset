@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Gun
   - Equipment
+  - GameManager
   layers:
   - Default
   - TransparentFX
