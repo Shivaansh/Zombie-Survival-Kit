@@ -79,7 +79,7 @@ public class Gun : MonoBehaviour
 
         rangedItem = GetComponent<ItemStore>();
 
-        playerCanvasUI = GameObject.FindGameObjectWithTag("InventoryCanvas");
+        playerCanvasUI = GameObject.FindGameObjectWithTag("InventoryUI");
         var inventoryCanvas = playerCanvasUI.GetComponent<Canvas>();
         isInventoryActive = inventoryCanvas.enabled;
     }

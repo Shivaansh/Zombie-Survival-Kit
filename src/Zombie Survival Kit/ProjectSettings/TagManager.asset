@@ -10,6 +10,10 @@ TagManager:
   - Equipment
   - GameManager
   - InventoryCanvas
+  - PlayerUI
+  - EquipmentUI
+  - InventoryUI
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -49,17 +49,6 @@ public class Inventory : MonoBehaviour
     public List<Item> items = new List<Item>();
 
     /// <summary>
-    /// Contruct: Used to construct an Object of type inventory
-    /// </summary>
-    /// <param name="s"></param>
-    /// <param name="p"></param>
-    public void Construct(int s, GameObject p)
-    {
-        space = s;
-        player = p;
-    }
-
-    /// <summary>
     /// Add: A bool method used to add an item to the inventory
     /// </summary>
     /// <param name="item">The item being added to the inventory</param>

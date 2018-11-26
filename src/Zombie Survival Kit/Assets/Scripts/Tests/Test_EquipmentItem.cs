@@ -13,12 +13,21 @@ public class Test_EquipmentItem {
     // A UnityTest behaves like a coroutine in PlayMode
     // and allows you to yield null to skip a frame in EditMode
     [UnityTest]
-    public IEnumerator Test_EquipmentItemWithEnumeratorPasses() {
+    public IEnumerator Test_Use() {
         // Use the Assert class to test conditions.
         // yield to skip a frame
         GameObject GameManager = GameObject.Instantiate(Resources.Load<GameObject>("PrefabPlayer/GameManager"));
         GameObject player = GameObject.Instantiate(Resources.Load<GameObject>("PrefabPlayer/PrimaryPlayer"));
-        ConsumableItem item1 = Resources.Load<ConsumableItem>("Items/Apple");
+        EquipmentItem item1 = Resources.Load<EquipmentItem>("Items/HeadArmor");
+
+        GameManager.GetComponent<Inventory>().Add(item1);
+        yield return null;
+        Assert.True(GameManager.GetComponent<Inventory>().items.Contains(item1));
+
+        GameManager.GetComponent<Inventory>().items[0].Use();
+        yield return null;
+        Assert.False(GameManager.GetComponent<Inventory>().items.Contains(item1));
+        Assert.True(GameManager.GetComponent<EquipmentManager>().equippedItems[(int)item1.equipSlot] == item1);
 
         yield return null;
     }

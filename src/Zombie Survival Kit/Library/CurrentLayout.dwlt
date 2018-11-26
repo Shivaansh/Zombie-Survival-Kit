@@ -13,65 +13,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43
-    width: 1920
-    height: 997
+    x: 7.2000003
+    y: 50.4
+    width: 1522
+    height: 767
   m_ShowMode: 4
   m_Title: 
-  m_RootView: {fileID: 4}
+  m_RootView: {fileID: 2}
   m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 598
-    width: 281
-    height: 349
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 13}
-  - {fileID: 2}
-  m_Position:
-    serializedVersion: 2
-    x: 1639
-    y: 0
-    width: 281
-    height: 947
-  m_MinSize: {x: 277, y: 192}
-  m_MaxSize: {x: 4002, y: 8042}
-  vertical: 1
-  controlID: 181
---- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,18 +34,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 3}
   - {fileID: 5}
-  - {fileID: 7}
-  - {fileID: 6}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 997
+    width: 1522
+    height: 767
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
---- !u!114 &5
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,12 +61,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
+    width: 1522
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &6
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,11 +81,59 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 977
-    width: 1920
+    y: 747
+    width: 1522
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1522
+    height: 717
+  m_MinSize: {x: 506, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
+  vertical: 0
+  controlID: 32
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1245
+    height: 717
+  m_MinSize: {x: 404, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
+  vertical: 1
+  controlID: 151
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,17 +147,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 8}
-  - {fileID: 3}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 30
-    width: 1920
-    height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+    y: 0
+    width: 1245
+    height: 446
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 77
+  controlID: 11
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,22 +166,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 9}
-  - {fileID: 12}
+  m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1639
-    height: 947
-  m_MinSize: {x: 402, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
-  vertical: 1
-  controlID: 78
+    width: 212
+    height: 446
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,22 +191,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 10}
-  - {fileID: 11}
+  m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 212
     y: 0
-    width: 1639
-    height: 659
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
-  vertical: 0
-  controlID: 39
+    width: 1033
+    height: 446
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 15}
+  - {fileID: 13}
+  - {fileID: 16}
+  m_Selected: 1
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,16 +225,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 279
-    height: 659
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
+    y: 446
+    width: 1245
+    height: 271
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 16}
+  - {fileID: 17}
+  - {fileID: 18}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,72 +250,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 279
+    x: 1245
     y: 0
-    width: 1360
-    height: 659
-  m_MinSize: {x: 200, y: 200}
+    width: 277
+    height: 717
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 17}
-  - {fileID: 15}
-  - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 2
---- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 659
-    width: 1639
-    height: 288
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 19}
-  m_Panes:
+  - {fileID: 12}
   - {fileID: 19}
   - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 281
-    height: 598
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 21}
-  m_Panes:
-  - {fileID: 21}
-  - {fileID: 22}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &14
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,20 +282,20 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1641
-    y: 690
-    width: 279
-    height: 328
+    x: 1254.4
+    y: 100
+    width: 275
+    height: 696
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 14}
+    m_Window: {fileID: 12}
     newResultList:
     - id: '[Zombie Survival Kit][suite]'
       name: Zombie Survival Kit
       fullName: Zombie Survival Kit
       resultStatus: 2
-      duration: 0.2386697
+      duration: 1.366036
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -353,13 +305,11 @@ MonoBehaviour:
       isSuite: 1
       categories: []
       parentID: 
-    - id: '[D:/Study Material/3XA3 projects/Zombie_Survival_Kit/src/Zombie Survival
-        Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
-      fullName: D:/Study Material/3XA3 projects/Zombie_Survival_Kit/src/Zombie Survival
-        Kit/Library/ScriptAssemblies/Tests.dll
+      fullName: C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll
       resultStatus: 2
-      duration: 0.2091888
+      duration: 1.3249389
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -373,7 +323,7 @@ MonoBehaviour:
       name: Test_ConsumableItem
       fullName: Test_ConsumableItem
       resultStatus: 1
-      duration: 0.0873529
+      duration: 0.1620217
       messages: 
       output: 
       stacktrace: 
@@ -387,7 +337,7 @@ MonoBehaviour:
       name: Test_Use
       fullName: Test_ConsumableItem.Test_Use
       resultStatus: 1
-      duration: 0.067319
+      duration: 0.1413931
       messages: 
       output: "Using Apple\r\n"
       stacktrace: 
@@ -402,7 +352,7 @@ MonoBehaviour:
       name: Test_EquipmentItem
       fullName: Test_EquipmentItem
       resultStatus: 1
-      duration: 0.0610762
+      duration: 0.1127104
       messages: 
       output: 
       stacktrace: 
@@ -412,13 +362,13 @@ MonoBehaviour:
       isSuite: 1
       categories: []
       parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: '[Tests][Test_EquipmentItem.Test_EquipmentItemWithEnumeratorPasses]'
-      name: Test_EquipmentItemWithEnumeratorPasses
-      fullName: Test_EquipmentItem.Test_EquipmentItemWithEnumeratorPasses
+    - id: '[Tests][Test_EquipmentItem.Test_Use]'
+      name: Test_Use
+      fullName: Test_EquipmentItem.Test_Use
       resultStatus: 1
-      duration: 0.0461851
+      duration: 0.0997662
       messages: 
-      output: 
+      output: "Using HeadArmor\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -431,7 +381,7 @@ MonoBehaviour:
       name: Test_EquipmentManager
       fullName: Test_EquipmentManager
       resultStatus: 1
-      duration: 0.3476368
+      duration: 0.4436167
       messages: 
       output: 
       stacktrace: 
@@ -445,20 +395,9 @@ MonoBehaviour:
       name: Test_Equip
       fullName: Test_EquipmentManager.Test_Equip
       resultStatus: 1
-      duration: 0.1320273
+      duration: 0.2285508
       messages: 
-      output: "More than one instance of Inventory found!\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nGun equipped\r\nThere are 2 audio listeners in the scene. Please
-        ensure there is always exactly one audio listener in the scene.\r\nThere are
-        2 audio listeners in the scene. Please ensure there is always exactly one
-        audio listener in the scene.\r\nThere are 2 audio listeners in the scene.
-        Please ensure there is always exactly one audio listener in the scene.\r\nThere
-        are 2 audio listeners in the scene. Please ensure there is always exactly
-        one audio listener in the scene.\r\n"
+      output: "Updating UI\r\nGun equipped\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -471,9 +410,9 @@ MonoBehaviour:
       name: Test_Unequip
       fullName: Test_EquipmentManager.Test_Unequip
       resultStatus: 1
-      duration: 0.0993546
+      duration: 0.0994193
       messages: 
-      output: 
+      output: "Updating UI\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -486,9 +425,10 @@ MonoBehaviour:
       name: Test_UnequipAll
       fullName: Test_EquipmentManager.Test_UnequipAll
       resultStatus: 1
-      duration: 0.0990306
+      duration: 0.0993925
       messages: 
-      output: 
+      output: "Updating UI\r\nUpdating UI\r\nUpdating UI\r\nUpdating UI\r\nUpdating
+        UI\r\nUpdating UI\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -501,7 +441,7 @@ MonoBehaviour:
       name: Test_Gun
       fullName: Test_Gun
       resultStatus: 2
-      duration: 0.1954607
+      duration: 0.2150919
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -516,7 +456,7 @@ MonoBehaviour:
       name: Test_GunSimplePasses
       fullName: Test_Gun.Test_GunSimplePasses
       resultStatus: 1
-      duration: 0.0063953
+      duration: 0.0167877
       messages: 
       output: 
       stacktrace: 
@@ -531,7 +471,7 @@ MonoBehaviour:
       name: Test_GunWithEnumeratorPasses
       fullName: Test_Gun.Test_GunWithEnumeratorPasses
       resultStatus: 1
-      duration: 0.0577544
+      duration: 0.0656494
       messages: 
       output: 
       stacktrace: 
@@ -546,7 +486,7 @@ MonoBehaviour:
       name: Test_Reload
       fullName: Test_Gun.Test_Reload
       resultStatus: 1
-      duration: 0.0653814
+      duration: 0.0660484
       messages: 
       output: 
       stacktrace: 
@@ -561,7 +501,7 @@ MonoBehaviour:
       name: Test_Shoot
       fullName: Test_Gun.Test_Shoot
       resultStatus: 2
-      duration: 0.04632
+      duration: 0.0496451
       messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
         reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: "NullReferenceException: Object reference not set to an instance of
@@ -580,7 +520,7 @@ MonoBehaviour:
       name: Test_Inventory
       fullName: Test_Inventory
       resultStatus: 1
-      duration: 0.2652526
+      duration: 0.265787
       messages: 
       output: 
       stacktrace: 
@@ -594,7 +534,7 @@ MonoBehaviour:
       name: Test_Add
       fullName: Test_Inventory.Test_Add
       resultStatus: 1
-      duration: 0.0660595
+      duration: 0.0662231
       messages: 
       output: 
       stacktrace: 
@@ -609,7 +549,7 @@ MonoBehaviour:
       name: Test_InventoryEquipmentConsumable
       fullName: Test_Inventory.Test_InventoryEquipmentConsumable
       resultStatus: 1
-      duration: 0.0827991
+      duration: 0.08253
       messages: 
       output: 
       stacktrace: 
@@ -624,7 +564,7 @@ MonoBehaviour:
       name: Test_RemoveFromInventory
       fullName: Test_Inventory.Test_RemoveFromInventory
       resultStatus: 1
-      duration: 0.099577
+      duration: 0.1000787
       messages: 
       output: 
       stacktrace: 
@@ -635,7 +575,36 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentID: '[Tests][Test_Inventory][suite]'
-    m_ResultText: 'Test_Gun (0.195s)
+    - id: '[Tests][Test_ItemStore][suite]'
+      name: Test_ItemStore
+      fullName: Test_ItemStore
+      resultStatus: 1
+      duration: 0.1148896
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_ItemStore.Test_ItemStoreWithEnumeratorPasses]'
+      name: Test_ItemStoreWithEnumeratorPasses
+      fullName: Test_ItemStore.Test_ItemStoreWithEnumeratorPasses
+      resultStatus: 1
+      duration: 0.0994008
+      messages: 
+      output: "Picked up HeadArmor\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_ItemStore][suite]'
+    m_ResultText: 'Zombie Survival Kit (1.366s)
 
       ---
 
@@ -643,9 +612,9 @@ MonoBehaviour:
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3a93d1ee
-      m_LastClickedID: -288255174
-      m_ExpandedIDs: da62618fd62827a3ab19d7b6a02a84d6c2d69e00fb65ad0b16ca642effffff7f
+      m_SelectedIDs: d62827a3
+      m_LastClickedID: -1557714730
+      m_ExpandedIDs: da62618fd62827a3ab19d7b6a02a84d63a93d1eec2d69e00fb65ad0b16ca642effffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -672,7 +641,7 @@ MonoBehaviour:
       availableCategories:
       - Uncategorized
   m_EditModeTestListGUI:
-    m_Window: {fileID: 14}
+    m_Window: {fileID: 12}
     newResultList:
     - id: '[Zombie Survival Kit][suite]'
       name: Zombie Survival Kit
@@ -720,7 +689,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &15
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -740,10 +709,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 281
-    y: 92
-    width: 1356
-    height: 638
+    x: 221.6
+    y: 100
+    width: 1029
+    height: 425
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -755,10 +724,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -678
-    m_HBaseRangeMax: 678
-    m_VBaseRangeMin: -310.5
-    m_VBaseRangeMax: 310.5
+    m_HBaseRangeMin: -411.6
+    m_HBaseRangeMax: 411.6
+    m_VBaseRangeMin: -163.2
+    m_VBaseRangeMax: 163.2
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -776,30 +745,30 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 1356
-      height: 621
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 678, y: 310.5}
+      width: 1029
+      height: 408
+    m_Scale: {x: 1.1255087, y: 1.1255087}
+    m_Translation: {x: 514.5, y: 204.00002}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -678
-      y: -310.5
-      width: 1356
-      height: 621
+      x: -457.12665
+      y: -181.25139
+      width: 914.2533
+      height: 362.50278
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1356, y: 638}
+  m_LastWindowPixelSize: {x: 1286.25, y: 531.25}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
   m_XRRenderMode: 0
---- !u!114 &16
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -819,32 +788,32 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 92
-    width: 277
-    height: 638
+    x: 7.2000003
+    y: 100
+    width: 210
+    height: 425
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e280000
+    m_SelectedIDs: 9c070000
     m_LastClickedID: 0
-    m_ExpandedIDs: 2841ffff4841ffff6c44ffff4c5bffff6c5bffffd05effffde78fffffe78ffffcc7cffff2cbbffff4cbbffff08bfffffe4fbffff00000000064f0000b85e0000
+    m_ExpandedIDs: daeefcfffaeefcff3001fdff4018fdff6018fdff9224fdff886bfdffa86bfdff2477fdffc294fdffe294fdffeea0fdff86c5fdffa6c5fdff72d2fdff58eafdff78eafdff40f7fdffc40efeffe40efeff581bfeff303dfeff503dfeffa849feff1e7dfeff3e7dfeff9688feff6addfeff8addfeffa2e4feff1401ffff0000000074710000f0890000588b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Terrain
+      m_OriginalName: Terrain
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 32908
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
   - ShivsScene
@@ -852,7 +821,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_CurrentSortingName: TransformSorting
---- !u!114 &17
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -931,7 +900,7 @@ MonoBehaviour:
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &18
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -956,7 +925,7 @@ MonoBehaviour:
     width: 400
     height: 429
   m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &19
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -976,10 +945,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 751
-    width: 1637
-    height: 267
+    x: 7.2000003
+    y: 545.60004
+    width: 1243
+    height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -993,21 +962,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/Brian's Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/Brian's Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Study Material\3XA3 projects\Zombie_Survival_Kit\src\Zombie
-    Survival Kit
+  m_LastProjectPath: C:\Users\Brian\OneDrive\Desktop\Zombie Survival Kit
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 70}
-    m_SelectedIDs: 7a350000
-    m_LastClickedID: 13690
-    m_ExpandedIDs: 00000000fa2a00000a2b00001e2b0000da2b00009e2c0000de2c00005c2e000036300000a2300000b4300000cc30000040310000b0320000dc330000e2330000b0340000de3400007a350000d438000032390000fc390000a03a0000e23a00009e480000a0480000a2480000a4480000a6480000
+    scrollPos: {x: 0, y: 187}
+    m_SelectedIDs: c4650000
+    m_LastClickedID: 26052
+    m_ExpandedIDs: 00000000aa630000b0630000b8630000746400008e6400002c650000c4650000f4650000006600000c66000038660000ca66000030670000346700005c670000706700008c670000f26800002269000076690000b4690000d0690000e06d0000e26d0000e46d0000e66d0000e86d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1023,7 +991,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1035,7 +1003,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa2a00000a2b00001e2b0000da2b00009e2c0000de2c00005c2e000036300000a2300000b4300000cc30000040310000b0320000dc330000e2330000b0340000de3400007a350000d438000032390000fc390000a03a0000e23a00009e480000a0480000a2480000a4480000a6480000
+    m_ExpandedIDs: 00000000aa630000b0630000b86300000a640000746400008e6400002c650000c4650000f4650000006600000c66000038660000ca66000030670000346700005c670000706700008c670000f26800002269000076690000b4690000d0690000e06d0000e26d0000e46d0000e66d0000e86d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1079,7 +1047,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1090,7 +1058,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 210
---- !u!114 &20
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1110,12 +1078,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 751
-    width: 1637
-    height: 267
+    x: 7.2000003
+    y: 545.60004
+    width: 1243
+    height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &21
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1135,10 +1103,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1641
-    y: 92
-    width: 279
-    height: 577
+    x: 1254.4
+    y: 100
+    width: 275
+    height: 696
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -1149,7 +1117,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
---- !u!114 &22
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1169,8 +1137,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1533
-    y: 92
-    width: 387
-    height: 926
+    x: 1254.4
+    y: 100
+    width: 275
+    height: 696
   m_PersistentViewDataDictionary: {fileID: 0}

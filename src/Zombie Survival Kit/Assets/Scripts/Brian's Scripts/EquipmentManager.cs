@@ -39,12 +39,6 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] GameObject gun; //the gun
     GameObject equippedGun;
 
-    public void Construct(Inventory i, GameObject g, GameObject player)
-    {
-        inventory = i;
-        gun = g;
-        fpscontroller = player;
-    }
 
     /// <summary>
     /// Start: Is a void method used for initialization

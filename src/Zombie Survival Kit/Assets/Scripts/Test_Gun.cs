@@ -38,7 +38,7 @@ public class Test_Gun {
     {
         var GunManager = new GameObject().AddComponent<Gun>(); //create a gameobject with thte gun script as a component
         GameObject bullet = GameObject.Instantiate(Resources.Load<GameObject>("PrefabItems/bullet")); //load a bullet prefab from resources folder
-        GameObject camera = GameObject.Instantiate(Resources.Load<GameObject>("Prefabplayer/FirstPersonController"));
+        GameObject camera = GameObject.Instantiate(Resources.Load<GameObject>("Prefabplayer/PrimaryPlayer"));
         //GunManager.Construct(7, 7, bullet, camera, 1000f, 0.8f, 2f); //construct a gun with specified parameter
         
 
@@ -60,6 +60,13 @@ public class Test_Gun {
     [TearDown]
     public void AfterEveryTest()
     {
-
+        foreach (var gameobject in GameObject.FindGameObjectsWithTag("Bullet"))
+        {
+            Object.Destroy(gameobject);
+        }
+        foreach (var gameobject in GameObject.FindGameObjectsWithTag("GameController"))
+        {
+            Object.Destroy(gameobject);
+        }
     }
 }
