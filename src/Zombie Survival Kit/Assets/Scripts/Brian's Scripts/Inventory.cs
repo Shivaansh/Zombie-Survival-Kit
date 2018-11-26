@@ -48,6 +48,11 @@ public class Inventory : MonoBehaviour
      */
     public List<Item> items = new List<Item>();
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("MainCamera");
+    }
+
     /// <summary>
     /// Add: A bool method used to add an item to the inventory
     /// </summary>

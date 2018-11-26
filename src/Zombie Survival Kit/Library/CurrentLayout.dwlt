@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 572
+    x: 428
     y: 50.4
     width: 963
-    height: 773
+    height: 767
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
@@ -42,7 +42,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 963
-    height: 773
+    height: 767
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 753
+    y: 747
     width: 963
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -105,11 +105,11 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 963
-    height: 723
-  m_MinSize: {x: 683, y: 492}
+    height: 717
+  m_MinSize: {x: 508, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 89
+  controlID: 22
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,11 +129,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 686
-    height: 723
+    height: 717
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 90
+  controlID: 23
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,11 +153,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 686
-    height: 450
+    height: 445
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 38
+  controlID: 94
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,8 +174,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 202
-    height: 450
+    width: 206
+    height: 445
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -197,10 +197,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 202
+    x: 206
     y: 0
-    width: 484
-    height: 450
+    width: 480
+    height: 445
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 13}
@@ -225,9 +225,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 450
+    y: 445
     width: 686
-    height: 273
+    height: 272
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 17}
@@ -253,16 +253,16 @@ MonoBehaviour:
     x: 686
     y: 0
     width: 277
-    height: 723
-  m_MinSize: {x: 277, y: 71}
+    height: 717
+  m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -282,7 +282,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1254.4
+    x: 1116.8
     y: 100
     width: 275
     height: 696
@@ -294,9 +294,9 @@ MonoBehaviour:
     - id: '[Zombie Survival Kit][suite]'
       name: Zombie Survival Kit
       fullName: Zombie Survival Kit
-      resultStatus: 2
-      duration: 1.366036
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 3.3454347
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -308,9 +308,9 @@ MonoBehaviour:
     - id: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 1.3249389
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 3.3126311
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
       name: Test_ConsumableItem
       fullName: Test_ConsumableItem
       resultStatus: 1
-      duration: 0.1620217
+      duration: 0.1273707
       messages: 
       output: 
       stacktrace: 
@@ -337,7 +337,7 @@ MonoBehaviour:
       name: Test_Use
       fullName: Test_ConsumableItem.Test_Use
       resultStatus: 1
-      duration: 0.1413931
+      duration: 0.1080151
       messages: 
       output: "Using Apple\r\n"
       stacktrace: 
@@ -348,11 +348,40 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentID: '[Tests][Test_ConsumableItem][suite]'
+    - id: '[Tests][Test_DaylightController][suite]'
+      name: Test_DaylightController
+      fullName: Test_DaylightController
+      resultStatus: 1
+      duration: 2.0985596
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_DaylightController.Test_DayLight]'
+      name: Test_DayLight
+      fullName: Test_DaylightController.Test_DayLight
+      resultStatus: 1
+      duration: 2.087138
+      messages: 
+      output: "(0.4, -0.2, 0.1, 0.9)\r\n(0.4, -0.2, 0.1, 0.9)\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_DaylightController][suite]'
     - id: '[Tests][Test_EquipmentItem][suite]'
       name: Test_EquipmentItem
       fullName: Test_EquipmentItem
       resultStatus: 1
-      duration: 0.1127104
+      duration: 0.1163212
       messages: 
       output: 
       stacktrace: 
@@ -366,7 +395,7 @@ MonoBehaviour:
       name: Test_Use
       fullName: Test_EquipmentItem.Test_Use
       resultStatus: 1
-      duration: 0.0997662
+      duration: 0.099368
       messages: 
       output: "Using HeadArmor\r\n"
       stacktrace: 
@@ -381,7 +410,7 @@ MonoBehaviour:
       name: Test_EquipmentManager
       fullName: Test_EquipmentManager
       resultStatus: 1
-      duration: 0.4436167
+      duration: 0.4260688
       messages: 
       output: 
       stacktrace: 
@@ -395,7 +424,7 @@ MonoBehaviour:
       name: Test_Equip
       fullName: Test_EquipmentManager.Test_Equip
       resultStatus: 1
-      duration: 0.2285508
+      duration: 0.2087966
       messages: 
       output: "Updating UI\r\nGun equipped\r\n"
       stacktrace: 
@@ -410,7 +439,7 @@ MonoBehaviour:
       name: Test_Unequip
       fullName: Test_EquipmentManager.Test_Unequip
       resultStatus: 1
-      duration: 0.0994193
+      duration: 0.0999013
       messages: 
       output: "Updating UI\r\n"
       stacktrace: 
@@ -425,7 +454,7 @@ MonoBehaviour:
       name: Test_UnequipAll
       fullName: Test_EquipmentManager.Test_UnequipAll
       resultStatus: 1
-      duration: 0.0993925
+      duration: 0.1008752
       messages: 
       output: "Updating UI\r\nUpdating UI\r\nUpdating UI\r\nUpdating UI\r\nUpdating
         UI\r\nUpdating UI\r\n"
@@ -440,9 +469,9 @@ MonoBehaviour:
     - id: '[Tests][Test_Gun][suite]'
       name: Test_Gun
       fullName: Test_Gun
-      resultStatus: 2
-      duration: 0.2150919
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1489752
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -450,65 +479,15 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentID: '[D:/Study Material/3XA3 projects/Zombie_Survival_Kit/src/Zombie Survival
-        Kit/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: '[Tests][Test_Gun.Test_GunSimplePasses]'
-      name: Test_GunSimplePasses
-      fullName: Test_Gun.Test_GunSimplePasses
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_Gun.Test_ShootandReload]'
+      name: Test_ShootandReload
+      fullName: Test_Gun.Test_ShootandReload
       resultStatus: 1
-      duration: 0.0167877
+      duration: 0.1328613
       messages: 
-      output: 
+      output: "Gun equipped\r\n"
       stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[Tests][Test_Gun][suite]'
-    - id: '[Tests][Test_Gun.Test_GunWithEnumeratorPasses]'
-      name: Test_GunWithEnumeratorPasses
-      fullName: Test_Gun.Test_GunWithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0656494
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[Tests][Test_Gun][suite]'
-    - id: '[Tests][Test_Gun.Test_Reload]'
-      name: Test_Reload
-      fullName: Test_Gun.Test_Reload
-      resultStatus: 1
-      duration: 0.0660484
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentID: '[Tests][Test_Gun][suite]'
-    - id: '[Tests][Test_Gun.Test_Shoot]'
-      name: Test_Shoot
-      fullName: Test_Gun.Test_Shoot
-      resultStatus: 2
-      duration: 0.0496451
-      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
-        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: "NullReferenceException: Object reference not set to an instance of
-        an object\r\n"
-      stacktrace: "BulletDamage.Awake () (at Assets/Scripts/Shiv's Scripts/BulletDamage.cs:23)\r\nUnityEngine.Object:Instantiate(GameObject)\r\n<Test_Shoot>c__Iterator1:MoveNext()
-        (at Assets/Scripts/Test_Gun.cs:40)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
-        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -520,7 +499,7 @@ MonoBehaviour:
       name: Test_Inventory
       fullName: Test_Inventory
       resultStatus: 1
-      duration: 0.265787
+      duration: 0.264615
       messages: 
       output: 
       stacktrace: 
@@ -534,7 +513,7 @@ MonoBehaviour:
       name: Test_Add
       fullName: Test_Inventory.Test_Add
       resultStatus: 1
-      duration: 0.0662231
+      duration: 0.0664558
       messages: 
       output: 
       stacktrace: 
@@ -549,7 +528,7 @@ MonoBehaviour:
       name: Test_InventoryEquipmentConsumable
       fullName: Test_Inventory.Test_InventoryEquipmentConsumable
       resultStatus: 1
-      duration: 0.08253
+      duration: 0.0828946
       messages: 
       output: 
       stacktrace: 
@@ -564,9 +543,9 @@ MonoBehaviour:
       name: Test_RemoveFromInventory
       fullName: Test_Inventory.Test_RemoveFromInventory
       resultStatus: 1
-      duration: 0.1000787
+      duration: 0.0982986
       messages: 
-      output: 
+      output: "1\r\n2\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -579,7 +558,7 @@ MonoBehaviour:
       name: Test_ItemStore
       fullName: Test_ItemStore
       resultStatus: 1
-      duration: 0.1148896
+      duration: 0.1170936
       messages: 
       output: 
       stacktrace: 
@@ -593,7 +572,7 @@ MonoBehaviour:
       name: Test_ItemStoreWithEnumeratorPasses
       fullName: Test_ItemStore.Test_ItemStoreWithEnumeratorPasses
       resultStatus: 1
-      duration: 0.0994008
+      duration: 0.0998674
       messages: 
       output: "Picked up HeadArmor\r\n"
       stacktrace: 
@@ -604,17 +583,14 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentID: '[Tests][Test_ItemStore][suite]'
-    m_ResultText: 'Zombie Survival Kit (1.366s)
-
-      ---
-
-      One or more child tests had errors'
+    m_ResultText: "Test_DayLight (2.087s)\n---\n(0.4, -0.2, 0.1, 0.9)\r\n(0.4, -0.2,
+      0.1, 0.9)"
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d62827a3
-      m_LastClickedID: -1557714730
-      m_ExpandedIDs: da62618fd62827a3ab19d7b6a02a84d63a93d1eec2d69e00fb65ad0b16ca642effffff7f
+      m_SelectedIDs: 4531dd72
+      m_LastClickedID: 1927098693
+      m_ExpandedIDs: da62618fd62827a3ab19d7b648e001d2a02a84d63a93d1eec2d69e0062783202fb65ad0b16ca642effffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -709,10 +685,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 776.8
+    x: 636.8
     y: 100
-    width: 480
-    height: 429
+    width: 476
+    height: 424
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -724,16 +700,16 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -192
-    m_HBaseRangeMax: 192
-    m_VBaseRangeMin: -164.8
-    m_VBaseRangeMax: 164.8
+    m_HBaseRangeMin: -190.40001
+    m_HBaseRangeMax: 190.40001
+    m_VBaseRangeMin: -162.8
+    m_VBaseRangeMax: 162.8
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
+    m_HSlider: 1
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
@@ -745,25 +721,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 480
-      height: 412
+      width: 476
+      height: 407
     m_Scale: {x: 1.25, y: 1.25}
-    m_Translation: {x: 240, y: 206}
+    m_Translation: {x: 238, y: 203.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -192
-      y: -164.8
-      width: 384
-      height: 329.6
+      x: -190.4
+      y: -162.8
+      width: 380.8
+      height: 325.6
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 600, y: 536.25}
+  m_LastWindowPixelSize: {x: 595, y: 530}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -788,30 +764,30 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 572
+    x: 428
     y: 100
-    width: 200
-    height: 429
+    width: 204
+    height: 424
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 74b1f9ff
-    m_LastClickedID: -413324
-    m_ExpandedIDs: 08b4f9ff0ab4f9fff4b4f9fff686faff0e87faff3487faff5287faff5487faffc4faffff02fbffffe4fbffff000000004e28000042290000682b0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 9c3efeffbc3efeffac55feffd876fefff876feff7c8dfeffb8a3feffd8a3feff56bafeff5cd7feff7cd7feff6cedfeffa800ffffc800ffff3a15ffff5027ffff7027ffff723cffffac56ffffcc56ffff8a5effff3870ffff5870ffff748affffd0aefffff0aeffff8ec1ffffd2fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Items
-      m_OriginalName: Items
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 7762
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -945,10 +921,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 572
-    y: 549.60004
+    x: 428
+    y: 544.8
     width: 684
-    height: 252
+    height: 251
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -962,34 +938,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/AssetStore/rpg-tutorial-assets
+    - Assets/Resources/PrefabEnvironment
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/AssetStore/rpg-tutorial-assets
+  - Assets/Resources/PrefabEnvironment
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Brian\OneDrive\Desktop\Zombie Survival Kit
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a1a0000
-    m_LastClickedID: 6746
-    m_ExpandedIDs: 00000000060c0000160c00002a0c0000b00d0000f20d0000700f000050110000a6110000e61100005a120000c4130000f2140000f8140000cc150000fa15000022190000581a0000d01b0000121c00003e6200004062000042620000446200004662000000ca9a3b
+    m_SelectedIDs: 8c0c0000
+    m_LastClickedID: 3212
+    m_ExpandedIDs: 00000000c80b0000d80b0000e60b0000160d0000300d0000c40f00000a1000003010000090110000861200008c1200003a13000080170000ac170000bc560000be560000c0560000c2560000c4560000c6560000c8560000ca560000cc560000ce56000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PrefabEnemies
-      m_OriginalName: PrefabEnemies
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 4152
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -1003,7 +979,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000060c0000160c00002a0c0000100d0000b00d0000d80d0000f20d0000700f0000760f000050110000a6110000ce110000e61100005a120000c4130000f2140000f8140000cc150000fa15000022190000581a00002c1b0000d01b0000ea1b0000121c00003e62000040620000426200004462000046620000
+    m_ExpandedIDs: 00000000c80b0000d80b0000e60b0000160d0000300d0000e80d0000c40f00000a100000221000003010000090110000861200008c1200003a130000d813000080170000ac170000bc560000be560000c0560000c2560000c4560000c6560000c8560000ca560000cc560000ce560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1078,10 +1054,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 572
-    y: 549.60004
+    x: 428
+    y: 544.8
     width: 684
-    height: 252
+    height: 251
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:
@@ -1103,10 +1079,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1260.8
+    x: 1116.8
     y: 100
     width: 275
-    height: 702
+    height: 696
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 

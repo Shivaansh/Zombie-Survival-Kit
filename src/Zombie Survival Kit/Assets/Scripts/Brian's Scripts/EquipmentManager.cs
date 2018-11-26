@@ -45,6 +45,7 @@ public class EquipmentManager : MonoBehaviour
     /// </summary>
 	void Start()
     {
+        fpscontroller = GameObject.FindGameObjectWithTag("GameController");
         int numSlots = System.Enum.GetNames(typeof(equipmentSlot)).Length;
         equippedItems = new EquipmentItem[numSlots];
 

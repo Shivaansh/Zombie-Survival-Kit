@@ -17,11 +17,12 @@ public class BulletDamage : MonoBehaviour
 
     int modifier;
 
-    private void Awake()
+    private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("GameController");
         playerStats = player.GetComponent<PlayerStats>();
         modifier = playerStats.dmg.GetValue();
+
     }
 
     /// <summary>  

@@ -51,14 +51,16 @@ public class Test_Inventory {
         // Use the Assert class to test conditions.
         // yield to skip a frame
         GameObject GameManager = GameObject.Instantiate(Resources.Load<GameObject>("PrefabPlayer/GameManager"));
-        GameObject player = Resources.Load<GameObject>("PrefabPlayer/PrimaryPlayer");
+        GameObject player = GameObject.Instantiate(Resources.Load<GameObject>("PrefabPlayer/PrimaryPlayer"));
         EquipmentItem item1 = Resources.Load<EquipmentItem>("Items/HeadArmor");
         GameManager.GetComponent<Inventory>().Add(item1);
 
         yield return null;
         Assert.True(GameManager.GetComponent<Inventory>().items.Contains(item1));
 
+        Debug.Log("1");
         GameManager.GetComponent<Inventory>().RemoveFromInventory(item1);
+        Debug.Log("2");
         yield return null;
         var spawnedItem = GameObject.FindGameObjectWithTag("Equipment");
         var prefabOfSpawnedItem = PrefabUtility.GetCorrespondingObjectFromSource(spawnedItem);
