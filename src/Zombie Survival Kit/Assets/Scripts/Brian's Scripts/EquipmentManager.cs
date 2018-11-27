@@ -41,6 +41,8 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] GameObject gun; //the gun
     GameObject equippedGun;
 
+    private bool isGunEquipped = false;
+
 
     /// <summary>
     /// Start: Is a void method used for initialization
@@ -97,6 +99,11 @@ public class EquipmentManager : MonoBehaviour
         {
             oldEquipment = equippedItems[slotIndex];
             inventory.Add(oldEquipment);
+            if (oldEquipment.name == "RangeWeapon")
+            {
+                Destroy(GameObject.FindGameObjectWithTag("Gun").gameObject);
+                isGunEquipped = false;
+            }
         }
 
         equippedItems[slotIndex] = newEquipment;
@@ -107,10 +114,11 @@ public class EquipmentManager : MonoBehaviour
         }
 
         //Shiv's part
-        if (newEquipment.name == "RangeWeapon")
+        if (newEquipment.name == "RangeWeapon" && isGunEquipped == false)
         {
             //set to active
             equippedGun = Instantiate(gun, fpscontroller.transform.position, Quaternion.identity);
+            isGunEquipped = true;
             Debug.Log("Gun equipped");
         }
         //End of Shiv's part
@@ -133,6 +141,7 @@ public class EquipmentManager : MonoBehaviour
             {
                 //set to active
                 Destroy(GameObject.FindGameObjectWithTag("Gun").gameObject);
+                isGunEquipped = false;
                 Debug.Log("Gun unequipped");
             }
             // End of Shiv's part

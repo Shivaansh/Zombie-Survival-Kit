@@ -18,12 +18,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 963
-    height: 723
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+    width: 1920
+    height: 947
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 4679
+  controlID: 1824
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,10 +44,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 776.8
-    y: 100
-    width: 480
-    height: 428
+    x: 412
+    y: 92
+    width: 955
+    height: 567
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
@@ -59,17 +59,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -192
-    m_HBaseRangeMax: 192
-    m_VBaseRangeMin: -164.40001
-    m_VBaseRangeMax: 164.40001
+    m_HBaseRangeMin: -477.5
+    m_HBaseRangeMax: 477.5
+    m_VBaseRangeMin: -275
+    m_VBaseRangeMax: 275
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 1
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -80,25 +80,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 480
-      height: 411
-    m_Scale: {x: 1.25, y: 1.25}
-    m_Translation: {x: 240, y: 205.5}
+      width: 955
+      height: 550
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 477.5, y: 275}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -192
-      y: -164.4
-      width: 384
-      height: 328.8
+      x: -477.5
+      y: -275
+      width: 955
+      height: 550
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 600, y: 535}
+  m_LastWindowPixelSize: {x: 955, y: 567}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -121,12 +121,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 686
-    height: 723
-  m_MinSize: {x: 406, y: 492}
+    width: 1369
+    height: 947
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 4680
+  controlID: 1825
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,12 +145,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 686
-    height: 449
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+    width: 1369
+    height: 588
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 4681
+  controlID: 1826
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,10 +167,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 202
-    height: 449
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+    width: 410
+    height: 588
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -196,16 +196,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 572
-    y: 100
-    width: 200
-    height: 428
+    x: 0
+    y: 92
+    width: 408
+    height: 567
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 30420000
-    m_LastClickedID: 16944
-    m_ExpandedIDs: 62fbffff000000001c3f0000a440000082410000
+    m_SelectedIDs: 4c25ffff
+    m_LastClickedID: -55988
+    m_ExpandedIDs: 4a25ffff6c2dffff0000000076690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -243,18 +243,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 202
+    x: 410
     y: 0
-    width: 484
-    height: 449
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+    width: 959
+    height: 588
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
-  - {fileID: 2}
   - {fileID: 9}
-  m_Selected: 1
+  - {fileID: 2}
+  m_Selected: 2
   m_LastSelected: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -276,20 +276,20 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 324.80002
-    y: 100
-    width: 765
-    height: 425
+    x: 412
+    y: 92
+    width: 955
+    height: 567
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1214.4044052578017
-  m_2DMode: 0
+  lastFramingTime: 156.19206763949185
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 527.31, y: -4402.9775, z: -749.15}
+    m_Target: {x: 439.07983, y: 223.86981, z: 10.5}
     speed: 2
-    m_Value: {x: 527.31, y: -4402.9775, z: -749.15}
+    m_Value: {x: 439.07983, y: 223.86981, z: 10.5}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -309,32 +309,32 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
-      speed: 2
-      m_Value: 1
-    zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
+    zGrid:
+      m_Target: 1
+      speed: 2
+      m_Value: 1
   m_Rotation:
-    m_Target: {x: 0.20186108, y: -0.6929049, z: 0.2122997, w: 0.65883523}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0.20186108, y: 0.6929049, z: -0.2122997, w: -0.65883523}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.1282221
+    m_Target: 784.7166
     speed: 2
-    m_Value: 1.1282221
+    m_Value: 784.7166
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 1
+  m_ViewIsLockedToObject: 0
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -355,10 +355,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 386
-    y: 92
-    width: 1157
-    height: 539
+    x: 773.60004
+    y: 100
+    width: 479
+    height: 424
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &10
 MonoBehaviour:
@@ -375,11 +375,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 449
-    width: 686
-    height: 274
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
+    y: 588
+    width: 1369
+    height: 359
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -406,10 +406,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 572
-    y: 548.8
-    width: 684
-    height: 253
+    x: 0
+    y: 680
+    width: 1367
+    height: 338
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -423,21 +423,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Items
+    - Assets/Scripts/Brian's Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Items
+  - Assets/Scripts/Brian's Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Brian\OneDrive\Desktop\3XA3\Zombie_Survival_Kit\src\Zombie
+  m_LastProjectPath: D:\Study Material\3XA3 projects\Zombie_Survival_Kit\src\Zombie
     Survival Kit
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 117}
-    m_SelectedIDs: 242e0000
-    m_LastClickedID: 11812
-    m_ExpandedIDs: 000000000e2d00001e2d0000322d0000ea2d0000ae2e0000ec2e000044320000b0320000c2320000da32000046330000ae340000d8350000de350000a8360000d636000072370000b23a00000c3b0000c43b00006c3c0000ac3c0000284700002a4700002c4700002e4700003047000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: f45e0000
+    m_LastClickedID: 24308
+    m_ExpandedIDs: 000000005a5d0000605d0000685d0000f85d0000085e0000f45e0000165f0000265f00002e5f0000a25f0000a65f0000f65f0000fa5f00001e60000040600000c2610000d6610000bc700000be700000c0700000c2700000c4700000c6700000c8700000ca700000cc700000ce700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -465,7 +465,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e2d00001e2d0000322d0000ea2d0000ae2e0000ec2e000044320000b0320000c2320000da32000046330000ae340000d8350000de350000a8360000d636000072370000b23a00000c3b0000c43b00006c3c0000ac3c0000284700002a4700002c4700002e4700003047000000ca9a3b
+    m_ExpandedIDs: 000000005a5d0000605d0000685d0000f85d0000085e0000f45e0000165f0000265f00002e5f0000a25f0000a65f0000f65f0000fa5f00001e60000040600000c2610000d6610000bc700000be700000c0700000c2700000c4700000c6700000c8700000ca700000cc700000ce700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -490,10 +490,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 30420000
-    m_LastClickedInstanceID: 16944
+    m_SelectedInstanceIDs: 4c25ffff
+    m_LastClickedInstanceID: -55988
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c623000000000000b6780200
+    m_ExpandedInstanceIDs: c6230000b6780200fe46feff400c000010180000d2170000e2140000ba190000681000006a140000600c000046180000721a0000b2190000560f000032190000001b0000f2190000a416000042100000ec140000700d0000360c00009812000072190000fe0d0000e8170000d21900001417000052170000dc0e0000621c0000000000003c1b00004a06000074100000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -517,7 +517,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 84}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 210
 --- !u!114 &12
@@ -540,10 +540,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 7.2000003
-    y: 545.60004
-    width: 1082
-    height: 250
+    x: 428
+    y: 544.8
+    width: 684
+    height: 251
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -559,19 +559,926 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 686
+    x: 1369
     y: 0
-    width: 277
-    height: 723
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+    width: 551
+    height: 947
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 16}
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1256.8
+    y: 100
+    width: 273
+    height: 696
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 14}
+    newResultList:
+    - id: '[Zombie Survival Kit][suite]'
+      name: Zombie Survival Kit
+      fullName: Zombie Survival Kit
+      resultStatus: 1
+      duration: 6.0875316
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: 
+    - id: '[D:/Study Material/3XA3 projects/Zombie_Survival_Kit/src/Zombie Survival
+        Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+      name: Tests.dll
+      fullName: D:/Study Material/3XA3 projects/Zombie_Survival_Kit/src/Zombie Survival
+        Kit/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[Zombie Survival Kit][suite]'
+    - id: '[Tests][Test_CharacterCombat][suite]'
+      name: Test_CharacterCombat
+      fullName: Test_CharacterCombat
+      resultStatus: 1
+      duration: 2.1529877
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_CharacterCombat.Test_Attack]'
+      name: Test_Attack
+      fullName: Test_CharacterCombat.Test_Attack
+      resultStatus: 1
+      duration: 2.1335301
+      messages: 
+      output: "There are 2 audio listeners in the scene. Please ensure there is always
+        exactly one audio listener in the scene.\r\nThere are 2 audio listeners in
+        the scene. Please ensure there is always exactly one audio listener in the
+        scene.\r\nThere are 2 audio listeners in the scene. Please ensure there is
+        always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nPrimaryPlayer(Clone)
+        takes 25 damage.\r\nThere are 2 audio listeners in the scene. Please ensure
+        there is always exactly one audio listener in the scene.\r\nThere are 2 audio
+        listeners in the scene. Please ensure there is always exactly one audio listener
+        in the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        in the scene. Please ensure there is always exactly one audio listener in
+        the scene.\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_CharacterCombat][suite]'
+    - id: '[Tests][Test_CharacterStats][suite]'
+      name: Test_CharacterStats
+      fullName: Test_CharacterStats
+      resultStatus: 1
+      duration: 0.0952353
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_CharacterStats.Test_TakeDamage]'
+      name: Test_TakeDamage
+      fullName: Test_CharacterStats.Test_TakeDamage
+      resultStatus: 1
+      duration: 0.082242
+      messages: 
+      output: "PrimaryPlayer(Clone) takes 51 damage.\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_CharacterStats][suite]'
+    - id: '[Tests][Test_ConsumableItem][suite]'
+      name: Test_ConsumableItem
+      fullName: Test_ConsumableItem
+      resultStatus: 1
+      duration: 0.1161356
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_ConsumableItem.Test_Use]'
+      name: Test_Use
+      fullName: Test_ConsumableItem.Test_Use
+      resultStatus: 1
+      duration: 0.0994391
+      messages: 
+      output: "Using Apple\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_ConsumableItem][suite]'
+    - id: '[Tests][Test_DaylightController][suite]'
+      name: Test_DaylightController
+      fullName: Test_DaylightController
+      resultStatus: 1
+      duration: 2.1041877
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_DaylightController.Test_DayLight]'
+      name: Test_DayLight
+      fullName: Test_DaylightController.Test_DayLight
+      resultStatus: 1
+      duration: 2.086804
+      messages: 
+      output: "(0.4, -0.2, 0.1, 0.9)\r\n(0.4, -0.2, 0.1, 0.9)\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_DaylightController][suite]'
+    - id: '[Tests][Test_EquipmentItem][suite]'
+      name: Test_EquipmentItem
+      fullName: Test_EquipmentItem
+      resultStatus: 1
+      duration: 0.1153324
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_EquipmentItem.Test_Use]'
+      name: Test_Use
+      fullName: Test_EquipmentItem.Test_Use
+      resultStatus: 1
+      duration: 0.0992163
+      messages: 
+      output: "Using HeadArmor\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_EquipmentItem][suite]'
+    - id: '[Tests][Test_EquipmentManager][suite]'
+      name: Test_EquipmentManager
+      fullName: Test_EquipmentManager
+      resultStatus: 1
+      duration: 0.4286024
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_EquipmentManager.Test_Equip]'
+      name: Test_Equip
+      fullName: Test_EquipmentManager.Test_Equip
+      resultStatus: 1
+      duration: 0.2085046
+      messages: 
+      output: "Updating UI\r\nGun equipped\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_EquipmentManager][suite]'
+    - id: '[Tests][Test_EquipmentManager.Test_Unequip]'
+      name: Test_Unequip
+      fullName: Test_EquipmentManager.Test_Unequip
+      resultStatus: 1
+      duration: 0.0993451
+      messages: 
+      output: "Updating UI\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_EquipmentManager][suite]'
+    - id: '[Tests][Test_EquipmentManager.Test_UnequipAll]'
+      name: Test_UnequipAll
+      fullName: Test_EquipmentManager.Test_UnequipAll
+      resultStatus: 1
+      duration: 0.1037192
+      messages: 
+      output: "Updating UI\r\nUpdating UI\r\nUpdating UI\r\nUpdating UI\r\nUpdating
+        UI\r\nUpdating UI\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_EquipmentManager][suite]'
+    - id: '[Tests][Test_Gun][suite]'
+      name: Test_Gun
+      fullName: Test_Gun
+      resultStatus: 1
+      duration: 0.1493552
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_Gun.Test_ShootandReload]'
+      name: Test_ShootandReload
+      fullName: Test_Gun.Test_ShootandReload
+      resultStatus: 1
+      duration: 0.132439
+      messages: 
+      output: "Gun equipped\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_Gun][suite]'
+    - id: '[Tests][Test_Inventory][suite]'
+      name: Test_Inventory
+      fullName: Test_Inventory
+      resultStatus: 1
+      duration: 0.2654722
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_Inventory.Test_Add]'
+      name: Test_Add
+      fullName: Test_Inventory.Test_Add
+      resultStatus: 1
+      duration: 0.0657648
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_Inventory][suite]'
+    - id: '[Tests][Test_Inventory.Test_InventoryEquipmentConsumable]'
+      name: Test_InventoryEquipmentConsumable
+      fullName: Test_Inventory.Test_InventoryEquipmentConsumable
+      resultStatus: 1
+      duration: 0.0827805
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_Inventory][suite]'
+    - id: '[Tests][Test_Inventory.Test_RemoveFromInventory]'
+      name: Test_RemoveFromInventory
+      fullName: Test_Inventory.Test_RemoveFromInventory
+      resultStatus: 1
+      duration: 0.0997919
+      messages: 
+      output: "1\r\n2\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_Inventory][suite]'
+    - id: '[Tests][Test_ItemStore][suite]'
+      name: Test_ItemStore
+      fullName: Test_ItemStore
+      resultStatus: 1
+      duration: 0.1154636
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_ItemStore.Test_ItemStoreWithEnumeratorPasses]'
+      name: Test_ItemStoreWithEnumeratorPasses
+      fullName: Test_ItemStore.Test_ItemStoreWithEnumeratorPasses
+      resultStatus: 1
+      duration: 0.0992269
+      messages: 
+      output: "Picked up HeadArmor\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_ItemStore][suite]'
+    - id: '[Tests][Test_PlayerStats][suite]'
+      name: Test_PlayerStats
+      fullName: Test_PlayerStats
+      resultStatus: 1
+      duration: 0.2161373
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_PlayerStats.Test_Eat]'
+      name: Test_Eat
+      fullName: Test_PlayerStats.Test_Eat
+      resultStatus: 1
+      duration: 0.0998622
+      messages: 
+      output: "PrimaryPlayer(Clone) takes 51 damage.\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_PlayerStats][suite]'
+    - id: '[Tests][Test_PlayerStats.Test_OnEquipmentChanged]'
+      name: Test_OnEquipmentChanged
+      fullName: Test_PlayerStats.Test_OnEquipmentChanged
+      resultStatus: 1
+      duration: 0.0999191
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_PlayerStats][suite]'
+    - id: '[Tests][Test_Stat][suite]'
+      name: Test_Stat
+      fullName: Test_Stat
+      resultStatus: 1
+      duration: 0.2804897
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: '[C:/Users/Brian/OneDrive/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[Tests][Test_Stat.Test_AddToStat]'
+      name: Test_AddToStat
+      fullName: Test_Stat.Test_AddToStat
+      resultStatus: 1
+      duration: 0.0990547
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_Stat][suite]'
+    - id: '[Tests][Test_Stat.Test_GetValue]'
+      name: Test_GetValue
+      fullName: Test_Stat.Test_GetValue
+      resultStatus: 1
+      duration: 0.0659762
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_Stat][suite]'
+    - id: '[Tests][Test_Stat.Test_RemoveFromStat]'
+      name: Test_RemoveFromStat
+      fullName: Test_Stat.Test_RemoveFromStat
+      resultStatus: 1
+      duration: 0.0991842
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Tests][Test_Stat][suite]'
+    m_ResultText: 'Test_Use (0.099s)
+
+      ---
+
+      Using HeadArmor'
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 4d950ae8
+      m_LastClickedID: -401959603
+      m_ExpandedIDs: da62618fd62827a3ab19d7b648e001d2a02a84d6a23dadee3a93d1ee389be9f4c2d69e00f75d310162783202fb65ad0b16ca642e408aa274ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 14}
+    newResultList:
+    - id: '[Zombie Survival Kit][suite]'
+      name: Zombie Survival Kit
+      fullName: Zombie Survival Kit
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentID: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -591,10 +1498,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1260.8
-    y: 100
-    width: 275
-    height: 702
+    x: 1371
+    y: 92
+    width: 549
+    height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -605,7 +1512,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -625,8 +1532,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1533
-    y: 92
-    width: 387
-    height: 926
+    x: 1254.4
+    y: 100
+    width: 275
+    height: 696
   m_PersistentViewDataDictionary: {fileID: 0}
