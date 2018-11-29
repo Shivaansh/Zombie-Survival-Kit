@@ -3,6 +3,9 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{multirow}
+\usepackage{float}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -11,6 +14,16 @@
     urlcolor=blue
 }
 \usepackage[round]{natbib}
+
+\DeclareRobustCommand{\hsout}[1]{\texorpdfstring{\sout{#1}}{#1}}
+
+\newcounter{ftnum}
+\newcommand{\fttheftnum}{F\theftnum}
+\newcommand{\fref}[1]{T-F\ref{#1}}
+
+\newcounter{nftnum}
+\newcommand{\nftthenftnum}{NF\thenftnum}
+\newcommand{\nfref}[1]{T-NF\ref{#1}}
 
 \title{SE 3XA3: Test Plan\\Zombie Survival Kit}
 
@@ -39,7 +52,7 @@
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
 2018-10-26 & 1.0 & First Revision of Test Plan\\
-Date 2 & 1.1 & Notes\\
+2018-11-28 & 2.0 & Updated Final Revision of Test Plan\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -99,15 +112,15 @@ See Gantt Chart at the following url : \url{https://gitlab.cas.mcmaster.ca/jonat
 	
 \subsection{Tests for Functional Requirements}
 
-\subsubsection{Func. Req. 1: The player must be able to move forward, left, down, and right using the WASD keys}
+\subsubsection{{\color{magenta} F1.} The player must be able to move forward, left, down, and right using the WASD keys {\color{magenta} on the keyboard.}}
 		
-\paragraph{Player Movement}
+\paragraph{Player Movement} 
 
-\begin{enumerate}
+\begin{enumerate} 
 
-\item{Player-Movement-M-1\\}
+\item{Player-Movement-M-1\\} \refstepcounter{ftnum} \label{F1-1}
 
-Type: Manual\\
+Type: Manual \\
 					
 Initial State: A scene is initially paused. The scene will have the player initialized at the center of the playable map, and a tree will be initialized at a position beside the player to act as a stationary marker.\\
 					
@@ -119,13 +132,13 @@ How test will be performed:\\ The user will start the scene and the user will pr
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 2: The player must be able to lookin all directions by moving their mouse}
+\subsubsection{{\color{magenta} F2.} The player must be able to look in all directions by moving their mouse.} 
 		
 \paragraph{Camera Movement}
 
 \begin{enumerate}
 
-\item{Camera-Movement-M-1\\}
+\item{Camera-Movement-M-1\\} \refstepcounter{ftnum} \label{F2-1}
 
 Type: Manual\\
 					
@@ -139,13 +152,13 @@ How test will be performed:\\ The user will start the scene and the user will mo
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 3: Zombie enemies must walk back and forth between random points in their 'spawn' circle, which imitates them walking around}
+\subsubsection{{\color{magenta} F3.} Zombie enemies must walk back and forth between random points in their ‘spawn circle’, which imitates them walking around.} 
 		
 \paragraph{'Spawn' Circle}
 
 \begin{enumerate}
 
-\item{Spawn-Circle-A-1\\}
+\item{Spawn-Circle-A-1\\}  \refstepcounter{ftnum} \label{F3-1}
 
 Type: Automated\\
 					
@@ -159,13 +172,13 @@ How test will be performed:\\ A test script will be created that initializes the
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 4: Zombie enemies must start attacking the player when they come within a certain radius}
+\subsubsection{{\color{magenta} F4.} Zombie enemies must start attacking the player when they come within a certain radius.}
 		
 \paragraph{Attack Radius}
 
 \begin{enumerate}
 
-\item{Attack-Radius-A-1\\}
+\item{Attack-Radius-A-1\\} \refstepcounter{ftnum} \label{F4-1}
 
 Type: Automated\\
 					
@@ -179,13 +192,13 @@ How test will be performed:\\  A test script will be created that initializes th
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 5: Zombie enemies must follow the player if they start running away while the zombie is in it's attack state}
+\subsubsection{{\color{magenta} F5.} Zombie enemies must follow the player if \hsout{they start running away while the zombie is attacking them} {\color{magenta} the player is at a certain distance from the zombie.}} 
 
 \paragraph{Zombie Follows Player}
 
 \begin{enumerate}
 
-\item{Zombie-Follows-Player-A-1\\}
+\item{Zombie-Follows-Player-A-1\\} \refstepcounter{ftnum} \label{F5-1}
 
 Type: Automated\\
 					
@@ -199,13 +212,13 @@ How test will be performed:\\ A test script will be created that initializes the
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 6: If the player runs past a certain radius from the zombie's original spawn loaction, the zombie must return to their circle}
+\subsubsection{{\color{magenta} F6.} If the player runs past a certain radius from the zombie’s original spawn location, the zombie must return to their circle.} 
 
 \paragraph{Zombie Returns to 'Spawn' Circle Center}
 
 \begin{enumerate}
 
-\item{Zombie-Return-Spawn-Circle-A-1\\}
+\item{Zombie-Return-Spawn-Circle-A-1\\} \refstepcounter{ftnum} \label{F6-1}
 
 Type: Automated\\
 					
@@ -219,13 +232,13 @@ How test will be performed:\\ A test script will be created that initializes the
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 7: Different types of zombies must have different statistics (health, damage,etc.)}
+\subsubsection{{\color{magenta} F7.} Different types of zombies must have different statistics (health, damage, {\color{magenta} and attack speed). Different types of zombies will be distinguishable by their different appearances.}} 
 
 \paragraph{Zombie Stats}
 
 \begin{enumerate}
 
-\item{Zombie-Stats-A-1\\}
+\item{Zombie-Stats-A-1\\} \refstepcounter{ftnum} \label{F7-1}
 
 Type: Automated\\
 					
@@ -239,113 +252,159 @@ How test will be performed:\\ A test script will be created that initializes the
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 8: Zombies must have randomly generated chance of dropping items the player can use or consume when killed.}
+\subsubsection{{\color{magenta} F8.} Zombies must have randomly generated chance of dropping items the player can \hsout{use} {\color{magenta} equip} or consume when killed.} 
 
 \paragraph{Appearing Drops}
 
 \begin{enumerate}
 
-\item{Appearing-Drops-A-1\\}
+\item{\sout{Appearing-Drops-A-1} {\color{magenta} Appearing-Drops-DM-1}\\} \refstepcounter{ftnum} \label{F8-1}
 
-Type: Automated\\
+Type: \sout{Automated} {\color{magenta} Dynamic, Manual}\\
 					
 Initial State: Two zombie enemy objects are initialized at the center of its 'spawn' circle that will be have a predetermined position on the playable map. The player object is initialized at a distance of the zombie's attack radius.\\
 					
-Input: void \\
+Input: \sout{void} {\color{magenta} Start scene button, WASD keys, E key, I key, left mouse button, mouse movement}\\
 					
-Output: void or assertion error \\
+Output: \sout{void or assertion error} {\color{magenta} }\\
 					
-How test will be performed:\\ A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to attack one of the zombies. An assertion statement will be used to check if that zombie's current health value is lower than than its initial health value. Once the zombie's health value reaches zero, an item object will appear at a chance of 100\% at the position of the zombie before the zombie object is set to null (representing the first zombie's death). An assertion statement will be used to check if there exists an item object at the position where the zombie had died. The second zombie will undergo the same process as the first zombie, but an item object appearing at this zombie's position will have a chance of 0\%. An assertion statement will be used to check if there does not exists an item object at the position of the zombie before the zombie object is set to null (representing the second zombie's death), and the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.\\
+How test will be performed:\\ \sout{A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to attack one of the zombies. An assertion statement will be used to check if that zombie's current health value is lower than than its initial health value. Once the zombie's health value reaches zero, an item object will appear at a chance of 100\% at the position of the zombie before the zombie object is set to null (representing the first zombie's death). An assertion statement will be used to check if there exists an item object at the position where the zombie had died. The second zombie will undergo the same process as the first zombie, but an item object appearing at this zombie's position will have a chance of 0\%. An assertion statement will be used to check if there does not exists an item object at the position of the zombie before the zombie object is set to null (representing the second zombie's death), and the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.}\\
+{\color{magenta} The user will start the scene and the user will press down on the WASD keys to move the player towards one of the zombies. Once the player is within attacking distance, the user will attack the zombie by pressing the left mouse button until the zombie dies. The user will check if a drop has appeared and then pick up the drop using the E key. The user will press the I key to check if the item has been stored in the invenotry. The user will repeat this process for the second zombie. If any of the checks fail, the test has failed. Otherwise, the test has passed.}\\
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 9: Dropped items must be automatically deleted if not picked up within a certain time}
+\subsubsection{\hsout{Func. Req. 9: Dropped items must be automatically deleted if not picked up within a certain time}}
 
-\paragraph{Disappearing Drops}
+\paragraph{\hsout{Disappearing Drops}}
 
 \begin{enumerate}
 
-\item{Disappearing-Drops-A-1\\}
+\item{\hsout{Disappearing-Drops-A-1}\\} 
 
-Type: Automated\\
+\sout{Type: Automated}\\
 					
-Initial State: A zombie enemy objects is initialized at the center of its 'spawn' circle that will be have a predetermined position on the playable map. The player object is initialized at a distance of the zombie's attack radius.\\
+\sout{Initial State: A zombie enemy objects is initialized at the center of its 'spawn' circle that will be have a predetermined position on the playable map. The player object is initialized at a distance of the zombie's attack radius.}\\
 					
-Input: void \\
+\sout{Input: void }\\
 					
-Output: void or assertion error \\
+\sout{Output: void or assertion error} \\
 					
-How test will be performed:\\ A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to attack one of the zombies. An assertion statement will be used to check if that zombie's current health value is lower than than its initial health value. Once the zombie's health value reaches zero, an item object will appear at a chance of 100\% at the position of the zombie before the zombie object is set to null (representing the zombie's death). An assertion statement will be used to check if there exists an item object at the position where the zombie had died. Instructions to wait for the amount of time it takes for the item to disappear are given. An assertion statement will be used to check if there does not exists an item object at the same position, and the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.\\
+\sout{How test will be performed:}\\ \sout{A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to attack one of the zombies. An assertion statement will be used to check if that zombie's current health value is lower than than its initial health value. Once the zombie's health value reaches zero, an item object will appear at a chance of 100\% at the position of the zombie before the zombie object is set to null (representing the zombie's death). An assertion statement will be used to check if there exists an item object at the position where the zombie had died. Instructions to wait for the amount of time it takes for the item to disappear are given. An assertion statement will be used to check if there does not exists an item object at the same position, and the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.}\\
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 10: The player must be able to pick up tiems they are looking at with the 'interact' key}
+\subsubsection{{\color{magenta} F9.} The player must be able to pick up items they are looking at with the ‘interact’ key.} 
 
 \paragraph{Pickup Drops}
 
 \begin{enumerate}
 
-\item{Pickup-Drops-A-1\\}
+\item{\sout{Pickup-Drops-A-1} {\color{magenta} Pickup-Drops-DM-1} \\} \refstepcounter{ftnum} \label{F9-1}
 
-Type: Automated\\
+Type: \sout{Automated} {\color{magenta} Dynamic, Manual}\\
 					
 Initial State: A player object is initialized at any predetermined position, and an item object is also initialized near the player's position.\\
 					
-Input: void \\
+Input: \sout{void} {\color{magenta} Start scene button, WASD keys, E key, mouse movements}   \\
 					
-Output: void or assertion error \\
+Output: \sout{void or assertion error} {\color{magenta} The item object will disappear once the item has been picked up by the player} \\
 					
-How test will be performed:\\ A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to move towards the item and, once close enough, to change the camera's foward position to the item. Then, the 'interact' key will be inputted. An assertion statement will be used to check if there exists the item in the player's inventory, and the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.\\
+How test will be performed:\\ \sout{A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to move towards the item and, once close enough, to change the camera's foward position to the item. Then, the 'interact' key will be inputted. An assertion statement will be used to check if there exists the item in the player's inventory, and the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.}\\
+{\color{magenta} The user will start the scene and the user will press down on the WASD keys to move towards the item. The user will move the mouse until the reticle is on the item, and then they will press the E key to pick up the item. If the item disappears from the scene, then the test was successful. If it stays in the scene, the test has failed}\\
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 11: The player must be able to access their inventory by pressing the 'invenotry' key}
+\subsubsection{{\color{magenta} F10.} The player must be able to access their inventory by pressing the ‘inventory’ key{\color{magenta} , and will have a maximum space of 20 items.}} 
 
 \paragraph{Inventory Access}
 
 \begin{enumerate}
 
-\item{Inventory-Access-A-1\\}
+\item{\sout{Inventory-Access-A-1} {\color{magenta} Inventory-Access-DM-1}\\} \refstepcounter{ftnum} \label{F10-1}
 
-Type: Automated\\
+Type: \sout{Automated} {\color{magenta} Dynamic, Manual}\\
 					
 Initial State: A player object is initialized at any predetermined position\\
 					
-Input: void \\
+Input: \sout{void} {\color{magenta} Start scene button, I key}\\
 					
-Output: void or assertion error \\
+Output: \sout{void or assertion error} {\color{magenta} The Inventory UI will appear on screen}\\
 					
-How test will be performed:\\ The user will start the scene and the user will press down on the WASD keys. If the user notices thatthe position of the player changes in the scene relative to the tree, the test is concluded and is considered to have passed. If the player position stays the same relative to the tree's position while the user is pressing down on th WASD keys, the test is considered to have failed. \\
+How test will be performed:\\ \sout{The user will start the scene and the user will press down on the WASD keys. If the user notices that the position of the player changes in the scene relative to the tree, the test is concluded and is considered to have passed. If the player position stays the same relative to the tree's position while the user is pressing down on th WASD keys, the test is considered to have failed.} \\
+{\color{magenta} The user will start the scene. Once the scene has started, the user will press down on the I key. If the user observes that the Inventory UI appears on the screen, the test has succeeded; if not, the test has failed}\\
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 12: The player must by able to equip, consume, delete, and move around items in their inventory using the mouse.}
+\subsubsection{{\color{magenta} F11.} The player must be able to equip, consume, \hsout{delete, and move around} {\color{magenta} and drop} items in their Inventory {\color{magenta} UI} using the \hsout{mouse} {\color{magenta} LMB.}} 
 
-\paragraph{Use Items Move Items}
+\paragraph{\hsout{Use Items Move Items} {\color{magenta} Use Remove Items}}
 
 \begin{enumerate}
 
-\item{Use-Move-Items-M-1\\}
+\item{\sout{Use-Move-Items-M-1} {\color{magenta} Use-Remove-Items-DM-1} \\} \refstepcounter{ftnum} \label{F11-1}
 
-Type: Manual \\
+Type: {\color{magenta} Dynamic, }Manual \\
 					
 Initial State: A scene is initially paused. A player object is initialized at the center of the playable map. Equipment and consumable item objects are initialized close to the player's position.\\
 					
-Input: Start scene button, WASD keys, mouse movement, mouse left-click, 'inventory' key, 'interact' key, 'de-equip' button\\
+Input: Start scene button, WASD keys, mouse movement, mouse left-click, \sout{'inventory' key, 'interact' key, 'de-equip' button} {\color{magenta} I key, E key, U key, remove button}\\
 					
-Output: Changes on screen.\\
+Output: Items picked up by the player will appear in the Inventory UI. Equipment items used will be equipped and shown in the Equipment UI. Consumable items used will dissappear from the Inventory UI and the player's health will increase. Items removed from the Inventory UI will be removed and appear as an item game object in front of the player and drop to the terrain.\\
 					
-How test will be performed:\\ The user will start the scene and the user will press down on the WASD keys to move the player towards the items and stop once the player is close enough to the item to interact with it. The user will then use the mouse to change the camera view until the item is in the center of screen and will press the 'interact' key on the item to pick it up. The user will do this for both items. The user will then press the 'inventory' key to open the inventory UI, and use the mouse to hover over either item icon. The user will press down on the left mouse button to use the item. If the item used is the consumable, the user will check the player's health value to see if it has increased by a specified amount. The user will also check if the item no longer exists in the player's inventory. The user will then press down on the left mouse button to use the equipment item. The user will check if the equipment has been equipped in one of the player's equipment slot and if the equipment item has disappeared from the player's inventory. The user will then press the 'de-equip' button and will check if the equipment is no longer in the player's equpment slot, but back in the player's inventory. The user will move the equipment item to another slot by pressing and holding down the left mouse button on the item icon, and drag the mouse to an empty slot in the player's inventory. The user will check if the item has moved to its intended spot. The user will then press the left mouse button on the remove button in the top right corner of the slot the item is in. The user will check if the item has been removed from the player's inventory and has appeared at some close distance in front of the player. If any of the user's check fails, the test is considered to have failed. Otherwise, the test was passed.\\
+How test will be performed:\\ The user will start the scene and the user will press down on the WASD keys to move the player towards the items and stop once the player is close enough to the item to interact with it. The user will then use the mouse to change the camera view until rectile is over the item and then the user will press the E key to pick it up. The user will do this for all items. The user will then press the \sout{'inventory'} {\color{magenta} I} key to open the inventory UI, and use the mouse to hover over either item icon. The user will press down on the left mouse button to use the item. If the item used is the consumable, the user will check the player's health value to see if it has increased by a specified amount. The user will also check if the item no longer exists in the player's inventory. The user will then press down on the left mouse button to use {\color{magenta} one of} the equipment item. The user will check if the equipment has been equipped in one of the player's equipment slot and if the equipment item has disappeared from the player's inventory. \sout{The user will then press the 'de-equip' button and will check if the equipment is no longer in the player's equipment slot, but back in the player's inventory. The user will move the equipment item to another slot by pressing and holding down the left mouse button on the item icon, and drag the mouse to an empty slot in the player's inventory. The user will check if the item has moved to its intended spot.} The user will then press the left mouse button on the remove button \sout{in the top right corner of the slot the item is in} {\color{magenta} for all items in the inventory}. The user will check if the \sout{item has} {\color{magenta} items have} been removed from the player's inventory and \sout{has} {\color{magenta} have} appeared at some close distance in front of the player. If any of the user's check fails, the test is considered to have failed. Otherwise, the test was passed.\\
+
+\item{{\color{magenta} Use-Remove-Items-BUA-2}\\} \refstepcounter{ftnum} \label{F11-2}
+
+{\color{magenta} Type: Black Box, Unit, Automatic}\\
+					
+{\color{magenta} Initial State: void}\\
+					
+{\color{magenta} Input: void}\\
+					
+{\color{magenta} Output: void}\\
+					
+{\color{magenta} How test will be performed:}\\{\color{magenta} The methods that implement adding items to the inventory, using items, and removing items from the inventory will be tested. Assertion statements will be used for expected outputs. If an assertion errors does not occur, then the test was successful. If an assertion error does occur, then the test has failed.} \\
+\end{enumerate}
+
+\subsubsection{{\color{magenta} F12. The player must be able to unequip items in their Equipment UI using the LMB or the `unequip all’  key.}} 
+
+\paragraph{{\color{magenta} Unequip}}
+
+\begin{enumerate}
+
+\item{{\color{magenta} Unequip-DM-1}} \refstepcounter{ftnum} \label{F12-1}
+
+{\color{magenta} Type: Dynamic, Manual} \\
+					
+{\color{magenta} Initial State: A player object and equipment item objects are initialized at a predetermined position}\\
+					
+{\color{magenta} Input: Start scene button, WASD keys, E key, I key mouse movement, left mouse button}\\
+					
+{\color{magenta} Output: The equipment items, when used, will appear in the Equipment UI. Items removed from the Equipment UI will reappear in the Invenotry UI}\\
+					
+{\color{magenta}How test will be performed:}\\ {\color{magenta} The user will start the scene and the user will press down on the WASD keys to move the player towards the items and stop once the player is close enough to the item to interact with it. The user will then use the mouse to change the camera view until rectile is over the item and then the user will press the E key to pick it up. The user will do this for all items. The user will then press the I key to open the inventory UI, and use the mouse to hover over the equipment item icon. The user will press down on the left mouse button to equip the item. The user will do this for all equipment items in the inventory, and check if each item has been transferred over to the Equipment UI. The user will then use the  the remove button on one of the items in the Equipment UI, and then press the U key. The user will check if all items have been removed from the Equipment UI and has reappeared in the Inventory UI. If any of the user's check fails, the test is considered to have failed. Otherwise, the test was passed.}
+
+\item{{\color{magenta} Unequip-BUA-2}\\} \refstepcounter{ftnum} \label{F12-2}
+
+{\color{magenta} Type: Black Box, Unit, Automatic}\\
+					
+{\color{magenta} Initial State: void}\\
+					
+{\color{magenta} Input: void}\\
+					
+{\color{magenta} Output: void}\\
+					
+{\color{magenta} How test will be performed:}\\{\color{magenta} The methods that implement equipping and unequipping items will be tested. Assertion statements will be used for expected outputs. If an assertion errors does not occur, then the test was successful. If an assertion error does occur, then the test has failed.} \\
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 13: The player must by able to fire/use their equipped weapon by pressing the left mouse button.}
+\subsubsection{{\color{magenta} F13.} The player must be able to fire/use \hsout{their equipped weapon} {\color{magenta} an equipped gun or axe} by pressing the left mouse button (LMB).} 
 
 \paragraph{Attack Items}
 
 \begin{enumerate}
 
-\item{Attack-Items-M-1\\}
+\item{Attack-Items-M-1\\} \refstepcounter{ftnum} \label{F13-1}
 
 Type: Manual \\
 					
@@ -359,13 +418,13 @@ How test will be performed:\\ The user will start the scene and the user will pr
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 14: If the player has a firearm equipped, they must be able to aimdown sights using the right mouse button.}
+\subsubsection{{\color{magenta} F14.} If the player has a firearm equipped, \hsout{they must be able to aim down sights using the right mouse button (RMB)} {\color{magenta} the user can reload the gun using the ‘reload’ key. The mazimum amount of bullets will be 7.}} 
 
 \paragraph{Aiming}
 
 \begin{enumerate}
 
-\item{Aiming-M-1\\}
+\item{Aiming-M-1\\} \refstepcounter{ftnum} \label{F14-1}
 
 Type: Changes on screen \\
 					
@@ -379,13 +438,13 @@ How test will be performed:\\ The user will start the scene and the user will pr
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 15: The environment must slowly go through a day and night cycle.}
+\subsubsection{{\color{magenta} F15.} The environment must slowly go through a day and night cycle.} 
 
 \paragraph{Day and Night}
 
 \begin{enumerate}
 
-\item{Day-Night-A-1\\}
+\item{Day-Night-A-1\\} \refstepcounter{ftnum} \label{F15-1}
 
 Type: Automated \\
 					
@@ -399,13 +458,13 @@ How test will be performed:\\ A test script will be created that initializes the
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 16: The player must lose health when hit by a zombie}
+\subsubsection{{\color{magenta} F16.} The player must lose health when hit by a zombie.} 
 
 \paragraph{Zombie Attack}
 
 \begin{enumerate}
 
-\item{Zombie-Attack-A-1\\}
+\item{Zombie-Attack-A-1\\} \refstepcounter{ftnum} \label{F16-1}
 
 Type: Automated \\
 					
@@ -419,13 +478,13 @@ How test will be performed:\\  A test script will be created that initializes th
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 17: Zombies must lose health when hit by the player}
+\subsubsection{{\color{magenta} F17.} Zombies must lose health when hit by the player {\color{magenta} by using the LMB once the player is within attacking distance from the zombie.}} 
 
 \paragraph{Player Attack}
 
 \begin{enumerate}
 
-\item{Player-Attack-A-1\\}
+\item{Player-Attack-A-1\\} \refstepcounter{ftnum} \label{F17-1}
 
 Type: Automated \\
 					
@@ -439,13 +498,13 @@ How test will be performed:\\  A test script will be created that initializes th
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 18: Players and zombies must die when they reach 0 health}
+\subsubsection{{\color{magenta} F18.} Players or zombies must die when they reach 0 health.} 
 
 \paragraph{Death}
 
 \begin{enumerate}
 
-\item{Death-A-1\\}
+\item{Death-A-1\\} \refstepcounter{ftnum} \label{F18-1}
 
 Type: Automated \\
 					
@@ -459,23 +518,83 @@ How test will be performed:\\  A test script will be created that initializes th
 
 \end{enumerate}
 
-\subsubsection{Func. Req. 19: Upon player death, the game must reset}
+\subsubsection{\hsout{Func. Req. 19: Upon player death, the game must reset}} 
 
-\paragraph{Reset}
+\paragraph{\hsout{Reset}}
 
 \begin{enumerate}
 
-\item{Reset-M-1\\}
+\item{\sout{Reset-M-1}\\}
 
-Type: Manual \\
+\sout{Type: Manual} \\
 					
-Initial State: A player object is initialized in the center of the playable map and a zombie enemy object is initialized at a distance from the player that is within the zombie's attack radius.\\
+\sout{Initial State: A player object is initialized in the center of the playable map and a zombie enemy object is initialized at a distance from the player that is within the zombie's attack radius.}\\
 					
-Input: Scene start button \\
+\sout{Input: Scene start button} \\
 					
-Output: Changes on screen \\
+\sout{Output: Changes on screen} \\
 					
-How test will be performed:\\  The user will start the scene. The user will check if the zombie is attacking the player and if the player's health is decreasing after each zombie attack. Once the player's health decreases to zero, the user will check if the scene resets to its inital state where the process begins all over again. If any of the user's check fails, the test is considered to have failed. Otherwise, the test was passed. \\
+\sout{How test will be performed:}\\  \sout{The user will start the scene. The user will check if the zombie is attacking the player and if the player's health is decreasing after each zombie attack. Once the player's health decreases to zero, the user will check if the scene resets to its inital state where the process begins all over again. If any of the user's check fails, the test is considered to have failed. Otherwise, the test was passed.} \\
+
+\end{enumerate}
+
+\subsubsection{{\color{magenta} F19. An Inventory UI will give the user a visual representation of the player's inventory and will be accessable by pressing the ‘inventory’ key.}} 
+
+\paragraph{{\color{magenta} InventoryUI}}
+
+\begin{enumerate}
+
+\item{{\color{magenta} InventoryUI-DM-1}\\} \refstepcounter{ftnum} \label{F19-1}
+
+{\color{magenta} Type: Dynamic, Manual}  \\
+					
+{\color{magenta} Initial State: A player object will be instantiate at a predetermined location}\\
+					
+{\color{magenta} Input: Start scene button,  I key}\\
+					
+{\color{magenta} Output: The Inventory UI will appear on the bottom right corner of the screen after the user presses down on the I key, and the Inventory UI will disappear when the I key is pressed once again.}\\
+					
+{\color{magenta} How test will be performed:}\\  {\color{magenta} The user will start the scene and the user will press down on the I key. The user will check if the Inventory UI appears. on the bottom right corner of the screen. Then the user will press the I key again and check if the Inventory UI has disappeared from the screen. If any of the user's check fails, the test is considered to have failed. Otherwise, the test was passed.}\\
+
+\end{enumerate}
+
+\subsubsection{{\color{magenta} F20. An Equipment UI will give the user a visual representation of the player's equipped items and will be appear with the Inventory UI by pressing the ‘inventory’ key.}} 
+
+\paragraph{{\color{magenta} Equipment UI}}
+
+\begin{enumerate}
+
+\item{{\color{magenta} EquipmentUI-DM-1}\\} \refstepcounter{ftnum} \label{F20-1}
+
+{\color{magenta} Type: Dynamic, Manual }  \\
+					
+{\color{magenta} Initial State: A player object will be instantiate at a predetermined location}\\
+					
+{\color{magenta} Input: Start scene button,  I key}\\
+					
+{\color{magenta} Output: The Equipment UI will appear on the top left corner of the screen after the user presses down on the I key, and the Equipment UI will dissappear when the I key is pressed once again. }\\
+					
+{\color{magenta} How test will be performed:}\\  {\color{magenta} The user will start the scene and the user will press down on the I key. The user will check if the Equipment UI appears. on the top left corner of the screen. Then the user will press the I key again and check if the Equipment UI has disappeared from the screen. If any of the user's check fails, the test is considered to have failed. Otherwise, the test was passed.}\\
+
+\end{enumerate}
+
+\subsubsection{{\color{magenta} F21. A Player UI will give the user a visual representation of the player's health and remaining bullets if a gun is equipped to the player. The Player UI will also consist of a reticle.}} 
+
+\paragraph{{\color{magenta} Player UI}}
+
+\begin{enumerate}
+
+\item{{\color{magenta} PlayerUI-SM-1}\\}  \refstepcounter{ftnum} \label{F21-1}
+
+{\color{magenta} Type: Static, Manual}  \\
+					
+{\color{magenta} Initial State: A player object will be instantiate at a predetermined location}\\
+					
+{\color{magenta} Input: Start scene button}\\
+					
+{\color{magenta} Output: A Player UI on the bottom left corner of the screen}\\
+					
+{\color{magenta} How test will be performed:}\\  {\color{magenta} The user will start the scene and the user will check if there exists a Player UI on the bottom left corner of the screen. If any of the user's check fails, the test is considered to have failed. Otherwise, the test was passed.}\\
 
 \end{enumerate}
 
@@ -487,7 +606,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 
 \begin{enumerate}
 	
-	\item{Graphics-F-1\\}
+	\item{Graphics-F-1\\} \refstepcounter{nftnum} \label{NF1}
 	
 	Type: Functional \\
 	
@@ -501,9 +620,9 @@ How test will be performed:\\  The user will start the scene. The user will chec
 	The surveyor will ask the user to start the game and to look at all the initialized objects and playable map.\\
 	Afterwards, they will fill in an answer to a question relating to how the graphics appear to them.
 	
-	\item{Ease-of-Use-F-1\\}
+	\item{Ease-of-Use-F-1\\} \refstepcounter{nftnum} \label{NF2}
 	
-	Type: Functional \\
+	Type: Functional \nfref{NF2}\\
 	
 	Initial State: Scene is paused. All game mechanics, game functions/features, game objects, and interactions will be intialized for the user to begin playing the current game Zombie Survival Kit. \\
 	
@@ -515,7 +634,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 	The surveyor will tell the user all the possible features of the game. Then the surveyor will ask the user to use the keyboard or mouse to perform the features. \\
 	Afterwards, they will fill in an answer to a question relating to how intuitive or easy it is to use all the possible input commands through the mouse and keyboard.\\
 	
-	\item{Ease-of-Use-F-1\\}
+	\item{Ease-of-Use-F-1\\} \refstepcounter{nftnum} \label{NF3}
 	
 	Type: Functional \\
 	
@@ -535,7 +654,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 
 \begin{enumerate}
 	
-	\item{Min-Learn-F-1\\}
+	\item{Min-Learn-F-1\\} \refstepcounter{nftnum} \label{NF4}
 	
 	Type: Functional \\
 	
@@ -555,7 +674,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 
 \begin{enumerate}
 	
-	\item{Start-Time-F-1\\}
+	\item{Start-Time-F-1\\} \refstepcounter{nftnum} \label{NF5}
 	
 	Type: Functional \\
 	
@@ -569,7 +688,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 	The surveyor will ask the user to time how long it takes to start the game. Then the surveyor will ask the user to start the game. \\
 	Afterwards, they will fill in an answer to a question relating to how fast did it take for the scene to load. \\
 	
-	\item{FPS-F-1\\}
+	\item{FPS-F-1\\} \refstepcounter{nftnum} \label{NF6}
 	
 	Type: Functional \\
 	
@@ -582,7 +701,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 	How test will be performed:\\ The user will start the scene and will read the framerate on the screen produced by the script by Dave Hampson (http://wiki.unity3d.com/index.php/FramesPerSecond). \\ 
 	If the framerate runs at a speed equal to or higher than 60 frames per second while performing all the features of Zombie Survival Kit, the test passes. Otherwise the test failed.\\
 	
-	\item{Close-Time-F-1\\}
+	\item{Close-Time-F-1\\} \refstepcounter{nftnum} \label{NF7}
 	
 	Type: Functional \\
 	
@@ -596,17 +715,17 @@ How test will be performed:\\  The user will start the scene. The user will chec
 	The surveyor will ask the user to start the scene, and once the scene starts, the surveyor will ask the user to time how long it takes to close the game. The surveyor will then ask the user to close the game. \\
 	Afterwards, they will fill in an answer to a question relating to how fast did it take for the scene to stop playing. \\
 	
-	\item{Close-Time-F-1\\}
+	\item{\sout{Close-Time-F-1} {\color{magenta} Enough-Ram-F-1}\\} \refstepcounter{nftnum} \label{NF8}
 	
 	Type: Functional \\
 	
 	Initial State: void \\
 	
-	Input/Condition: Checking to see that the space needed to download the playable executable of Zombie Survival Kit does not surpass 1GB. \\
+	Input/Condition: Checking to see that the \sout{space} {\color{magenta} ram} needed to \sout{download the playable executable of} {\color{magenta} play} Zombie Survival Kit does not surpass 1GB. \\
 	
 	Output/Result: The space needed to download the playable executable of Zombie Survival Kit \\
 	
-	How test will be performed:\\ The user will check how much space is required to download the playable executable of Zombie Survival Kit. If space required does not exceed 1GB, the test has passed. Otherwise, the test has failed. \\
+	How test will be performed:\\ The user will check how much \sout{space} {\color{magenta} ram} \sout{is required to download the playable executable of} Zombie Survival Kit {\color{magenta} takes up}. If \sout{space} {\color{magenta} the amount ram used} \sout{required} does not exceed 1GB, the test has passed. Otherwise, the test has failed. \\
 	
 \end{enumerate}
 
@@ -614,7 +733,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 
 \begin{enumerate}
 	
-	\item{Enough-Space-F-1\\}
+	\item{Enough-Space-F-1\\} \refstepcounter{nftnum} \label{NF9}
 	
 	Type: Functional\\
 	
@@ -632,7 +751,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 
 \begin{enumerate}
 	
-	\item{Player-Attack-Animation-to-Effect-F-1\\}
+	\item{Player-Attack-Animation-to-Effect-F-1\\} \refstepcounter{nftnum} \label{NF10}
 	
 	Type: Functional\\
 	
@@ -646,7 +765,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 	The surveyor will ask the user to move the player towards a zombie, and to have the player attack the zombie.\\
 	Afterwards, they will fill in an answer to a question relating to how precise the zombie's attack animation was to the effect it had on the player's health.\\		
 	
-	\item{Time-Day-Night-Transition-F-1\\}
+	\item{Time-Day-Night-Transition-F-1\\} \refstepcounter{nftnum} \label{NF11}
 	
 	Type: Functional\\
 	
@@ -660,7 +779,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 	The surveyor will tell the user before starting the scene, how long it will take for the environment to change from day to night and night to day. Then the surveyor will ask the user to time how long it takes for day to become night and night to become day, after starting the scene. \\
 	Afterwards, they will fill in an answer to a question relating to how precise the change in day or night in the game was to the amount of time that has passed.\\
 	
-	\item{Zombie-Attack-Animation-to-Effect-F-1\\}
+	\item{Zombie-Attack-Animation-to-Effect-F-1\\} \refstepcounter{nftnum} \label{NF12}
 	
 	Type: Functional\\
 	
@@ -674,7 +793,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 	The surveyor will ask the user to move the player towards a zombie, and let the zombie attack the player.\\
 	Afterwards, they will fill in an answer to a question relating to how precise the zombie's attack animation was to the effect it had on the player's health.\\	
 	
-	\item{Distance-to-Pickup-Item-F-1\\}
+	\item{Distance-to-Pickup-Item-F-1\\} \refstepcounter{nftnum} \label{NF13}
 	
 	Type: Functional \\
 	
@@ -694,7 +813,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 
 \begin{enumerate}
 	
-	\item{Reliable-Input-Commands-F-1\\}
+	\item{Reliable-Input-Commands-F-1\\} \refstepcounter{nftnum} \label{NF14}
 	
 	Type: Functional \\
 	
@@ -708,8 +827,8 @@ How test will be performed:\\  The user will start the scene. The user will chec
 	The surveyor will ask the user to perform all the possible input commands and will tell the user what will happen in the game before the commands are inputted. \\
 	Afterwards, they will fill in an answer to a question relating to how reliabile the intended output would appear, after inputting each input command from the mouse and keyboard.\\
 	
-	\item{Play-When-On-F-1\\}
-	
+	\item{Play-When-On-F-1\\} \refstepcounter{nftnum} \label{NF15}
+	 
 	Type: Functional\\
 	
 	Initial State: Scene is paused. All game mechanics, game functions/features, game objects, and interactions will be intialized for the user to begin playing the current game Zombie Survival Kit.\\
@@ -728,7 +847,7 @@ How test will be performed:\\  The user will start the scene. The user will chec
 
 \begin{enumerate}
 	
-	\item{Culture-Discretion-F-1\\}
+	\item{Culture-Discretion-F-1\\} \refstepcounter{nftnum} \label{NF16}
 	
 	Type: Functional\\
 	
@@ -747,32 +866,40 @@ How test will be performed:\\  The user will start the scene. The user will chec
 \subsubsection{Non-function Requirements not being tested on}
 
 \begin{enumerate}
+
+	\item{{\color{magenta} Operational and Environmental Requirements}\\}
+	
+	{\color{magenta} The operational and Environmental requirements are expected system requirements that the user will have to run the game, and includes requirements detailing what partner applications are used to develop Zombie Survival Kit. These are design decisions that Group 6ix feels to bring out the best experience of Zombie Survival Kit which do not require testing.}
 	
 	\item{Security Requirements\\}
-	1. Zombie Survival Kit shall not require any personal information from the user.\\
-	
+	\sout{1. Zombie Survival Kit shall not require any personal information from the user.}\\ 
+
 	We cannot test what we do not require the game to do. Therefore there are no tests for the Security Requirements.
+
+	\item{Legal Requirements\\}
+
+	We cannot test the license in which Zombie Survival is under.
 	
 	\item{Health and Safety Requirements\\}
-	1. Users with a history of epilepsy or sensitivity to flashing lights should notuse this product.\\
+	\sout{1. Users with a history of epilepsy or sensitivity to flashing lights should notuse this product.}\\
 	
-	2. The product should be used in a well lit environment\\
+	\sout{2. The product should be used in a well lit environment}\\
 	
-	3. Correct posture should be ensured by the user while sitting on computer\\
+	\sout{3. Correct posture should be ensured by the user while sitting on computer}\\
 	
-	4. After every hour of use, a 10 minute break is highly recommended.\\
+	\sout{4. After every hour of use, a 10 minute break is highly recommended.}\\
 	
-	5. If the user experiences watering of eyes, a sensation of dizziness or nausea,\\
+	\sout{5. If the user experiences watering of eyes, a sensation of dizziness or nausea,}\\
 	
-	use of the product should be ceased immediately.\\
+	\sout{use of the product should be ceased immediately.}\\
 	
-	6. The product should never be used if the user is feeling sleepy.\\
+	\sout{6. The product should never be used if the user is feeling sleepy.}\\
 	
-	7. The computer being used should be well ventilated and should be cooled adequately.\\
+	\sout{7. The computer being used should be well ventilated and should be cooled adequately.}\\
 	
-	8. The frame rate should be at least 60 FPS at all times to prevent motion sickness, and frame time variance should be checked and maintained at a maximum of 16 ms.\\
+	\sout{8. The frame rate should be at least 60 FPS at all times to prevent motion sickness, and frame time variance should be checked and maintained at a maximum of 16 ms.}\\
 	
-	9. The age of the user should be at least 12 years. \\
+	\sout{9. The age of the user should be at least 12 years.} \\
 	
 	These requirements concerning the safety of the user and the equipment required for Zombie Survival Kit will not be tested on because failure to any of these requirements may consitute a health hazard.\\
 	
@@ -780,7 +907,90 @@ How test will be performed:\\  The user will start the scene. The user will chec
 \end{enumerate}
 
 \subsection{Traceability Between Test Cases and Requirements}
-All the functional and non-function test cases as stated above have detailed instructions as to what constitutes a passed or failed test case. Each step within each test case are also described allowing for high traceability between test cases and requirements.
+\sout{All the functional and non-function test cases as stated above have detailed instructions as to what constitutes a passed or failed test case. Each step within each test case are also described allowing for high traceability between test cases and requirements.}\\
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.5\textwidth} p{0.4\textwidth}}
+\toprule
+\textbf{Functional Requirements} & \textbf{Tests}\\
+\midrule
+F1 & \fref{F1-1}\\
+F2 & \fref{F2-1}\\
+F3 & \fref{F3-1}\\
+F4 & \fref{F4-1}\\
+F5 & \fref{F5-1}\\
+F6 & \fref{F6-1}\\
+F7 & \fref{F7-1}\\
+F8 & \fref{F8-1}\\
+F9 & \fref{F9-1}\\
+F10 & \fref{F10-1}\\
+F11 & \fref{F11-1}, \fref{F11-2}\\
+F12 & \fref{F12-1}, \fref{F12-2}\\
+F13 & \fref{F13-1}\\
+F14 & \fref{F14-1} \\
+F15 & \fref{F15-1} \\
+F16 & \fref{F16-1} \\
+F17 & \fref{F17-1} \\
+F18 & \fref{F18-1} \\
+F19 & \fref{F19-1} \\
+F20 & \fref{F20-1} \\
+F21 & \fref{F21-1} \\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Functional Requirements and Tests}
+\label{TblRT}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.5\textwidth} p{0.4\textwidth}}
+\toprule
+\textbf{Non-Functional Requirements} & \textbf{Tests}\\
+\midrule
+NF1 & \nfref{NF1}\\
+NF2 & \nfref{NF2}\\
+NF3 & \nfref{NF3}\\
+NF4 & not tested\\
+NF5 & \nfref{NF4}\\
+NF6 & not tested\\
+NF7 & \nfref{NF5}\\
+NF8 & \nfref{NF6}\\
+NF9 & \nfref{NF7}\\
+NF10 & \nfref{NF8}\\
+NF11 & \nfref{NF9}\\
+NF12 & \nfref{NF10}, \nfref{NF12}\\
+NF13 & \nfref{NF11}\\
+NF14 & \nfref{NF13}\\
+NF15 & \nfref{NF14}\\
+NF16 & \nfref{NF15}\\
+NF17 &  not tested\\
+NF18 &  not tested\\
+NF19 &  not tested\\
+NF20 &  not tested\\
+NF21 &  not tested\\
+NF22 &  not tested\\
+NF23 &  not tested\\
+NF24 &  not tested\\
+NF25 &  not tested\\
+NF26 &  \nfref{NF16}\\
+NF27 &  not tested\\
+NF28 &  not tested\\
+NF29 &  not tested\\
+NF30 &  not tested\\
+NF31 &  not tested\\
+NF32 &  not tested\\
+NF33 &  not tested\\
+NF34 &  not tested\\
+NF35 &  not tested\\
+NF36 &  not tested\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Non-Functional Requirements and Tests}
+\label{TblRT}
+\end{table}
+
+
 \section{Tests for Proof of Concept}
 
 \subsection{Movement and Camera}
@@ -913,11 +1123,16 @@ Unit tests for internal functions will be accomplished using ASSERT statements. 
 
 For example, assertion statements will be used to make sure the combat system is correct. After the code for the enemy attacking the player runs, there will be an assertion to check if the player's new health is equal to the player's old health minus the enemy's attack value. If the assertion passes, it is known that the the enemy has successfully attacked and reduced the player's health. The same thing is tested for the opposite scenario, where the player attacks the enemy. There is an assertion to check if the enemy's new health is equal to the enemy's old health minus the player's attack value. \\
 
-Another example of unit testing that will be done is for the inventory system. Once the player picks up an item, it should be added into the first available inventory slot. Assertion statements can be used to check if the item was successfully placed into the slot. This is done by running an assertion that checks if the first available inventory slot is filled with an Item of the type that was just picked up. If the assertion passes, the player has successfully picked up the item into their inventory.
+Another example of unit testing that will be done is for the inventory system. Once the player picks up an item, it should be added into the first available inventory slot. Assertion statements can be used to check if the item was successfully placed into the slot. This is done by running an assertion that checks if the first available inventory slot is filled with an Item of the type that was just picked up. If the assertion passes, the player has successfully picked up the item into their inventory\\
 
-\subsection{Unit testing of output files}		
+{\color{magenta} All test scripts for unit testing of internal functions are found in: \\
+\href{https://gitlab.cas.mcmaster.ca/jonatans/Zombie\_Survival\_Kit/tree/Brian\_Final/src/Zombie\%20Survival\%20Kit/Assets/Scripts/Test\%20Scripts}{Test-Scripts} \\}
 
-Currently, the implementation does not generate any output files, so no tests are necessary. As a design choice, it was decided to reset the game when the player dies to give the development kit more of a survival theme. Also since this is just a dev kit and not a fully fledged video game, saving the game and generating output files is not necessary. If any output files are added, this section will be updated and test cases will be added.
+\subsection{\hsout{Unit testing of output files}}		
+
+\sout{Currently, the implementation does not generate any output files, so no tests are necessary. As a design choice, it was decided to reset the game when the player dies to give the development kit more of a survival theme. Also since this is just a dev kit and not a fully fledged video game, saving the game and generating output files is not necessary. If any output files are added, this section will be updated and test cases will be added.}
+
+
 
 %\bibliographystyle{plainnat}
 %
