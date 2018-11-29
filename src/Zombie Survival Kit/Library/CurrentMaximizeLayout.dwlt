@@ -13,17 +13,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 3}
-  - {fileID: 15}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 710, y: 492}
-  m_MaxSize: {x: 16010, y: 14042}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 63
+  controlID: 126
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,9 +44,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1081
+    x: 204
     y: 92
-    width: 428
+    width: 1305
     height: 575
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 1
@@ -59,8 +59,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -214
-    m_HBaseRangeMax: 214
+    m_HBaseRangeMin: -652.5
+    m_HBaseRangeMax: 652.5
     m_VBaseRangeMin: -279
     m_VBaseRangeMax: 279
     m_HAllowExceedBaseRangeMin: 1
@@ -80,25 +80,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 428
+      width: 1305
       height: 558
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 214, y: 279}
+    m_Translation: {x: 652.5, y: 279}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -214
+      x: -652.5
       y: -279
-      width: 428
+      width: 1305
       height: 558
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 428, y: 575}
+  m_LastWindowPixelSize: {x: 1305, y: 575}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -116,17 +116,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 4}
-  - {fileID: 11}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1511
     height: 947
-  m_MinSize: {x: 608, y: 492}
-  m_MaxSize: {x: 12008, y: 14042}
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 64
+  controlID: 98
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,17 +141,16 @@ MonoBehaviour:
   m_Children:
   - {fileID: 5}
   - {fileID: 7}
-  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1511
     height: 596
-  m_MinSize: {x: 608, y: 221}
-  m_MaxSize: {x: 12008, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 65
+  controlID: 99
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,7 +205,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: e44dffffe4fbffff00000000a0300000fe3e0000
+    m_ExpandedIDs: e4fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -246,15 +245,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 202
     y: 0
-    width: 877
+    width: 1309
     height: 596
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 8}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
   - {fileID: 9}
-  m_Selected: 0
+  - {fileID: 2}
+  m_Selected: 2
   m_LastSelected: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 204
-    y: 92
-    width: 873
+    y: 19
+    width: 1305
     height: 575
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
@@ -374,45 +374,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1079
-    y: 0
-    width: 432
-    height: 596
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 2}
-  m_Panes:
-  - {fileID: 2}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &11
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
     x: 0
     y: 596
     width: 1511
     height: 351
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 11}
   m_Panes:
+  - {fileID: 11}
   - {fileID: 12}
   - {fileID: 13}
-  - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &12
+  m_LastSelected: 2
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,20 +424,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Brian's Scripts
+    - Assets/_Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Brian's Scripts
+  - Assets/_Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Moham\Desktop\Zombie Survival Kit
+  m_LastProjectPath: D:\Study Material\3XA3 projects\Zombie_Survival_Kit\src\Zombie
+    Survival Kit
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 279}
-    m_SelectedIDs: 980e0000
-    m_LastClickedID: 3736
-    m_ExpandedIDs: 00000000260a0000360a0000460a00009a0b0000b40b0000980e0000e00e0000fc0e00000c0f0000881000009a110000a01100005c120000ec120000021300006a170000ac170000d8170000e8880000ea880000ec880000ee880000f0880000f2880000f4880000f6880000f8880000fa880000fc88000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: dc2a0000
+    m_LastClickedID: 10972
+    m_ExpandedIDs: 00000000be2a0000ce2a0000de2a0000322c00004c2c00007c2f0000982f0000a82f000026310000383200003e320000fc3200000e380000503800007c380000228900002489000026890000288900002a8900002c8900002e8900003089000032890000348900003689000038890000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -478,7 +454,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -490,7 +466,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000260a0000360a0000460a00009a0b0000b40b0000980e0000e00e0000fc0e00000c0f0000881000009a110000a01100005c120000ec120000021300006a170000ac170000d8170000e8880000ea880000ec880000ee880000f0880000f2880000f4880000f6880000f8880000fa880000fc880000
+    m_ExpandedIDs: 00000000be2a0000ce2a0000de2a0000322c00004c2c00007c2f0000982f0000a82f000026310000383200003e320000fc3200000e380000503800007c380000228900002489000026890000288900002a8900002c8900002e8900003089000032890000348900003689000038890000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -517,7 +493,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000b6780200fe46feff400c000010180000d2170000e2140000ba19000068100000600c000046180000721a0000b2190000560f000032190000001b0000f2190000a416000042100000ec140000700d0000360c00009812000072190000fe0d0000e8170000d21900001417000052170000dc0e0000621c0000000000003c1b00004a06000074100000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -534,7 +510,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -545,6 +521,31 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 210
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 688
+    width: 1509
+    height: 330
+  m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -566,36 +567,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 626.4
-    width: 1207
-    height: 176
+    y: 688
+    width: 1509
+    height: 330
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &14
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 680
-    width: 1367
-    height: 338
-  m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -613,16 +589,16 @@ MonoBehaviour:
     y: 0
     width: 409
     height: 947
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
+  - {fileID: 15}
   - {fileID: 16}
   - {fileID: 17}
-  - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &16
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -648,13 +624,13 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 16}
+    m_Window: {fileID: 15}
     newResultList:
     - id: '[Zombie Survival Kit][suite]'
       name: Zombie Survival Kit
       fullName: Zombie Survival Kit
       resultStatus: 1
-      duration: 6.116511
+      duration: 8.156091
       messages: 
       output: 
       stacktrace: 
@@ -664,11 +640,13 @@ MonoBehaviour:
       isSuite: 1
       categories: []
       parentID: 
-    - id: '[C:/Users/Moham/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[D:/Study Material/3XA3 projects/Zombie_Survival_Kit/src/Zombie Survival
+        Kit/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
-      fullName: C:/Users/Moham/Desktop/Zombie Survival Kit/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 6.0866046
+      fullName: D:/Study Material/3XA3 projects/Zombie_Survival_Kit/src/Zombie Survival
+        Kit/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 0
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -681,8 +659,8 @@ MonoBehaviour:
     - id: '[Tests][Test_CharacterCombat][suite]'
       name: Test_CharacterCombat
       fullName: Test_CharacterCombat
-      resultStatus: 0
-      duration: 2.1492975
+      resultStatus: 1
+      duration: 2.2764542
       messages: 
       output: 
       stacktrace: 
@@ -695,63 +673,21 @@ MonoBehaviour:
     - id: '[Tests][Test_CharacterCombat.Test_Attack]'
       name: Test_Attack
       fullName: Test_CharacterCombat.Test_Attack
-      resultStatus: 0
-      duration: 2.1292875
+      resultStatus: 1
+      duration: 2.2397285
       messages: 
       output: "There are 2 audio listeners in the scene. Please ensure there is always
         exactly one audio listener in the scene.\r\nThere are 2 audio listeners in
         the scene. Please ensure there is always exactly one audio listener in the
         scene.\r\nThere are 2 audio listeners in the scene. Please ensure there is
-        always exactly one audio listener in the scene.\r\nPrimaryPlayer(Clone) takes
-        25 damage.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
+        always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
         in the scene. Please ensure there is always exactly one audio listener in
         the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
+        is always exactly one audio listener in the scene.\r\nPrimaryPlayer(Clone)
+        takes 25 damage.\r\nThere are 2 audio listeners in the scene. Please ensure
+        there is always exactly one audio listener in the scene.\r\nThere are 2 audio
+        listeners in the scene. Please ensure there is always exactly one audio listener
+        in the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
         is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
         in the scene. Please ensure there is always exactly one audio listener in
         the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
@@ -989,54 +925,7 @@ MonoBehaviour:
         is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
         in the scene. Please ensure there is always exactly one audio listener in
         the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\nThere are 2 audio listeners in the scene. Please ensure there
-        is always exactly one audio listener in the scene.\r\nThere are 2 audio listeners
-        in the scene. Please ensure there is always exactly one audio listener in
-        the scene.\r\n"
+        is always exactly one audio listener in the scene.\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1048,8 +937,8 @@ MonoBehaviour:
     - id: '[Tests][Test_CharacterStats][suite]'
       name: Test_CharacterStats
       fullName: Test_CharacterStats
-      resultStatus: 0
-      duration: 0.0958713
+      resultStatus: 1
+      duration: 0.2027558
       messages: 
       output: 
       stacktrace: 
@@ -1062,8 +951,8 @@ MonoBehaviour:
     - id: '[Tests][Test_CharacterStats.Test_TakeDamage]'
       name: Test_TakeDamage
       fullName: Test_CharacterStats.Test_TakeDamage
-      resultStatus: 0
-      duration: 0.0825687
+      resultStatus: 1
+      duration: 0.1719535
       messages: 
       output: "PrimaryPlayer(Clone) takes 51 damage.\r\n"
       stacktrace: 
@@ -1077,8 +966,8 @@ MonoBehaviour:
     - id: '[Tests][Test_ConsumableItem][suite]'
       name: Test_ConsumableItem
       fullName: Test_ConsumableItem
-      resultStatus: 0
-      duration: 0.1157239
+      resultStatus: 1
+      duration: 0.2408784
       messages: 
       output: 
       stacktrace: 
@@ -1091,8 +980,8 @@ MonoBehaviour:
     - id: '[Tests][Test_ConsumableItem.Test_Use]'
       name: Test_Use
       fullName: Test_ConsumableItem.Test_Use
-      resultStatus: 0
-      duration: 0.0994688
+      resultStatus: 1
+      duration: 0.2065831
       messages: 
       output: "Using Apple\r\n"
       stacktrace: 
@@ -1106,8 +995,8 @@ MonoBehaviour:
     - id: '[Tests][Test_DaylightController][suite]'
       name: Test_DaylightController
       fullName: Test_DaylightController
-      resultStatus: 0
-      duration: 2.104415
+      resultStatus: 1
+      duration: 2.2345603
       messages: 
       output: 
       stacktrace: 
@@ -1120,8 +1009,8 @@ MonoBehaviour:
     - id: '[Tests][Test_DaylightController.Test_DayLight]'
       name: Test_DayLight
       fullName: Test_DaylightController.Test_DayLight
-      resultStatus: 0
-      duration: 2.0878744
+      resultStatus: 1
+      duration: 2.200469
       messages: 
       output: "(0.4, -0.2, 0.1, 0.9)\r\n(0.4, -0.2, 0.1, 0.9)\r\n"
       stacktrace: 
@@ -1135,8 +1024,8 @@ MonoBehaviour:
     - id: '[Tests][Test_EquipmentItem][suite]'
       name: Test_EquipmentItem
       fullName: Test_EquipmentItem
-      resultStatus: 0
-      duration: 0.1160333
+      resultStatus: 1
+      duration: 0.240496
       messages: 
       output: 
       stacktrace: 
@@ -1149,8 +1038,8 @@ MonoBehaviour:
     - id: '[Tests][Test_EquipmentItem.Test_Use]'
       name: Test_Use
       fullName: Test_EquipmentItem.Test_Use
-      resultStatus: 0
-      duration: 0.1000242
+      resultStatus: 1
+      duration: 0.2055373
       messages: 
       output: "Using HeadArmor\r\n"
       stacktrace: 
@@ -1164,8 +1053,8 @@ MonoBehaviour:
     - id: '[Tests][Test_EquipmentManager][suite]'
       name: Test_EquipmentManager
       fullName: Test_EquipmentManager
-      resultStatus: 0
-      duration: 0.4273272
+      resultStatus: 1
+      duration: 0.7569317
       messages: 
       output: 
       stacktrace: 
@@ -1178,8 +1067,8 @@ MonoBehaviour:
     - id: '[Tests][Test_EquipmentManager.Test_Equip]'
       name: Test_Equip
       fullName: Test_EquipmentManager.Test_Equip
-      resultStatus: 0
-      duration: 0.1970881
+      resultStatus: 1
+      duration: 0.3096618
       messages: 
       output: "Updating UI\r\nGun equipped\r\n"
       stacktrace: 
@@ -1193,8 +1082,8 @@ MonoBehaviour:
     - id: '[Tests][Test_EquipmentManager.Test_Unequip]'
       name: Test_Unequip
       fullName: Test_EquipmentManager.Test_Unequip
-      resultStatus: 0
-      duration: 0.0989231
+      resultStatus: 1
+      duration: 0.2058641
       messages: 
       output: "Updating UI\r\n"
       stacktrace: 
@@ -1208,8 +1097,8 @@ MonoBehaviour:
     - id: '[Tests][Test_EquipmentManager.Test_UnequipAll]'
       name: Test_UnequipAll
       fullName: Test_EquipmentManager.Test_UnequipAll
-      resultStatus: 0
-      duration: 0.1150594
+      resultStatus: 1
+      duration: 0.2061355
       messages: 
       output: "Updating UI\r\nUpdating UI\r\nUpdating UI\r\nUpdating UI\r\nUpdating
         UI\r\nUpdating UI\r\n"
@@ -1224,8 +1113,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Gun][suite]'
       name: Test_Gun
       fullName: Test_Gun
-      resultStatus: 0
-      duration: 0.1493714
+      resultStatus: 1
+      duration: 0.3097061
       messages: 
       output: 
       stacktrace: 
@@ -1238,8 +1127,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Gun.Test_ShootandReload]'
       name: Test_ShootandReload
       fullName: Test_Gun.Test_ShootandReload
-      resultStatus: 0
-      duration: 0.1329771
+      resultStatus: 1
+      duration: 0.274894
       messages: 
       output: "Gun equipped\r\n"
       stacktrace: 
@@ -1253,8 +1142,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Inventory][suite]'
       name: Test_Inventory
       fullName: Test_Inventory
-      resultStatus: 0
-      duration: 0.2914116
+      resultStatus: 1
+      duration: 0.5506402
       messages: 
       output: 
       stacktrace: 
@@ -1267,8 +1156,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Inventory.Test_Add]'
       name: Test_Add
       fullName: Test_Inventory.Test_Add
-      resultStatus: 0
-      duration: 0.0662574
+      resultStatus: 1
+      duration: 0.1368293
       messages: 
       output: 
       stacktrace: 
@@ -1282,8 +1171,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Inventory.Test_InventoryEquipmentConsumable]'
       name: Test_InventoryEquipmentConsumable
       fullName: Test_Inventory.Test_InventoryEquipmentConsumable
-      resultStatus: 0
-      duration: 0.0826236
+      resultStatus: 1
+      duration: 0.1718792
       messages: 
       output: 
       stacktrace: 
@@ -1297,8 +1186,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Inventory.Test_RemoveFromInventory]'
       name: Test_RemoveFromInventory
       fullName: Test_Inventory.Test_RemoveFromInventory
-      resultStatus: 0
-      duration: 0.1255199
+      resultStatus: 1
+      duration: 0.2065052
       messages: 
       output: "1\r\n2\r\n"
       stacktrace: 
@@ -1312,8 +1201,8 @@ MonoBehaviour:
     - id: '[Tests][Test_ItemStore][suite]'
       name: Test_ItemStore
       fullName: Test_ItemStore
-      resultStatus: 0
-      duration: 0.1167594
+      resultStatus: 1
+      duration: 0.2407252
       messages: 
       output: 
       stacktrace: 
@@ -1326,8 +1215,8 @@ MonoBehaviour:
     - id: '[Tests][Test_ItemStore.Test_Interact]'
       name: Test_Interact
       fullName: Test_ItemStore.Test_Interact
-      resultStatus: 0
-      duration: 0.0999499
+      resultStatus: 1
+      duration: 0.2067217
       messages: 
       output: "Picked up HeadArmor\r\n"
       stacktrace: 
@@ -1341,8 +1230,8 @@ MonoBehaviour:
     - id: '[Tests][Test_PlayerStats][suite]'
       name: Test_PlayerStats
       fullName: Test_PlayerStats
-      resultStatus: 0
-      duration: 0.2222449
+      resultStatus: 1
+      duration: 0.4461507
       messages: 
       output: 
       stacktrace: 
@@ -1355,8 +1244,8 @@ MonoBehaviour:
     - id: '[Tests][Test_PlayerStats.Test_Eat]'
       name: Test_Eat
       fullName: Test_PlayerStats.Test_Eat
-      resultStatus: 0
-      duration: 0.0996035
+      resultStatus: 1
+      duration: 0.2061588
       messages: 
       output: "PrimaryPlayer(Clone) takes 51 damage.\r\n"
       stacktrace: 
@@ -1370,8 +1259,8 @@ MonoBehaviour:
     - id: '[Tests][Test_PlayerStats.Test_OnEquipmentChanged]'
       name: Test_OnEquipmentChanged
       fullName: Test_PlayerStats.Test_OnEquipmentChanged
-      resultStatus: 0
-      duration: 0.1002572
+      resultStatus: 1
+      duration: 0.2058649
       messages: 
       output: 
       stacktrace: 
@@ -1385,8 +1274,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Stat][suite]'
       name: Test_Stat
       fullName: Test_Stat
-      resultStatus: 0
-      duration: 0.2827411
+      resultStatus: 1
+      duration: 0.584631
       messages: 
       output: 
       stacktrace: 
@@ -1399,8 +1288,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Stat.Test_AddToStat]'
       name: Test_AddToStat
       fullName: Test_Stat.Test_AddToStat
-      resultStatus: 0
-      duration: 0.0989789
+      resultStatus: 1
+      duration: 0.2059118
       messages: 
       output: 
       stacktrace: 
@@ -1414,8 +1303,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Stat.Test_GetValue]'
       name: Test_GetValue
       fullName: Test_Stat.Test_GetValue
-      resultStatus: 0
-      duration: 0.0678175
+      resultStatus: 1
+      duration: 0.138214
       messages: 
       output: 
       stacktrace: 
@@ -1429,8 +1318,8 @@ MonoBehaviour:
     - id: '[Tests][Test_Stat.Test_RemoveFromStat]'
       name: Test_RemoveFromStat
       fullName: Test_Stat.Test_RemoveFromStat
-      resultStatus: 0
-      duration: 0.0998065
+      resultStatus: 1
+      duration: 0.2055354
       messages: 
       output: 
       stacktrace: 
@@ -1441,7 +1330,7 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentID: '[Tests][Test_Stat][suite]'
-    m_ResultText: Zombie Survival Kit (6.117s)
+    m_ResultText: Zombie Survival Kit (8.156s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
@@ -1474,7 +1363,7 @@ MonoBehaviour:
       availableCategories:
       - Uncategorized
   m_EditModeTestListGUI:
-    m_Window: {fileID: 16}
+    m_Window: {fileID: 15}
     newResultList:
     - id: '[Zombie Survival Kit][suite]'
       name: Zombie Survival Kit
@@ -1522,7 +1411,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &17
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1556,7 +1445,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
---- !u!114 &18
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}

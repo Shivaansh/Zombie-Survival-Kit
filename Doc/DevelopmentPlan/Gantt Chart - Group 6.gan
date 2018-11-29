@@ -76,24 +76,37 @@
             <task id="117" name="Inventory System" color="#8cb6ce" meeting="false" start="2018-10-12" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
             <task id="121" name="Integration and Maintenance" color="#8cb6ce" meeting="false" start="2018-10-15" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="33" name="Test Plan" color="#8cb6ce" meeting="false" start="2018-10-24" duration="3" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="true">
+        <task id="33" name="Test Plan" color="#8cb6ce" meeting="false" start="2018-10-24" duration="3" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="false">
             <task id="123" name="Functional Requirements" color="#8cb6ce" meeting="false" start="2018-10-24" duration="3" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
             <task id="124" name="Non Functional Requirements" color="#8cb6ce" meeting="false" start="2018-10-24" duration="3" complete="0" thirdDate="2018-10-24" thirdDate-constraint="0" expand="true"/>
             <task id="125" name="Proof of Concept Testin" color="#8cb6ce" meeting="false" start="2018-10-26" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
             <task id="126" name="Unit Testing" color="#8cb6ce" meeting="false" start="2018-10-26" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
             <task id="127" name="About Project" color="#8cb6ce" meeting="false" start="2018-10-26" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="36" name="Design &amp; Document" color="#8cb6ce" meeting="false" start="2018-10-27" duration="14" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="true"/>
-        <task id="39" name="Revision 0 Demonstration" color="#8cb6ce" meeting="false" start="2018-11-13" duration="2" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="true"/>
-        <task id="41" name="Final Demonstration" color="#8cb6ce" meeting="false" start="2018-09-20" duration="1" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="true">
-            <task id="129" name="Bullet Damage Modifiers" color="#8cb6ce" meeting="false" start="2018-09-20" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
-            <task id="131" name="Reload Delay" color="#8cb6ce" meeting="false" start="2018-09-20" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
-            <task id="133" name="Equipping and unequipping weapon" color="#8cb6ce" meeting="false" start="2018-09-20" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
-            <task id="135" name="Gun Model Fix" color="#8cb6ce" meeting="false" start="2018-09-20" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
-            <task id="137" name="Commenting Code" color="#8cb6ce" meeting="false" start="2018-09-20" duration="1" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+        <task id="36" name="Design &amp; Document" color="#8cb6ce" meeting="false" start="2018-10-27" duration="14" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="true">
+            <task id="140" name="MIS" color="#8cb6ce" meeting="false" start="2018-10-27" duration="14" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="143" name="Module Guide - Use Cases" color="#8cb6ce" meeting="false" start="2018-10-27" duration="14" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="147" name="Module Guide - Traceability Matrix" color="#8cb6ce" meeting="false" start="2018-10-27" duration="14" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="149" name="Module Guide - Module Decomposition" color="#8cb6ce" meeting="false" start="2018-10-27" duration="14" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="39" name="Revision 0 Demonstration" color="#8cb6ce" meeting="false" start="2018-11-12" duration="3" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="true">
+            <task id="153" name="Gun Demonstration" color="#8cb6ce" meeting="false" start="2018-11-12" duration="3" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="158" name="Inventory UI Cursor Fix" color="#8cb6ce" meeting="false" start="2018-11-12" duration="3" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="160" name="Zombie Death Delay" color="#8cb6ce" meeting="false" start="2018-11-12" duration="3" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="164" name="Player Stats fixes" color="#8cb6ce" meeting="false" start="2018-11-12" duration="3" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="41" name="Final Demonstration" color="#8cb6ce" meeting="false" start="2018-11-22" duration="5" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="true">
+            <task id="129" name="Bullet Damage Modifiers" color="#8cb6ce" meeting="false" start="2018-11-22" duration="5" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="131" name="Reload Delay" color="#8cb6ce" meeting="false" start="2018-11-22" duration="5" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="133" name="Equipping and unequipping weapon" color="#8cb6ce" meeting="false" start="2018-11-22" duration="5" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="137" name="Commenting Code" color="#8cb6ce" meeting="false" start="2018-11-22" duration="5" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="166" name="Gun and Axe Canvas" color="#8cb6ce" meeting="false" start="2018-11-22" duration="5" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="174" name="Demo Scene Terrain" color="#8cb6ce" meeting="false" start="2018-11-22" duration="5" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="176" name="Unit Testing" color="#8cb6ce" meeting="false" start="2018-11-22" duration="5" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
+            <task id="180" name="PowerPoint" color="#8cb6ce" meeting="false" start="2018-11-22" duration="5" complete="0" thirdDate="2018-09-20" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="43" name="Peer Eval" color="#8cb6ce" meeting="false" start="2018-11-27" duration="2" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="true"/>
-        <task id="45" name="Final Documentation" color="#8cb6ce" meeting="false" start="2018-11-29" duration="7" complete="0" thirdDate="2018-09-26" thirdDate-constraint="0" expand="true"/>
+        <task id="184" name="Final Documentation" meeting="false" start="2018-09-20" duration="1" complete="0" expand="true"/>
     </tasks>
     <resources>
         <resource id="1" name="Brian Jonatan" function="SoftwareDevelopment:2" contacts="jonatans@mcmaster.ca" phone=""/>
@@ -116,6 +129,14 @@
         <allocation task-id="123" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
         <allocation task-id="124" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
         <allocation task-id="137" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="10.0"/>
+        <allocation task-id="140" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="143" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="30.0"/>
+        <allocation task-id="149" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="20.0"/>
+        <allocation task-id="158" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="30.0"/>
+        <allocation task-id="160" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="20.0"/>
+        <allocation task-id="166" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="10.0"/>
+        <allocation task-id="176" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="180" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="10.0"/>
         <allocation task-id="5" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="5.0"/>
         <allocation task-id="24" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="5.0"/>
         <allocation task-id="17" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="5.0"/>
@@ -136,6 +157,11 @@
         <allocation task-id="121" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="25.0"/>
         <allocation task-id="126" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="30.0"/>
         <allocation task-id="137" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="10.0"/>
+        <allocation task-id="140" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
+        <allocation task-id="149" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="20.0"/>
+        <allocation task-id="164" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="174" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="40.0"/>
+        <allocation task-id="176" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
         <allocation task-id="16" resource-id="3" function="Default:1" responsible="true" load="5.0"/>
         <allocation task-id="17" resource-id="3" function="Default:1" responsible="true" load="5.0"/>
         <allocation task-id="22" resource-id="3" function="Default:1" responsible="true" load="25.0"/>
@@ -157,8 +183,14 @@
         <allocation task-id="129" resource-id="3" function="Default:1" responsible="true" load="20.0"/>
         <allocation task-id="131" resource-id="3" function="Default:1" responsible="true" load="10.0"/>
         <allocation task-id="133" resource-id="3" function="Default:1" responsible="true" load="20.0"/>
-        <allocation task-id="135" resource-id="3" function="Default:1" responsible="true" load="20.0"/>
         <allocation task-id="137" resource-id="3" function="Default:1" responsible="false" load="10.0"/>
+        <allocation task-id="140" resource-id="3" function="Default:1" responsible="false" load="30.0"/>
+        <allocation task-id="147" resource-id="3" function="Default:1" responsible="true" load="20.0"/>
+        <allocation task-id="149" resource-id="3" function="Default:1" responsible="false" load="20.0"/>
+        <allocation task-id="153" resource-id="3" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="160" resource-id="3" function="Default:1" responsible="true" load="20.0"/>
+        <allocation task-id="166" resource-id="3" function="Default:1" responsible="true" load="10.0"/>
+        <allocation task-id="180" resource-id="3" function="Default:1" responsible="false" load="10.0"/>
     </allocations>
     <vacations/>
     <previous/>

@@ -23,6 +23,7 @@ public class PlayerStats : CharacterStats
 
     //Reference to the equipment manager
     EquipmentManager equipmentManager;
+    
 
     //Reference to the first person controller
     public GameObject player;
@@ -94,7 +95,8 @@ public class PlayerStats : CharacterStats
     {
         //Call the base method and reset the scene
         base.Die();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(1);
     }
 
     /// <summary>
