@@ -1,0 +1,57 @@
+\BOOKMARK [1][-]{section.1}{General Information}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Purpose}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Scope}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Acronyms, Abbreviations, and Symbols}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Overview of Document}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Plan}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Software Description}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{Test Team}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.3}{Automated Testing Approach}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.4}{Testing Tools}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.5}{Testing Schedule}{section.2}% 11
+\BOOKMARK [1][-]{section.3}{System Test Description}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{Tests for Functional Requirements}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.1.1}{magenta F1. The player must be able to move forward, left, down, and right using the WASD keys magenta on the keyboard.}{subsection.3.1}% 14
+\BOOKMARK [3][-]{subsubsection.3.1.2}{magenta F2. The player must be able to look in all directions by moving their mouse.}{subsection.3.1}% 15
+\BOOKMARK [3][-]{subsubsection.3.1.3}{magenta F3. Zombie enemies must walk back and forth between random points in their \217spawn circle\220, which imitates them walking around.}{subsection.3.1}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.4}{magenta F4. Zombie enemies must start attacking the player when they come within a certain radius.}{subsection.3.1}% 17
+\BOOKMARK [3][-]{subsubsection.3.1.5}{magenta F5. Zombie enemies must follow the player if they start running away while the zombie is attacking them magenta the player is at a certain distance from the zombie.}{subsection.3.1}% 18
+\BOOKMARK [3][-]{subsubsection.3.1.6}{magenta F6. If the player runs past a certain radius from the zombie\220s original spawn location, the zombie must return to their circle.}{subsection.3.1}% 19
+\BOOKMARK [3][-]{subsubsection.3.1.7}{magenta F7. Different types of zombies must have different statistics \(health, damage, magenta and attack speed\). Different types of zombies will be distinguishable by their different appearances.}{subsection.3.1}% 20
+\BOOKMARK [3][-]{subsubsection.3.1.8}{magenta F8. Zombies must have randomly generated chance of dropping items the player can use magenta equip or consume when killed.}{subsection.3.1}% 21
+\BOOKMARK [3][-]{subsubsection.3.1.9}{Func. Req. 9: Dropped items must be automatically deleted if not picked up within a certain time}{subsection.3.1}% 22
+\BOOKMARK [3][-]{subsubsection.3.1.10}{magenta F9. The player must be able to pick up items they are looking at with the \217interact\220 key.}{subsection.3.1}% 23
+\BOOKMARK [3][-]{subsubsection.3.1.11}{magenta F10. The player must be able to access their inventory by pressing the \217inventory\220 keymagenta , and will have a maximum space of 20 items.}{subsection.3.1}% 24
+\BOOKMARK [3][-]{subsubsection.3.1.12}{magenta F11. The player must be able to equip, consume, delete, and move around magenta and drop items in their Inventory magenta UI using the mouse magenta LMB.}{subsection.3.1}% 25
+\BOOKMARK [3][-]{subsubsection.3.1.13}{magenta F12. The player must be able to unequip items in their Equipment UI using the LMB or the `unequip all\220 key.}{subsection.3.1}% 26
+\BOOKMARK [3][-]{subsubsection.3.1.14}{magenta F13. The player must be able to fire/use their equipped weapon magenta an equipped gun or axe by pressing the left mouse button \(LMB\).}{subsection.3.1}% 27
+\BOOKMARK [3][-]{subsubsection.3.1.15}{magenta F14. If the player has a firearm equipped, they must be able to aim down sights using the right mouse button \(RMB\) magenta the user can reload the gun using the \217reload\220 key. The mazimum amount of bullets will be 7.}{subsection.3.1}% 28
+\BOOKMARK [3][-]{subsubsection.3.1.16}{magenta F15. The environment must slowly go through a day and night cycle.}{subsection.3.1}% 29
+\BOOKMARK [3][-]{subsubsection.3.1.17}{magenta F16. The player must lose health when hit by a zombie.}{subsection.3.1}% 30
+\BOOKMARK [3][-]{subsubsection.3.1.18}{magenta F17. Zombies must lose health when hit by the player magenta by using the LMB once the player is within attacking distance from the zombie.}{subsection.3.1}% 31
+\BOOKMARK [3][-]{subsubsection.3.1.19}{magenta F18. Players or zombies must die when they reach 0 health.}{subsection.3.1}% 32
+\BOOKMARK [3][-]{subsubsection.3.1.20}{Func. Req. 19: Upon player death, the game must reset}{subsection.3.1}% 33
+\BOOKMARK [3][-]{subsubsection.3.1.21}{magenta F19. An Inventory UI will give the user a visual representation of the player's inventory and will be accessable by pressing the \217inventory\220 key.}{subsection.3.1}% 34
+\BOOKMARK [3][-]{subsubsection.3.1.22}{magenta F20. An Equipment UI will give the user a visual representation of the player's equipped items and will be appear with the Inventory UI by pressing the \217inventory\220 key.}{subsection.3.1}% 35
+\BOOKMARK [3][-]{subsubsection.3.1.23}{magenta F21. A Player UI will give the user a visual representation of the player's health and remaining bullets if a gun is equipped to the player. The Player UI will also consist of a reticle.}{subsection.3.1}% 36
+\BOOKMARK [2][-]{subsection.3.2}{Tests for Nonfunctional Requirements}{section.3}% 37
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Look and Feel Requirements}{subsection.3.2}% 38
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Usability and Humanity Requirements}{subsection.3.2}% 39
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Performance Requirements}{subsection.3.2}% 40
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Safety Critical Requirements}{subsection.3.2}% 41
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Precision Requirements}{subsection.3.2}% 42
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Reliability and Availability Requirements}{subsection.3.2}% 43
+\BOOKMARK [3][-]{subsubsection.3.2.7}{Cultural Requirements}{subsection.3.2}% 44
+\BOOKMARK [3][-]{subsubsection.3.2.8}{Non-function Requirements not being tested on}{subsection.3.2}% 45
+\BOOKMARK [2][-]{subsection.3.3}{Traceability Between Test Cases and Requirements}{section.3}% 46
+\BOOKMARK [1][-]{section.4}{Tests for Proof of Concept}{}% 47
+\BOOKMARK [2][-]{subsection.4.1}{Movement and Camera}{section.4}% 48
+\BOOKMARK [2][-]{subsection.4.2}{Inventory System}{section.4}% 49
+\BOOKMARK [2][-]{subsection.4.3}{Enemy pathfinding}{section.4}% 50
+\BOOKMARK [1][-]{section.5}{Comparison to Existing Implementation}{}% 51
+\BOOKMARK [1][-]{section.6}{Unit Testing Plan}{}% 52
+\BOOKMARK [2][-]{subsection.6.1}{Unit testing of internal functions}{section.6}% 53
+\BOOKMARK [2][-]{subsection.6.2}{Unit testing of output files}{section.6}% 54
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 55
+\BOOKMARK [2][-]{subsection.7.1}{Symbolic Parameters}{section.7}% 56
+\BOOKMARK [2][-]{subsection.7.2}{Usability Survey Questions?}{section.7}% 57
