@@ -62,7 +62,7 @@ public class Zombie : MonoBehaviour
     /// </summary>
     void Update ()
     {
-        if (!zombieStats.isDeath()) //If the zombie is not dead
+        if (!zombieStats.IsDead()) //If the zombie is not dead
         {
             //Calculate its distance to the player and spawn point
             distanceToPlayer = Vector3.Distance(player.position, transform.position);
@@ -151,7 +151,7 @@ public class Zombie : MonoBehaviour
     /// </summary>
     private void RandomMovement()
     {
-        if (!zombieStats.isDeath()) //If the zombie is not dead
+        if (!zombieStats.IsDead()) //If the zombie is not dead
         {
             //Pick a random angle in radians and move 5 units towards it
             randomAngle = Random.Range(0f, Mathf.PI * 2f);

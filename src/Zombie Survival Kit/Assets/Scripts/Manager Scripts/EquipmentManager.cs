@@ -35,9 +35,9 @@ public class EquipmentManager : MonoBehaviour
      */
     private InventoryManager inventory;
 
-    [SerializeField] GameObject GunUI;
-    [SerializeField] GameObject AxeUI;
-    [SerializeField] GameObject fpscontroller; // the FirstPersonCharacter child of the player
+    [SerializeField] GameObject gunUI;
+    [SerializeField] GameObject axeUI;
+    [SerializeField] GameObject fpsController; // the FirstPersonCharacter child of the player
     [SerializeField] GameObject gun; //the gun
     GameObject equippedGun;
 
@@ -51,9 +51,9 @@ public class EquipmentManager : MonoBehaviour
     /// </summary>
 	void Start()
     {
-        fpscontroller = GameObject.FindGameObjectWithTag("GameController");
-        GunUI = GameObject.FindGameObjectWithTag("GunUI");
-        AxeUI = GameObject.FindGameObjectWithTag("AxeUI");
+        fpsController = GameObject.FindGameObjectWithTag("GameController");
+        gunUI = GameObject.FindGameObjectWithTag("GunUI");
+        axeUI = GameObject.FindGameObjectWithTag("AxeUI");
         int numSlots = System.Enum.GetNames(typeof(equipmentSlot)).Length;
         equippedItems = new EquipmentItem[numSlots];
 
@@ -69,8 +69,8 @@ public class EquipmentManager : MonoBehaviour
             UnequipAll();
         if (equippedItems[(int)equipmentSlot.Primaryhand] == null)
         {
-            AxeUI.GetComponent<Canvas>().enabled = false;
-            GunUI.GetComponent<Canvas>().enabled = false;
+            axeUI.GetComponent<Canvas>().enabled = false;
+            gunUI.GetComponent<Canvas>().enabled = false;
         }
     }
 
@@ -86,14 +86,14 @@ public class EquipmentManager : MonoBehaviour
         {
             if (newEquipment.name == "Axe")
             {
-                AxeUI.GetComponent<Canvas>().enabled = true;
-                GunUI.GetComponent<Canvas>().enabled = false;
+                axeUI.GetComponent<Canvas>().enabled = true;
+                gunUI.GetComponent<Canvas>().enabled = false;
                 isAxeEquipped = true;
             }
             else
             {
-                AxeUI.GetComponent<Canvas>().enabled = false;
-                GunUI.GetComponent<Canvas>().enabled = true;
+                axeUI.GetComponent<Canvas>().enabled = false;
+                gunUI.GetComponent<Canvas>().enabled = true;
                 isAxeEquipped = false;
             }
         }
@@ -122,7 +122,7 @@ public class EquipmentManager : MonoBehaviour
         if (newEquipment.name == "RangeWeapon" && isGunEquipped == false)
         {
             //set to active
-            equippedGun = Instantiate(gun, fpscontroller.transform.position, Quaternion.identity);
+            equippedGun = Instantiate(gun, fpsController.transform.position, Quaternion.identity);
             isGunEquipped = true;
             Debug.Log("Gun equipped");
         }

@@ -19,7 +19,7 @@ public class ZombieStats : CharacterStats
     private bool isDropped = false;
 
     //Array of droppable objects
-    private GameObject[] Drops;
+    private GameObject[] drops;
 
     //To store the death location
     public Transform zombie;
@@ -34,17 +34,17 @@ public class ZombieStats : CharacterStats
         curHealth = maxHealth;
 
         //Loads All the possible items that can be dropped by a zombie
-        Drops = new GameObject[10];
-        Drops[0] = Resources.Load<GameObject>("PrefabItems/HeadArmor");
-        Drops[1] = Resources.Load<GameObject>("PrefabItems/Axe");
-        Drops[2] = Resources.Load<GameObject>("PrefabItems/RangeWeapon");
-        Drops[3] = Resources.Load<GameObject>("PrefabItems/Watermelon");
-        Drops[4] = Resources.Load<GameObject>("PrefabItems/LegArmor");
-        Drops[5] = Resources.Load<GameObject>("PrefabItems/Apple");
-        Drops[6] = Resources.Load<GameObject>("PrefabItems/ChestArmor");
-        Drops[7] = Resources.Load<GameObject>("PrefabItems/FeetArmor");
-        Drops[8] = Resources.Load<GameObject>("PrefabItems/OffHand");
-        Drops[9] = Resources.Load<GameObject>("PrefabItems/Cloak");
+        drops = new GameObject[10];
+        drops[0] = Resources.Load<GameObject>("PrefabItems/HeadArmor");
+        drops[1] = Resources.Load<GameObject>("PrefabItems/Axe");
+        drops[2] = Resources.Load<GameObject>("PrefabItems/RangeWeapon");
+        drops[3] = Resources.Load<GameObject>("PrefabItems/Watermelon");
+        drops[4] = Resources.Load<GameObject>("PrefabItems/LegArmor");
+        drops[5] = Resources.Load<GameObject>("PrefabItems/Apple");
+        drops[6] = Resources.Load<GameObject>("PrefabItems/ChestArmor");
+        drops[7] = Resources.Load<GameObject>("PrefabItems/FeetArmor");
+        drops[8] = Resources.Load<GameObject>("PrefabItems/OffHand");
+        drops[9] = Resources.Load<GameObject>("PrefabItems/Cloak");
     }
 
     /// <summary>
@@ -95,52 +95,52 @@ public class ZombieStats : CharacterStats
             {
                 case 0:
                     Debug.Log("Dropped HeadArmor");
-                    GameObject HeadArmor = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject HeadArmor = Instantiate(drops[dropChoice]) as GameObject;
                     HeadArmor.transform.position = deathLocation;
                     break;
                 case 1:
                     Debug.Log("Dropped MeleeWeapon");
-                    GameObject MeleeWeapon = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject MeleeWeapon = Instantiate(drops[dropChoice]) as GameObject;
                     MeleeWeapon.transform.position = deathLocation;
                     break;
                 case 2:
                     Debug.Log("Dropped RangeWeapon");
-                    GameObject RangeWeapon = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject RangeWeapon = Instantiate(drops[dropChoice]) as GameObject;
                     RangeWeapon.transform.position = deathLocation;
                     break;
                 case 3:
                     Debug.Log("Dropped Watermelon");
-                    GameObject Watermelon = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject Watermelon = Instantiate(drops[dropChoice]) as GameObject;
                     Watermelon.transform.position = deathLocation;
                     break;
                 case 4:
                     Debug.Log("Dropped LegArmor");
-                    GameObject LegArmor = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject LegArmor = Instantiate(drops[dropChoice]) as GameObject;
                     LegArmor.transform.position = deathLocation;
                     break;
                 case 5:
                     Debug.Log("Dropped Apple");
-                    GameObject Apple = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject Apple = Instantiate(drops[dropChoice]) as GameObject;
                     Apple.transform.position = deathLocation;
                     break;
                 case 6:
                     Debug.Log("Dropped ChestArmor");
-                    GameObject ChestArmor = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject ChestArmor = Instantiate(drops[dropChoice]) as GameObject;
                     ChestArmor.transform.position = deathLocation;
                     break;
                 case 7:
                     Debug.Log("Dropped FeetArmor");
-                    GameObject FeetArmor = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject FeetArmor = Instantiate(drops[dropChoice]) as GameObject;
                     FeetArmor.transform.position = deathLocation;
                     break;
                 case 8:
                     Debug.Log("Dropped OffHand");
-                    GameObject OffHand = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject OffHand = Instantiate(drops[dropChoice]) as GameObject;
                     OffHand.transform.position = deathLocation;
                     break;
                 case 9:
                     Debug.Log("Dropped Cloak");
-                    GameObject Cloak = Instantiate(Drops[dropChoice]) as GameObject;
+                    GameObject Cloak = Instantiate(drops[dropChoice]) as GameObject;
                     Cloak.transform.position = deathLocation;
                     break;
             }
@@ -151,7 +151,7 @@ public class ZombieStats : CharacterStats
     /// IsDead: A boolean method that allows other classes to know if the zombie has died
     /// </summary>
     /// <returns>true or false</returns>
-    public bool isDeath()
+    public bool IsDead()
     {
         return isDead;
     }

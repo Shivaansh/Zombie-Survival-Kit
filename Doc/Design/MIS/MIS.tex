@@ -28,6 +28,7 @@
 %% Comments
 
 \usepackage{color}
+\usepackage[normalem]{ulem}
 
 \newif\ifcomments\commentstrue
 
@@ -60,7 +61,6 @@
 \newpage
 \section* {Modules}
 \begin{description}
-\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
 \item [\refstepcounter{mnum} \mthemnum \label{mSDI}:] Item (Component)
 \item [\refstepcounter{mnum} \mthemnum \label{mSDCI}:] ConsumableItem (Component)
 \item [\refstepcounter{mnum} \mthemnum \label{mSDEI}:] EquipmentItem (Component)
@@ -83,6 +83,8 @@
 \item [\refstepcounter{mnum} \mthemnum \label{mBHFPS}:] FirstPersonController (Character)
 \item [\refstepcounter{mnum} \mthemnum \label{mBHG}:] Gun (Object)
 \item [\refstepcounter{mnum} \mthemnum \label{mBHBD}:] BulletDamage (Objects)
+{\color{magenta} \item [\refstepcounter{mnum} \mthemnum \label{mBHDLC}:] DayLightController}
+{\color{magenta} \item [\refstepcounter{mnum} \mthemnum \label{mBHPU}:] PlayerUI}
 \end{description}
 
 \section* {\mref{mSDI} Item}
@@ -319,6 +321,8 @@ Update &~ & ~  & ~\\
 Equip & EquipmentItem & ~  & ~\\
 Unequip & $\mathbb{N}$ & ~  & ~\\
 UnequipAll &~ & ~  & ~ \\
+{\color{magenta} IsGunEquipped} &~ & {\color{magenta} $\mathbb{B}$}  & ~ \\
+{\color{magenta} IsAxeEquipped} &~ & {\color{magenta} $\mathbb{B}$}  & ~ \\
 \hline
 \end{tabular}
 
@@ -327,7 +331,15 @@ UnequipAll &~ & ~  & ~ \\
 \subsubsection* {State Variables}
 
 equippedItems: array of $EquipmentItem$\\
-inventory: $Inventory$
+inventory: $InventoryManager$ \\
+{\color{magenta} axeUI: $GameObject$} \\
+{\color{magenta} gunUI: $GameObject$} \\
+{\color{magenta} fpsController: $GameObject$} \\
+{\color{magenta} gun: $GameObject$} \\
+{\color{magenta} equippedGun: $GameObject$} \\
+{\color{magenta} isGunEquipped: $\mathbb{B}$} \\
+{\color{magenta} isAxeEquipped: $\mathbb{B}$} \\
+
 
 \subsubsection* {State Invariant}
 
@@ -349,28 +361,28 @@ This module updates automatically as the user changes the player's equipment by 
 
 \noindent Start():
 \begin{itemize}
-\item translation: Initializes state variable equippedItems with the length of equipmentSlot (an enum type) and state variable inventory as an instance of the Inventory module.
+\item translation: Initializes state variable equippedItems with the length of equipmentSlot (an enum type), state variable inventory as an instance of the Inventory module, {\color{magenta} and the fpsController/gunUI/axeUI objects by finding game objects with their respective tags.}
 \item output: None
 \item exception: None
 \end{itemize}
 
 \noindent Update():
 \begin{itemize}
-\item translation: Upon keyboard input of "U", perform UnequipAll().
+\item translation: Upon keyboard input of "U", perform UnequipAll(). {\color{magenta} Also, disable both the axe and gun UI if there is no item in the primary hand}
 \item output: None
 \item exception: None
 \end{itemize}
 
 \noindent Equip(EquipmentItem newEquipment):
 \begin{itemize}
-\item translation: Stores the newEquipment item into equippedItems[newEquipment.equipSlot].
+\item translation: Stores the newEquipment item into equippedItems[newEquipment.equipSlot]. {\color{magenta} If the newEquipment is a gun: update the isGunEquipped variable, enable the gunUI, and set equippedGun to instantiate a gun object at the location of the fpsController. If the newEquipment is an axe: update the isAxeEquipped variable, and enable the axeUI.}
 \item output: None
 \item exception: None
 \end{itemize}
 
 \noindent Unequip(int SlotIndex):
 \begin{itemize}
-\item translation: Removes the EquipmentItem in equippedItems[SlotIndex].
+\item translation: Removes the EquipmentItem in equippedItems[SlotIndex].  {\color{magenta} If the old item is a gun: update the isGunEquipped variable, disable the gunUI, and set destroy the created gun object. If the old item is an axe: update the isAxeEquipped variable, and disable the axeUI.}
 \item output: None
 \item exception: None
 \end{itemize}
@@ -380,6 +392,20 @@ This module updates automatically as the user changes the player's equipment by 
 \item translation: Removes all EquipmentItem in equippedItems.
 \item output: None
 \item exception: None
+\end{itemize}
+
+\noindent{\color{magenta}  IsGunEquipped():}
+\begin{itemize}
+\item {\color{magenta} translation: A public method to return the private variable isGunEquipped.}
+\item {\color{magenta} output: isGunEquipped}
+\item {\color{magenta} exception: None}
+\end{itemize}
+
+\noindent{\color{magenta}  IsAxeEquipped():}
+\begin{itemize}
+\item {\color{magenta} translation: A public method to return the private variable isAxeEquipped.}
+\item {\color{magenta} output: isAxeEquipped}
+\item {\color{magenta} exception: None}
 \end{itemize}
 
 \newpage
@@ -1047,13 +1073,13 @@ CharacterCombat
 
 \subsection* {Uses}
 
-\mref{mSDCS}
+\mref{mSDCS}, {\color{magenta} \mref{mSDPS}}
 
 \subsection* {Syntax}
 
 \subsubsection* {Exported Types}
 
-CharacterStats
+CharacterStats,  {\color{magenta} PlayerStats}
 
 \subsubsection* {Exported Access Programs}
 
@@ -1064,7 +1090,7 @@ CharacterStats
 Start & ~ & ~  & ~\\
 Update & ~ & ~ & ~\\
 Attack & CharacterStats & ~ & ~\\
-DoDamage & CharacterStats, $\mathbb{R}$ & IEnumerator & ~\\
+\sout{DoDamage} & \sout{CharacterStats, $\mathbb{R}$} & \sout{IEnumerator} & ~\\
 \hline
 \end{tabular}
 
@@ -1073,13 +1099,14 @@ DoDamage & CharacterStats, $\mathbb{R}$ & IEnumerator & ~\\
 \subsubsection* {State Variables}
 
 attackerStats: $CharacterStats$\\
-attackSpeed: $\mathbb{R}$ \\
+{\color{magenta} playerManager: $PlayerStats$}\\
+\sout{attackSpeed: $\mathbb{R}$} \\
 attackCooldown: $\mathbb{R}$ \\
 attackDelay: $\mathbb{R}$ \\
 
 \subsubsection* {State Invariant}
 
-attackDelay = 1.5
+\sout{attackDelay = 1.5}
 
 \subsubsection* {Assumptions}
 
@@ -1103,18 +1130,17 @@ This module requires the component to be of type CharacterStats.
 
 \noindent Attack(CharacterStats targetStats):
 \begin{itemize}
-\item translation: Runs the DoDamage() method once the attackCooldown reaches 0 and resets the cooldown back to 1 divided by the attackSpeed.
+\item translation: Runs the \sout{DoDamage() method} {\color{magenta} TakeDamage() function stats parameter with the attackerStats damage value} once the attackCooldown reaches 0. Resets the cooldown back to 1 divided by the attackSpeed {\color{magenta} and plays a sound effect through the playerManager}.
 \item output: None
 \item exception: None
 \end{itemize}
 
-\noindent DoDamage(CharacterStats stats, float delay):
+\noindent \sout{DoDamage(CharacterStats stats, float delay):}
 \begin{itemize}
-\item translation: Runs the TakeDamage() function on the stats parameter with the attackerStats damage value.
-\item output: $out := WaitForSecondsDelay(delay)$, so the attack only commences after the delay timer is over.
-\item exception: None
+\item \sout{translation: Runs the TakeDamage() function on the stats parameter with the attackerStats damage value.}
+\item \sout{output: $out := WaitForSecondsDelay(delay)$, so the attack only commences after the delay timer is over.}
+\item \sout{exception: None}
 \end{itemize}
-
 \newpage
 
 \section* {\mref{mSDCS} CharacterStats}
@@ -1201,7 +1227,7 @@ PlayerStats
 
 \subsubsection* {Exported Types}
 
-PlayerStats
+PlayerStats, {\color{magenta} EquipmentManager}
 
 \subsubsection* {Exported Access Programs}
 
@@ -1214,6 +1240,7 @@ Start & ~  & ~ & ~\\
 OnEquipmentChanged & EquipmentItem, EquipmentItem  & ~ & ~\\
 Eat & ConsumableItem  & ~ & ~\\
 Die & ~  & ~ & ~\\
+{\color{magenta} MeleeSound} & ~  & ~ & ~\\
 \hline
 \end{tabular}
 
@@ -1223,6 +1250,9 @@ Die & ~  & ~ & ~\\
 
 instance: $PlayerStats$ \\
 player: $GameObject$ \\
+{\color{magenta} equipmentManager: $EquipmentManager$} \\
+{\color{magenta} axeSound: $AudioClip$} \\
+{\color{magenta} punchSound: $AudioClip$} \\
 
 \subsubsection* {State Invariant}
 
@@ -1243,7 +1273,7 @@ This module inherits from CharacterStats.
 
 \noindent Start():
 \begin{itemize}
-\item translation: Initializes curHealth as maxHealth and the onEquipmentChanged delegate inside the EquipmentManager as the OnEquipmentChanged method in this class.
+\item translation: Initializes curHealth as maxHealth{\color{magenta}, the equipmentManager,} and the onEquipmentChanged delegate inside the EquipmentManager as the OnEquipmentChanged method in this class.
 \item output: None
 \item exception: None
 \end{itemize}
@@ -1269,6 +1299,13 @@ This module inherits from CharacterStats.
 \item exception: None
 \end{itemize}
 
+\noindent {\color{magenta} MeleeSound():}
+\begin{itemize}
+\item {\color{magenta} translation: Plays the axeSound or punchSound at the transform of the player depending on whether the equipmentManager says the axe is equipped or not.}
+\item{\color{magenta}  output: None}
+\item {\color{magenta} exception: None}
+\end{itemize}
+
 \newpage
 
 \section* {\mref{mSDZS} ZombieStats}
@@ -1285,7 +1322,8 @@ ZombieStats
 
 \subsubsection* {Exported Types}
 
-None
+\sout{None} 
+{\color{magenta} Animator, GameObject, Transform}
 
 \subsubsection* {Exported Access Programs}
 
@@ -1293,7 +1331,11 @@ None
 \hline
 \textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
 \hline
+{\color{magenta} Start} & ~  & ~ & ~\\
+{\color{magenta} Update} & ~  & ~ & ~\\
 Die & ~  & ~ & ~\\
+{\color{magenta} DropItem} &  {\color{magenta} Vector3, $\mathbb{N}$}  & ~ & ~\\
+{\color{magenta} IsDead} & ~  & {\color{magenta} $\mathbb{B}$} & ~\\
 \hline
 \end{tabular}
 
@@ -1301,7 +1343,14 @@ Die & ~  & ~ & ~\\
 
 \subsubsection* {State Variables}
 
-None
+\sout{None} \\
+{\color{magenta} animator: Animator} \\
+{\color{magenta} zombie: Transform} \\
+{\color{magenta} delay: $\mathbb{R}$} \\
+{\color{magenta} timeAnimStarted: $\mathbb{R}$} \\
+{\color{magenta} isDead: $\mathbb{B}$} \\
+{\color{magenta} isDropped: $\mathbb{B}$} \\
+{\color{magenta} drops: GameObject[  ]} \\
 
 \subsubsection* {State Invariant}
 
@@ -1313,11 +1362,39 @@ This module inherits from CharacterStats.
 
 \subsubsection* {Access Routine Semantics}
 
+\noindent {\color{magenta}Start(): }
+\begin{itemize}
+\item {\color{magenta} translation: Initializes the animator, initial HP as well loads the prefabs for each drop and stores them in the drops array.}
+\item {\color{magenta}output: None }
+\item {\color{magenta} exception: None}
+\end{itemize}
+
+\noindent {\color{magenta} Update():}
+\begin{itemize}
+\item {\color{magenta}translation: Destroys the zombie game object and spawns a random drop item once the isDead boolean becomes true and enough time has passed for the death animation to finish. }
+\item {\color{magenta} output: None}
+\item {\color{magenta} exception: None}
+\end{itemize}
+
 \noindent Die():
 \begin{itemize}
-\item translation: Calls the base Die() method from CharacterStats and destroys the zombie game object this script is attached to.
+\item translation: Calls the base Die() method from CharacterStats \sout{and destroys the zombie game object this script is attached to}{\color{magenta}, sets the isDead boolean to true, and starts the animation/animation timer.}
 \item output: None
 \item exception: None
+\end{itemize}
+
+\noindent {\color{magenta} DropItem(Vector3 destination, int dropChoice): }
+\begin{itemize}
+\item {\color{magenta} translation: If an item has not yet been dropped, instantiate an item at the specified destination based on the dropChoice parameter}
+\item {\color{magenta} output: None}
+\item {\color{magenta} exception: None}
+\end{itemize}
+
+\noindent {\color{magenta} IsDead():}
+\begin{itemize}
+\item {\color{magenta} translation: A public method to return the isDead boolean. }
+\item {\color{magenta} output: isDead}
+\item {\color{magenta} exception: None}
 \end{itemize}
 
 \newpage
@@ -1346,7 +1423,7 @@ List
 \hline
 GetValue & ~ & $\mathbb{N}$  & ~\\
 AddToStat & $\mathbb{N}$  & ~ & ~\\
-RemoveFromStat & $\mathbb{N}$m  & ~ & ~\\
+RemoveFromStat & $\mathbb{N}$  & ~ & ~\\
 \hline
 \end{tabular}
 
@@ -1520,6 +1597,7 @@ int, int, GameObject, AudioClip, AudioClip, float, float, Tranform, GameObject, 
 	shoot & ~ & ~  & ~\\
 	reload & ~ & ~ & ~\\
 	createBullet & ~ & ~ & ~\\
+	{\color{magenta} getAmmoInClip} & ~ & {\color{magenta} $\mathbb{N}$} & ~\\
 	\hline
 \end{tabular}
 
@@ -1589,6 +1667,13 @@ This module is attached to a GameObject which has a RangedWeapon component attac
 	\item exception: None
 \end{itemize}
 
+\noindent {\color {magenta} getAmmoInClip():}
+\begin{itemize}
+	\item {\color {magenta} translation: This public method returns the private ammoInClip integer.}
+	\item {\color {magenta} output: ammoInClip}
+	\item {\color {magenta} exception: None} 
+\end{itemize}
+
 \newpage
 \section*{\mref{mBHBD} BulletDamage}
 
@@ -1638,6 +1723,146 @@ The object collided with has a "collider" component attached to it.
 	\item output: None
 	\item exception: None
 \end{itemize}
+
+\newpage
+
+{\color {magenta} 
+\section* {\mref{mBHDLC} DayLightController}
+
+\subsection*{Template Module}
+
+DayLightController
+
+\subsection* {Uses}
+
+None
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+None
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+Update & ~ & ~ & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+rate: $\mathbb{R}$ \\
+
+\subsubsection* {State Invariant}
+
+None
+
+\subsubsection* {Assumptions}
+
+This module is attached to the Directional Light object that controls the lighting system.
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent Update():
+\begin{itemize}
+\item translation: Rotates the transform of the directional light according a rate proportional to the rate variable.
+\item output: None
+\item exception: None
+\end{itemize} }
+
+\newpage
+
+{\color {magenta} 
+\section* {\mref{mBHPU} PlayerUI}
+
+\subsection*{Template Module}
+
+PlayerUI
+
+\subsection* {Uses}
+
+\mref{mSDPS}, \mref{mBHG}
+
+\subsection* {Syntax}
+
+\subsubsection* {Exported Types}
+
+PlayerStats, Gun, RectTransform, Text
+
+\subsubsection* {Exported Access Programs}
+
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Routine name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions}\\
+\hline
+Start & ~ & ~ & ~\\
+Update & ~ & ~ & ~\\
+SetStats & PlayerStats & ~ & ~\\
+SetHPFill & $\mathbb{R}$ & ~ & ~\\
+SetAmmoAmount & String & ~ & ~\\
+\hline
+\end{tabular}
+
+\subsection* {Semantics}
+
+\subsubsection* {State Variables}
+
+hpBarFill: RectTransform \\
+ammoLeft: Text \\
+gun: Gun \\
+stats: PlayerStats 
+
+\subsubsection* {State Invariant}
+
+None
+
+\subsubsection* {Assumptions}
+
+This module is attached to the PlayerUI canvas.
+
+\subsubsection* {Access Routine Semantics}
+
+\noindent Start():
+\begin{itemize}
+\item translation: Calls SetStats() to gain a reference to the player statistics.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent Update():
+\begin{itemize}
+\item translation: Determines if a gun object exists and continiously updates player health and ammo amounts on the UI.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent SetStats(PlayerStats playerStats):
+\begin{itemize}
+\item translation: Sets the state stat variable to the input parameter playerStats.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent SetHPFill(float amount):
+\begin{itemize}
+\item translation: Updates the scale of the red component of the HP bar according to the amount of health left, expressed as a float.
+\item output: None
+\item exception: None
+\end{itemize}
+
+\noindent SetAmmoAmount(string amount):
+\begin{itemize}
+\item translation: Updates the scale of the text of the ammo counter according to the amount of ammo left, expressed as a string.
+\item output: None
+\item exception: None
+\end{itemize}
+}
 
 
 \end {document}

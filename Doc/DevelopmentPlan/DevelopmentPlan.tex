@@ -2,6 +2,8 @@
 
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage[normalem]{ulem}
+\usepackage[colorlinks]{hyperref}
 
 \title{SE 3XA3: Development Plan\\Zombie Survival}
 
@@ -27,6 +29,7 @@
 2018-06-27 & Brian & Added introductory blurb\\
 2018-06-27 & Mohammad & Added pointer to project schedule\\
 2018-10-16 & Shivaansh & Updated the Proof of Concept section\\
+2018-11-30 & Mohammad & Rev 1 Update\\
 ... & ... & ...\\
 \bottomrule
 \end{tabularx}
@@ -42,7 +45,11 @@ This document describes the development decisions (which are subject to change) 
 Mondays: 2:30PM - 4:30PM (HSL Library)\\
 Tuesdays: 5:00 PM - 7:00 PM (HSL Library) (as and when needed)\\
 Tuesdays: 7:00 PM - 9:00 PM (ITB 236 Lab)\\
-Wednesdays: 12:30 PM - 2:30 PM (ITB 236 Lab)
+Wednesdays: 12:30 PM - 2:30 PM (ITB 236 Lab) \\ \\
+{\color{magenta} Each group member will be given a role between Project Manager, Tester, and Scribe. The scribe will make the agenda for 
+each meeting, consisting of what needs to be discussed and decided. The project manager will chair each meeting, leading each discussion. At the
+end of the meeting, the scribe will make a written statement on what has been discussed and which decisions have been made. Also, the statement
+will include tasks everyone will need to complete until the next meeting.}
 
 \section{Team Communication Plan}
 Discord Server (Audio calls for meetings)\\
@@ -54,7 +61,7 @@ Mohammad Hussain - Developer and Scribe\\
 Shivaansh Prasann - Developer and Project Manager
 
 \section{Git Workflow Plan}
-Each developer has their own branch. Code reviews will be conducted during meetings and once all individual branches are fully functional each branch will be merged to master. Tags will be used after pushing each deliverable for the project.
+\sout{Each developer has their own branch. Code reviews will be conducted during meetings and once all individual branches are fully functional each branch will be merged to master.} {\color{magenta} Each developer will push their commits with detailed comments on the master branch, as this will reduce the number of merging complications between multiple branches. Any branches created will be on a as-needed basis, for example when trying to add a potential new feature you may not want to include on the master branch immediately. The project manager will deal with any merge or branching issues, as they have the most knowledge of the overall workings of the system. They will be solved by manually separating and fixing the two new sections of code that are having conflicts.} Tags will be used after pushing each deliverable for the project.
 
 \section{Proof of Concept Demonstration Plan}
 The main challenges with this project would be the following: \newline
@@ -82,5 +89,13 @@ URL: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-p
 Please refer to the file: Gantt Chart - Group 6.gan in this folder for the project schedule.
 
 \section{Project Review}
+
+{\color{magenta} After finishing the Zombie Survival Dev Kit, it can be declared an overall success. Group 6ix accomplished the original goal of the project,
+which was to create a development kit with the foundations of a zombie survival game already implemented for aspiring developers to develop upon. Each 
+group member contributed a fair amount, and the final product came out looking very polished and professional.} \\ \\
+{\color{magenta} The only apparent downside to the final product is that not all the features that were planned to be implemented could have been finished on
+time. Examples include aiming down sights with the gun, zombie respawning, and loot from zombies disappearing after a certain amount of time. These are
+all extra features that are not core components to the development kit. They were chosen to be left out in the interest of time and prioritizing more integral tasks.} \\ \\
+{\color{magenta} I believe this development plan well prepared us for the project, although there are a few things that could be modified to make development go a little more smoothly. For example, time management and should be improved so everyone is always working on a task. Many times during the project, a group member was left with nothing to do as his next task was dependent on something another member was currently working on. The division of work should be changed to account for dependencies, so everyone is able to work on something at all times without having to wait for someone else.} 
 
 \end{document}

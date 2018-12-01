@@ -41,7 +41,8 @@ public class PlayerUI : MonoBehaviour
         {
             gun = gun1.GetComponent<Gun>();
             SetAmmoAmount(gun.getAmmoInClip().ToString());
-        } else
+        }
+        else
         {
             SetAmmoAmount("-");
         }
