@@ -245,15 +245,16 @@ How test will be performed:\\ \hsout{A test script will be created that initiali
 
 \item{Zombie-Stats-A-1\\} \refstepcounter{ftnum} \label{F7-1}
 
-Type: Automated\\
+Type: \hsout{Automated}{\color{magenta}Manual}\\
 					
-Initial State: All different zombie enemy type objects are initialized.
+Initial State: \hsout{All different zombie enemy type objects are initialized.} {\color{magenta} The game scene consists of the player object and diferent zombie objects.}
 					
-Input: void \\
+Input: \hsout{void } {\color{magenta} Keyboard and Mouse}\\
 					
-Output: void or assertion error \\
+Output: void \hsout{or assertion error} \\
 					
-How test will be performed:\\ A test script will be created that initializes the test with the specified initial state. Within the test script, instructions will be given to compare all the different stats fields of each zombie enemy type. An assertion statement will be used to check if all values within a stat field are different for each zombie enemy type. Once all assertion tests are passed, the test is conlcuded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.\\
+How test will be performed:\\ \hsout{A test script will be created that initializes the test with the specified initial state. Within the test script, instructions will be given to compare all the different stats fields of each zombie enemy type. An assertion statement will be used to check if all values within a stat field are different for each zombie enemy type. Once all assertion tests are passed, the test is conlcuded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.}
+{\color{magenta} The game scene consists of the player and some enemy objects instantiated on a terrain. The user takes control of the player and uses the keyboard to move towards a zombie enemy and uses the left mouse button to attack the zombie. The user attacks and kills multiple zombies in this manner. If different zombies take a different number of hits to kill, the test is said to have passed, otherwise the test is considered a failure.}\\
 
 \end{enumerate}
 
@@ -471,15 +472,16 @@ How test will be performed:\\ A test script will be created that initializes the
 
 \item{Zombie-Attack-A-1\\} \refstepcounter{ftnum} \label{F16-1}
 
-Type: Automated \\
+Type: \hsout{Automated} {\color{magenta} Manual} \\
 					
 Initial State: A zombie enemy object is initialized at the center of its 'spawn' circle that will be have a predetermined position on the playable map. The player object is initialized outside the zombie's attack radius.\\
 					
-Input: void \\
+Input: \hsout{void} {\color{magenta} Keyboard} \\
 					
 Output: void or assertion error \\
 					
-How test will be performed:\\  A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to move towards the zombie's attack radius.  Once the player is within the zombie enemy's attack radius, the zombie will be given commands to attack the player and the zombie's attack animation will be enabled. An assertion statements will be used to check after each zombie attack if the player's health is lower than its previous health. Once the player's health reaches zero, the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.\\
+How test will be performed:\\  \hsout{A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to move towards the zombie's attack radius.  Once the player is within the zombie enemy's attack radius, the zombie will be given commands to attack the player and the zombie's attack animation will be enabled. An assertion statements will be used to check after each zombie attack if the player's health is lower than its previous health. Once the player's health reaches zero, the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.}
+{\color{magenta} The user assumes control of the player and guides the player to a zombie using the WASD keys on the keyboard. Once inside the zombie's attack radius, the zombie should start attacking the player. The player's health bar at the bottom left corner of the screen should become shorter in lenght, indicating a loss of health. If this behaviour is observed, the test is said to have passed, otherwise it is considered a failure. The results are recorded with the help of a Google Form.}\\
 
 \end{enumerate}
 
@@ -491,15 +493,15 @@ How test will be performed:\\  A test script will be created that initializes th
 
 \item{Player-Attack-A-1\\} \refstepcounter{ftnum} \label{F17-1}
 
-Type: Automated \\
+Type: \hsout{Automated} {\color{magenta} Manual} \\
 					
 Initial State: A zombie enemy object is initialized at the center of its 'spawn' circle that will be have a predetermined position on the playable map. The player object is initialized outside the zombie's attack radius.\\
 					
-Input: void \\
+Input: \hsout{void} {\color{magenta} Keyboard and Mouse} \\
 					
 Output: void or assertion error \\
 					
-How test will be performed:\\  A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to move and change its camera forward positon towards the zombie. Once the player is within attacking distance, the player will be given commands to attack the zombie and the player's attack animation will be enabled. An assertion statement will be used to check, after each player attack, if the zombie's health is lower than its previous health. Once the zombie's health reaches zero, the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.\\
+How test will be performed:\\  \hsout{A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to move and change its camera forward positon towards the zombie. Once the player is within attacking distance, the player will be given commands to attack the zombie and the player's attack animation will be enabled. An assertion statement will be used to check, after each player attack, if the zombie's health is lower than its previous health. Once the zombie's health reaches zero, the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.} {\color{magenta}The user assumes control of the player by using the WASD keys to move the player and the mouse to move the camera and attack. The player walks up to a zombie and keeps attacking the zombie till the zombie dies. If the zombie dies, this test is considered a success, a failure otherwise.}\\
 
 \end{enumerate}
 
@@ -511,15 +513,16 @@ How test will be performed:\\  A test script will be created that initializes th
 
 \item{Death-A-1\\} \refstepcounter{ftnum} \label{F18-1}
 
-Type: Automated \\
+Input: \hsout{void} {\color{magenta} Keyboard and Mouse} \\
 					
 Initial State: Two zombie enemy objects is initialized at the center of its 'spawn' circle that will be have a predetermined position on the playable map. The player object is initialized outside the zombie's attack radius.\\
 					
-Input: void \\
+Type: \hsout{Automated} {\color{magenta} Manual} \\
 					
 Output: void or assertion error \\
 					
-How test will be performed:\\  A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to move and change its camera forward positon towards the first zombie. Once the player is within attacking distance, the player will be given commands to attack the first zombie and the player's attack animation will be enabled. Assertion statements will be used to check, after each player attack, if the first zombie's health is lower than its previous health. Once the first zombie's health reaches zero, the first zombie will have died. An assertion statement will be used to check that the first zombie not longer exists (null). Commands will then be given to the second zombie to move towards the player. Once the player is within the zombie's attack radius, the zombie's attack animation will begin.  An assertion statements will be used to check after each zombie attack if the player's health is lower than its previous health. Once the player's health reaches zero, the player is dead. An assertion statement will be used to check if the player is dead and the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.\\
+How test will be performed:\\  \hsout{A test script will be created that initializes the test with the specified initial state. Within the test script, commands will be given to the player to move and change its camera forward positon towards the first zombie. Once the player is within attacking distance, the player will be given commands to attack the first zombie and the player's attack animation will be enabled. Assertion statements will be used to check, after each player attack, if the first zombie's health is lower than its previous health. Once the first zombie's health reaches zero, the first zombie will have died. An assertion statement will be used to check that the first zombie not longer exists (null). Commands will then be given to the second zombie to move towards the player. Once the player is within the zombie's attack radius, the zombie's attack animation will begin.  An assertion statements will be used to check after each zombie attack if the player's health is lower than its previous health. Once the player's health reaches zero, the player is dead. An assertion statement will be used to check if the player is dead and the test is concluded. No assertion errors indicate a passed test, whereas assertion errors indicate a failed test.}
+{\color{magenta}The user assumes control of the player object and guides the player towards a zombie. When the player enters the zombie's attack radius, the zombie starts attacking the player. The user attacks the zombie using the left mouse button. After multiple attacks, the zombie dies and drops a pickup on the ground. The user then guides the player to another zombie, and once in the zombie's attack radius, the zombie starts attacking the player. This time, the player does not attack the zombie or run away. The health bar at the bottom left corner should continues to deplete and once it reaches zero, the screen displays the "Game Over" message. Only if all these conditions are observed is the test considered a pass.}\\
 
 \end{enumerate}
 
@@ -1113,18 +1116,20 @@ The user opens the Inventory UI using the I button. If the Inventory UI shows no
 	
 \section{Comparison to Existing Implementation}	
 
-Group 6's version of this implementation has almost caught up to and replicated the existing open source implementation's functionalities. Currently, both implementations have a basic testing environment, and not a full playable terrain created using Unity. Both programs also have an inventory and equipment system implemented, allowing the user to pick up various items into their inventory and consume/equip them as they please. \\
+\hsout{Group 6's version of this implementation has almost caught up to and replicated the existing open source implementation's functionalities. Currently, both implementations have a basic testing environment, and not a full playable terrain created using Unity. Both programs also have an inventory and equipment system implemented, allowing the user to pick up various items into their inventory and consume/equip them as they please.}
+{\color{magenta} Group 6 has finished the implementation of all the functionalities present in the existing open source implementation. Group 6's implementation now has a sample terrain with various models like trees, bridges and mountains, as well as fully functional melee and range weapons, a working inventory system, a day and night cycle, as well as sound effects to indicate that an attack has been completed. The sounds effects are an extra feature not present in the exisiting implementation.}\\
 
-The open source project has implemented visibly equipping melee and ranged weapons and using them with animations, whereas Group 6 has not yet developed that far into the aesthetics of the project and currently only has a basic left-click enemy damage system. Although behind on that aspect, a basic enemy AI system has been developed where the enemies wander around in a certain radius, and follow/attack the player when they get too close.  The existing implementation does not have enemy AI and only has a still object that you can practice attacking with your weapons. \\
+The open source project has implemented visibly equipping melee and ranged weapons and using them with animations, \hsout{whereas Group 6 has not yet developed that far into the aesthetics of the project and currently only has a basic left-click enemy damage system}, {\color{magenta}which differs from Group 6's implementation in that Group 6's implementation uses still images for weapons.} \hsout{Although behind on that aspect, a} {\color{magenta}A } basic enemy AI system has been developed where the enemies wander around in a certain radius, and follow/attack the player when they get too close.  The existing implementation does not have enemy AI and only has a still object that you can practice attacking with your weapons. \\
 
-Parallel testing will not be used since much of the existing implementation is not fully complete or put together. Although it would have been useful, there are not many components to test that would be benefiecial in testing the current implementation aswell. The current project was inspired by the existing implementation in an attempt to finish and make it what it was designed to be like, but since the start of development it has become very independent and not attached to the open source code, making running tests on it not an effective use of time.
+\hsout{Parallel testing will not be used since much of the existing implementation is not fully complete or put together. Although it would have been useful, there are not many components to test that would be benefiecial in testing the current implementation aswell. The current project was inspired by the existing implementation in an attempt to finish and make it what it was designed to be like, but since the start of development it has become very independent and not attached to the open source code, making running tests on it not an effective use of time}
+{\color{magenta} Testing for the implementation has been conducted using a mix of Automated and Manual testing. Unity Test scripts have been used for various functional and non-functional requirements. Due to some restrictions imposed by the nature of some GameObjects (such as in the modules 'Enemy', 'Zombie' and 'ZombieStats' ), some components have been tested manually with the help of volunteers, who provide feedback through a Google Form.}.
 
 
 \section{Unit Testing Plan}
 
 \subsection{Unit testing of internal functions}
 
-Unit tests for internal functions will be accomplished using ASSERT statements. As of now, these statements will be embedded in the C\# scripts in each testable function. In order to test that the code is functional, each statement will be placed under the main part of each function. Inside, certain values will be asserted to check if they are equal, or certain statements will be inputted and checked if they evaluate to true or false which will prove the correctness of the code.   \\
+Unit tests for internal functions will be accomplished using ASSERT statements. \hsout{As of now, these statements will be embedded in the C\# scripts in each testable function. In order to test that the code is functional, each statement will be placed under the main part of each function} {\color{magenta} These ASSERT statements are located in dedicated test scripts which use the Unity Test framework. Each test script corresponds to one module in the implementation.}. Inside, certain values will be asserted to check if they are equal, or certain statements will be inputted and checked if they evaluate to true or false which will prove the correctness of the code.   \\
 
 For example, assertion statements will be used to make sure the combat system is correct. After the code for the enemy attacking the player runs, there will be an assertion to check if the player's new health is equal to the player's old health minus the enemy's attack value. If the assertion passes, it is known that the the enemy has successfully attacked and reduced the player's health. The same thing is tested for the opposite scenario, where the player attacks the enemy. There is an assertion to check if the enemy's new health is equal to the enemy's old health minus the player's attack value. \\
 

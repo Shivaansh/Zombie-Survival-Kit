@@ -45,37 +45,37 @@
 \contentsline {paragraph}{Day and Night}{19}{section*.19}
 \contentsline {subsubsection}{\numberline {3.1.17}{\color {magenta} F16.} The player must lose health when hit by a zombie.}{19}{subsubsection.3.1.17}
 \contentsline {paragraph}{Zombie Attack}{19}{section*.20}
-\contentsline {subsubsection}{\numberline {3.1.18}{\color {magenta} F17.} Zombies must lose health when hit by the player {\color {magenta} by using the LMB once the player is within attacking distance from the zombie.}}{20}{subsubsection.3.1.18}
-\contentsline {paragraph}{Player Attack}{20}{section*.21}
+\contentsline {subsubsection}{\numberline {3.1.18}{\color {magenta} F17.} Zombies must lose health when hit by the player {\color {magenta} by using the LMB once the player is within attacking distance from the zombie.}}{21}{subsubsection.3.1.18}
+\contentsline {paragraph}{Player Attack}{21}{section*.21}
 \contentsline {subsubsection}{\numberline {3.1.19}{\color {magenta} F18.} Players or zombies must die when they reach 0 health.}{21}{subsubsection.3.1.19}
 \contentsline {paragraph}{Death}{21}{section*.22}
-\contentsline {subsubsection}{\numberline {3.1.20}\hsout {Func. Req. 19: Upon player death, the game must reset}}{22}{subsubsection.3.1.20}
-\contentsline {paragraph}{\hsout {Reset}}{22}{section*.23}
+\contentsline {subsubsection}{\numberline {3.1.20}\hsout {Func. Req. 19: Upon player death, the game must reset}}{23}{subsubsection.3.1.20}
+\contentsline {paragraph}{\hsout {Reset}}{23}{section*.23}
 \contentsline {subsubsection}{\numberline {3.1.21}{\color {magenta} F19. An Inventory UI will give the user a visual representation of the player's inventory and will be accessable by pressing the \IeC {\textquoteleft }inventory\IeC {\textquoteright } key.}}{23}{subsubsection.3.1.21}
 \contentsline {paragraph}{{\color {magenta} InventoryUI}}{23}{section*.24}
-\contentsline {subsubsection}{\numberline {3.1.22}{\color {magenta} F20. An Equipment UI will give the user a visual representation of the player's equipped items and will be appear with the Inventory UI by pressing the \IeC {\textquoteleft }inventory\IeC {\textquoteright } key.}}{23}{subsubsection.3.1.22}
-\contentsline {paragraph}{{\color {magenta} Equipment UI}}{23}{section*.25}
-\contentsline {subsubsection}{\numberline {3.1.23}{\color {magenta} F21. A Player UI will give the user a visual representation of the player's health and remaining bullets if a gun is equipped to the player. The Player UI will also consist of a reticle.}}{24}{subsubsection.3.1.23}
-\contentsline {paragraph}{{\color {magenta} Player UI}}{24}{section*.26}
-\contentsline {subsection}{\numberline {3.2}Tests for Nonfunctional Requirements}{25}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Look and Feel Requirements}{25}{subsubsection.3.2.1}
-\contentsline {paragraph}{Look and Feel}{25}{section*.27}
-\contentsline {subsubsection}{\numberline {3.2.2}Usability and Humanity Requirements}{27}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.1.22}{\color {magenta} F20. An Equipment UI will give the user a visual representation of the player's equipped items and will be appear with the Inventory UI by pressing the \IeC {\textquoteleft }inventory\IeC {\textquoteright } key.}}{24}{subsubsection.3.1.22}
+\contentsline {paragraph}{{\color {magenta} Equipment UI}}{24}{section*.25}
+\contentsline {subsubsection}{\numberline {3.1.23}{\color {magenta} F21. A Player UI will give the user a visual representation of the player's health and remaining bullets if a gun is equipped to the player. The Player UI will also consist of a reticle.}}{25}{subsubsection.3.1.23}
+\contentsline {paragraph}{{\color {magenta} Player UI}}{25}{section*.26}
+\contentsline {subsection}{\numberline {3.2}Tests for Nonfunctional Requirements}{26}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Look and Feel Requirements}{26}{subsubsection.3.2.1}
+\contentsline {paragraph}{Look and Feel}{26}{section*.27}
+\contentsline {subsubsection}{\numberline {3.2.2}Usability and Humanity Requirements}{28}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Performance Requirements}{28}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Safety Critical Requirements}{30}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.4}Safety Critical Requirements}{31}{subsubsection.3.2.4}
 \contentsline {subsubsection}{\numberline {3.2.5}Precision Requirements}{31}{subsubsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.6}Reliability and Availability Requirements}{33}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}Cultural Requirements}{35}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}Non-function Requirements not being tested on}{35}{subsubsection.3.2.8}
-\contentsline {subsection}{\numberline {3.3}Traceability Between Test Cases and Requirements}{37}{subsection.3.3}
-\contentsline {section}{\numberline {4}Tests for Proof of Concept}{40}{section.4}
-\contentsline {subsection}{\numberline {4.1}Movement and Camera}{40}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Inventory System}{41}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Enemy pathfinding}{43}{subsection.4.3}
-\contentsline {section}{\numberline {5}Comparison to Existing Implementation}{43}{section.5}
-\contentsline {section}{\numberline {6}Unit Testing Plan}{44}{section.6}
-\contentsline {subsection}{\numberline {6.1}Unit testing of internal functions}{44}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}\hsout {Unit testing of output files}}{45}{subsection.6.2}
-\contentsline {section}{\numberline {7}Appendix}{45}{section.7}
-\contentsline {subsection}{\numberline {7.1}Symbolic Parameters}{45}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Usability Survey Questions?}{45}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {3.2.6}Reliability and Availability Requirements}{34}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Cultural Requirements}{36}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}Non-function Requirements not being tested on}{36}{subsubsection.3.2.8}
+\contentsline {subsection}{\numberline {3.3}Traceability Between Test Cases and Requirements}{38}{subsection.3.3}
+\contentsline {section}{\numberline {4}Tests for Proof of Concept}{41}{section.4}
+\contentsline {subsection}{\numberline {4.1}Movement and Camera}{41}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Inventory System}{42}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Enemy pathfinding}{44}{subsection.4.3}
+\contentsline {section}{\numberline {5}Comparison to Existing Implementation}{44}{section.5}
+\contentsline {section}{\numberline {6}Unit Testing Plan}{45}{section.6}
+\contentsline {subsection}{\numberline {6.1}Unit testing of internal functions}{45}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}\hsout {Unit testing of output files}}{46}{subsection.6.2}
+\contentsline {section}{\numberline {7}Appendix}{46}{section.7}
+\contentsline {subsection}{\numberline {7.1}Symbolic Parameters}{47}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Usability Survey Questions?}{47}{subsection.7.2}

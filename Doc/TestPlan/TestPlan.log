@@ -1,14 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  1 DEC 2018 03:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.9.30)  1 DEC 2018 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **TestPlan.tex
 (./TestPlan.tex
-LaTeX2e <2018-04-01> patch level 2
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+LaTeX2e <2018-04-01> patch level 5
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size12.clo
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -23,7 +22,7 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \heavyrulewidth=\dimen103
 \lightrulewidth=\dimen104
@@ -42,12 +41,11 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@thisruleclass=\count90
 \@lastruleclass=\count91
 \@thisrulewidth=\dimen115
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/tabularx.sty
+) (d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
-Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen116
 \ar@mcellbox=\box26
 \extrarowheight=\dimen117
@@ -64,14 +62,16 @@ Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
 \TX@cols=\count92
 \TX@ftn=\toks15
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyp
+erref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-gen
+eric.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -81,7 +81,7 @@ Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -89,7 +89,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -111,31 +111,33 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-(/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.st
+y
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen123
 \Hy@linkcounter=\count93
 \Hy@pagecounter=\count94
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count95
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.
+cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4509.
@@ -146,8 +148,7 @@ Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
 \c@Hy@tempcnt=\count96
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+ (d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -171,19 +172,20 @@ LaTeX Info: Redefining \pageref on input line 6443.
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
 \Fld@listcount=\count101
 \c@bookmark@seq@number=\count102
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfileche
+ck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip45
 )
-(/usr/local/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box28
 \UL@hyphenbox=\box29
 \UL@skip=\skip46
@@ -195,14 +197,13 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package: ulem 2012/05/18
 \ULdepth=\dimen129
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2018/08/03 v2.3 Span multiple rows of a table
 \multirow@colwidth=\skip47
 \multirow@cntb=\count104
 \multirow@dima=\skip48
 \bigstrutjot=\dimen130
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+) (d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count105
 \float@exts=\toks18
@@ -212,7 +213,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 15.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip49
 \bibsep=\skip50
@@ -222,11 +223,7 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@ftnum=\count107
 \c@nftnum=\count108
 
-(./TestPlan.aux
-
-LaTeX Warning: Label `TblRT' multiply defined.
-
-)
+No file TestPlan.aux.
 \openout1 = `TestPlan.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -244,18 +241,21 @@ LaTeX Font Info:    ... okay on input line 40.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
 LaTeX Font Info:    ... okay on input line 40.
 \AtBeginShipoutBox=\box33
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cf
+g
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.d
+ef
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 
-(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.
+mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen131
@@ -270,10 +270,12 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \everyMPtoPDFconversion=\toks21
 )))
 Package hyperref Info: Link coloring ON on input line 40.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+(d:/Program Files (x86)/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlest
+ring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count115
@@ -281,8 +283,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 40.
 LaTeX Info: Redefining \pageref on input line 40.
 LaTeX Info: Redefining \nameref on input line 40.
-
-(./TestPlan.out) (./TestPlan.out)
+ (./TestPlan.out) (./TestPlan.out)
 \@outlinefile=\write3
 \openout3 = `TestPlan.out'.
 
@@ -292,29 +293,28 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 43.
  [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Test
-Plan.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 2.
- [1] [2])
+{d:/Program Files (x86)/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.m
+ap}]
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
 \tf@toc=\write4
 \openout4 = `TestPlan.toc'.
 
- (./TestPlan.lot)
+
+Package hyperref Warning: old lot file detected, not used; run LaTeX again.
+
 \tf@lot=\write5
 \openout5 = `TestPlan.lot'.
 
 
-(./TestPlan.lof)
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
 \tf@lof=\write6
 \openout6 = `TestPlan.lof'.
 
- [3] [4pdfTeX warning (ext4): destination with the same identifier (name{table.
-1}) has been already used, duplicate ignored
+[1pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -557,378 +557,380 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--255
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
+Overfull \hbox (3.11629pt too wide) in paragraph at lines 256--258
+|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
+  |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
 
  []
 
 [9]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 260.
+(hyperref)                removing `\@ifnextchar' on input line 261.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 260.
+(hyperref)                removing `\@ifnextchar' on input line 261.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--278
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
 [10]
-Overfull \hbox (1.12222pt too wide) in paragraph at lines 281--281
+Overfull \hbox (1.12222pt too wide) in paragraph at lines 282--282
 []|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
 ]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--294
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
 [11]
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 301.
+(hyperref)                removing `\@ifnextchar' on input line 302.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--319
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--320
 
  []
 
 [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 322.
+(hyperref)                removing `\@ifnextchar' on input line 323.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 322.
+(hyperref)                removing `\@ifnextchar' on input line 323.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--340
+Underfull \hbox (badness 10000) in paragraph at lines 339--341
 
  []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 343.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 343.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 343.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 343.
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 344.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 374.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 375.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--389
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 406.
+(hyperref)                removing `\@ifnextchar' on input line 407.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 406.
+(hyperref)                removing `\@ifnextchar' on input line 407.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 418--419
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
 
 [17]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 426.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 426.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 446.
+(hyperref)                removing `\@ifnextchar' on input line 427.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 427.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
+
+ []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 447.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 462--463
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 466.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--477
-
- []
+(hyperref)                removing `\@ifnextchar' on input line 467.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 486.
+(hyperref)                removing `\@ifnextchar' on input line 488.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 486.
+(hyperref)                removing `\@ifnextchar' on input line 488.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 494--495
-
- []
-
-
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
@@ -943,21 +945,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
 
-[20]
+
 Underfull \hbox (badness 10000) in paragraph at lines 502--503
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 506.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 514--515
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
 
  []
 
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 508.
+
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 516--517
 
  []
@@ -977,834 +979,963 @@ Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 532--533
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 524--526
 
  []
 
 [22]
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--542
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--546
+
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 546.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 554--555
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 558--559
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--563
-
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 566.
+(hyperref)                removing `\@ifnextchar' on input line 549.
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 574--575
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 576--577
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
+Underfull \hbox (badness 10000) in paragraph at lines 561--562
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--581
+Underfull \hbox (badness 10000) in paragraph at lines 563--564
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 565--566
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 586.
+(hyperref)                removing `\@ifnextchar' on input line 569.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 596--597
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--599
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--617
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 589.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 618--619
-[]\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
-nc-tions/features,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 618--619
+Underfull \hbox (badness 10000) in paragraph at lines 599--600
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 620--621
+Underfull \hbox (badness 10000) in paragraph at lines 601--602
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--623
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--606
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 630--631
+Underfull \hbox (badness 10000) in paragraph at lines 619--620
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 632--633
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 621--622
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 632--633
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 634--635
+Underfull \hbox (badness 10000) in paragraph at lines 623--624
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--637
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--641
+LaTeX Warning: Reference `NF2' on page 26 undefined on input line 633.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 644--645
-
- []
-
-
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 646--647
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 635--636
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 646--647
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 648--649
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 650--651
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 652--655
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 664--665
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 666--667
+Underfull \hbox (badness 10000) in paragraph at lines 641--644
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--648
+
+ []
+
+
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 649--650
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 666--667
+Underfull \hbox (badness 10000) in paragraph at lines 649--650
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 668--669
+Underfull \hbox (badness 10000) in paragraph at lines 651--652
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--671
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--675
+Underfull \hbox (badness 10000) in paragraph at lines 655--658
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 684--685
+Underfull \hbox (badness 10000) in paragraph at lines 667--668
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 686--687
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 669--670
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--687
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--695
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 698--699
+Underfull \hbox (badness 10000) in paragraph at lines 673--674
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 700--701
+Underfull \hbox (badness 10000) in paragraph at lines 675--678
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--688
+
+ []
+
+
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 689--690
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 700--701
+Underfull \hbox (badness 10000) in paragraph at lines 689--690
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 695--698
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--703
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 704--705
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 703--704
+[]\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
+nc-tions/features,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
 
  []
 
 
-Overfull \hbox (138.11398pt too wide) in paragraph at lines 706--708
+Underfull \hbox (badness 10000) in paragraph at lines 705--706
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 707--708
+
+ []
+
+
+Overfull \hbox (138.11398pt too wide) in paragraph at lines 709--711
 \OT1/cmr/m/n/12 pro-duced by the script by Dave Hamp-son (http://wiki.unity3d.c
 om/index.php/FramesPerSecond). 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 706--708
+Underfull \hbox (badness 10000) in paragraph at lines 709--711
 
  []
 
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 711--712
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 714--715
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 713--714
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 716--717
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 713--714
+Underfull \hbox (badness 10000) in paragraph at lines 716--717
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+Underfull \hbox (badness 10000) in paragraph at lines 718--719
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 717--718
+Underfull \hbox (badness 10000) in paragraph at lines 720--721
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 719--722
+Underfull \hbox (badness 10000) in paragraph at lines 722--725
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--726
+Underfull \hbox (badness 10000) in paragraph at lines 728--729
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 727--728
+Underfull \hbox (badness 10000) in paragraph at lines 730--731
 
  []
 
-[29]
-Overfull \hbox (8.3167pt too wide) in paragraph at lines 729--730
+
+Overfull \hbox (8.3167pt too wide) in paragraph at lines 732--733
 []\OT1/cmr/m/n/12 Input/Condition: Check-ing to see that the |   [] []ram[] nee
 ded to |   []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 729--730
+Underfull \hbox (badness 10000) in paragraph at lines 732--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 733--734
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 743--744
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--746
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 747--748
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 749--750
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 751--752
+Underfull \hbox (badness 10000) in paragraph at lines 734--735
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 761--762
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 763--764
-[]\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
-nc-tions/features,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 763--764
+Underfull \hbox (badness 10000) in paragraph at lines 746--747
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 765--766
+Underfull \hbox (badness 10000) in paragraph at lines 748--749
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 767--768
+Underfull \hbox (badness 10000) in paragraph at lines 750--751
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 769--772
+Underfull \hbox (badness 10000) in paragraph at lines 752--753
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 777--778
-[]\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
-nc-tions/features,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 777--778
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 779--780
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 781--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 783--786
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 789--790
-
- []
-
-
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 791--792
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 766--767
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 791--792
+Underfull \hbox (badness 10000) in paragraph at lines 766--767
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--794
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 795--796
+Underfull \hbox (badness 10000) in paragraph at lines 770--771
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--800
+Underfull \hbox (badness 10000) in paragraph at lines 772--775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 778--779
+
+ []
+
+
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 780--781
+[]\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
+nc-tions/features,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--781
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 782--783
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--789
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 803--804
+Underfull \hbox (badness 10000) in paragraph at lines 792--793
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 805--806
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 794--795
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--806
+Underfull \hbox (badness 10000) in paragraph at lines 794--795
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--808
+Underfull \hbox (badness 10000) in paragraph at lines 796--797
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--810
+Underfull \hbox (badness 10000) in paragraph at lines 798--799
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--814
+Underfull \hbox (badness 10000) in paragraph at lines 800--803
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 823--824
-
- []
-
-
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 825--826
-[]\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
-nc-tions/features,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 825--826
+Underfull \hbox (badness 10000) in paragraph at lines 806--807
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 827--828
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 829--830
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 831--834
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 837--838
-
- []
-
-
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 839--840
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 808--809
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--840
+Underfull \hbox (badness 10000) in paragraph at lines 808--809
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 810--811
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--844
+Underfull \hbox (badness 10000) in paragraph at lines 812--813
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--848
+Underfull \hbox (badness 10000) in paragraph at lines 814--817
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 826--827
+
+ []
+
+
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 828--829
+[]\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
+nc-tions/features,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 828--829
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 830--831
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 834--837
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 857--858
+Underfull \hbox (badness 10000) in paragraph at lines 840--841
 
  []
 
 
-Overfull \hbox (23.67441pt too wide) in paragraph at lines 859--860
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 842--843
 []\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
 nc-tions/features,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--860
+Underfull \hbox (badness 10000) in paragraph at lines 842--843
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--862
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 863--864
+Underfull \hbox (badness 10000) in paragraph at lines 846--847
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 865--868
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 875--876
+Underfull \hbox (badness 10000) in paragraph at lines 848--851
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 879--881
+Underfull \hbox (badness 10000) in paragraph at lines 860--861
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 884--885
+Overfull \hbox (23.67441pt too wide) in paragraph at lines 862--863
+[]\OT1/cmr/m/n/12 Initial State: Scene is paused. All game me-chan-ics, game fu
+nc-tions/features,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--890
+Underfull \hbox (badness 10000) in paragraph at lines 864--865
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--892
+Underfull \hbox (badness 10000) in paragraph at lines 866--867
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--894
+Underfull \hbox (badness 10000) in paragraph at lines 868--871
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--896
+Underfull \hbox (badness 10000) in paragraph at lines 878--879
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 897--898
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 899--900
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 901--902
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 903--904
+Underfull \hbox (badness 10000) in paragraph at lines 882--884
 
  []
 
 [36]
-Overfull \hbox (18.50409pt too wide) in paragraph at lines 905--906
+Underfull \hbox (badness 10000) in paragraph at lines 887--888
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 891--893
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 894--895
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 896--897
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 898--899
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 900--901
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 902--903
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--907
+
+ []
+
+
+Overfull \hbox (18.50409pt too wide) in paragraph at lines 908--909
 |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
   |   []   |   []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 905--906
+Underfull \hbox (badness 10000) in paragraph at lines 908--909
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 907--908
+Underfull \hbox (badness 10000) in paragraph at lines 910--911
+
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 909--910
-
- []
-
-
-Overfull \hbox (1.75124pt too wide) in paragraph at lines 914--914
+Overfull \hbox (1.75124pt too wide) in paragraph at lines 917--917
 []\OT1/cmr/bx/n/14.4 Traceability Be-tween Test Cases and Re-quire-ments 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
+Underfull \hbox (badness 10000) in paragraph at lines 918--919
 
  []
 
-[37] [38pdfTeX warning (ext4): destination with the same identifier (name{table
-.3}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.997 
-      ]
-Overfull \vbox (22.98344pt too high) has occurred while \output is active []
+LaTeX Warning: Reference `F1-1' on page 38 undefined on input line 926.
 
 
-[39pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
+LaTeX Warning: Reference `F2-1' on page 38 undefined on input line 927.
+
+
+LaTeX Warning: Reference `F3-1' on page 38 undefined on input line 928.
+
+
+LaTeX Warning: Reference `F4-1' on page 38 undefined on input line 929.
+
+
+LaTeX Warning: Reference `F5-1' on page 38 undefined on input line 930.
+
+
+LaTeX Warning: Reference `F6-1' on page 38 undefined on input line 931.
+
+
+LaTeX Warning: Reference `F7-1' on page 38 undefined on input line 932.
+
+
+LaTeX Warning: Reference `F8-1' on page 38 undefined on input line 933.
+
+
+LaTeX Warning: Reference `F9-1' on page 38 undefined on input line 934.
+
+
+LaTeX Warning: Reference `F10-1' on page 38 undefined on input line 935.
+
+
+LaTeX Warning: Reference `F11-1' on page 38 undefined on input line 936.
+
+
+LaTeX Warning: Reference `F11-2' on page 38 undefined on input line 936.
+
+
+LaTeX Warning: Reference `F12-1' on page 38 undefined on input line 937.
+
+
+LaTeX Warning: Reference `F12-2' on page 38 undefined on input line 937.
+
+
+LaTeX Warning: Reference `F13-1' on page 38 undefined on input line 938.
+
+
+LaTeX Warning: Reference `F14-1' on page 38 undefined on input line 939.
+
+
+LaTeX Warning: Reference `F15-1' on page 38 undefined on input line 940.
+
+
+LaTeX Warning: Reference `F16-1' on page 38 undefined on input line 941.
+
+
+LaTeX Warning: Reference `F17-1' on page 38 undefined on input line 942.
+
+
+LaTeX Warning: Reference `F18-1' on page 38 undefined on input line 943.
+
+
+LaTeX Warning: Reference `F19-1' on page 38 undefined on input line 944.
+
+
+LaTeX Warning: Reference `F20-1' on page 38 undefined on input line 945.
+
+
+LaTeX Warning: Reference `F21-1' on page 38 undefined on input line 946.
+
+[38]
+
+LaTeX Warning: Reference `NF1' on page 39 undefined on input line 959.
+
+
+LaTeX Warning: Reference `NF2' on page 39 undefined on input line 960.
+
+
+LaTeX Warning: Reference `NF3' on page 39 undefined on input line 961.
+
+
+LaTeX Warning: Reference `NF4' on page 39 undefined on input line 963.
+
+
+LaTeX Warning: Reference `NF5' on page 39 undefined on input line 965.
+
+
+LaTeX Warning: Reference `NF6' on page 39 undefined on input line 966.
+
+
+LaTeX Warning: Reference `NF7' on page 39 undefined on input line 967.
+
+
+LaTeX Warning: Reference `NF8' on page 39 undefined on input line 968.
+
+
+LaTeX Warning: Reference `NF9' on page 39 undefined on input line 969.
+
+
+LaTeX Warning: Reference `NF10' on page 39 undefined on input line 970.
+
+
+LaTeX Warning: Reference `NF12' on page 39 undefined on input line 970.
+
+
+LaTeX Warning: Reference `NF11' on page 39 undefined on input line 971.
+
+
+LaTeX Warning: Reference `NF13' on page 39 undefined on input line 972.
+
+
+LaTeX Warning: Reference `NF14' on page 39 undefined on input line 973.
+
+
+LaTeX Warning: Reference `NF15' on page 39 undefined on input line 974.
+
+
+LaTeX Warning: Reference `NF16' on page 39 undefined on input line 984.
+
+[39pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.997 
-      ]
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
+l.1000 
+       ]
+Overfull \vbox (22.98344pt too high) has occurred while \output is active []
+
+
+[40pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1000 
+       ]
+Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1021--1022
-
- []
-
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 1042--1043
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1056
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1025
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1045--1046
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
 
  []
 
 [42]
-Overfull \hbox (4.07785pt too wide) in paragraph at lines 1116--1117
-\OT1/cmr/m/n/12 both im-ple-men-ta-tions have a ba-sic test-ing en-vi-ron-ment,
- and not a full playable
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1116--1117
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1072
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1085
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1103
 
  []
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1127--1128
+Overfull \hbox (10.22919pt too wide) in paragraph at lines 1119--1121
+|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
+  |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1129--1130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
 
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1159--1160
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1161--1162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1163--1164
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1165--1166
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1133
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
+Underfull \hbox (badness 10000) in paragraph at lines 1136--1137
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1171.
 [46]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1171.
+Underfull \hbox (badness 10000) in paragraph at lines 1164--1165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1166--1167
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1168--1169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1172--1173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1175
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1176.
+[47]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1176.
  (./TestPlan.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1171.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1171.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1176.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1176.
 
 Package rerunfilecheck Info: File `TestPlan.out' has not changed.
 (rerunfilecheck)             Checksum: 8608E3C374DE146E0E7C9EE74B7E5F9D;6893.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1171.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1176.
  ) 
 Here is how much of TeX's memory you used:
- 5738 strings out of 492649
- 82205 string characters out of 6129622
- 202989 words of memory out of 5000000
- 9364 multiletter control sequences out of 15000+600000
+ 5728 strings out of 492639
+ 82951 string characters out of 6123540
+ 196353 words of memory out of 5000000
+ 9370 multiletter control sequences out of 15000+600000
  9083 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,10n,32p,2033b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on TestPlan.pdf (51 pages, 195031 bytes).
+ 28i,11n,32p,2033b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/Program Files (x86)/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb><d:/Program Files (x86)/texlive/2018/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb><d:/Program Files (x86)/texlive/2018/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb><d:/Program Files (x86)/texlive/2018/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on TestPlan.pdf (49 pages, 203552 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 723 compressed objects within 8 object streams
- 230 named destinations out of 1000 (max. 500000)
+ 638 PDF objects out of 1000 (max. 8388607)
+ 577 compressed objects within 6 object streams
+ 228 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 
