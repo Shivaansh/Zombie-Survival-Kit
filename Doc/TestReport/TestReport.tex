@@ -14,9 +14,9 @@
 }
 \usepackage[round]{natbib}
 
-\title{SE 3XA3: Test Report\\Title of Project}
+\title{SE 3XA3: Test Report\\Zombie Survival Kit}
 
-\author{Team \#, Team Name
+\author{Team 6, Group 6ix
 		\\ Student 1: Brian Jonatan,  jonatans
 		\\ Student 2: Mohamad Hussain, hussam17
 		\\ Student 3: Shivaansh Prasann, prasanns
@@ -40,7 +40,7 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
+ December 3 2018 & 1.0 & Document created\\
 Date 2 & 1.1 & Notes\\
 \bottomrule
 \end{tabularx}
@@ -333,11 +333,39 @@ While playing the game, a change in the orientation of the daylight object is vi
 The existing project does not contain any documentation regarding the testing procedured in the development of the software. No unit testing has been implemented, and the final product is not error free. For example, in the existing implementation, the axe weapon is dysfunctional and it causes the inventory UI to crash.
 
 \section{Unit Testing}
+Unit Testing was conducted to verify the correctness of various modules of our project. Certain modules, however, could not be tested due to restrictions imposed by the Unity 3D engine. For these modules, manual testing was used to verify that they function as intended.
 
+Unit Testing was conducted on the following modules:
+\begin{itemize}
+	\item Character Combat
+	\item Character Stats
+	\item Consumable Item
+	\item Daylight Controller
+	\item Equipment Item
+	\item Equipment Manager
+	\item Gun
+	\item Inventory
+	\item Item Store
+	\item Player Stats
+	\item Stat
+\end{itemize}
+
+The correctness of a module is verified by unit testing, when no assertion errors are returned by the unit test file. In case of our project, unit testing the aforementioned modules returned no assertion errors, and the modules mentioned above are therefore assumed to be correct.
+
+[Please see the Test Plan for a detailed description of the individual Test Scripts.]
 \section{Changes Due to Testing}
 
+While no errors were encountered during testing, it was revealed that certain modules were preventing other modules from working correctly. Also, some undesirable behaviours were observed. These are listed below:
+
+\begin{itemize}
+	\item The implementation of the gun firing mechanism prevented the cursor from showing up on the screen when the inventory UI was brought up, and prevented interaction with the inventory UI.\newline
+	\textbf{Change made: } A new function was added to the First Person Controller script to enable the cursor when the inventory UI was brought up, even if the gun was equipped.
+	\item The initial implementation of the gun firing mechanism caused a shot to be fired even when the gun was being unequipped / swapped in the inventory UI or while equipping an item or consuming a consumable.\newline
+	\textbf{Change made: } The Gun module now checks whether the inventory UI is active and if that is true, a shot is not fired.
+	\item 
+\end{itemize}
 \section{Automated Testing}
-		
+		For our project, the only implementation of automated testing was the Unit Testing process. The results of our unit tests are mentioned in a previous section.
 \section{Trace to Requirements}
 		
 \section{Trace to Modules}		
