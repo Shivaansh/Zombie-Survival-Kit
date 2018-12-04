@@ -1,8 +1,10 @@
 \documentclass[12pt, titlepage]{article}
 
 \usepackage{booktabs}
+\usepackage{ulem}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage[round]{natbib}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -15,14 +17,14 @@
 \title{SE 3XA3: Test Report\\Title of Project}
 
 \author{Team \#, Team Name
-		\\ Student 1 name and macid
-		\\ Student 2 name and macid
-		\\ Student 3 name and macid
+		\\ Student 1: Brian Jonatan,  jonatans
+		\\ Student 2: Mohamad Hussain, hussam17
+		\\ Student 3: Shivaansh Prasann, prasanns
 }
 
 \date{\today}
 
-\input{../Comments}
+    %\input{../Comments}
 
 \begin{document}
 
@@ -48,21 +50,287 @@ Date 2 & 1.1 & Notes\\
 
 \pagenumbering{arabic}
 
-This document ...
+This document contains the results of our initial testing plan, the information dervied from it as well as the changes that have been implemented in our project based on the results of the tests that have been conducted.
 
 \section{Functional Requirements Evaluation}
+\subsection{Functional Requirement 1: } 
 
+\subsubsection{Description: }The player must be able to move forward, left, backwards and right using the WASD keys.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } By pressing the WASD keys on the keyboard, the player can move around on the game terrain. 
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+\subsection{Functional Requirement 2: } 
+
+\subsubsection{Description: }The player must be able to look in all directions by moving their mouse.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } By moving the mouse in a certain direction, it is observed that the camera turns in the same direction.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%
+
+\subsection{Functional Requirement 3: } 
+
+\subsubsection{Description: }Zombie enemies must walk back and forth between random points in their 'spawn' circle, which imitates them walking around.
+
+\subsubsection{Type: } Automated
+
+\subsubsection{Observation: } When the game scene is initialized, zombie enemies can be observed at various positions on the game terrain. These zombies are observed to be moving around a certain position on the map.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 4: } 
+
+\subsubsection{Description: }Zombie enemies must start attacking hte player when they come within a certain radius.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user controls the player and moves close to a zombie, then the zombie starts attacking the player, and the zombie character model is animated to show an attack movement.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 5: } 
+
+\subsubsection{Description: }Zombie enemies must follow the player when the player is at a certain distance form the zombie.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user controls the player and moves close to a zombie, then the zombie starts attacking the player, and the zombie character model is animated to show an attack movement. When the player then starts to move away, the zombie starts to follow the player.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 6: } 
+
+\subsubsection{Description: }If the player runs past a certain radius from the zombie's original spawn location, the zombie must return to their circle..
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user controls the player and moves close to a zombie, then the zombie starts attacking the player, and the zombie character model is animated to show an attack movement. When the player then starts to move away, the zombie starts to follow the player. The user then presses and holds the shift button while moving the player away from the zombie. When the distance between the player and zombie is sufficiently large, the zombie stops chasing the player and starts returning to their own position.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 7: } 
+
+\subsubsection{Description: }Different types of zombies must have different statistics (health, damage and attack speed). Different types of zombies will be distinguishable by their different appearances. 
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user assumes control of the player and attacks various zombies in the game scene, different zombies require a different number of hits to kill.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 8: } 
+
+\subsubsection{Description: }Zombies must have randomly generated chance of dropping items the player can equip or consume when killed.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When different zombies are killed, they drop a different type of pickup after they die. 
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 9: } 
+
+\subsubsection{Description: }The player must be able to pick up items they are looking at with the 'interact' key.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user looks at a pickup and presses the 'E' button on the keyboard, the pickup item disappears from the screen. 
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 10: } 
+
+\subsubsection{Description: }The player must be able to acces their inventory by pressing the 'inventory' key, and will have a maximum space of 20 items.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user  presses the 'I' button on the keyboard, the inventory UI is shown with 20 item slots. 
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+\subsection{Functional Requirement 11: } 
+
+\subsubsection{Description: }The player must be able to equip, consume and drop items in their inventory UI using the LMB.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user  presses the 'I' button on the keyboard, the inventory UI is shown with 20 item slots. When the player then picks up some pickups from the game scene, the inventory UI updates and shows the pickups in a slot. By clicking on an apple, the player's health increases according to the health bar and by clicking on a boot icon, it moves from the inventory UI at the right side of the screen to the equipment UI at the top left of the screen.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 12: } 
+
+\subsubsection{Description: }The player must be able to unequip items in their Equipment UI using the LMB or the 'unequip all' key.
+
+\subsubsection{Type: } Dynamic, Manual
+
+\subsubsection{Observation: } When the user has items equipped, pressing the U button moves all items from the Equipment UI to the Inventory UI. When the user individually clicks on the items in the Equipment UI using the LMB, the specific item is moved from the Equipment UI to the Inventory UI. \newline
+The Test script containing the Assert statements, when executed, does not report any assertion errors.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 13: } 
+
+\subsubsection{Description: }The player must be able to fire/use an equipped gun or axe by pressing the left mouse button (LMB).
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the player has a gun equipped, pressing the LMB causes the gunshot sound to be played and the bullet UI at the bottom left corner is updated to show the ammo count in the gun. \sout{When the player tries to equip an axe by opening the inventory UI, the cursor does not show up and the switch cannot be made.} {\color{magenta} When the axe is equipped, clicking the LMB causes the axe swing sounds to be played.}
+
+\subsubsection[Pass / Fail:] {Result: } {\sout{Failed}} {\color{magenta} Passed}
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 14: } 
+
+\subsubsection{Description: }If the player has a firearm equipped, the user can reload the gun using the 'reload' key. The maximum amount of bullets will be 7.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the player has a gun equipped, pressing the LMB causes the gunshot sound to be played and the bullet UI at the bottom left corner is updated to show the ammo count in the gun. By pressing the 'R' button on the keyboard, the ammo UI count is set back to 7, and a reload sound effect is played.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 15: } 
+
+\subsubsection{Description: }The environment must slowly go through a day and night cycle.
+
+\subsubsection{Type: } Automated, Manual
+
+\subsubsection{Observation: } A unit test script is used to test the working of the daylight controller object. This script is supposed to return assertion errors if the rotation of the daylight object in the game does not change as time passes. This test is considered to have passed as no assertion errors were returned.\newline
+While playing the game, a change in the orientation of the daylight object is visible and it's effect on the game terrain is noticeable.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 16: } 
+
+\subsubsection{Description: }The player must lose health when hit by a zombie.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user assumes control of the player and moves the player close to a zombie, the zombie attacks the player. When this happens, a decrease in the health level is demonstrated by the health bar UI at the bottom left corner of the screen.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 17: } 
+
+\subsubsection{Description: }Zombies must lose health when hit by the player by using the LMB once the player is within attacking distance from the zombie.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user assumes control of the player and moves the player close to a zombie, then uses the LMB to attack the zombie, the zombie dies after multiple clicks of the LMB, and drops a pickup object on the ground.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 18: } 
+
+\subsubsection{Description: }Players or zombies must die when they reach 0 health.
+
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } When the user assumes control of the player and moves the player close to a zombie, then uses the LMB to attack the zombie, the zombie dies after multiple clicks of the LMB, and drops a pickup object on the ground. The user then navigates the player to another zombie and allows the zombie to repeatedly damage the player. Eventually, the health level in the health bar UI (at the bottom left corner of the screen) becomes zero and a hit to the player after that causes the "Game Over" message to be displayed on the screen.
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 19: } 
+
+\subsubsection{Description: }An Inventory UI will give the user a visual representation of the player's inventory and will be accessible by pressing the 'inventory' key.
+\subsubsection{Type: } Dynamic, Manual
+
+\subsubsection{Observation: } When the user presses the "I" key on the kyeboard, an Inventory UI and an Equipment UI is displayed with 20 slots in the Inventory UI and 6 slots in the Equipment UI. If the player has picked up an item from the game, it is scene in the inventory UI.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 20: } 
+
+\subsubsection{Description: }An Equipment UI will give the user a visual representation of the player's equipped items and it will appear with the Inventory UI by pressing the 'inventory' key.
+\subsubsection{Type: } Dynamic, Manual
+
+\subsubsection{Observation: } When the user presses the "I" key on the kyeboard, an Inventory UI and an Equipment UI is displayed with 20 slots in the Inventory UI and 6 slots in the Equipment UI. If the player has picked up and equipped an item from the game, it is scene in the Equipment UI.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
+
+\subsection{Functional Requirement 21: } 
+
+\subsubsection{Description: }A Player UI will give teh user a visual representation of the player's health and remaining bullets if a gun is equipped to the player. The Player UI will also consist of a reticle.
+\subsubsection{Type: } Manual
+
+\subsubsection{Observation: } At all times in the game scene, a red reticle can be seen at the center of the screen. The reticle remains at the center of the screen at all times, irrespective of where the camera is moved. At the bottom left corner of the screen, a health bar UI can be seen. When a gun is equipped, the ammo count UI displays the number '7' which is the maximum capacity of a gun. When a shot is fired using the LMB, the number changes to 6.
+
+\subsubsection[Pass / Fail:] {Result: } Passed
+
+%%%%%%%%%%%%%
 \section{Nonfunctional Requirements Evaluation}
-
+ To evaluate our non-functional requirements, we created a Google Form to go along with an executable version of our project. These are shared with 10 volunteer testers who use our software while following a set of instructions and share their feedback through the Google Form.
+ 
 \subsection{Usability}
+		\subsubsection{Min-Learn-F-1}
 		
+		X out of 10 testers reported that the controls for our project were easy to learn.
 \subsection{Performance}
-
-\subsection{etc.}
+	\subsubsection{Start-Time-F-1}
+	\subsubsection{FPS-F-1}
+	\subsubsection{Close-Time-F-1}
+	\subsubsection{Enough-Ram-F-1}
+\subsection{Look and Feel}
+	\subsubsection{Graphics-F-1}
+	\subsubsection{Ease-of-Use-F-1}
+	\subsubsection{Ease-of-Use-F-1}
+\subsection{Safety}
+	\subsubsection{Enough-Space-F-1}
+\subsection{Precision}
+	\subsubsection{Player-Attack-Animation-to-Effect-F-1}
+	\subsubsection{Time-Day-Night-Transition-F-1}
+	\subsubsection{Zombie-Attack-Animation-to-Effect-F-1}
+	\subsubsection{Distance-to-Pickup-Item-F-1}
+\subsection{Reliability and Availability}
+	\subsubsection{Reliable-Input-Commands-F-1}
+	\subsection{Play-When-On-F-1}
+\subsection{Cultural Requirements}
+	\subsubsection{Culture-Discretion-F-1}
 	
 \section{Comparison to Existing Implementation}	
 
-This section will not be appropriate for every project.
+The existing project does not contain any documentation regarding the testing procedured in the development of the software. No unit testing has been implemented, and the final product is not error free. For example, in the existing implementation, the axe weapon is dysfunctional and it causes the inventory UI to crash.
 
 \section{Unit Testing}
 
