@@ -107,19 +107,19 @@
 \contentsline {section}{\numberline {2}Nonfunctional Requirements Evaluation}{12}{section.2}
 \contentsline {subsection}{\numberline {2.1}Usability}{13}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Min-Learn-F-1}{13}{subsubsection.2.1.1}
-\contentsline {subsection}{\numberline {2.2}Performance}{15}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Start-Time-F-1}{15}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}FPS-F-1}{15}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Close-Time-F-1}{15}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Enough-Ram-F-1}{15}{subsubsection.2.2.4}
-\contentsline {subsection}{\numberline {2.3}Look and Feel}{15}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Graphics-F-1}{15}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Ease-of-Use-F-1}{15}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Ease-of-Use-F-1}{15}{subsubsection.2.3.3}
-\contentsline {subsection}{\numberline {2.4}Safety}{15}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Enough-Space-F-1}{15}{subsubsection.2.4.1}
-\contentsline {subsection}{\numberline {2.5}Precision}{15}{subsection.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Player-Attack-Animation-to-Effect-F-1}{15}{subsubsection.2.5.1}
+\contentsline {subsection}{\numberline {2.2}Performance}{13}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Start-Time-F-1}{13}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}FPS-F-1}{13}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Close-Time-F-1}{13}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Enough-Ram-F-1}{13}{subsubsection.2.2.4}
+\contentsline {subsection}{\numberline {2.3}Look and Feel}{13}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Graphics-F-1}{13}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Ease-of-Use-F-1}{14}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Ease-of-Use-F-1}{14}{subsubsection.2.3.3}
+\contentsline {subsection}{\numberline {2.4}Safety}{14}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Enough-Space-F-1}{14}{subsubsection.2.4.1}
+\contentsline {subsection}{\numberline {2.5}Precision}{14}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Player-Attack-Animation-to-Effect-F-1}{14}{subsubsection.2.5.1}
 \contentsline {subsubsection}{\numberline {2.5.2}Time-Day-Night-Transition-F-1}{15}{subsubsection.2.5.2}
 \contentsline {subsubsection}{\numberline {2.5.3}Zombie-Attack-Animation-to-Effect-F-1}{15}{subsubsection.2.5.3}
 \contentsline {subsubsection}{\numberline {2.5.4}Distance-to-Pickup-Item-F-1}{15}{subsubsection.2.5.4}
@@ -132,6 +132,6 @@
 \contentsline {section}{\numberline {4}Unit Testing}{16}{section.4}
 \contentsline {section}{\numberline {5}Changes Due to Testing}{17}{section.5}
 \contentsline {section}{\numberline {6}Automated Testing}{17}{section.6}
-\contentsline {section}{\numberline {7}Trace to Requirements}{17}{section.7}
-\contentsline {section}{\numberline {8}Trace to Modules}{17}{section.8}
-\contentsline {section}{\numberline {9}Code Coverage Metrics}{17}{section.9}
+\contentsline {section}{\numberline {7}Trace to Requirements}{18}{section.7}
+\contentsline {section}{\numberline {8}Trace to Modules}{18}{section.8}
+\contentsline {section}{\numberline {9}Code Coverage Metrics}{18}{section.9}

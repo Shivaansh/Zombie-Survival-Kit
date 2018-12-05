@@ -15,13 +15,13 @@
 \contentsline {paragraph}{Player Movement}{3}{section*.4}
 \contentsline {subsubsection}{\numberline {3.1.2}{\color {magenta} F2.} The player must be able to look in all directions by moving their mouse.}{4}{subsubsection.3.1.2}
 \contentsline {paragraph}{Camera Movement}{4}{section*.5}
-\contentsline {subsubsection}{\numberline {3.1.3}{\color {magenta} F3.} Zombie enemies must walk back and forth between random points in their ‘spawn circle’, which imitates them walking around.}{4}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.3}{\color {magenta} F3.} Zombie enemies must walk back and forth between random points in their \IeC {\textquoteleft }spawn circle\IeC {\textquoteright }, which imitates them walking around.}{4}{subsubsection.3.1.3}
 \contentsline {paragraph}{'Spawn' Circle}{4}{section*.6}
 \contentsline {subsubsection}{\numberline {3.1.4}{\color {magenta} F4.} Zombie enemies must start attacking the player when they come within a certain radius.}{5}{subsubsection.3.1.4}
 \contentsline {paragraph}{Attack Radius}{5}{section*.7}
 \contentsline {subsubsection}{\numberline {3.1.5}{\color {magenta} F5.} Zombie enemies must follow the player if \hsout {they start running away while the zombie is attacking them} {\color {magenta} the player is at a certain distance from the zombie.}}{6}{subsubsection.3.1.5}
 \contentsline {paragraph}{Zombie Follows Player}{6}{section*.8}
-\contentsline {subsubsection}{\numberline {3.1.6}{\color {magenta} F6.} If the player runs past a certain radius from the zombie’s original spawn location, the zombie must return to their circle.}{8}{subsubsection.3.1.6}
+\contentsline {subsubsection}{\numberline {3.1.6}{\color {magenta} F6.} If the player runs past a certain radius from the zombie\IeC {\textquoteright }s original spawn location, the zombie must return to their circle.}{8}{subsubsection.3.1.6}
 \contentsline {paragraph}{Zombie Returns to 'Spawn' Circle Center}{8}{section*.9}
 \contentsline {subsubsection}{\numberline {3.1.7}{\color {magenta} F7.} Different types of zombies must have different statistics (health, damage, {\color {magenta} and attack speed). Different types of zombies will be distinguishable by their different appearances.}}{9}{subsubsection.3.1.7}
 \contentsline {paragraph}{Zombie Stats}{9}{section*.10}
@@ -29,17 +29,17 @@
 \contentsline {paragraph}{Appearing Drops}{10}{section*.11}
 \contentsline {subsubsection}{\numberline {3.1.9}\hsout {Func. Req. 9: Dropped items must be automatically deleted if not picked up within a certain time}}{11}{subsubsection.3.1.9}
 \contentsline {paragraph}{\hsout {Disappearing Drops}}{11}{section*.12}
-\contentsline {subsubsection}{\numberline {3.1.10}{\color {magenta} F9.} The player must be able to pick up items they are looking at with the ‘interact’ key.}{12}{subsubsection.3.1.10}
+\contentsline {subsubsection}{\numberline {3.1.10}{\color {magenta} F9.} The player must be able to pick up items they are looking at with the \IeC {\textquoteleft }interact\IeC {\textquoteright } key.}{12}{subsubsection.3.1.10}
 \contentsline {paragraph}{Pickup Drops}{12}{section*.13}
-\contentsline {subsubsection}{\numberline {3.1.11}{\color {magenta} F10.} The player must be able to access their inventory by pressing the ‘inventory’ key{\color {magenta} , and will have a maximum space of 20 items.}}{13}{subsubsection.3.1.11}
+\contentsline {subsubsection}{\numberline {3.1.11}{\color {magenta} F10.} The player must be able to access their inventory by pressing the \IeC {\textquoteleft }inventory\IeC {\textquoteright } key{\color {magenta} , and will have a maximum space of 20 items.}}{13}{subsubsection.3.1.11}
 \contentsline {paragraph}{Inventory Access}{13}{section*.14}
 \contentsline {subsubsection}{\numberline {3.1.12}{\color {magenta} F11.} The player must be able to equip, consume, \hsout {delete, and move around} {\color {magenta} and drop} items in their Inventory {\color {magenta} UI} using the \hsout {mouse} {\color {magenta} LMB.}}{14}{subsubsection.3.1.12}
 \contentsline {paragraph}{\hsout {Use Items Move Items} {\color {magenta} Use Remove Items}}{14}{section*.15}
-\contentsline {subsubsection}{\numberline {3.1.13}{\color {magenta} F12. The player must be able to unequip items in their Equipment UI using the LMB or the `unequip all’ key.}}{16}{subsubsection.3.1.13}
+\contentsline {subsubsection}{\numberline {3.1.13}{\color {magenta} F12. The player must be able to unequip items in their Equipment UI using the LMB or the `unequip all\IeC {\textquoteright } key.}}{16}{subsubsection.3.1.13}
 \contentsline {paragraph}{{\color {magenta} Unequip}}{16}{section*.16}
 \contentsline {subsubsection}{\numberline {3.1.14}{\color {magenta} F13.} The player must be able to fire/use \hsout {their equipped weapon} {\color {magenta} an equipped gun or axe} by pressing the left mouse button (LMB).}{17}{subsubsection.3.1.14}
 \contentsline {paragraph}{Attack Items}{17}{section*.17}
-\contentsline {subsubsection}{\numberline {3.1.15}{\color {magenta} F14.} If the player has a firearm equipped, \hsout {they must be able to aim down sights using the right mouse button (RMB)} {\color {magenta} the user can reload the gun using the ‘reload’ key. The mazimum amount of bullets will be 7.}}{18}{subsubsection.3.1.15}
+\contentsline {subsubsection}{\numberline {3.1.15}{\color {magenta} F14.} If the player has a firearm equipped, \hsout {they must be able to aim down sights using the right mouse button (RMB)} {\color {magenta} the user can reload the gun using the \IeC {\textquoteleft }reload\IeC {\textquoteright } key. The mazimum amount of bullets will be 7.}}{18}{subsubsection.3.1.15}
 \contentsline {paragraph}{Aiming}{18}{section*.18}
 \contentsline {subsubsection}{\numberline {3.1.16}{\color {magenta} F15.} The environment must slowly go through a day and night cycle.}{19}{subsubsection.3.1.16}
 \contentsline {paragraph}{Day and Night}{19}{section*.19}
@@ -51,9 +51,9 @@
 \contentsline {paragraph}{Death}{21}{section*.22}
 \contentsline {subsubsection}{\numberline {3.1.20}\hsout {Func. Req. 19: Upon player death, the game must reset}}{23}{subsubsection.3.1.20}
 \contentsline {paragraph}{\hsout {Reset}}{23}{section*.23}
-\contentsline {subsubsection}{\numberline {3.1.21}{\color {magenta} F19. An Inventory UI will give the user a visual representation of the player's inventory and will be accessable by pressing the ‘inventory’ key.}}{23}{subsubsection.3.1.21}
+\contentsline {subsubsection}{\numberline {3.1.21}{\color {magenta} F19. An Inventory UI will give the user a visual representation of the player's inventory and will be accessable by pressing the \IeC {\textquoteleft }inventory\IeC {\textquoteright } key.}}{23}{subsubsection.3.1.21}
 \contentsline {paragraph}{{\color {magenta} InventoryUI}}{23}{section*.24}
-\contentsline {subsubsection}{\numberline {3.1.22}{\color {magenta} F20. An Equipment UI will give the user a visual representation of the player's equipped items and will be appear with the Inventory UI by pressing the ‘inventory’ key.}}{24}{subsubsection.3.1.22}
+\contentsline {subsubsection}{\numberline {3.1.22}{\color {magenta} F20. An Equipment UI will give the user a visual representation of the player's equipped items and will be appear with the Inventory UI by pressing the \IeC {\textquoteleft }inventory\IeC {\textquoteright } key.}}{24}{subsubsection.3.1.22}
 \contentsline {paragraph}{{\color {magenta} Equipment UI}}{24}{section*.25}
 \contentsline {subsubsection}{\numberline {3.1.23}{\color {magenta} F21. A Player UI will give the user a visual representation of the player's health and remaining bullets if a gun is equipped to the player. The Player UI will also consist of a reticle.}}{25}{subsubsection.3.1.23}
 \contentsline {paragraph}{{\color {magenta} Player UI}}{25}{section*.26}

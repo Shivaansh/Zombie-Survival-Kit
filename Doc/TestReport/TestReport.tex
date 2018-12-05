@@ -305,28 +305,78 @@ While playing the game, a change in the orientation of the daylight object is vi
 \subsection{Usability}
 		\subsubsection{Min-Learn-F-1}
 		
-		X out of 10 testers reported that the controls for our project were easy to learn.
+		According to our survey, 10 out of 10 testers reported that the controls for our project were easy to remember.
 \subsection{Performance}
 	\subsubsection{Start-Time-F-1}
+	
+	According to our survey, 10 out of 10 testers felt that the game loading time was fast.
 	\subsubsection{FPS-F-1}
+	
+	According to our survey, 8 out of 10 testers reported that the average frame rate that the game ran at was at least 60 frames per second.
 	\subsubsection{Close-Time-F-1}
+	
+	According to our survey, 6 out of 10 testers felt that the time taken to quit the game was short.
+	
 	\subsubsection{Enough-Ram-F-1}
+	
+	According to our survey, 9 out of 10 testers reported that the amount of RAM used by the game was less than 1 GB.
+	
 \subsection{Look and Feel}
 	\subsubsection{Graphics-F-1}
+	
+	According to our survey, the following objects were observed by testers:
+	\begin{itemize}
+		\item Helath and ammo bars: 10 testers
+		\item Red reticle: 10 testers
+		\item Tall, grey zombies: 10 testers
+		\item Short, beige zombies: 10 testers
+		\item Colored cubes around a tent: 6 testers
+		\item Fruits: 10 testers
+		\item Tent: 8 testers
+		\item Trees: 10 testers
+		\item Day and Night cycle: 10 testers
+		\item An inventory UI (when 'I' button is pressed on the keyboard): 10 testers
+		\item Axe: 10 testers 
+	\end{itemize}
 	\subsubsection{Ease-of-Use-F-1}
+	
+	According to our survey, 10 out of 10 testers reported that they felt the controls to be easy to learn.
 	\subsubsection{Ease-of-Use-F-1}
+	
+	According to our survey, 10 out of 10 testers reported that they felt the controls to be intuitive.
 \subsection{Safety}
 	\subsubsection{Enough-Space-F-1}
+	
+	According to our survey, 9 out of 10 testers reported that the size of the downloaded executable was greater than 1 GB.
 \subsection{Precision}
 	\subsubsection{Player-Attack-Animation-to-Effect-F-1}
+	
+	According to our survey, 10 out of 10 testers reported that the player's effect of attacking the zombies felt intuitive, but 3 testers also reported that the system could be improved by incorporating some form of feedback.
+
+	
 	\subsubsection{Time-Day-Night-Transition-F-1}
+	
+	According to our survey, 10 out of 10 users reported observing a day and night cycle in the game.
+	
 	\subsubsection{Zombie-Attack-Animation-to-Effect-F-1}
+		According to our survey, 9 out of 10 users reported that when attacked by a zombie, the health bar reflected a change in health levels instantly.
+	
 	\subsubsection{Distance-to-Pickup-Item-F-1}
+	
+	According to our survey, 10 out of 10 testers reported that the maximum distance from which a pickup canbe added to the inventory felt intuitive.
+	
 \subsection{Reliability and Availability}
 	\subsubsection{Reliable-Input-Commands-F-1}
+	
+	According to our survey, 9 out of 10 testers reported that the game responded to their inputs within a suitable time frame.
 	\subsection{Play-When-On-F-1}
+	
+	According to our survey, 9 testers reported that the game behaved as expected when it was launched and closed 10 times out of 10 attempts.\newline
+	1 tester reported that the game behaved as expected when it was launched and closed 9 times out of 10 attempts.
 \subsection{Cultural Requirements}
 	\subsubsection{Culture-Discretion-F-1}
+	
+	According to our survery, 10 out of 10 testers reported that they did not find any of the illustrations and other contents of the game offensive.
 	
 \section{Comparison to Existing Implementation}	
 
@@ -362,7 +412,8 @@ While no errors were encountered during testing, it was revealed that certain mo
 	\textbf{Change made: } A new function was added to the First Person Controller script to enable the cursor when the inventory UI was brought up, even if the gun was equipped.
 	\item The initial implementation of the gun firing mechanism caused a shot to be fired even when the gun was being unequipped / swapped in the inventory UI or while equipping an item or consuming a consumable.\newline
 	\textbf{Change made: } The Gun module now checks whether the inventory UI is active and if that is true, a shot is not fired.
-	\item 
+	\item The initial implementation of the player attack mechanism did not provide any intuituve feedback to the player to indicate damage being done to the enemy. This feedback was derived from our volunteer test survey. \newline
+	\textbf{Change made: } A sound effect now plays when the player attacks a zombie.
 \end{itemize}
 \section{Automated Testing}
 		For our project, the only implementation of automated testing was the Unit Testing process. The results of our unit tests are mentioned in a previous section.
