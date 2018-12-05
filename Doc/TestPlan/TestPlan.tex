@@ -1138,7 +1138,238 @@ Another example of unit testing that will be done is for the inventory system. O
 {\color{magenta} All test scripts for unit testing of internal functions are found in: \\
 \href{https://gitlab.cas.mcmaster.ca/jonatans/Zombie\_Survival\_Kit/tree/Brian\_Final/src/Zombie\%20Survival\%20Kit/Assets/Scripts/Test\%20Scripts}{Test-Scripts} \\}
 
+
+Below is the outline of how the Unit Test scripts verify correctness: \newline
+
+\subsubsection{Test\textunderscore CharacterCombat}
+
+\paragraph{Purpose} Verify that the Attack() method functions properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item GameManager (GameObject): Required for Unity Test
+	\item  character (GameObject): The character that carries out an attack
+	\item  character2 (GameObject):
+	The character that is attacked
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item attacker (CharacterCombat): Reference to the CharacterCombat script attached to 'character'.
+	\item attackerStats (CharacterStats): Reference to the CharacterStats script attached to 'character'.
+	\item defenderStats (CharacterStats): Reference to the CharacterStats script attached to 'character2'.
+\end{itemize}
+\paragraph{Description: }
+	This script asserts that the health of 'character2' after the Attack method is called by 'character' is less than its original value.
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+%%%%%%%%%%%%%
+\subsubsection{Test\textunderscore CharacterStats}
+
+\paragraph{Purpose} Verify that the TakeDamage() method functions properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item GameManager (GameObject): Required for Unity Test
+	\item  player (GameObject): A reference to the player object
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item stats (CharacterStats): The CharacterStats script attached to the player.
+
+\end{itemize}
+\paragraph{Description: }
+This script asserts that the health level (which is initially 100) is equal to 49 after the $TakeDamage$ method is called and a damage of 51 is caused.
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+%%%%%%%%%%%%%%%%%%%
+\subsubsection{Test\textunderscore ConsumableItem}
+
+\paragraph{Purpose} Verify that the Use() method functions properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item GameManager (GameObject): Required for Unity Test
+	\item  player (GameObject): A reference to the player object
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item item1 (ConsumableItem): A reference to an instance of a ConsumableItem script.
+	
+\end{itemize}
+\paragraph{Description: }
+This script asserts when item1 is equipped, the inventory is not empty, and after the Use() method is called on item1, item1 is 'consumed' and the inventory is now empty.
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Test\textunderscore DayLightController}
+
+
+\paragraph{Purpose} Verify that the 'Directional Light' GameObject rotates periodically.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+%	\item GameManager (GameObject): Required for Unity Test
+%	\item  player (GameObject): A reference to the player object
+%	\item  GunUI (GameObject): The Gun ammo count UI
+%	\item AxeUI (GameObject): The Axe UI element of the canvas
+%	\item item1 (ConsumableItem): A reference to an instance of a ConsumableItem script.
+	\item daylightobject (GameObject): A reference to the Directional Light object.
+	
+\end{itemize}
+\paragraph{Description: }
+This script asserts that the rotation of the Directional Light object at a certain time differs from the rotation of the Directional Light object after 2 seconds.
+
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Test\textunderscore EquipmentItem}
+
+\paragraph{Purpose} Verify that the Use() method functions properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item GameManager (GameObject): Required for Unity Test
+	\item  player (GameObject): A reference to the player object
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item item1 (EquipmentItem): A reference to an instance of a EquipmentItem script.
+	
+\end{itemize}
+\paragraph{Description: }
+This script asserts when item1 is not equipped, the inventory is not empty, the equipment UI is empty, and that after the Use() method is called on item1, item1 is 'equipped' and the inventory is now empty, whereas the equipment UI is no longer empty.
+ 
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+
+%%%%%%%%%%
+
+\subsubsection{Test\textunderscore EquipmentManager}
+
+\paragraph{Purpose} Verify that the Equip() method functions properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item GameManager (GameObject): Required for Unity Test
+	\item  player (GameObject): A reference to the player object
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item InventoryUI (GameObject): The Inventory UI element of the canvas
+	\item item1 (EquipmentItem): A reference to an instance of a EquipmentItem script.
+	\item item1 (EquipmentItem): An item with the name "ChestArmor", that has the EquipmentItem script attached as a component.
+	\item item2 (EquipmentItem): An item with the name "Cloak", that has the EquipmentItem script attached as a component.
+	\item item3 (EquipmentItem): An item with the name "RangeWeapon", that has the EquipmentItem script attached as a component.
+	
+\end{itemize}
+\paragraph{Description: }
+This script asserts when the Equip() method is called on item1, item2 and item3, they are all assigned to a different slot in the equipment UI.
+
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Test\textunderscore Gun}
+
+\paragraph{Purpose} Verify that the shoot() and reload() methods functions properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item bullet (GameObject): An instance of a 'bullet' gameObject
+	\item cam (GameObject): A reference to the camera in the game.
+	\item GameManager (GameObject): Required for Unity Test
+	\item  PlayerUI (GameObject): A reference to the player UI element of the canvas
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item rangeWeapon (EquipmentItem): A reference to an instance of a EquipmentItem object with the Gun script attached to it.
+	
+\end{itemize}
+\paragraph{Description: }
+This script asserts when the shoot() method is called on the gun,  a bullet gameObject is instantiated and that the value of the ammo in the gun is reduced by 1. This script also asserts that when the reload() method is called, the value of the ammo in the gun is reset back to the max value of 7.
+
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+
+%%%%%%%%%%%%%%%%
+\subsubsection{Test\textunderscore Inventory}
+
+\paragraph{Purpose} Verify that the Add(), InventoryEquipmentConsumable() and RemoveFromInventory() methods functions properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item GameManager (GameObject): Required for Unity Test
+	\item  player (GameObject): A reference to the player UI element of the canvas
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item item1 (EquipmentItem): A reference to an instance of a EquipmentItem object with the Gun script attached to it.
+	
+\end{itemize}
+\paragraph{Description: }
+To test the Add() method, this script asserts that when item1 is added to the inventory using the Add() methods, the inventory contains item1 and is not empty.
+\newline
+To test the InventoryEquipmentConsumable() method, this script asserts that before calling the InventoryEquipmentConsumable() method, the inventory contains item1, but not after calling the method.
+\newline
+To test the RemoveFromInventory() method, this script asserts that when this method is called, item1 exists but is independent from the inventory (the inventory does not contain item1).
+
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Test\textunderscore ItemStore}
+
+\paragraph{Purpose} Verify that the Interact() method functions properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item GameManager (GameObject): Required for Unity Test
+	\item  player (GameObject): A reference to the player UI element of the canvas
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item GameItem (GameObject): An instance of a "HeadArmor" prefab.
+	\item item (EquipmentItem): A reference to a "HeadArmor" object which shall be residing in the inventory.
+	
+\end{itemize}
+\paragraph{Description: }
+This method asserts that when the Interact() method is called, the inventory contains item and GameItem does not exist anymore.
+
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+
+%%%%%%%%%%%%%%%%%%%
+\subsubsection{Test\textunderscore PlayerStats}
+
+\paragraph{Purpose} Verify that the OnEquipmentChanged() and Eat() methods function properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item GameManager (GameObject): Required for Unity Test
+	\item  player (GameObject): A reference to the player UI element of the canvas
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item stats (PlayerStats): A reference to the PlayerStats script attached to 'player'.
+	\item item1 (ConsumableItem): A ConsumableItem instance.
+	\item item2 (ConsumableItem): A ConsumableItem instance.
+	
+\end{itemize}
+\paragraph{Description: }
+To test the Eat() method, this script asserts that the value of 'curHealth' for 'stats' before and after calling the Eat() method is different, and that the value of 'curHealth' after the Eat() method has been called is greater than what it was before by a difference of the value of the 'healthModifier' variable for 'item1'. In this test, 'item1' has the name 'Apple'.
+\newline
+To test the OnEquipmentChanged() method, this script asserts that when 'item1' is equipped, the values of armor and damage stats for the player are increased by the values of the defence and attack modifiers associated with 'item1' respectively. Also, when item1 is swapped with item2 (by calling the OnEquipmentChanged() method),  the values of armor and damage stats for the player are updated by the values of the defence and attack modifiers associated with 'item2' respectively.
+For this test, 'item1' and 'item2' are named 'Axe' and 'RangeWeapon' respectively.
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Test\textunderscore Stat}
+
+\paragraph{Purpose} Verify that the AddToStat(), GetValue() and RemoveFromStat() methods function properly.
+
+\paragraph{Setup: } The following variables are needed for this test:
+\begin{itemize}
+	\item GameManager (GameObject): Required for Unity Test
+	\item  player (GameObject): A reference to the player UI element of the canvas
+	\item  GunUI (GameObject): The Gun ammo count UI
+	\item AxeUI (GameObject): The Axe UI element of the canvas
+	\item damage (Stat): A reference to the Stat script attached to 'player'.
+
+	
+\end{itemize}
+\paragraph{Description: }
+To test the AddToStat() method, this script asserts that when a value is added to 'stat' by calling the AddToStat(), stat then contains that value.
+\newline
+To test the GetValue() method, this script asserts that when two values are passed to 'stat' using the AddToStat() method, GetValue() then returns the sum of those two values.
+\newline
+To test the RemoveFromStat() method, this script asserts that when 4 values are added to 'stat' using the AddToStat() method, and then one value (say 'x') is removed from 'stat' using the RemoveFromStat() method, 'stat' does not contain 'x'.
+\paragraph{Teardown: } All the variables created in the Setup section are removed.
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% output unit testing
 \subsection{\hsout{Unit testing of output files}}		
+%%%%%%%%% output unit testing
 
 \sout{Currently, the implementation does not generate any output files, so no tests are necessary. As a design choice, it was decided to reset the game when the player dies to give the development kit more of a survival theme. Also since this is just a dev kit and not a fully fledged video game, saving the game and generating output files is not necessary. If any output files are added, this section will be updated and test cases will be added.}
 
@@ -1150,6 +1381,7 @@ Another example of unit testing that will be done is for the inventory system. O
 %
 %\newpage
 %
+\newpage
 \section{Appendix}
 
 This is where you can place additional information.
