@@ -79,7 +79,7 @@ This document contains the results of our initial testing plan, the information 
 
 \subsubsection{Description: }Zombie enemies must walk back and forth between random points in their 'spawn' circle, which imitates them walking around.
 
-\subsubsection{Type: } Automated
+\subsubsection{Type: } Manual
 
 \subsubsection{Observation: } When the game scene is initialized, zombie enemies can be observed at various positions on the game terrain. These zombies are observed to be moving around a certain position on the map.
 
@@ -117,9 +117,9 @@ This document contains the results of our initial testing plan, the information 
 
 \subsubsection{Type: } Manual
 
-\subsubsection{Observation: } When the user controls the player and moves close to a zombie, then the zombie starts attacking the player, and the zombie character model is animated to show an attack movement. When the player then starts to move away, the zombie starts to follow the player. The user then presses and holds the shift button while moving the player away from the zombie. When the distance between the player and zombie is sufficiently large, the zombie stops chasing the player and starts returning to their own position.
+\subsubsection{Observation: } When the user controls the player and moves close to a zombie, then the zombie starts attacking the player, and the zombie character model is animated to show an attack movement. When the player then starts to move away, the zombie starts to follow the player. The user then presses and holds the shift button while moving the player away from the zombie. When the distance between the player and zombie is sufficiently large, the zombie stops chasing the player and starts returning to their own position. A bug reported in the testing surveys was if the player stops at the exact point the zombie is supposed to turn around, it gets stuck repeatedly turning between its spawn point and the player, until the player moves closer or farther.
 
-\subsubsection[Pass / Fail:] {Result: } Passed
+\subsubsection[Pass / Fail:] {Result: } Pass with Partial Fail
 
 %%%%%%%%%%%%%
 
@@ -417,14 +417,83 @@ While no errors were encountered during testing, it was revealed that certain mo
 \end{itemize}
 \section{Automated Testing}
 		For our project, the only implementation of automated testing was the Unit Testing process. The results of our unit tests are mentioned in a previous section.
+
 \section{Trace to Requirements}
-		
-\section{Trace to Modules}		
+		A trace between requirements and testing is given in \hyperref[tab:tracereq]{Table~\ref*{tab:tracereq}}.\\
+		Each test number matches with the requirement number because we based our tests in the test plan to each test one functional requirement. 
+
+
+
+\section{Trace to Modules}	
+A trace between modules and testing is given in \hyperref[tab:tracemod]{Table~\ref*{tab:tracemod}}.\\
+
+
 
 \section{Code Coverage Metrics}
+Recording code coverage metrics for the tests was not feasible or representative of the quality of the tests for this project. Test coverage is defined to be the ratio between the number of lines
+of code called by the test suite to the total number of lines of code. Meaning, this would only apply to the automated unit test scripts. As mentioned in the test plan, test scripts were not possible
+to create for any module where a zombie has to be instantiated on the scene, since the zombies need a valid NavMesh to walk on which requires an active scene, not possible through just code. Due to this, Group 6ix would have a low code coverage metric just because these tests were not possible to create automated scripts for. Code coverage is not a good representative measure for the quality of this testing, since zombie modules were tested through manual/integration testing via a Google Survey which is not seen through the metric.
 
-\bibliographystyle{plainnat}
+\begin{table}[h]
+\caption{Trace between requirements and tests} \label{tab:tracereq}
+\centering
+\begin{tabularx}{0.55\textwidth}{p{4cm}X}
+\toprule {\bf Test} & {\bf Requirement}\\
+\midrule
+1	&	R1	\\
+2	&	R2	\\
+3	&	R3	\\
+4	&	R4	\\
+5	&	R5	\\
+6	&	R6	\\
+7	&	R7	\\
+8	&	R8	\\
+9	&	R9\\
+10	&	R10	\\
+11	&	R11	\\
+12	&	R12	\\
+13	&	R13	\\
+14	&	R14	\\
+15	&	R15	\\
+16	&	R16	\\
+17	&	R17	\\
+18	&	R18	\\
+19	&	R19	\\
+20	&	R20	\\
+21	&	R21	\\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-\bibliography{SRS}
+\begin{table}[ht]
+\caption{Trace between modules and tests} \label{tab:tracemod}
+\centering
+\begin{tabularx}{1.05\textwidth}{p{5cm}X}
+\toprule {\bf Test} & {\bf Modules}\\
+\midrule
+1	&	M21	\\
+2	&	M21	\\
+3	&	M20	\\
+4	&	M20\\
+5	&	M20	\\
+6	&	M20	\\
+7	&	M20, M16	\\
+8	&	M2, M3, M4, M18	\\
+9	&	M7, M9, M10\\
+10	&	M13	\\
+11	&	M2, M3, M4, M5, M6, M11, M12, M13, M14	\\
+12	&	M2, M3, M4 , M5, M6, M11, M12, M13, M14	\\
+13	&	M8, M10, M22, M23	\\
+14	&	M22	\\
+15	&	M24	\\
+16	&	M15, M16	\\
+17	&	M6, M8, M15, M16, M23	\\
+18	&	M16	\\
+19	&	M13, M14	\\
+20	&	M11, M12\\
+21	&	M25\\
+\bottomrule
+\end{tabularx}
+\end{table}	
 
 \end{document}
